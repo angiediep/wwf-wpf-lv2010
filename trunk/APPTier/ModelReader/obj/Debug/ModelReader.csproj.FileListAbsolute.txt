@@ -1,0 +1,10 @@
+C:\Users\Nghia Tran\Desktop\WpfApplication1\ModelReader\bin\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\WpfApplication1\ModelReader\bin\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\WpfApplication1\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\WpfApplication1\ModelReader\obj\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\WpfApplication1\ModelReader\obj\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\ModelReader\bin\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\ModelReader\obj\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\APPTier\ModelReader\obj\Debug\ModelReader.pdb
