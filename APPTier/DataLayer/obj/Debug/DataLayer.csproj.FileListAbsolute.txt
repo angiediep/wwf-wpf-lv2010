@@ -1,5 +1,0 @@
-C:\Users\Nghia Tran\Desktop\APPTier\DataLayer\bin\Debug\DataLayer.dll
-C:\Users\Nghia Tran\Desktop\APPTier\DataLayer\bin\Debug\DataLayer.pdb
-C:\Users\Nghia Tran\Desktop\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Nghia Tran\Desktop\APPTier\DataLayer\obj\Debug\DataLayer.dll
-C:\Users\Nghia Tran\Desktop\APPTier\DataLayer\obj\Debug\DataLayer.pdb
