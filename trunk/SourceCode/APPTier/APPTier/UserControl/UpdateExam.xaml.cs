@@ -22,42 +22,42 @@ namespace APPTier
 	{
 		public UpdateExam()
 		{
-			this.InitializeComponent();
-            BUSLayer.BusDotThi exams = new BUSLayer.BusDotThi();
-            DataTable dt = new DataTable();
-            dt = exams.getDataTable();
-            this.dtgvExam.ItemsSource = dt.DefaultView;
+            //this.InitializeComponent();
+            //BUSLayer.BusDotThi exams = new BUSLayer.BusDotThi();
+            //DataTable dt = new DataTable();
+            //dt = exams.getDataTable();
+            //this.dtgvExam.ItemsSource = dt.DefaultView;
 		}
 
 		private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
-            MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn lưu thông tin đã cập nhật không?", "Cập nhật Nhân viên", MessageBoxButton.YesNo);
-            if (msg == MessageBoxResult.No)
-            {
-                BusDotThi exams = new BusDotThi();
-                DataTable dt = new DataTable();
-                dt = exams.getDataTable();
-                this.dtgvExam.ItemsSource = dt.DefaultView;
-            }
-            else
-            {
-                //Luu thong tin da cap nhat xuong
-                //Hien thi lai thong tin
-            }
+            //MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn lưu thông tin đã cập nhật không?", "Cập nhật Nhân viên", MessageBoxButton.YesNo);
+            //if (msg == MessageBoxResult.No)
+            //{
+            //    BusDotThi exams = new BusDotThi();
+            //    DataTable dt = new DataTable();
+            //    dt = exams.getDataTable();
+            //    this.dtgvExam.ItemsSource = dt.DefaultView;
+            //}
+            //else
+            //{
+            //    //Luu thong tin da cap nhat xuong
+            //    //Hien thi lai thong tin
+            //}
 		}
 
 		private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
-            MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn hủy cập nhật thông tin không?","Cập nhật Đợt thi", MessageBoxButton.YesNo);
-            if (msg == MessageBoxResult.Yes)
-            {
-                BusDotThi exams = new BusDotThi();
-                DataTable dt = new DataTable();
-                dt = exams.getDataTable();
-                this.dtgvExam.ItemsSource = dt.DefaultView;
-            }
+            //MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn hủy cập nhật thông tin không?","Cập nhật Đợt thi", MessageBoxButton.YesNo);
+            //if (msg == MessageBoxResult.Yes)
+            //{
+            //    BusDotThi exams = new BusDotThi();
+            //    DataTable dt = new DataTable();
+            //    dt = exams.getDataTable();
+            //    this.dtgvExam.ItemsSource = dt.DefaultView;
+            //}
 		}
 	}
 }

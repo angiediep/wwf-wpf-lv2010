@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3FA25C86-54DF-44A2-8F98-7632729ECA24}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DataConnector.cs" />
+    <Compile Include="DAO\Config.cs" />
     <Compile Include="DAO\DaoChungChi.cs" />
     <Compile Include="DAO\DaoCongViec.cs" />
     <Compile Include="DAO\DaoDotThi.cs" />
@@ -55,6 +55,7 @@
     <Compile Include="DAO\DaoPhanCong.cs" />
     <Compile Include="DAO\DaoQuanLy.cs" />
     <Compile Include="DAO\DaoTienDo.cs" />
+    <Compile Include="DAO\DataConnector.cs" />
     <Compile Include="DTO\DtoChungChi.cs" />
     <Compile Include="DTO\DtoCongViec.cs" />
     <Compile Include="DTO\DtoDotThi.cs" />

@@ -1,5 +1,5 @@
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
