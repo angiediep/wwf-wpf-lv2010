@@ -39,158 +39,158 @@ namespace APPTier
 
         private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            try
-            {
-                // TODO: Add event handler implementation here.
-                int iCheckFinish = 1; //kiểm tra có nhập đủ thông tin chưa, mặc định là đủ
-                //nếu kiểm tra có ô thông tin chưa điền, iCheckFinish = 0
-                if (tbxPassword.Password == "")
-                {
-                    iCheckFinish = 0;
-                }
-                else
-                {
-                    foreach (TextBox temp in FindVisualChildren<TextBox>(this.Window))
-                    {
-                        if (temp.Text == "")//nếu thông tin có rỗng
-                        {
-                            iCheckFinish = 0;
-                            break;
-                        }
-                    }
-                }
-                //Nếu thông tin chưa hoàn tất, hỏi xem có muốn thoát khỏi đăng kí và vào đăng nhập không
-                //Nếu có, hiện đăng nhập
-                if (iCheckFinish == 0)
-                {
-                    MessageBoxResult msg = MessageBox.Show("Bạn chưa hoàn tất thủ tục đăng kí, bạn có thật sự muốn đăng nhập không?", "Đăng nhập", MessageBoxButton.YesNo);
-                    if (msg == MessageBoxResult.Yes)
-                    {
-                        Login login = new Login();
-                        login.Show();
-                        this.Close();
+            //try
+            //{
+            //    // TODO: Add event handler implementation here.
+            //    int iCheckFinish = 1; //kiểm tra có nhập đủ thông tin chưa, mặc định là đủ
+            //    //nếu kiểm tra có ô thông tin chưa điền, iCheckFinish = 0
+            //    if (tbxPassword.Password == "")
+            //    {
+            //        iCheckFinish = 0;
+            //    }
+            //    else
+            //    {
+            //        foreach (TextBox temp in FindVisualChildren<TextBox>(this.Window))
+            //        {
+            //            if (temp.Text == "")//nếu thông tin có rỗng
+            //            {
+            //                iCheckFinish = 0;
+            //                break;
+            //            }
+            //        }
+            //    }
+            //    //Nếu thông tin chưa hoàn tất, hỏi xem có muốn thoát khỏi đăng kí và vào đăng nhập không
+            //    //Nếu có, hiện đăng nhập
+            //    if (iCheckFinish == 0)
+            //    {
+            //        MessageBoxResult msg = MessageBox.Show("Bạn chưa hoàn tất thủ tục đăng kí, bạn có thật sự muốn đăng nhập không?", "Đăng nhập", MessageBoxButton.YesNo);
+            //        if (msg == MessageBoxResult.Yes)
+            //        {
+            //            Login login = new Login();
+            //            login.Show();
+            //            this.Close();
 
-                    }
-                }
-                //Nếu thông tin đã hoàn tất, thông báo thông tin chưa được lưu, hỏi xem người dùng có muốn lưu không
-                //Nếu có, tiến hành lưu và hiện form đăng nhập
-                //Nếu không, bỏ qua và chỉ hiện form đăng nhập
-                else
-                {
-                    MessageBoxResult msg = MessageBox.Show("Bạn chưa chọn đăng kí, bạn có muốn chúng tôi đăng kí với thông tin này không?", "Đăng nhập", MessageBoxButton.YesNo);
-                    if (msg == MessageBoxResult.Yes)
-                    {
-                        //Lưu thông tin đăng kí xuống cơ sở dữ liệu
-                        DtoNhanVien user = new DtoNhanVien();
-                        MyHashAlg hash = new MyHashAlg();
-                        if (!Regex.IsMatch(this.tbxEmail.Text, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
-                        {
-                            MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButton.OK);
+            //        }
+            //    }
+            //    //Nếu thông tin đã hoàn tất, thông báo thông tin chưa được lưu, hỏi xem người dùng có muốn lưu không
+            //    //Nếu có, tiến hành lưu và hiện form đăng nhập
+            //    //Nếu không, bỏ qua và chỉ hiện form đăng nhập
+            //    else
+            //    {
+            //        MessageBoxResult msg = MessageBox.Show("Bạn chưa chọn đăng kí, bạn có muốn chúng tôi đăng kí với thông tin này không?", "Đăng nhập", MessageBoxButton.YesNo);
+            //        if (msg == MessageBoxResult.Yes)
+            //        {
+            //            //Lưu thông tin đăng kí xuống cơ sở dữ liệu
+            //            DtoNhanVien user = new DtoNhanVien();
+            //            MyHashAlg hash = new MyHashAlg();
+            //            if (!Regex.IsMatch(this.tbxEmail.Text, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
+            //            {
+            //                MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButton.OK);
 
-                        }
-                        else
-                        {
-                            user.TENNV = this.tbxRealName.Text;
-                            user.DIENTHOAI = this.tbxPhone.Text;
-                            user.EMAIL = this.tbxEmail.Text;
-                            user.SALT = MyHashAlg.CreateRandomSalt();
-                            user.MATKHAU = hash.Hash(user.SALT, this.tbxPassword.Password);
-                            BusNhanVien _user = new BusNhanVien();
-                            List<DtoNhanVien> users = _user.getListDataBytenNV(user.TENNV);
-                            if (users != null)
-                            {
-                                MessageBox.Show("Tài khoản đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButton.OK);
-                            }
-                            else
-                            {
-                                _user.insertData(user);
-                            }
-                        }
-                        MessageBox.Show("Thủ tục đăng kí hoàn tất, bấm OK để đăng nhập!", "Đăng kí", MessageBoxButton.OK);
-                    }
-                    Login login = new Login();
-                    login.Show();
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBoxResult msg = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButton.OK);
-            }
+            //            }
+            //            else
+            //            {
+            //                user.TENNV = this.tbxRealName.Text;
+            //                user.DIENTHOAI = this.tbxPhone.Text;
+            //                user.EMAIL = this.tbxEmail.Text;
+            //                user.SALT = MyHashAlg.CreateRandomSalt();
+            //                user.MATKHAU = hash.Hash(user.SALT, this.tbxPassword.Password);
+            //                BusNhanVien _user = new BusNhanVien();
+            //                List<DtoNhanVien> users = _user.getListDataBytenNV(user.TENNV);
+            //                if (users != null)
+            //                {
+            //                    MessageBox.Show("Tài khoản đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButton.OK);
+            //                }
+            //                else
+            //                {
+            //                    _user.insertData(user);
+            //                }
+            //            }
+            //            MessageBox.Show("Thủ tục đăng kí hoàn tất, bấm OK để đăng nhập!", "Đăng kí", MessageBoxButton.OK);
+            //        }
+            //        Login login = new Login();
+            //        login.Show();
+            //        this.Close();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxResult msg = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButton.OK);
+            //}
         }
 
         private void btnRegister_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            try
-            {
-                // TODO: Add event handler implementation here.
-                int iCheckFinish = 1; //kiểm tra có nhập đủ thông tin chưa, mặc định là đủ
-                //nếu kiểm tra có ô thông tin chưa điền, iCheckFinish = 0
-                if (tbxPassword.Password == "")
-                {
-                    iCheckFinish = 0;
-                }
-                else
-                {
-                    foreach (TextBox temp in FindVisualChildren<TextBox>(this.Window))
-                    {
-                        string _temp = temp.Name;
-                        if (temp.Text == "")//nếu thông tin có rỗng
-                        {
+            //try
+            //{
+            //    // TODO: Add event handler implementation here.
+            //    int iCheckFinish = 1; //kiểm tra có nhập đủ thông tin chưa, mặc định là đủ
+            //    //nếu kiểm tra có ô thông tin chưa điền, iCheckFinish = 0
+            //    if (tbxPassword.Password == "")
+            //    {
+            //        iCheckFinish = 0;
+            //    }
+            //    else
+            //    {
+            //        foreach (TextBox temp in FindVisualChildren<TextBox>(this.Window))
+            //        {
+            //            string _temp = temp.Name;
+            //            if (temp.Text == "")//nếu thông tin có rỗng
+            //            {
 
-                            iCheckFinish = 0;
-                            break;
-                        }
-                    }
-                }
-                //Nếu thông tin chưa hoàn tất, hỏi xem có muốn thoát khỏi đăng kí và vào đăng nhập không
-                //Nếu có, hiện đăng nhập
-                if (iCheckFinish == 0)
-                {
-                    MessageBoxResult msg = MessageBox.Show("Bạn chưa hoàn tất thủ tục đăng kí!", "Đăng kí", MessageBoxButton.OK);
-                }
-                //Nếu thông tin đã hoàn tất, thông báo thông tin chưa được lưu, hỏi xem người dùng có muốn lưu không
-                //Nếu có, tiến hành lưu và hiện form đăng nhập
-                //Nếu không, bỏ qua và chỉ hiện form đăng nhập
-                else
-                {
-                    //Lưu thông tin đăng kí xuống cơ sở dữ liệu
-                    DtoNhanVien user = new DtoNhanVien();
-                    MyHashAlg hash = new MyHashAlg();
-                    if (!Regex.IsMatch(this.tbxEmail.Text, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
-                    {
-                        MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButton.OK);
+            //                iCheckFinish = 0;
+            //                break;
+            //            }
+            //        }
+            //    }
+            //    //Nếu thông tin chưa hoàn tất, hỏi xem có muốn thoát khỏi đăng kí và vào đăng nhập không
+            //    //Nếu có, hiện đăng nhập
+            //    if (iCheckFinish == 0)
+            //    {
+            //        MessageBoxResult msg = MessageBox.Show("Bạn chưa hoàn tất thủ tục đăng kí!", "Đăng kí", MessageBoxButton.OK);
+            //    }
+            //    //Nếu thông tin đã hoàn tất, thông báo thông tin chưa được lưu, hỏi xem người dùng có muốn lưu không
+            //    //Nếu có, tiến hành lưu và hiện form đăng nhập
+            //    //Nếu không, bỏ qua và chỉ hiện form đăng nhập
+            //    else
+            //    {
+            //        //Lưu thông tin đăng kí xuống cơ sở dữ liệu
+            //        DtoNhanVien user = new DtoNhanVien();
+            //        MyHashAlg hash = new MyHashAlg();
+            //        if (!Regex.IsMatch(this.tbxEmail.Text, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
+            //        {
+            //            MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButton.OK);
 
-                    }
-                    else
-                    {
-                        user.TENNV = this.tbxRealName.Text;
-                        user.DIENTHOAI = this.tbxPhone.Text;
-                        user.EMAIL = this.tbxEmail.Text;
-                        user.SALT = MyHashAlg.CreateRandomSalt();
-                        user.MATKHAU = hash.Hash(user.SALT, this.tbxPassword.Password);
-                        BusNhanVien _user = new BusNhanVien();
-                        List<DtoNhanVien> users = _user.getListDataBytenNV(user.TENNV);
-                        if (users.Count != 0)
-                        {
-                            MessageBox.Show("Tài khoản đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButton.OK);
-                        }
-                        else
-                        {
-                            _user.insertData(user);
-                        }
-                    }
-                    MessageBox.Show("Thủ tục đăng kí hoàn tất, bấm OK để đăng nhập!", "Đăng kí", MessageBoxButton.OK);
+            //        }
+            //        else
+            //        {
+            //            user.TENNV = this.tbxRealName.Text;
+            //            user.DIENTHOAI = this.tbxPhone.Text;
+            //            user.EMAIL = this.tbxEmail.Text;
+            //            user.SALT = MyHashAlg.CreateRandomSalt();
+            //            user.MATKHAU = hash.Hash(user.SALT, this.tbxPassword.Password);
+            //            BusNhanVien _user = new BusNhanVien();
+            //            List<DtoNhanVien> users = _user.getListDataBytenNV(user.TENNV);
+            //            if (users.Count != 0)
+            //            {
+            //                MessageBox.Show("Tài khoản đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButton.OK);
+            //            }
+            //            else
+            //            {
+            //                _user.insertData(user);
+            //            }
+            //        }
+            //        MessageBox.Show("Thủ tục đăng kí hoàn tất, bấm OK để đăng nhập!", "Đăng kí", MessageBoxButton.OK);
 
-                    Login login = new Login();
-                    login.Show();
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBoxResult msg = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButton.OK);
-            }
+            //        Login login = new Login();
+            //        login.Show();
+            //        this.Close();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxResult msg = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButton.OK);
+            //}
         }
 
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject

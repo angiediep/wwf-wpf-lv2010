@@ -1,5 +1,5 @@
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelReader\bin\Debug\ModelReader.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelReader\bin\Debug\ModelReader.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelReader\obj\Debug\ModelReader.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\ModelReader\obj\Debug\ModelReader.pdb

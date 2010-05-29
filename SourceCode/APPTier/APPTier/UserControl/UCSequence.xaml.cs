@@ -45,7 +45,7 @@ namespace APPTier
 
         private void draw(List<Activity> list)
         {
-            int j = 0;
+            //int j = 0;
             int count = list.Count;
             PointF nextStartPoint = m_ListNextPoint[0];
             for (int i = 0; i < count; i++)
