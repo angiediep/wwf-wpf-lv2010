@@ -8,29 +8,29 @@ using System.Text;
 
 using System.Data.SqlClient;
 using System.IO;
-using DTO;
-namespace DAO
+using DataLayer.DTO;
+namespace DataLayer.DAO
 {
-public class DaoDOTTHI
+public class DaoDotThi
 {
 
-	public DaoDOTTHI()
+	public DaoDotThi()
 	{
 	}
 	#region "ExportFile" 
-	public DtoDOTTHI getDataById(int maDT)
+	public DtoDotThi getDataById(int maDT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.AddWithValue("@maDT", maDT);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        DtoDOTTHI data = null;
+        DtoDotThi data = null;
         while (dr.Read())
         {
-            data = new DtoDOTTHI();
+            data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.TENDT =Convert.ToString(dr["tenDT"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
@@ -41,7 +41,7 @@ public class DaoDOTTHI
     }
 	public DataTable getDataTable()
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -53,20 +53,20 @@ public class DaoDOTTHI
         con.Close();
         return dt;
     }
-	public List<DtoDOTTHI>  getDataList()
+	public List<DtoDotThi>  getDataList()
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoDOTTHI> lst = new List<DtoDOTTHI>();
-        DtoDOTTHI data = null;
+        List<DtoDotThi> lst = new List<DtoDotThi>();
+        DtoDotThi data = null;
         while (dr.Read())
         {
-            data = new DtoDOTTHI();
+            data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.TENDT =Convert.ToString(dr["tenDT"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
@@ -76,9 +76,9 @@ public class DaoDOTTHI
         con.Close();
         return lst;
     }
-	public List<DtoDOTTHI>  getDataListSortBy(string col, bool flag)
+	public List<DtoDotThi>  getDataListSortBy(string col, bool flag)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataDOTTHISortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -87,11 +87,11 @@ public class DaoDOTTHI
         cmd.Parameters.AddWithValue("@col", col); 
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoDOTTHI> lst = new List<DtoDOTTHI>();
-        DtoDOTTHI data = null;
+        List<DtoDotThi> lst = new List<DtoDotThi>();
+        DtoDotThi data = null;
         while (dr.Read())
         {
-            data = new DtoDOTTHI();
+            data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.TENDT =Convert.ToString(dr["tenDT"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
@@ -101,19 +101,19 @@ public class DaoDOTTHI
         con.Close();
         return lst;
     }
-	public List<DtoDOTTHI> getListDataBytenDT(string tenDT)    {
-        string conStr = Config.CONSTRING;
+	public List<DtoDotThi> getListDataBytenDT(string tenDT)    {
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHIBytenDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.AddWithValue("@tenDT", tenDT);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoDOTTHI> lst = new List<DtoDOTTHI>();
-        DtoDOTTHI data = null;
+        List<DtoDotThi> lst = new List<DtoDotThi>();
+        DtoDotThi data = null;
         while (dr.Read())
         {
-            data = new DtoDOTTHI();
+            data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.TENDT =Convert.ToString(dr["tenDT"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
@@ -123,19 +123,19 @@ public class DaoDOTTHI
         con.Close();
         return lst;
     }
-	public List<DtoDOTTHI> getListDataByngayThi(DateTime ngayThi)    {
-        string conStr = Config.CONSTRING;
+	public List<DtoDotThi> getListDataByngayThi(DateTime ngayThi)    {
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.AddWithValue("@ngayThi", ngayThi);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoDOTTHI> lst = new List<DtoDOTTHI>();
-        DtoDOTTHI data = null;
+        List<DtoDotThi> lst = new List<DtoDotThi>();
+        DtoDotThi data = null;
         while (dr.Read())
         {
-            data = new DtoDOTTHI();
+            data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.TENDT =Convert.ToString(dr["tenDT"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
@@ -145,10 +145,10 @@ public class DaoDOTTHI
         con.Close();
         return lst;
     }
-	public int insertData(DtoDOTTHI data)
+	public int insertData(DtoDotThi data)
     {
         int Id = -1;
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -159,9 +159,9 @@ public class DaoDOTTHI
         Id = Convert.ToInt32(cmd.ExecuteScalar());
         return Id;
     }
-	public bool deleteData(DtoDOTTHI data)
+	public bool deleteData(DtoDotThi data)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -173,7 +173,7 @@ public class DaoDOTTHI
     }
 	public bool deleteDataBytenDT(string tenDT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHIBytenDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -185,7 +185,7 @@ public class DaoDOTTHI
     }
 	public bool deleteDataByngayThi(DateTime ngayThi)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -197,7 +197,7 @@ public class DaoDOTTHI
     }
 	public bool deleteDataBysoLuongThiSinh(int soLuongThiSinh)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHIBysoLuongThiSinh " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -207,9 +207,9 @@ public class DaoDOTTHI
         cmd.ExecuteNonQuery();
         return true;
     }
-	public bool updateData(DtoDOTTHI data)
+	public bool updateData(DtoDotThi data)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -221,9 +221,9 @@ public class DaoDOTTHI
         cmd.ExecuteNonQuery();
         return true;
     }
-	public bool updateDataBymaDT(DtoDOTTHI data,int maDT)
+	public bool updateDataBymaDT(DtoDotThi data,int maDT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBymaDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -235,9 +235,9 @@ public class DaoDOTTHI
         cmd.ExecuteNonQuery();
         return true;
     }
-	public bool updateDataBytenDT(DtoDOTTHI data,string tenDT)
+	public bool updateDataBytenDT(DtoDotThi data,string tenDT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBytenDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -249,9 +249,9 @@ public class DaoDOTTHI
         cmd.ExecuteNonQuery();
         return true;
     }
-	public bool updateDataByngayThi(DtoDOTTHI data,DateTime ngayThi)
+	public bool updateDataByngayThi(DtoDotThi data,DateTime ngayThi)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;

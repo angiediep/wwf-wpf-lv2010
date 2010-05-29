@@ -47,11 +47,9 @@
   <ItemGroup>
     <Compile Include="BusChungChi.cs" />
     <Compile Include="BusCongViec.cs" />
-    <Compile Include="BusDOTTHI.cs" />
+    <Compile Include="BusDotThi.cs" />
     <Compile Include="BusDotThi_ChungChi.cs" />
     <Compile Include="BusGhiChu.cs" />
-    <Compile Include="BusLoaiChungChi.cs" />
-    <Compile Include="BusNguoiQuanLy.cs" />
     <Compile Include="BusNhanVienThuaHanh.cs" />
     <Compile Include="BusPhanCong.cs" />
     <Compile Include="BusQuanLy.cs" />

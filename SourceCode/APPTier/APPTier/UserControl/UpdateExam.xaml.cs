@@ -23,7 +23,7 @@ namespace APPTier
 		public UpdateExam()
 		{
 			this.InitializeComponent();
-            BUSLayer.BusDOTTHI exams = new BUSLayer.BusDOTTHI();
+            BUSLayer.BusDotThi exams = new BUSLayer.BusDotThi();
             DataTable dt = new DataTable();
             dt = exams.getDataTable();
             this.dtgvExam.ItemsSource = dt.DefaultView;
@@ -35,7 +35,7 @@ namespace APPTier
             MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn lưu thông tin đã cập nhật không?", "Cập nhật Nhân viên", MessageBoxButton.YesNo);
             if (msg == MessageBoxResult.No)
             {
-                BusDOTTHI exams = new BusDOTTHI();
+                BusDotThi exams = new BusDotThi();
                 DataTable dt = new DataTable();
                 dt = exams.getDataTable();
                 this.dtgvExam.ItemsSource = dt.DefaultView;
@@ -53,7 +53,7 @@ namespace APPTier
             MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn hủy cập nhật thông tin không?","Cập nhật Đợt thi", MessageBoxButton.YesNo);
             if (msg == MessageBoxResult.Yes)
             {
-                BusDOTTHI exams = new BusDOTTHI();
+                BusDotThi exams = new BusDotThi();
                 DataTable dt = new DataTable();
                 dt = exams.getDataTable();
                 this.dtgvExam.ItemsSource = dt.DefaultView;

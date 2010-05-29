@@ -6,9 +6,9 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-using DAO;
-using DTO;
-namespace BUS
+using DataLayer.DAO;
+using DataLayer.DTO;
+namespace BUSLayer
 {
 public class BusNhanVienThuaHanh
 {
@@ -17,6 +17,27 @@ public class BusNhanVienThuaHanh
 	{
 	}
 	#region "ExportFile" 
+
+    /// <summary>
+    /// This method provides function 'login' for NhanVienThuaHanh.
+    /// </summary>
+    /// <param name="strUsername">the login name.</param>
+    /// <param name="strPassword">the password</param>
+    /// <returns>true:  login success.
+    ///         false: login fail.</returns>
+    public bool login(String strUsername, String strPassword)
+    {
+        if (null == strUsername || null == strPassword)
+            return false;
+        if (0 == strUsername.Trim().Length || 0 == strPassword.Trim().Length)
+            return false;
+        //remove the SQL Injection.
+        strUsername.Replace('\'',' ');
+        strPassword.Replace('\'', ' ');
+
+        DaoNhanVienThuaHanh daoNhanVienThuaHanh = new DaoNhanVienThuaHanh();
+        return daoNhanVienThuaHanh.login(strUsername, strPassword);
+    }
 	public DtoNhanVienThuaHanh getDataById(int Id)
 	{
 		DtoNhanVienThuaHanh data = null;
