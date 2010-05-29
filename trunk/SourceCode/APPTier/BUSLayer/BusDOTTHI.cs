@@ -6,23 +6,23 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-using DAO;
-using DTO;
-namespace BUS
+using DataLayer.DAO;
+using DataLayer.DTO;
+namespace BUSLayer
 {
-public class BusDOTTHI
+public class BusDotThi
 {
 
-	public BusDOTTHI()
+	public BusDotThi()
 	{
 	}
 	#region "ExportFile" 
-	public DtoDOTTHI getDataById(int Id)
+	public DtoDotThi getDataById(int Id)
 	{
-		DtoDOTTHI data = null;
+		DtoDotThi data = null;
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			data = dDOTTHI.getDataById(Id);
 		}
 		catch
@@ -31,12 +31,12 @@ public class BusDOTTHI
 		}
 		return data;
 	}
-	public List<DtoDOTTHI> getListDataBytenDT(string tenDT)
+	public List<DtoDotThi> getListDataBytenDT(string tenDT)
 	{
-		List<DtoDOTTHI> lst = null;
+		List<DtoDotThi> lst = null;
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			lst = dDOTTHI.getListDataBytenDT(tenDT);
 		}
 		catch
@@ -45,12 +45,12 @@ public class BusDOTTHI
 		}
 		return lst;
 	}
-	public List<DtoDOTTHI> getListDataByngayThi(DateTime ngayThi)
+	public List<DtoDotThi> getListDataByngayThi(DateTime ngayThi)
 	{
-		List<DtoDOTTHI> lst = null;
+		List<DtoDotThi> lst = null;
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			lst = dDOTTHI.getListDataByngayThi(ngayThi);
 		}
 		catch
@@ -59,12 +59,12 @@ public class BusDOTTHI
 		}
 		return lst;
 	}
-	public List<DtoDOTTHI> getDataList()
+	public List<DtoDotThi> getDataList()
 	{
-		List<DtoDOTTHI> lst = null;
+		List<DtoDotThi> lst = null;
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			lst = dDOTTHI.getDataList();
 		}
 		catch
@@ -73,12 +73,12 @@ public class BusDOTTHI
 		}
 		return lst;
 	}
-	public List<DtoDOTTHI> getDataListSortBy(string col, bool flag)
+	public List<DtoDotThi> getDataListSortBy(string col, bool flag)
 	{
-		List<DtoDOTTHI> lst = null;
+		List<DtoDotThi> lst = null;
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			lst = dDOTTHI.getDataListSortBy(col, flag);
 		}
 		catch
@@ -87,12 +87,12 @@ public class BusDOTTHI
 		}
 		return lst;
 	}
-	public int insertData(DtoDOTTHI data)
+	public int insertData(DtoDotThi data)
 	{
 		int Id = -1;
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			Id = dDOTTHI.insertData(data);
 		}
 		catch
@@ -101,11 +101,11 @@ public class BusDOTTHI
 		}
 		return Id;
 	}
-	public bool deleteData(DtoDOTTHI data)
+	public bool deleteData(DtoDotThi data)
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.deleteData(data);
 		}
 		catch
@@ -118,7 +118,7 @@ public class BusDOTTHI
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.deleteDataBytenDT(tenDT);
 		}
 		catch
@@ -131,7 +131,7 @@ public class BusDOTTHI
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.deleteDataByngayThi(ngayThi);
 		}
 		catch
@@ -144,7 +144,7 @@ public class BusDOTTHI
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.deleteDataBysoLuongThiSinh(soLuongThiSinh);
 		}
 		catch
@@ -153,11 +153,11 @@ public class BusDOTTHI
 		}
 		return true;
 	}
-	public bool updateData(DtoDOTTHI data)
+	public bool updateData(DtoDotThi data)
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.updateData(data);
 		}
 		catch
@@ -166,11 +166,11 @@ public class BusDOTTHI
 		}
 		return true;
 	}
-	public bool updateDataBymaDT(DtoDOTTHI data,int maDT)
+	public bool updateDataBymaDT(DtoDotThi data,int maDT)
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.updateDataBymaDT(data,maDT);
 		}
 		catch
@@ -179,11 +179,11 @@ public class BusDOTTHI
 		}
 		return true;
 	}
-	public bool updateDataBytenDT(DtoDOTTHI data,string tenDT)
+	public bool updateDataBytenDT(DtoDotThi data,string tenDT)
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.updateDataBytenDT(data,tenDT);
 		}
 		catch
@@ -192,11 +192,11 @@ public class BusDOTTHI
 		}
 		return true;
 	}
-	public bool updateDataByngayThi(DtoDOTTHI data,DateTime ngayThi)
+	public bool updateDataByngayThi(DtoDotThi data,DateTime ngayThi)
 	{
 		try
 		{
-			DaoDOTTHI dDOTTHI = new DaoDOTTHI();
+			DaoDotThi dDOTTHI = new DaoDotThi();
 			dDOTTHI.updateDataByngayThi(data,ngayThi);
 		}
 		catch

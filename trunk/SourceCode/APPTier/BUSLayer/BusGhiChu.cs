@@ -6,9 +6,9 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-using DAO;
-using DTO;
-namespace BUS
+using DataLayer.DAO;
+using DataLayer.DTO;
+namespace BUSLayer
 {
 public class BusGhiChu
 {

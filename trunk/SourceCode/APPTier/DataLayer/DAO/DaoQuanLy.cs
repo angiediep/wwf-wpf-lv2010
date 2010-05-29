@@ -8,8 +8,8 @@ using System.Text;
 
 using System.Data.SqlClient;
 using System.IO;
-using DTO;
-namespace DAO
+using DataLayer.DTO;
+namespace DataLayer.DAO
 {
 public class DaoQuanLy
 {
@@ -20,7 +20,7 @@ public class DaoQuanLy
 	#region "ExportFile" 
 	public DtoQuanLy getDataById(string tenDangNhap)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -41,7 +41,7 @@ public class DaoQuanLy
     }
 	public DataTable getDataTable()
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -55,7 +55,7 @@ public class DaoQuanLy
     }
 	public List<DtoQuanLy>  getDataList()
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -78,7 +78,7 @@ public class DaoQuanLy
     }
 	public List<DtoQuanLy>  getDataListSortBy(string col, bool flag)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataQuanLySortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -102,7 +102,7 @@ public class DaoQuanLy
         return lst;
     }
 	public List<DtoQuanLy> getListDataBymatKhau(string matKhau)    {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataQuanLyBymatKhau " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -124,7 +124,7 @@ public class DaoQuanLy
         return lst;
     }
 	public List<DtoQuanLy> getListDataBySALT(int SALT)    {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataQuanLyBySALT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -148,7 +148,7 @@ public class DaoQuanLy
 	public int insertData(DtoQuanLy data)
     {
         int Id = -1;
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -161,7 +161,7 @@ public class DaoQuanLy
     }
 	public bool deleteData(DtoQuanLy data)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -173,7 +173,7 @@ public class DaoQuanLy
     }
 	public bool deleteDataBymatKhau(string matKhau)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataQuanLyBymatKhau " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -185,7 +185,7 @@ public class DaoQuanLy
     }
 	public bool deleteDataBySALT(int SALT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataQuanLyBySALT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -197,7 +197,7 @@ public class DaoQuanLy
     }
 	public bool deleteDataByemail(string email)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataQuanLyByemail " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -209,7 +209,7 @@ public class DaoQuanLy
     }
 	public bool updateData(DtoQuanLy data)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -223,7 +223,7 @@ public class DaoQuanLy
     }
 	public bool updateDataBytenDangNhap(DtoQuanLy data,string tenDangNhap)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataQuanLyBytenDangNhap " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -237,7 +237,7 @@ public class DaoQuanLy
     }
 	public bool updateDataBymatKhau(DtoQuanLy data,string matKhau)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataQuanLyBymatKhau " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -251,7 +251,7 @@ public class DaoQuanLy
     }
 	public bool updateDataBySALT(DtoQuanLy data,int SALT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataQuanLyBySALT " , con);
         cmd.CommandType = CommandType.StoredProcedure;

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3FA25C86-54DF-44A2-8F98-7632729ECA24}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -45,27 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\Config.cs" />
+    <Compile Include="DAO\DataConnector.cs" />
     <Compile Include="DAO\DaoChungChi.cs" />
     <Compile Include="DAO\DaoCongViec.cs" />
-    <Compile Include="DAO\DaoDOTTHI.cs" />
+    <Compile Include="DAO\DaoDotThi.cs" />
     <Compile Include="DAO\DaoDotThi_ChungChi.cs" />
     <Compile Include="DAO\DaoGhiChu.cs" />
-    <Compile Include="DAO\DaoLoaiChungChi.cs" />
-    <Compile Include="DAO\DaoNguoiQuanLy.cs" />
-    <Compile Include="DAO\DaoNhanVien.cs" />
     <Compile Include="DAO\DaoNhanVienThuaHanh.cs" />
     <Compile Include="DAO\DaoPhanCong.cs" />
     <Compile Include="DAO\DaoQuanLy.cs" />
     <Compile Include="DAO\DaoTienDo.cs" />
     <Compile Include="DTO\DtoChungChi.cs" />
     <Compile Include="DTO\DtoCongViec.cs" />
-    <Compile Include="DTO\DtoDOTTHI.cs" />
+    <Compile Include="DTO\DtoDotThi.cs" />
     <Compile Include="DTO\DtoDotThi_ChungChi.cs" />
     <Compile Include="DTO\DtoGhiChu.cs" />
-    <Compile Include="DTO\DtoLoaiChungChi.cs" />
-    <Compile Include="DTO\DtoNguoiQuanLy.cs" />
-    <Compile Include="DTO\DtoNhanVien.cs" />
     <Compile Include="DTO\DtoNhanVienThuaHanh.cs" />
     <Compile Include="DTO\DtoPhanCong.cs" />
     <Compile Include="DTO\DtoQuanLy.cs" />

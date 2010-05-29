@@ -8,8 +8,8 @@ using System.Text;
 
 using System.Data.SqlClient;
 using System.IO;
-using DTO;
-namespace DAO
+using DataLayer.DTO;
+namespace DataLayer.DAO
 {
 public class DaoDotThi_ChungChi
 {
@@ -20,7 +20,7 @@ public class DaoDotThi_ChungChi
 	#region "ExportFile" 
 	public DtoDotThi_ChungChi getDataById(int maDT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -39,7 +39,7 @@ public class DaoDotThi_ChungChi
     }
 	public DataTable getDataTable()
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -53,7 +53,7 @@ public class DaoDotThi_ChungChi
     }
 	public List<DtoDotThi_ChungChi>  getDataList()
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -74,7 +74,7 @@ public class DaoDotThi_ChungChi
     }
 	public List<DtoDotThi_ChungChi>  getDataListSortBy(string col, bool flag)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataDotThi_ChungChiSortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -98,7 +98,7 @@ public class DaoDotThi_ChungChi
 	public int insertData(DtoDotThi_ChungChi data)
     {
         int Id = -1;
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -109,7 +109,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool deleteData(DtoDotThi_ChungChi data)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -121,7 +121,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool deleteDataBymaCC(int maCC)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDotThi_ChungChiBymaCC " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -133,7 +133,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool updateData(DtoDotThi_ChungChi data)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -145,7 +145,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool updateDataBymaDT(DtoDotThi_ChungChi data,int maDT)
     {
-        string conStr = Config.CONSTRING;
+        string conStr = DataConnector.getConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChiBymaDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;

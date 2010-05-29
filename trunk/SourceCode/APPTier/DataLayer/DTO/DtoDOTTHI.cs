@@ -6,12 +6,12 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-namespace DTO
+namespace DataLayer.DTO
 {
-public class DtoDOTTHI
+public class DtoDotThi
 {
 
-	public DtoDOTTHI()
+	public DtoDotThi()
 	{
 	}
 	private int mmaDT ;
