@@ -22,7 +22,7 @@ public class Config
 	}
     public static string CONSTRING
     {
-        get { return "Data Source=DHA-PC\\SQLEXPRESS;Initial Catalog=QuyTrinhThiDB;Integrated Security=True";} 
+        get { return "Data Source=NMBINH\\SQLEXPRESS;Initial Catalog=QuyTrinhThiDB;Integrated Security=True;User ID=sa;Password=123456";} 
     }
 
 }

@@ -6,9 +6,9 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-using DataLayer.DAO;
-using DataLayer.DTO;
-namespace BUSLayer
+using DAO;
+using DTO;
+namespace BUS
 {
 public class BusDOTTHI
 {
@@ -31,22 +31,6 @@ public class BusDOTTHI
 		}
 		return data;
 	}
-
-    public DataTable getDataTable()
-    {
-        DataTable dt = new DataTable();
-        try
-        {
-            DaoDOTTHI data = new DaoDOTTHI();
-            dt = data.getDataTable();
-        }
-        catch
-        {
-            return null;
-        }
-        return dt;
-    }
-
 	public List<DtoDOTTHI> getListDataBytenDT(string tenDT)
 	{
 		List<DtoDOTTHI> lst = null;

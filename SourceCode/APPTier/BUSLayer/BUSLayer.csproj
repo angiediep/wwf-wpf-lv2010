@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EC2E2C6F-332D-48FA-B34B-41E2AEB59ED7}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -52,7 +52,6 @@
     <Compile Include="BusGhiChu.cs" />
     <Compile Include="BusLoaiChungChi.cs" />
     <Compile Include="BusNguoiQuanLy.cs" />
-    <Compile Include="BusNhanVien.cs" />
     <Compile Include="BusNhanVienThuaHanh.cs" />
     <Compile Include="BusPhanCong.cs" />
     <Compile Include="BusQuanLy.cs" />

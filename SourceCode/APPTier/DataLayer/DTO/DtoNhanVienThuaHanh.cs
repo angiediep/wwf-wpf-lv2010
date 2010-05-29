@@ -6,7 +6,7 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-namespace DataLayer.DTO
+namespace DTO
 {
 public class DtoNhanVienThuaHanh
 {
