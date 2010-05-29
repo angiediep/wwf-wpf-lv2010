@@ -27,7 +27,19 @@ public class DaoNhanVienThuaHanh
     ///         false: login fail.</returns>
     public bool login(String strUsername, String strPassword)
     {
-        return false;
+        string strConn = DataConnector.getConnectionString();
+        SqlConnection conn = new SqlConnection(strConn);
+        SqlCommand cmd = new SqlCommand("spLoginForNhanVienThuaHanh", conn);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@tenDangNhap", strUsername);
+        cmd.Parameters.AddWithValue("@matKhau", strPassword);
+        cmd.Parameters.Add("@result", SqlDbType.Int);
+        cmd.Parameters["@result"].Direction = ParameterDirection.Output;
+
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        int result = int.Parse( cmd.Parameters["@result"].Value.ToString()) ;
+        return result == 1;
     }
 	public DtoNhanVienThuaHanh getDataById(int maNV)
     {
@@ -260,7 +272,10 @@ public class DaoNhanVienThuaHanh
 		cmd.Parameters.AddWithValue("@tenNV", data.TENNV);
 		cmd.Parameters.AddWithValue("@dienThoai", data.DIENTHOAI);
         con.Open();
+
         Id = Convert.ToInt32(cmd.ExecuteScalar());
+        
+        con.Close();
         return Id;
     }
 	public bool deleteData(DtoNhanVienThuaHanh data)

@@ -3,3 +3,8 @@ E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\GongSolutions
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\obj\Debug\ResolveAssemblyReference.cache
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.dll
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\bin\Debug\GongSolutions.Wpf.DragDrop.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.pdb

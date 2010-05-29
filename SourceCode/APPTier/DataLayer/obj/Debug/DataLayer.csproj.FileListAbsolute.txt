@@ -3,3 +3,8 @@ E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\bin
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
