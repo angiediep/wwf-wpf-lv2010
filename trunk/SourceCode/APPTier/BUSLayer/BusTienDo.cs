@@ -6,9 +6,9 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using System.IO;
-using DataLayer.DAO;
-using DataLayer.DTO;
-namespace BUSLayer
+using DAO;
+using DTO;
+namespace BUS
 {
 public class BusTienDo
 {

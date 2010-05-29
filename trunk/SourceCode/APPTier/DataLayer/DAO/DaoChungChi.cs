@@ -8,8 +8,8 @@ using System.Text;
 
 using System.Data.SqlClient;
 using System.IO;
-using DataLayer.DTO;
-namespace DataLayer.DAO
+using DTO;
+namespace DAO
 {
 public class DaoChungChi
 {

@@ -32,18 +32,18 @@ namespace APPTier
         private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO: Add event handler implementation here.
-            string Username = tbxUsername.Text;
-            string Password = tbxPassword.Password;
-            MyHashAlg hash = new MyHashAlg();
-            BusNhanVien user = new BusNhanVien();
-            m_userkey = Password;
+            string strUserName = tbxUsername.Text.Trim();
+            string strPassword = tbxPassword.Password.Trim();
+            MyHashAlg myHashAlg = new MyHashAlg();
+            BusNhanVienThuaHanh busNhanVien = new BusNhanVienThuaHanh();
+            m_userkey = strPassword;
             try
             {
-                if (this.tbxUsername.Text == "")
+                if (strUserName == "")
                 {
                     MessageBoxResult msg = MessageBox.Show("Bạn chưa nhập tên tài khoản!", "Lỗi", MessageBoxButton.OK);
                 }
-                else if (this.tbxPassword.Password == "")
+                else if (strPassword == "")
                 {
                     MessageBoxResult msg = MessageBox.Show("Bạn chưa nhập mật khẩu!", "Lỗi", MessageBoxButton.OK);
                 }
@@ -53,7 +53,7 @@ namespace APPTier
                     //Kiểm tra Database giá trị hash và tên tài khoản
                     //Nếu không hợp lệ sẽ báo lỗi
                     //Nếu hợp lệ, kiểm tra loại user
-                    List<DtoNhanVien> userList = user.getListDataBytenNV(Username);
+                    List<DtoNhanVien> userList = busNhanVien.getListDataBytenNV(strUserName);
                     if (userList.Count > 0)
                     {
                         int Salt = userList[0].SALT;
@@ -63,7 +63,7 @@ namespace APPTier
                         }
                         else
                         {
-                            string passphrase = hash.Hash(Salt, Password); //cai dc luu trong csdl
+                            string passphrase = myHashAlg.Hash(Salt, strPassword); //cai dc luu trong csdl
                             if (userList[0].MATKHAU != passphrase)
                             {
                                 MessageBoxResult msg = MessageBox.Show("Tài khoản không hợp lệ!", "Lỗi", MessageBoxButton.OK);
