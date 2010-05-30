@@ -10,32 +10,65 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BUSLayer;
+using DataLayer.DAO;
 
-namespace QuanLyThi
+namespace APPTier
 {
-	/// <summary>
-	/// Interaction logic for ChangeSystemInfo.xaml
-	/// </summary>
-	public partial class ChangeSystemInfo : UserControl
-	{
-		public ChangeSystemInfo()
-		{
-			this.InitializeComponent();
-		}
+    /// <summary>
+    /// Interaction logic for ChangeSystemInfo.xaml
+    /// </summary>
+    public partial class ChangeSystemInfo : UserControl
+    {
+        private DataConnector m_dcSystemInfo;
+        public ChangeSystemInfo()
+        {
+            this.InitializeComponent();
+            m_dcSystemInfo = new DataConnector();
+            m_dcSystemInfo.ReadBinary("dbinfo.dat");
+            reset();
+        }
 
-		private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
-		{
-			// TODO: Add event handler implementation here.
-		}
+        private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            DataConnector dc = new DataConnector();
+            dc.strServerName = this.tbxServerName.Text;
+            dc.strDatabaseName = this.tbxDatabaseName.Text;
+            dc.strUserID = this.tbxUserID.Text;
+            dc.strPass = this.tbxPass.Text;
+            string temp = dc.WriteBinary("dbinfo.dat");
+            if (temp != null)
+            {
+                MessageBox.Show(temp, "Lỗi", MessageBoxButton.OK);
+            }
 
-		private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
-		{
-			// TODO: Add event handler implementation here.
-		}
+        }
 
-		private void btnReset_Click(object sender, System.Windows.RoutedEventArgs e)
-		{
-			// TODO: Add event handler implementation here.
-		}
-	}
+        private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn hủy thông tin trên không?", "Hủy", MessageBoxButton.YesNo);
+            if (msg == MessageBoxResult.Yes)
+            {
+                reset();
+            }
+
+        }
+
+        private void btnReset_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            reset();
+        }
+
+        public void reset()
+        {
+            this.tbxServerName.Text = m_dcSystemInfo.strServerName;
+            this.tbxDatabaseName.Text = m_dcSystemInfo.strDatabaseName;
+            this.tbxUserID.Text = m_dcSystemInfo.strUserID;
+            this.tbxPass.Text = m_dcSystemInfo.strPass;
+            this.tbxServerName.Focus();
+        }
+    }
 }

@@ -3,6 +3,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d" xmlns:local="clr-namespace:APPTier"
+	xmlns:QuanLyThi="clr-namespace:QuanLyThi"
 	x:Class="APPTier.AdminHomepage"
 	x:Name="Window"
 	Title="AdminHomepage"
@@ -71,10 +72,14 @@
 
 	<Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FF282828" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 		<Grid Margin="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0.708*"/>
+				<RowDefinition Height="0.292*"/>
+			</Grid.RowDefinitions>
 		
-			<Rectangle Fill="#FF444444" VerticalAlignment="Top" Height="16.167" Grid.Column="1" RadiusX="5" RadiusY="5" d:IsLocked="True"/>
-			<Rectangle Fill="#FF444444" Margin="0,8,0,0" VerticalAlignment="Top" Height="15.167" Grid.Column="1" d:IsLocked="True"/>
-			<TabControl x:Name="tabMainMenu" Margin="8,27.167,8,8" TabStripPlacement="Right">
+			<Rectangle Fill="#FF444444" VerticalAlignment="Top" Height="16.167" RadiusX="5" RadiusY="5" d:IsLocked="True" d:LayoutOverrides="GridBox"/>
+			<Rectangle Fill="#FF444444" Margin="0,8,0,0" VerticalAlignment="Top" Height="15.167" d:IsLocked="True" d:LayoutOverrides="GridBox"/>
+			<TabControl x:Name="tabMainMenu" Margin="8,27.167,8,8" TabStripPlacement="Right" Grid.RowSpan="2">
 				<TabItem x:Name="tabUser" Header="Nhân viên">
 					<Grid>
 						<Menu x:Name="menuUser" VerticalAlignment="Top" Height="22">
@@ -107,7 +112,7 @@
 						<local:GanttView x:Name="ucGanttStatistic" Margin="6.04,26.833,8,8" Visibility="Hidden"/>
 					</Grid>
 				</TabItem>
-				<TabItem Header="Hệ Thống">
+				<TabItem Header="Hệ Thống" HorizontalAlignment="Right" Width="21.96">
 					<Grid>
 						<Menu x:Name="menuSystem" VerticalAlignment="Top" Height="22">
 							<MenuItem x:Name="mitemRules" Margin="0" Header="Đổi thông số hệ thống" Click="mitemUpdateUser_Click"/>
@@ -116,6 +121,7 @@
 								<MenuItem x:Name="mitemAssignByExam1" Header="Theo Đợt thi" Height="22" Click="mitemAssignByExam_Click"/>
 							</MenuItem>
 						</Menu>
+						<local:ChangeSystemInfo Margin="0,26,0,0"/>
 					</Grid>
 				</TabItem>
 				<TabItem x:Name="tabHelp" Header="Trợ giúp">
