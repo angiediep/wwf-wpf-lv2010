@@ -107,6 +107,17 @@
 						<local:GanttView x:Name="ucGanttStatistic" Margin="6.04,26.833,8,8" Visibility="Hidden"/>
 					</Grid>
 				</TabItem>
+				<TabItem Header="Hệ Thống">
+					<Grid>
+						<Menu x:Name="menuSystem" VerticalAlignment="Top" Height="22">
+							<MenuItem x:Name="mitemRules" Margin="0" Header="Đổi thông số hệ thống" Click="mitemUpdateUser_Click"/>
+							<MenuItem x:Name="mitemSysInfo" Margin="0" Header="Đổi thông số ứng dụng">
+								<MenuItem x:Name="mitemAssignByTime1" Header="Theo Kì" Height="22" Click="mitemAssignByTime_Click"/>
+								<MenuItem x:Name="mitemAssignByExam1" Header="Theo Đợt thi" Height="22" Click="mitemAssignByExam_Click"/>
+							</MenuItem>
+						</Menu>
+					</Grid>
+				</TabItem>
 				<TabItem x:Name="tabHelp" Header="Trợ giúp">
 					<Grid>
 						<Menu x:Name="menuHelp" VerticalAlignment="Top" Height="22">
