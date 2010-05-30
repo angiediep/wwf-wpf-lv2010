@@ -20,7 +20,7 @@ public class DaoCongViec
 	#region "ExportFile" 
 	public DtoCongViec getDataById(int maCV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataCongViec " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -42,7 +42,7 @@ public class DaoCongViec
     }
 	public DataTable getDataTable()
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataCongViec " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -56,7 +56,7 @@ public class DaoCongViec
     }
 	public List<DtoCongViec>  getDataList()
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataCongViec " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -80,7 +80,7 @@ public class DaoCongViec
     }
 	public List<DtoCongViec>  getDataListSortBy(string col, bool flag)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataCongViecSortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -105,7 +105,7 @@ public class DaoCongViec
         return lst;
     }
 	public List<DtoCongViec> getListDataBytenCV(string tenCV)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataCongViecBytenCV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -128,7 +128,7 @@ public class DaoCongViec
         return lst;
     }
 	public List<DtoCongViec> getListDataByngayBatDau(int ngayBatDau)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataCongViecByngayBatDau " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -151,7 +151,7 @@ public class DaoCongViec
         return lst;
     }
 	public List<DtoCongViec> getListDataByngayKetThuc(int ngayKetThuc)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataCongViecByngayKetThuc " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -176,7 +176,7 @@ public class DaoCongViec
 	public int insertData(DtoCongViec data)
     {
         int Id = -1;
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataCongViec " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -190,7 +190,7 @@ public class DaoCongViec
     }
 	public bool deleteData(DtoCongViec data)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataCongViec " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -202,7 +202,7 @@ public class DaoCongViec
     }
 	public bool deleteDataBytenCV(string tenCV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataCongViecBytenCV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -214,7 +214,7 @@ public class DaoCongViec
     }
 	public bool deleteDataByngayBatDau(int ngayBatDau)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataCongViecByngayBatDau " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -226,7 +226,7 @@ public class DaoCongViec
     }
 	public bool deleteDataByngayKetThuc(int ngayKetThuc)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataCongViecByngayKetThuc " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -238,7 +238,7 @@ public class DaoCongViec
     }
 	public bool deleteDataBymoTa(string moTa)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataCongViecBymoTa " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -250,7 +250,7 @@ public class DaoCongViec
     }
 	public bool updateData(DtoCongViec data)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataCongViec " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -265,7 +265,7 @@ public class DaoCongViec
     }
 	public bool updateDataBymaCV(DtoCongViec data,int maCV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataCongViecBymaCV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -280,7 +280,7 @@ public class DaoCongViec
     }
 	public bool updateDataBytenCV(DtoCongViec data,string tenCV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataCongViecBytenCV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -295,7 +295,7 @@ public class DaoCongViec
     }
 	public bool updateDataByngayBatDau(DtoCongViec data,int ngayBatDau)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataCongViecByngayBatDau " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -310,7 +310,7 @@ public class DaoCongViec
     }
 	public bool updateDataByngayKetThuc(DtoCongViec data,int ngayKetThuc)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataCongViecByngayKetThuc " , con);
         cmd.CommandType = CommandType.StoredProcedure;

@@ -20,7 +20,7 @@ public class DaoDotThi
 	#region "ExportFile" 
 	public DtoDotThi getDataById(int maDT)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -41,7 +41,7 @@ public class DaoDotThi
     }
 	public DataTable getDataTable()
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -55,7 +55,7 @@ public class DaoDotThi
     }
 	public List<DtoDotThi>  getDataList()
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -78,7 +78,7 @@ public class DaoDotThi
     }
 	public List<DtoDotThi>  getDataListSortBy(string col, bool flag)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataDOTTHISortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -102,7 +102,7 @@ public class DaoDotThi
         return lst;
     }
 	public List<DtoDotThi> getListDataBytenDT(string tenDT)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHIBytenDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -124,7 +124,7 @@ public class DaoDotThi
         return lst;
     }
 	public List<DtoDotThi> getListDataByngayThi(DateTime ngayThi)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -148,7 +148,7 @@ public class DaoDotThi
 	public int insertData(DtoDotThi data)
     {
         int Id = -1;
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -161,7 +161,7 @@ public class DaoDotThi
     }
 	public bool deleteData(DtoDotThi data)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -173,7 +173,7 @@ public class DaoDotThi
     }
 	public bool deleteDataBytenDT(string tenDT)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHIBytenDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -185,7 +185,7 @@ public class DaoDotThi
     }
 	public bool deleteDataByngayThi(DateTime ngayThi)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -197,7 +197,7 @@ public class DaoDotThi
     }
 	public bool deleteDataBysoLuongThiSinh(int soLuongThiSinh)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDOTTHIBysoLuongThiSinh " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -209,7 +209,7 @@ public class DaoDotThi
     }
 	public bool updateData(DtoDotThi data)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -223,7 +223,7 @@ public class DaoDotThi
     }
 	public bool updateDataBymaDT(DtoDotThi data,int maDT)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBymaDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -237,7 +237,7 @@ public class DaoDotThi
     }
 	public bool updateDataBytenDT(DtoDotThi data,string tenDT)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBytenDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -251,7 +251,7 @@ public class DaoDotThi
     }
 	public bool updateDataByngayThi(DtoDotThi data,DateTime ngayThi)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;

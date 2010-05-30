@@ -20,7 +20,7 @@ public class DaoPhanCong
 	#region "ExportFile" 
 	public DtoPhanCong getDataById(int maCV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -41,7 +41,7 @@ public class DaoPhanCong
     }
 	public DataTable getDataTable()
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -55,7 +55,7 @@ public class DaoPhanCong
     }
 	public List<DtoPhanCong>  getDataList()
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -78,7 +78,7 @@ public class DaoPhanCong
     }
 	public List<DtoPhanCong>  getDataListSortBy(string col, bool flag)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataPhanCongSortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -102,7 +102,7 @@ public class DaoPhanCong
         return lst;
     }
 	public List<DtoPhanCong> getListDataBymaNV(int maNV)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCongBymaNV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -124,7 +124,7 @@ public class DaoPhanCong
         return lst;
     }
 	public List<DtoPhanCong> getListDataByngayApDung(DateTime ngayApDung)    {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCongByngayApDung " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -148,7 +148,7 @@ public class DaoPhanCong
 	public int insertData(DtoPhanCong data)
     {
         int Id = -1;
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -161,7 +161,7 @@ public class DaoPhanCong
     }
 	public bool deleteData(DtoPhanCong data)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -173,7 +173,7 @@ public class DaoPhanCong
     }
 	public bool deleteDataBymaNV(int maNV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCongBymaNV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -185,7 +185,7 @@ public class DaoPhanCong
     }
 	public bool deleteDataByngayApDung(DateTime ngayApDung)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCongByngayApDung " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -197,7 +197,7 @@ public class DaoPhanCong
     }
 	public bool deleteDataByngayHetHan(DateTime ngayHetHan)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCongByngayHetHan " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -209,7 +209,7 @@ public class DaoPhanCong
     }
 	public bool updateData(DtoPhanCong data)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -223,7 +223,7 @@ public class DaoPhanCong
     }
 	public bool updateDataBymaCV(DtoPhanCong data,int maCV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCongBymaCV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -237,7 +237,7 @@ public class DaoPhanCong
     }
 	public bool updateDataBymaNV(DtoPhanCong data,int maNV)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCongBymaNV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -251,7 +251,7 @@ public class DaoPhanCong
     }
 	public bool updateDataByngayApDung(DtoPhanCong data,DateTime ngayApDung)
     {
-        string conStr = DataConnector.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCongByngayApDung " , con);
         cmd.CommandType = CommandType.StoredProcedure;
