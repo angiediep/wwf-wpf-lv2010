@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BUSLayer;
 using DataLayer.DTO;
-
+using QuanLyThi;
 namespace APPTier
 {
     /// <summary>
@@ -31,71 +31,82 @@ namespace APPTier
 
         private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            AdminHomepage adminHomepage = new AdminHomepage();
-                                   adminHomepage.Show();
-            this.Close();
-            //string strUserName = tbxUsername.Text.Trim();
-            //string strPassword = tbxPassword.Password.Trim();
-            //MyHashAlg myHashAlg = new MyHashAlg();
-            //BusNhanVienThuaHanh busNhanVien = new BusNhanVienThuaHanh();
-            //m_userkey = strPassword;
-            //try
-            //{
-            //    if (strUserName == "")
-            //    {
-            //        MessageBoxResult msg = MessageBox.Show("Bạn chưa nhập tên tài khoản!", "Lỗi", MessageBoxButton.OK);
-            //    }
-            //    else if (strPassword == "")
-            //    {
-            //        MessageBoxResult msg = MessageBox.Show("Bạn chưa nhập mật khẩu!", "Lỗi", MessageBoxButton.OK);
-            //    }
-            //    else
-            //    {
-            //        //Hash password
-            //       // Kiểm tra Database giá trị hash và tên tài khoản
-            //        //Nếu không hợp lệ sẽ báo lỗi
-            //        //Nếu hợp lệ, kiểm tra loại user
-            //        List<DtoNhanVienThuaHanh> userList = busNhanVien.getListDataBytenNV(strUserName);
-            //        if (userList.Count > 0)
-            //        {
-            //            int Salt = userList[0].SALT;
-            //            if (Salt == -1)
-            //            {
-            //                MessageBoxResult msg = MessageBox.Show("Tài khoản không hợp lệ!", "Lỗi", MessageBoxButton.OK);
-            //            }
-            //            else
-            //            {
-            //                string passphrase = myHashAlg.Hash(Salt, strPassword); //cai dc luu trong csdl
-            //                if (userList[0].MATKHAU != passphrase)
-            //                {
-            //                    MessageBoxResult msg = MessageBox.Show("Tài khoản không hợp lệ!", "Lỗi", MessageBoxButton.OK);
-            //                }
-            //                else
-            //                {
-            //                    if (userList[0].MANV == 1)
-            //                    {
-            //                        AdminHomepage adminHomepage = new AdminHomepage();
-            //                        adminHomepage.Show();
-            //                        this.Close();
-            //                    }
-            //                    else
-            //                    {
-            //                        UserHomepage userHomepage = new UserHomepage();
-            //                        userHomepage.Show();
-            //                        this.Close();
-            //                    }
-            //                }
+            
+            string strMessage = "";
+            string strUserName = tbxUsername.Text.Trim().Replace('\'',' ');
+            string strPassword = tbxPassword.Password.Trim().Replace('\'', ' ');
+            MyHashAlg myHashAlg = new MyHashAlg();
+            
+            if ("".Equals(strUserName) || "".Equals(strPassword))
+            {
+                strMessage = "Vui lòng nhập chính xác tên và mật khẩu để đăng nhập. ";
+                goto QUIT;
+            }
 
-            //            }
-            //            //Nếu là nhân viên, mở cửa sổ Nhân viên với các chức năng tương ứng
-            //            MessageBox.Show("đăng nhập thành công. nhưng chưa có code trang nhân viên");
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBoxResult msg = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButton.OK);
-            //}
+            BusNhanVienThuaHanh busNhanVien = new BusNhanVienThuaHanh();
+            List<DtoNhanVienThuaHanh> lstNhanVienThuaHanh = busNhanVien.getListDataBytenDangNhap(strUserName);
+            if (lstNhanVienThuaHanh.Count <= 0)
+            {
+                //tên đăng nhập không tồn tại trong bảng nhân viên thừa hành.
+                //Thử đăng nhập với admin:
+                goto LOGIN_AS_ADMIN;
+            }
+            
+            int salt = lstNhanVienThuaHanh[0].SALT;
+            if (myHashAlg.Hash(salt, strPassword).Equals(lstNhanVienThuaHanh[0].MATKHAU))
+            {
+                /**
+                 * Đăng nhập thành công với vai trò nhân viên thừa hành.
+                 */
+                UserHomepage userHomePage = new UserHomepage();
+                userHomePage.Show();
+                this.Close();
+                Constants.strUserName = strUserName;
+                Constants.strRealName = lstNhanVienThuaHanh[0].TENNV;
+                Constants.iUserType = 2;
+                return;
+            }
+            else
+            { 
+                /**
+                 * Tên đăng nhập có trong bảng nhân viên thừa hành nhưng đăng nhập không thành công vì
+                 * mật khẩu không đúng.
+                 */
+                strMessage = "Mật khẩu không đúng. Vui lòng kiểm tra và thử lại sau.";
+                goto QUIT;
+            }
+            
+        LOGIN_AS_ADMIN:
+            BusQuanLy busQuanLy = new BusQuanLy();
+            List<DtoQuanLy> lstQuanLy = busQuanLy.getDataList();
+            if (lstQuanLy.Count == 0 || !lstQuanLy[0].TENDANGNHAP.Equals(strUserName))
+            {
+                /**
+                 * Tên đăng nhập không tồn tại cả trong bảng dữ liệu NV Thừa hành lẫn NV Quản lý.
+                 */
+                strMessage = "Tên đăng nhập không tồn tại. Vui lòng kiểm tra và thử lại sau.";
+                goto QUIT;
+            }
+            salt = lstQuanLy[0].SALT;
+            if (myHashAlg.Hash(salt, strPassword).Equals(lstQuanLy[0].MATKHAU))
+            {
+                /*
+                 * Đăng nhập thành công với vai trò quản trị.
+                 */
+                AdminHomepage adminHomePage = new AdminHomepage();
+                adminHomePage.Show();
+                Constants.strUserName = strUserName;
+                Constants.strRealName = "Admin";
+                this.Close();
+            }
+            else
+            {
+                strMessage = "Mật khẩu không đúng. Vui lòng kiểm tra và thử lại sau.";
+                goto QUIT;
+            }
+            return;
+        QUIT:
+            MessageBox.Show(strMessage, "Lỗi", MessageBoxButton.OK);
         }
 
         private void btnRegister_Click(object sender, System.Windows.RoutedEventArgs e)

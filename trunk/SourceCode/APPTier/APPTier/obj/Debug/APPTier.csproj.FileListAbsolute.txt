@@ -130,3 +130,5 @@ C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTie
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
 E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
