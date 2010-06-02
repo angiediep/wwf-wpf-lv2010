@@ -37,86 +37,7 @@ namespace APPTier
             }
         }
 
-        private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            try
-            {
-                int iCheckFinish = 1; //kiểm tra có nhập đủ thông tin chưa, mặc định là đủ
-                //nếu kiểm tra có ô thông tin chưa điền, iCheckFinish = 0
-                if (tbxPassword.Password == "")
-                {
-                    iCheckFinish = 0;
-                }
-                else
-                {
-                    foreach (TextBox temp in FindVisualChildren<TextBox>(this.Window))
-                    {
-                        if (temp.Text == "")//nếu thông tin có rỗng
-                        {
-                            iCheckFinish = 0;
-                            break;
-                        }
-                    }
-                }
-                //Nếu thông tin chưa hoàn tất, hỏi xem có muốn thoát khỏi đăng kí và vào đăng nhập không
-                //Nếu có, hiện đăng nhập
-                if (iCheckFinish == 0)
-                {
-                    MessageBoxResult msg = MessageBox.Show("Bạn chưa hoàn tất thủ tục đăng kí, bạn có thật sự muốn đăng nhập không?", "Đăng nhập", MessageBoxButton.YesNo);
-                    if (msg == MessageBoxResult.Yes)
-                    {
-                        Login login = new Login();
-                        login.Show();
-                        this.Close();
-
-                    }
-                }
-                //Nếu thông tin đã hoàn tất, thông báo thông tin chưa được lưu, hỏi xem người dùng có muốn lưu không
-                //Nếu có, tiến hành lưu và hiện form đăng nhập
-                //Nếu không, bỏ qua và chỉ hiện form đăng nhập
-                else
-                {
-                    MessageBoxResult msg = MessageBox.Show("Bạn chưa chọn đăng kí, bạn có muốn chúng tôi đăng kí với thông tin này không?", "Đăng nhập", MessageBoxButton.YesNo);
-                    if (msg == MessageBoxResult.Yes)
-                    {
-                        //Lưu thông tin đăng kí xuống cơ sở dữ liệu
-                        DtoNhanVienThuaHanh user = new DtoNhanVienThuaHanh();
-                        MyHashAlg hash = new MyHashAlg();
-                        if (!Regex.IsMatch(this.tbxEmail.Text, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
-                        {
-                            MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButton.OK);
-
-                        }
-                        else
-                        {
-                            user.TENNV = this.tbxRealName.Text;
-                            user.DIENTHOAI = this.tbxPhone.Text;
-                            user.EMAIL = this.tbxEmail.Text;
-                            user.SALT = MyHashAlg.CreateRandomSalt();
-                            user.MATKHAU = hash.Hash(user.SALT, this.tbxPassword.Password);
-                            BusNhanVienThuaHanh _user = new BusNhanVienThuaHanh();
-                            List<DtoNhanVienThuaHanh> users = _user.getListDataBytenNV(user.TENNV);
-                            if (users != null)
-                            {
-                                MessageBox.Show("Tài khoản đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButton.OK);
-                            }
-                            else
-                            {
-                                _user.insertData(user);
-                            }
-                        }
-                        MessageBox.Show("Thủ tục đăng kí hoàn tất, bấm OK để đăng nhập!", "Đăng kí", MessageBoxButton.OK);
-                    }
-                    Login login = new Login();
-                    login.Show();
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBoxResult msg = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButton.OK);
-            }
-        }
+       
 
         private void btnRegister_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -125,6 +46,7 @@ namespace APPTier
             //Lấy thông tin từ form:
             string strUserName = tbxUsername.Text.Trim().Replace('\'', ' ');
             string strPassword = tbxPassword.Password.Trim().Replace('\'', ' ');
+            string strRePassword = tbxRePassword.Password.Trim().Replace('\'', ' ');
             string strRealName = tbxRealName.Text.Trim().Replace('\'', ' ');
             string strPhoneNumber = tbxPhone.Text.Trim().Replace('\'', ' ');
             string strEmail = tbxEmail.Text.Trim().Replace('\'', ' '); 
@@ -140,14 +62,17 @@ namespace APPTier
                 strMessage = "Vui lòng nhập đủ các thông tin để đăng ký!";
                 goto QUIT;
             }
-            
+            if (!strPassword.Equals(strRealName))
+            {
+                strMessage = "Mật khẩu nhập lại không khớp. Vui lòng kiểm tra và thử lại sau.";
+                goto QUIT;
+            }
             if (!Regex.IsMatch(strEmail, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
             {
                 strMessage = "Email không hợp lệ!";
                 goto QUIT;
             }
-
-            
+                        
 
             /*
              * Lưu thông tin đăng kí xuống cơ sở dữ liệu
@@ -235,6 +160,13 @@ namespace APPTier
             {
                 this.Close();
             }
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            UserHomepage userHomePage = new UserHomepage();
+            userHomePage.Show();
+            this.Close();
         }
     }
 }
