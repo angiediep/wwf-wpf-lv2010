@@ -14,6 +14,7 @@ using System.Data;
 using BUSLayer;
 using DataLayer.DTO;
 using Microsoft.Windows.Controls;
+using Microsoft.Windows.Controls.Primitives;
 namespace APPTier
 {
     /// <summary>
@@ -25,6 +26,7 @@ namespace APPTier
         {
             this.InitializeComponent();
 
+            #region button edit
             DataGridTemplateColumn item = new DataGridTemplateColumn();
             DataTemplate temp = new DataTemplate();
             temp.DataType = typeof(Button);
@@ -33,14 +35,31 @@ namespace APPTier
             spFactory.Name = "Edit";
             spFactory.SetValue(Button.ContentProperty, "Sửa");
             spFactory.SetValue(Button.NameProperty, "btnEdit");
-            //spFactory.SetValue(Button.WidthProperty, "66");
+            spFactory.AddHandler(Button.ClickEvent, new RoutedEventHandler(btnEdit_Click));
           
             temp.VisualTree = spFactory;
             item.CellTemplate = temp;
             dtgvUser.Columns.Add(item);
+            #endregion
 
-            DataGridTextColumn item2 = new DataGridTextColumn();
+            #region button delete
+            DataGridTemplateColumn item2 = new DataGridTemplateColumn();
+            DataTemplate temp2 = new DataTemplate();
+            temp2.DataType = typeof(Button);
+
+            FrameworkElementFactory spFactory2 = new FrameworkElementFactory(typeof(Button));
+            spFactory2.Name = "Delete";
+            spFactory2.SetValue(Button.ContentProperty, "Xóa");
+            spFactory2.SetValue(Button.NameProperty, "btnDelete");
+            spFactory2.AddHandler(Button.ClickEvent, new RoutedEventHandler(btnDelete_Click));
+
+            temp2.VisualTree = spFactory2;
+            item2.CellTemplate = temp2;
             dtgvUser.Columns.Add(item2);
+            #endregion
+
+            DataGridTextColumn item3 = new DataGridTextColumn();
+            dtgvUser.Columns.Add(item3);
 
             BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
             //DataTable dt = new DataTable();
@@ -62,25 +81,34 @@ namespace APPTier
              * Đặt tên column trong datagrid
              */
             dtgvUser.Columns[0].Header = "Chỉnh sửa";
-            dtgvUser.Columns[1].Header = "Số thứ tự";
-            dtgvUser.Columns[2].Header = "Mã nhân viên";
-            dtgvUser.Columns[3].Header = "Tên đăng nhập";
-            dtgvUser.Columns[4].Header = "Mật khẩu";
-            dtgvUser.Columns[5].Header = "SALT";
-            dtgvUser.Columns[6].Header = "Email";
-            dtgvUser.Columns[7].Header = "Họ và tên ";
-            dtgvUser.Columns[8].Header = "Điện thoại";
+            dtgvUser.Columns[1].Header = "Xóa";
+            dtgvUser.Columns[2].Header = "Số thứ tự";
+            dtgvUser.Columns[3].Header = "Mã nhân viên";
+            dtgvUser.Columns[4].Header = "Tên đăng nhập";
+            dtgvUser.Columns[5].Header = "Mật khẩu";
+            dtgvUser.Columns[6].Header = "Mã xác nhận";
+            dtgvUser.Columns[7].Header = "Email";
+            dtgvUser.Columns[8].Header = "Họ và tên ";
+            dtgvUser.Columns[9].Header = "Điện thoại";
 
+            /* them so thu tu cho cot 
+             * nhung chi them luc load, chua co lam cho them tu dong
+             */
             for (int i = 0; i < dtgvUser.Items.Count; i++)
             {
-                
+                DataGridCell cell = new DataGridCell();
+                cell = GetCell(dtgvUser, i, 2);
+                cell.Content = i + 1;
+                cell.VerticalContentAlignment = VerticalAlignment.Center;
             }
+
+
             /*
              * Ẩn các cột không cho xem
              */
+            dtgvUser.Columns[5].Visibility = Visibility.Hidden;
+            dtgvUser.Columns[6].Visibility = Visibility.Hidden;
             dtgvUser.Columns[3].Visibility = Visibility.Hidden;
-            dtgvUser.Columns[4].Visibility = Visibility.Hidden;
-            dtgvUser.Columns[1].Visibility = Visibility.Hidden;
 
         }
 
@@ -114,6 +142,77 @@ namespace APPTier
 
         void loadUserList()
         {
+        }
+
+        public DataGridCell GetCell(DataGrid dg, int row, int column)
+        {
+            DataGridRow rowContainer = GetRow(dg, row);
+
+            if (rowContainer != null)
+            {
+                DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(rowContainer);
+
+                // Try to get the cell but it may possibly be virtualized.
+                DataGridCell cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                if (cell == null)
+                {
+                    // Now try to bring into view and retreive the cell.
+                    dg.ScrollIntoView(rowContainer, dg.Columns[column]);
+                    cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                }
+                return cell;
+            }
+            return null;
+        }
+
+        public DataGridRow GetRow(DataGrid dg, int index)
+        {
+            DataGridRow row = (DataGridRow)dg.ItemContainerGenerator.ContainerFromIndex(index);
+            if (row == null)
+            {
+                // May be virtualized, bring into view and try again.
+                dg.UpdateLayout();
+                dg.ScrollIntoView(dg.Items[index]);
+                row = (DataGridRow)dg.ItemContainerGenerator.ContainerFromIndex(index);
+            }
+            return row;
+        }
+
+        public static T GetVisualChild<T>(Visual parent) where T : Visual
+        {
+            T child = default(T);
+            int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < numVisuals; i++)
+            {
+                Visual v = (Visual)VisualTreeHelper.GetChild(parent, i);
+                child = v as T;
+                if (child == null)
+                {
+                    child = GetVisualChild<T>(v);
+                }
+                if (child != null)
+                {
+                    break;
+                }
+            }
+            return child;
+        }
+
+        private void btnEdit_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            /* add code update/add new NhanVien  here
+             */
+            MessageBoxResult msg = MessageBox.Show("Quá trình cập nhật thành công! ", "Sửa Nhân viên", MessageBoxButton.OK);
+
+        }
+
+        private void btnDelete_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            /* add code delete NhanVien here
+             */
+            MessageBoxResult msg = MessageBox.Show("Quá trình xóa thành công", "Xóa Nhân viên", MessageBoxButton.OK);
         }
 
     }
