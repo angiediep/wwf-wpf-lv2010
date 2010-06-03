@@ -23,7 +23,6 @@ namespace DataLayer.DAO
             m_strDatabaseName = "QuyTrinhThiDB";
             m_strUserID = " ";
             m_strPass = " ";
-            WriteBinary("dbinfo.dat");
         }
 
         public string strServerName
