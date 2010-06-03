@@ -111,7 +111,7 @@
 			<Label x:Name="lblUsername" HorizontalAlignment="Left" Margin="48.552,84.966,0,0" Width="133" Content="Tên người dùng:" Grid.Column="1" Foreground="White" Height="13.76" VerticalAlignment="Top" />
 			<Label x:Name="lblPassword" HorizontalAlignment="Left" Margin="48.552,0,0,86.394" Width="133" Content="Mật khẩu:" Grid.Column="1" Foreground="White" Height="11.103" VerticalAlignment="Bottom" />
 			<Button x:Name="btnLogin" Margin="163.506,0,221.34,42.84"   Content="Đăng nhập" Grid.Column="1" VerticalAlignment="Bottom" Height="23" Click="btnLogin_Click" TabIndex="2" IsDefault="True" ToolTip="Tiến hành đăng nhập" />
-			<PasswordBox x:Name="tbxPassword" Password="admin" Margin="163.333,0,61.477,85.68" Grid.Column="1" VerticalAlignment="Bottom" Height="20" BorderThickness="0.5" MinWidth="250" MaxWidth="250" TabIndex="1" ToolTip="mật khẩu đăng nhập hệ thống">
+			<PasswordBox x:Name="tbxPassword" Password="123456" Margin="163.333,0,61.477,85.68" Grid.Column="1" VerticalAlignment="Bottom" Height="20" BorderThickness="0.5" MinWidth="250" MaxWidth="250" TabIndex="1" ToolTip="mật khẩu đăng nhập hệ thống">
 				<PasswordBox.BorderBrush>
 					<LinearGradientBrush EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
 						<GradientStop Color="#FF888888" Offset="0.05"/>
@@ -122,7 +122,7 @@
         
 			<TextBlock x:Name="lblFuncName" Margin="163.333,47,126.73,0" VerticalAlignment="Top" Height="25" Grid.Column="1" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment, GridBox" FontSize="16" Foreground="White"><Run Text="ĐĂNG NHẬP HỆ THỐNG"/></TextBlock>
 			<Button x:Name="btnRegister" Margin="0,0,117.096,42.84" Content="Đăng kí" Grid.Column="1" VerticalAlignment="Bottom" Height="23" Click="btnRegister_Click" HorizontalAlignment="Right" Width="86.033" TabIndex="3" ToolTip="Đăng ký tài khoản mới" />
-			<TextBox x:Name="tbxUsername" Margin="153.51,79.254,52.836,0" VerticalAlignment="Top" Height="20" Grid.Column="1" TextWrapping="Wrap" BorderThickness="0.5" Text="admin" Width="250" MinWidth="250" MaxWidth="250" TabIndex="0" ToolTip="tên đăng nhập hệ thống" />
+			<TextBox x:Name="tbxUsername" Margin="153.51,79.254,52.836,0" VerticalAlignment="Top" Height="20" Grid.Column="1" TextWrapping="Wrap" BorderThickness="0.5" Text="nmbinh" Width="250" MinWidth="250" MaxWidth="250" TabIndex="0" ToolTip="tên đăng nhập hệ thống" />
 			<Rectangle Fill="#FF444444" VerticalAlignment="Top" Height="16.167" d:LayoutOverrides="HorizontalAlignment" Grid.Column="1" RadiusX="5" RadiusY="5" d:IsLocked="True"/>
 			<Rectangle Fill="#FF444444" Margin="0,3.57,0,0" VerticalAlignment="Top" Height="15.167" d:LayoutOverrides="HorizontalAlignment" Grid.Column="1" d:IsLocked="True"/>
 			<Button x:Name="btnMinimize" HorizontalAlignment="Right" Margin="0,3.026,35.728,0" Style="{DynamicResource btnMinimize}" VerticalAlignment="Top" Width="4.472" Height="16.194" Content="Button" Grid.Column="1"/>

@@ -8,3 +8,8 @@ C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelL
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb

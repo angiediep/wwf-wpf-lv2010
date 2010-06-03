@@ -48,7 +48,7 @@ namespace ModelReader
                             break;
                         case "ns0:Work":
                             act = new WorkItem(new Random().Next(), tr.GetAttribute("x:Name"), new Random().Next(1, 5));
-                            Thread.Sleep(1000);
+                            //Thread.Sleep(1000);
                             flag = 1;
                             break;
                     }
