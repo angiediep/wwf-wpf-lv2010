@@ -31,7 +31,7 @@ namespace APPTier
 
         private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            
+
             string strMessage = "";
             string strUserName = tbxUsername.Text.Trim().Replace('\'',' ');
             string strPassword = tbxPassword.Password.Trim().Replace('\'', ' ');

@@ -12,7 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using BUSLayer;
-
+using DataLayer.DTO;
 namespace APPTier
 {
 	/// <summary>
@@ -22,14 +22,46 @@ namespace APPTier
 	{
 		public UpdateUser()
 		{
-            //this.InitializeComponent();
-            //BusNhanVien users = new BusNhanVien();
+            this.InitializeComponent();
+            BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
             //DataTable dt = new DataTable();
-            //dt = users.getDataTable();
-            //this.dtgvUser.ItemsSource = dt.DefaultView;
+            List<DtoNhanVienThuaHanh> lst = new List<DtoNhanVienThuaHanh>();
+            lst = users.getDataList();
+            dtgvUser.ItemsSource = lst;
+            dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
+            
+            
 		}
+        /// <summary>
+        /// Được gọi sau khi dữ liệu được load lên datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void dtgvUser_Loaded(object sender, RoutedEventArgs e)
+        {
+            /*
+             * Đặt tên column trong datagrid
+             */
+            dtgvUser.Columns[0].Header = "Mã nhân viên";
+            dtgvUser.Columns[1].Header = "Tên đăng nhập";
+            dtgvUser.Columns[2].Header = "Mật khẩu";
+            dtgvUser.Columns[3].Header = "SALT";
+            dtgvUser.Columns[4].Header = "Email";
+            dtgvUser.Columns[5].Header = "Họ và tên ";
+            dtgvUser.Columns[6].Header = "Điện thoại";
+            
+            /*
+             * Ẩn các cột không cho xem
+             */
+            dtgvUser.Columns[2].Visibility = Visibility.Hidden;
+            dtgvUser.Columns[3].Visibility = Visibility.Hidden;
+            dtgvUser.Columns[0].Visibility = Visibility.Hidden;
+            
+        }
 
-		private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
+
+
+        private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
             //MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn hủy cập nhật thông tin không?","Cập nhật Nhân viên", MessageBoxButton.YesNo);
@@ -40,6 +72,7 @@ namespace APPTier
             //    dt = users.getDataTable();
             //    this.dtgvUser.ItemsSource = dt.DefaultView;
             //}
+            
 		}
 
 		private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -60,6 +93,7 @@ namespace APPTier
 
                 
             //}
+
 		}
-	}
+    }
 }

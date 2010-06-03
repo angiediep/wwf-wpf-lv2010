@@ -76,7 +76,7 @@
 
 	<Grid x:Name="LayoutRoot">
 		<Border HorizontalAlignment="Right" Margin="0,86,111,164.357" Width="749" BorderBrush="#FF787878" BorderThickness="1" CornerRadius="6">
-			<Custom:DataGrid x:Name="dtgvUser" AutoGenerateColumns="True" ItemsSource="{Binding Collection}" Margin="8"/>
+			<Custom:DataGrid x:Name="dtgvUser" AutoGenerateColumns="True" ItemsSource="{Binding Collection}" Margin="8" ColumnWidth="SizeToHeader" />
 		</Border>
 		<Button x:Name="btnSave" HorizontalAlignment="Left" Margin="391.6,0,0,101.4"   VerticalAlignment="Bottom" Width="66" Height="25" Content="Lưu" Click="btnSave_Click"/>
 		<Button x:Name="btnCancel" Margin="461.6,0,418.4,101.4"   VerticalAlignment="Bottom" Height="25" Content="Hủy" Click="btnCancel_Click"/>
