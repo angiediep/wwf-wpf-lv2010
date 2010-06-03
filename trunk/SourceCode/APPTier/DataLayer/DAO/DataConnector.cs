@@ -19,10 +19,11 @@ namespace DataLayer.DAO
 
         public DataConnector()
         {
-            m_strServerName = "DHA\\SQLEXPRESS";
+            m_strServerName = "DHA-PC\\SQLEXPRESS";
             m_strDatabaseName = "QuyTrinhThiDB";
             m_strUserID = " ";
             m_strPass = " ";
+            WriteBinary("dbinfo.dat");
         }
 
         public string strServerName
