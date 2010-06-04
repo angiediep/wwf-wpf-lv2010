@@ -195,6 +195,8 @@ F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\b
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb

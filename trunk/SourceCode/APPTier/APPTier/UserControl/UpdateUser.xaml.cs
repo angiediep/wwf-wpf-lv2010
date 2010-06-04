@@ -15,6 +15,7 @@ using BUSLayer;
 using DataLayer.DTO;
 using Microsoft.Windows.Controls;
 using Microsoft.Windows.Controls.Primitives;
+using QuanLyThi;
 namespace APPTier
 {
     /// <summary>
@@ -24,49 +25,18 @@ namespace APPTier
     {
         public UpdateUser()
         {
+
             this.InitializeComponent();
-
-            #region button edit
-            DataGridTemplateColumn item = new DataGridTemplateColumn();
-            DataTemplate temp = new DataTemplate();
-            temp.DataType = typeof(Button);
-
-            FrameworkElementFactory spFactory = new FrameworkElementFactory(typeof(Button));
-            spFactory.Name = "Edit";
-            spFactory.SetValue(Button.ContentProperty, "Sửa");
-            spFactory.SetValue(Button.NameProperty, "btnEdit");
-            spFactory.AddHandler(Button.ClickEvent, new RoutedEventHandler(btnEdit_Click));
-          
-            temp.VisualTree = spFactory;
-            item.CellTemplate = temp;
-            dtgvUser.Columns.Add(item);
-            #endregion
-
-            #region button delete
-            DataGridTemplateColumn item2 = new DataGridTemplateColumn();
-            DataTemplate temp2 = new DataTemplate();
-            temp2.DataType = typeof(Button);
-
-            FrameworkElementFactory spFactory2 = new FrameworkElementFactory(typeof(Button));
-            spFactory2.Name = "Delete";
-            spFactory2.SetValue(Button.ContentProperty, "Xóa");
-            spFactory2.SetValue(Button.NameProperty, "btnDelete");
-            spFactory2.AddHandler(Button.ClickEvent, new RoutedEventHandler(btnDelete_Click));
-
-            temp2.VisualTree = spFactory2;
-            item2.CellTemplate = temp2;
-            dtgvUser.Columns.Add(item2);
-            #endregion
-
-            DataGridTextColumn item3 = new DataGridTextColumn();
-            dtgvUser.Columns.Add(item3);
+            
+            DataGridTextColumn soThuTu = new DataGridTextColumn();
+            dtgvUser.Columns.Add(soThuTu);
 
             BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
             //DataTable dt = new DataTable();
             List<DtoNhanVienThuaHanh> lst = new List<DtoNhanVienThuaHanh>();
             lst = users.getDataList();
             dtgvUser.ItemsSource = lst;
-
+            
             dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
         }
 
@@ -77,29 +47,42 @@ namespace APPTier
         /// <param name="e"></param>
         void dtgvUser_Loaded(object sender, RoutedEventArgs e)
         {
+            DataGridTextColumn columnEdit = new DataGridTextColumn();
+            DataGridTextColumn columnDelete = new DataGridTextColumn();
+            dtgvUser.Columns.Add(columnEdit);
+            dtgvUser.Columns.Add(columnDelete);
             /*
              * Đặt tên column trong datagrid
              */
-            dtgvUser.Columns[0].Header = "Chỉnh sửa";
-            dtgvUser.Columns[1].Header = "Xóa";
-            dtgvUser.Columns[2].Header = "Số thứ tự";
-            dtgvUser.Columns[3].Header = "Mã nhân viên";
-            dtgvUser.Columns[4].Header = "Tên đăng nhập";
-            dtgvUser.Columns[5].Header = "Mật khẩu";
-            dtgvUser.Columns[6].Header = "Mã xác nhận";
-            dtgvUser.Columns[7].Header = "Email";
-            dtgvUser.Columns[8].Header = "Họ và tên ";
-            dtgvUser.Columns[9].Header = "Điện thoại";
-
+            dtgvUser.Columns[0].Header = "Số thứ tự";
+            dtgvUser.Columns[1].Header = "Mã nhân viên";
+            dtgvUser.Columns[2].Header = "Tên đăng nhập";
+            dtgvUser.Columns[3].Header = "Mật khẩu";
+            dtgvUser.Columns[3].Header = "Mã xác nhận";
+            dtgvUser.Columns[5].Header = "Email";
+            dtgvUser.Columns[6].Header = "Họ và tên ";
+            dtgvUser.Columns[7].Header = "Điện thoại";
+            dtgvUser.Columns[8].Header = "Cập nhật";
+            dtgvUser.Columns[9].Header = "Xóa";
+            
+           
             /* them so thu tu cho cot 
              * nhung chi them luc load, chua co lam cho them tu dong
              */
+            FrameworkElementFactory spFactory = new FrameworkElementFactory(typeof(Button));
             for (int i = 0; i < dtgvUser.Items.Count; i++)
             {
                 DataGridCell cell = new DataGridCell();
-                cell = GetCell(dtgvUser, i, 2);
+                cell = GetCell(dtgvUser, i, 0);
                 cell.Content = i + 1;
                 cell.VerticalContentAlignment = VerticalAlignment.Center;
+
+                Button button = new Button();
+                cell = GetCell(dtgvUser, i, 8);
+                button.Content = "Sửa";
+                button.Uid = i.ToString();
+                button.Click += new RoutedEventHandler(btnEdit_Click);
+                cell.Content = button;
             }
 
 
@@ -111,6 +94,7 @@ namespace APPTier
             dtgvUser.Columns[3].Visibility = Visibility.Hidden;
 
         }
+
 
 
         private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -203,8 +187,13 @@ namespace APPTier
             // TODO: Add event handler implementation here.
             /* add code update/add new NhanVien  here
              */
-            MessageBoxResult msg = MessageBox.Show("Quá trình cập nhật thành công! ", "Sửa Nhân viên", MessageBoxButton.OK);
-
+            Button button = (Button)e.Source;
+            int i = int.Parse(button.Uid);
+            string str = "cap nhat thanh cong dong thu " + i;
+            
+            
+            str += "co id la: " + GetCell(dtgvUser, i, 1).Content.ToString();
+            MessageBox.Show(str);
         }
 
         private void btnDelete_Click(object sender, System.Windows.RoutedEventArgs e)
