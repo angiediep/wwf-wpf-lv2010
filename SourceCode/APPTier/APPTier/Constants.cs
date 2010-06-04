@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QuanLyThi
 {
-    public  class  Constants
+    public  static class  Constants
     {
         /// <summary>
         /// Tên đăng nhập của người dùng hiện tại
@@ -21,6 +21,6 @@ namespace QuanLyThi
         /// 1: Nhân viên quản lý
         /// 2: nhân viên thừa hành.
         /// </summary>
-        public static int iUserType = 0; 
+        public static int iUserType; 
     }
 }

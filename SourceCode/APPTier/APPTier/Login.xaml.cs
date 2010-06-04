@@ -31,7 +31,7 @@ namespace APPTier
 
         private void btnLogin_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            
             string strMessage = "";
             string strUserName = tbxUsername.Text.Trim().Replace('\'',' ');
             string strPassword = tbxPassword.Password.Trim().Replace('\'', ' ');
@@ -45,7 +45,8 @@ namespace APPTier
 
             BusNhanVienThuaHanh busNhanVien = new BusNhanVienThuaHanh();
             List<DtoNhanVienThuaHanh> lstNhanVienThuaHanh = busNhanVien.getListDataBytenDangNhap(strUserName);
-            if (lstNhanVienThuaHanh.Count <= 0)
+            
+            if (lstNhanVienThuaHanh == null || lstNhanVienThuaHanh.Count <= 0)
             {
                 //tên đăng nhập không tồn tại trong bảng nhân viên thừa hành.
                 //Thử đăng nhập với admin:
@@ -59,11 +60,11 @@ namespace APPTier
                  * Đăng nhập thành công với vai trò nhân viên thừa hành.
                  */
                 UserHomepage userHomePage = new UserHomepage();
-                userHomePage.Show();
-                this.Close();
                 Constants.strUserName = strUserName;
                 Constants.strRealName = lstNhanVienThuaHanh[0].TENNV;
                 Constants.iUserType = 2;
+                this.Close();
+                userHomePage.Show();
                 return;
             }
             else
@@ -79,12 +80,12 @@ namespace APPTier
         LOGIN_AS_ADMIN:
             BusQuanLy busQuanLy = new BusQuanLy();
             List<DtoQuanLy> lstQuanLy = busQuanLy.getDataList();
-            if (lstQuanLy.Count == 0 || !lstQuanLy[0].TENDANGNHAP.Equals(strUserName))
+            if (lstQuanLy == null || lstQuanLy.Count == 0 || !lstQuanLy[0].TENDANGNHAP.Equals(strUserName))
             {
                 /**
                  * Tên đăng nhập không tồn tại cả trong bảng dữ liệu NV Thừa hành lẫn NV Quản lý.
                  */
-                strMessage = "Tên đăng nhập không tồn tại. Vui lòng kiểm tra và thử lại sau.";
+                strMessage = "Tên đăng nhập không tồn tại hoặc không kết nối được với cơ sở dữ liệu. Vui lòng kiểm tra và thử lại sau.";
                 goto QUIT;
             }
             salt = lstQuanLy[0].SALT;
@@ -94,10 +95,11 @@ namespace APPTier
                  * Đăng nhập thành công với vai trò quản trị.
                  */
                 AdminHomepage adminHomePage = new AdminHomepage();
-                adminHomePage.Show();
                 Constants.strUserName = strUserName;
                 Constants.strRealName = "Admin";
+                Constants.iUserType = 1;
                 this.Close();
+                adminHomePage.Show();
             }
             else
             {
