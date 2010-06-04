@@ -33,11 +33,12 @@ namespace APPTier
         {
             // TODO: Add event handler implementation here.
             DataConnector dc = new DataConnector();
-            dc.strServerName = this.tbxServerName.Text;
-            dc.strDatabaseName = this.tbxDatabaseName.Text;
-            dc.strUserID = this.tbxUserID.Text;
-            dc.strPass = this.tbxPass.Text;
+            dc.strServerName = this.tbxServerName.Text.Trim();
+            dc.strDatabaseName = this.tbxDatabaseName.Text.Trim();
+            dc.strUserID = this.tbxUserID.Text.Trim();
+            dc.strPass = this.tbxPass.Text.Trim();
             string temp = dc.WriteBinary("dbinfo.dat");
+            
             if (temp != null)
             {
                 MessageBox.Show(temp, "Lỗi", MessageBoxButton.OK);

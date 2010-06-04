@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Windows.Controls;
 using System.Data;
 using BUSLayer;
 
@@ -22,13 +23,28 @@ namespace APPTier
 	{
 		public UpdateExam()
 		{
-            //this.InitializeComponent();
-            //BUSLayer.BusDotThi exams = new BUSLayer.BusDotThi();
-            //DataTable dt = new DataTable();
-            //dt = exams.getDataTable();
-            //this.dtgvExam.ItemsSource = dt.DefaultView;
+            this.InitializeComponent();
+            LoadMainData();            
 		}
+        /// <summary>
+        /// Load dữ liệu các đợt thi.
+        /// </summary>
+        public void LoadMainData()
+        {
+            BusDotThi busDotThi = new BusDotThi();
+            //Add cột thứ tự:
+            DataGridTextColumn column = new DataGridTextColumn();
+            dtgvExam.Columns.Add(column);
+            dtgvExam.ItemsSource = busDotThi.getDataList();
+            dtgvExam.InitializingNewItem += new InitializingNewItemEventHandler(dtgvExam_InitializingNewItem);
+            //dtgvExam.
+        }
 
+      
+        void dtgvExam_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
+        {
+            MessageBox.Show("ok");
+        }
 		private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.
@@ -45,6 +61,7 @@ namespace APPTier
             //    //Luu thong tin da cap nhat xuong
             //    //Hien thi lai thong tin
             //}
+            
 		}
 
 		private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)

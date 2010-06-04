@@ -80,10 +80,15 @@ namespace APPTier
 
             dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
             dtgvUser.RowEditEnding += new EventHandler<DataGridRowEditEndingEventArgs>(dtgvUser_RowEditEnding);
-
+            dtgvUser.CanUserSortColumns = false;
+            
             dtgvUser.CanUserAddRows = false;
             dtgvUser.CanUserDeleteRows = false;
         }
+
+
+       
+
 
         /// <summary>
         /// Được gọi sau khi dữ liệu được load lên datagrid
@@ -130,14 +135,14 @@ namespace APPTier
             }
             if (messageBoxResult == MessageBoxResult.No)
                 goto SAVE_DELETING;
-            for (int i = 0; i < m_lstDeleted.Count; i++)
+            for (int i = 0; i < m_lstEdited.Count; i++)
             {
                 dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstEdited[i];
                 busNhanVienThuaHanh.updateData(dtoNhanVienThuaHanh);
             }
         SAVE_DELETING:
             messageBoxResult = MessageBoxResult.No;
-            if (m_lstEdited.Count > 0)
+            if (m_lstDeleted.Count > 0)
             {
                 strMessage = "Bạn vừa thực hiện một số thao tác xóa thông tin nhân viên.\n\r";
                 strMessage += "Bạn có chắc chắn xóa vĩnh viễn không?";
