@@ -16,9 +16,7 @@
 			<Setter Property="Control.Template">
 				<Setter.Value>
 					<ControlTemplate>
-						<Border>
-							<Rectangle Margin="2" Stroke="#60000000" StrokeThickness="1" StrokeDashArray="1 2"/>
-						</Border>
+						
 					</ControlTemplate>
 				</Setter.Value>
 			</Setter>

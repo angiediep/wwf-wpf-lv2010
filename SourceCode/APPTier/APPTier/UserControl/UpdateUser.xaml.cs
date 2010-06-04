@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,52 +24,65 @@ namespace APPTier
     /// </summary>
     public partial class UpdateUser : UserControl
     {
+        List<DtoNhanVienThuaHanh> m_lstOriginal = new List<DtoNhanVienThuaHanh>();
+        List<DtoNhanVienThuaHanh> m_lstEdited = new List<DtoNhanVienThuaHanh>();
+        List<DtoNhanVienThuaHanh> m_lstDeleted = new List<DtoNhanVienThuaHanh>();
+        /// <summary>
+        /// Thêm dữ liệu phụ vào dataagrid. Dữ liệu này bao gồm: số thứ tự, button
+        /// xóa cho mỗi dòng.
+        /// </summary>
+        public void AddExtraData()
+        {
+            /* 
+           * Thêm dữ liệu cho cột thứ tự và cột deleteButton
+           */
+            for (int i = 0; i < dtgvUser.Items.Count; i++)
+            {
+                DataGridCell cell = new DataGridCell();
+                cell = GetCell(dtgvUser, i, 0);
+                cell.Content = i + 1;
+                cell.VerticalContentAlignment = VerticalAlignment.Center;
+
+                Button button = new Button();
+                button.Content = "Xóa";
+                button.Click += new RoutedEventHandler(btnDelete_Click);
+                cell = GetCell(dtgvUser, i, 8);
+                cell.Content = button;
+            }
+
+            /*
+             * Ẩn các cột không cho xem
+             */
+            dtgvUser.Columns[1].Visibility = Visibility.Hidden; //mã nhân viên
+            dtgvUser.Columns[3].Visibility = Visibility.Hidden; //mật khẩu
+            dtgvUser.Columns[4].Visibility = Visibility.Hidden; //salt
+
+        }
         public UpdateUser()
         {
             this.InitializeComponent();
 
-            #region button edit
-            DataGridTemplateColumn item = new DataGridTemplateColumn();
-            DataTemplate temp = new DataTemplate();
-            temp.DataType = typeof(Button);
-
-            FrameworkElementFactory spFactory = new FrameworkElementFactory(typeof(Button));
-            spFactory.Name = "Edit";
-            spFactory.SetValue(Button.ContentProperty, "Sửa");
-            spFactory.SetValue(Button.NameProperty, "btnEdit");
-            spFactory.AddHandler(Button.ClickEvent, new RoutedEventHandler(btnEdit_Click));
-
-            temp.VisualTree = spFactory;
-            item.CellTemplate = temp;
-            dtgvUser.Columns.Add(item);
-            #endregion
-
-            #region button delete
-            DataGridTemplateColumn item2 = new DataGridTemplateColumn();
-            DataTemplate temp2 = new DataTemplate();
-            temp2.DataType = typeof(Button);
-
-            FrameworkElementFactory spFactory2 = new FrameworkElementFactory(typeof(Button));
-            spFactory2.Name = "Delete";
-            spFactory2.SetValue(Button.ContentProperty, "Xóa");
-            spFactory2.SetValue(Button.NameProperty, "btnDelete");
-            spFactory2.AddHandler(Button.ClickEvent, new RoutedEventHandler(btnDelete_Click));
-
-            temp2.VisualTree = spFactory2;
-            item2.CellTemplate = temp2;
-            dtgvUser.Columns.Add(item2);
-            #endregion
-
-            DataGridTextColumn item3 = new DataGridTextColumn();
-            dtgvUser.Columns.Add(item3);
+            LoadMainData();
+        }
+        /// <summary>
+        /// Lấy dữ liệu nhân viên từ database
+        /// </summary>
+        public void LoadMainData()
+        {
+            //add cột thứ tự:
+            DataGridTextColumn column = new DataGridTextColumn();
+            dtgvUser.Columns.Add(column);
 
             BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
-            //DataTable dt = new DataTable();
-            List<DtoNhanVienThuaHanh> lst = new List<DtoNhanVienThuaHanh>();
-            lst = users.getDataList();
-            dtgvUser.ItemsSource = lst;
+            m_lstOriginal = users.getDataList();
+
+            dtgvUser.ItemsSource = m_lstOriginal;
 
             dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
+            dtgvUser.RowEditEnding += new EventHandler<DataGridRowEditEndingEventArgs>(dtgvUser_RowEditEnding);
+
+            dtgvUser.CanUserAddRows = false;
+            dtgvUser.CanUserDeleteRows = false;
         }
 
         /// <summary>
@@ -78,74 +92,101 @@ namespace APPTier
         /// <param name="e"></param>
         void dtgvUser_Loaded(object sender, RoutedEventArgs e)
         {
+            //Add cột delete button:
+            DataGridTextColumn column = new DataGridTextColumn();
+            dtgvUser.Columns.Add(column);
             /*
              * Đặt tên column trong datagrid
              */
-            dtgvUser.Columns[0].Header = "Chỉnh sửa";
-            dtgvUser.Columns[1].Header = "Xóa";
-            dtgvUser.Columns[2].Header = "Số thứ tự";
-            dtgvUser.Columns[3].Header = "Mã nhân viên";
-            dtgvUser.Columns[4].Header = "Tên đăng nhập";
-            dtgvUser.Columns[5].Header = "Mật khẩu";
-            dtgvUser.Columns[6].Header = "Mã xác nhận";
-            dtgvUser.Columns[7].Header = "Email";
-            dtgvUser.Columns[8].Header = "Họ và tên ";
-            dtgvUser.Columns[9].Header = "Điện thoại";
-
-            /* them so thu tu cho cot 
-             * nhung chi them luc load, chua co lam cho them tu dong
-             */
-            for (int i = 0; i < dtgvUser.Items.Count; i++)
-            {
-                DataGridCell cell, _cell = new DataGridCell();
-                cell = GetCell(dtgvUser, i, 2);
-                _cell = GetCell(dtgvUser, i, 4);
-                cell.Content = _cell.Content;
-                cell.VerticalContentAlignment = VerticalAlignment.Center;
-            }
-
-
-            /*
-             * Ẩn các cột không cho xem
-             */
-            dtgvUser.Columns[5].Visibility = Visibility.Hidden;
-            dtgvUser.Columns[6].Visibility = Visibility.Hidden;
-            dtgvUser.Columns[3].Visibility = Visibility.Hidden;
-
+            dtgvUser.Columns[0].Header = "Số thứ tự";
+            dtgvUser.Columns[1].Header = "Mã nhân viên";
+            dtgvUser.Columns[2].Header = "Tên đăng nhập";
+            dtgvUser.Columns[3].Header = "Mật khẩu";
+            dtgvUser.Columns[4].Header = "Mã xác nhận";
+            dtgvUser.Columns[5].Header = "Email";
+            dtgvUser.Columns[6].Header = "Họ và tên ";
+            dtgvUser.Columns[7].Header = "Điện thoại";
+            dtgvUser.Columns[8].Header = "Xóa";
+            AddExtraData();
         }
 
 
-        private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            // TODO: Add event handler implementation here.
-            MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn hủy cập nhật thông tin không?", "Cập nhật Nhân viên", MessageBoxButton.YesNo);
-            if (msg == MessageBoxResult.Yes)
-            {
-                loadUserList();
-            }
-
-        }
-
+        /// <summary>
+        /// Lưu kết quả thay đổi dữ liệu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
-            MessageBoxResult msg = MessageBox.Show("Bạn có chắc bạn muốn lưu thông tin đã cập nhật không?", "Cập nhật Nhân viên", MessageBoxButton.YesNo);
-            if (msg == MessageBoxResult.No)
+            DtoNhanVienThuaHanh dtoNhanVienThuaHanh;
+            BusNhanVienThuaHanh busNhanVienThuaHanh = new BusNhanVienThuaHanh();
+            MessageBoxResult messageBoxResult = MessageBoxResult.Yes;
+            string strMessage = "";
+            if (m_lstEdited.Count > 0)
             {
-                loadUserList();
+                strMessage = "Bạn vừa thực hiện một số thao tác cập nhật thông tin nhân viên.\n\r";
+                strMessage += "Bạn có chắc chắn lưu những sửa đổi không?";
+                messageBoxResult = MessageBox.Show(strMessage, "Nhắc lưu", MessageBoxButton.YesNo);
             }
-            else
+            if (messageBoxResult == MessageBoxResult.No)
+                goto SAVE_DELETING;
+            for (int i = 0; i < m_lstDeleted.Count; i++)
             {
-                //Luu thong tin da cap nhat xuong
-                //Hien thi lai thong tin
+                dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstEdited[i];
+                busNhanVienThuaHanh.updateData(dtoNhanVienThuaHanh);
             }
-
+        SAVE_DELETING:
+            messageBoxResult = MessageBoxResult.No;
+            if (m_lstEdited.Count > 0)
+            {
+                strMessage = "Bạn vừa thực hiện một số thao tác xóa thông tin nhân viên.\n\r";
+                strMessage += "Bạn có chắc chắn xóa vĩnh viễn không?";
+                messageBoxResult = MessageBox.Show(strMessage, "Nhắc lưu", MessageBoxButton.YesNo);
+            }
+            if (messageBoxResult == MessageBoxResult.No)
+                goto QUIT;
+            for (int i = 0; i < m_lstDeleted.Count; i++)
+            {
+                dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstDeleted[i];
+                busNhanVienThuaHanh.deleteData(dtoNhanVienThuaHanh);
+            }
+        QUIT:
+            m_lstDeleted.Clear();
+            m_lstEdited.Clear();
+            return;
         }
-
-        void loadUserList()
+        /// <summary>
+        /// Hủy bỏ thao tác thay đổi dữ liệu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCancel_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-        }
+            MessageBoxResult messageBoxResult = MessageBoxResult.No;
+            if (m_lstEdited.Count > 0 || m_lstDeleted.Count > 0)
+            {
+                String str = "Bạn vừa thực hiện một số thao tác thay đổi dữ liệu nhân viên.\n\r";
+                str += "Bạn có chắc chắn muốn hủy các thao tác này hay không?";
+                messageBoxResult = MessageBox.Show(str, "Nhắc lưu", MessageBoxButton.YesNo);
+                if (messageBoxResult == MessageBoxResult.No)
+                    return;
+            }
+            m_lstDeleted.Clear();
+            m_lstEdited.Clear();
+            m_lstOriginal.Clear();
 
+            dtgvUser.Columns.Clear();
+            LoadMainData();
+            dtgvUser_Loaded(null, null);
+
+        }
+        /// <summary>
+        /// Lấy và trả về một ô dữ liệu bất kỳ trong datagrid.
+        /// </summary>
+        /// <param name="dg">datagrid chứa ô dữ liệu cần lấy</param>
+        /// <param name="row">Dòng chứa ô dữ liệu cần lấy</param>
+        /// <param name="column">Cột chứa ô dữ liệu cần lấy</param>
+        /// <returns>Ô dữ liệu lấy được.</returns>
         public DataGridCell GetCell(DataGrid dg, int row, int column)
         {
             DataGridRow rowContainer = GetRow(dg, row);
@@ -166,7 +207,12 @@ namespace APPTier
             }
             return null;
         }
-
+        /// <summary>
+        /// Lấy và trả về một dòng dữ liệu bất kỳ trong datagrid
+        /// </summary>
+        /// <param name="dg">Datagrid chứa dữ liệu cần lấy</param>
+        /// <param name="index">Chỉ số dòng cần lấy.</param>
+        /// <returns>Dòng dữ liệu lấy được.</returns>
         public DataGridRow GetRow(DataGrid dg, int index)
         {
             DataGridRow row = (DataGridRow)dg.ItemContainerGenerator.ContainerFromIndex(index);
@@ -179,7 +225,12 @@ namespace APPTier
             }
             return row;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="parent"></param>
+        /// <returns></returns>
         public static T GetVisualChild<T>(Visual parent) where T : Visual
         {
             T child = default(T);
@@ -200,24 +251,30 @@ namespace APPTier
             return child;
         }
 
-        private void btnEdit_Click(object sender, System.Windows.RoutedEventArgs e)
+        /// <summary>
+        /// Được gọi sau khi edit xong một dòng.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void dtgvUser_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
-            // TODO: Add event handler implementation here.
-            /* add code update/add new NhanVien  here
-             */
-            DtoNhanVienThuaHanh nv = new DtoNhanVienThuaHanh();
-            nv = (DtoNhanVienThuaHanh)dtgvUser.SelectedItem; 
-            
-            //Luu xuong database
-
+            m_lstEdited.Add((DtoNhanVienThuaHanh)dtgvUser.SelectedItem);
         }
-
+        /// <summary>
+        /// Xử lý xóa tạm thời một dòng dữ liệu. Dữ liệu cần xóa sẽ được lưu ra một danh sách.
+        /// Khi người dùng lưu hành động xóa thì sẽ xóa thật sự dưới cơ sở dữ liệu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
-            /* add code delete NhanVien here
-             */
-            MessageBoxResult msg = MessageBox.Show("Quá trình xóa thành công", "Xóa Nhân viên", MessageBoxButton.OK);
+            DtoNhanVienThuaHanh nv = (DtoNhanVienThuaHanh)dtgvUser.SelectedItem;
+            m_lstDeleted.Add(nv);
+            if (dtgvUser.Items.Count > 0)
+                m_lstOriginal.RemoveAt(dtgvUser.SelectedIndex);
+            dtgvUser.Items.Refresh();
+            AddExtraData();
+
         }
 
     }
