@@ -205,8 +205,11 @@ namespace APPTier
             // TODO: Add event handler implementation here.
             /* add code update/add new NhanVien  here
              */
-            DataGridRow row = (DataGridRow)e.OriginalSource;
-            string str = row.Name;
+            DtoNhanVienThuaHanh nv = new DtoNhanVienThuaHanh();
+            nv = (DtoNhanVienThuaHanh)dtgvUser.SelectedItem; 
+            
+            //Luu xuong database
+
         }
 
         private void btnDelete_Click(object sender, System.Windows.RoutedEventArgs e)
