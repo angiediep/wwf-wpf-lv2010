@@ -97,9 +97,10 @@ namespace APPTier
              */
             for (int i = 0; i < dtgvUser.Items.Count; i++)
             {
-                DataGridCell cell = new DataGridCell();
+                DataGridCell cell, _cell = new DataGridCell();
                 cell = GetCell(dtgvUser, i, 2);
-                cell.Content = i + 1;
+                _cell = GetCell(dtgvUser, i, 4);
+                cell.Content = _cell.Content;
                 cell.VerticalContentAlignment = VerticalAlignment.Center;
             }
 
