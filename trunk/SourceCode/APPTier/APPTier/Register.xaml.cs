@@ -36,9 +36,6 @@ namespace APPTier
                 Application.Current.Shutdown();
             }
         }
-
-       
-
         private void btnRegister_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             string strMessage = "";
@@ -62,7 +59,7 @@ namespace APPTier
                 strMessage = "Vui lòng nhập đủ các thông tin để đăng ký!";
                 goto QUIT;
             }
-            if (!strPassword.Equals(strRealName))
+            if (!strPassword.Equals(strRePassword))
             {
                 strMessage = "Mật khẩu nhập lại không khớp. Vui lòng kiểm tra và thử lại sau.";
                 goto QUIT;
