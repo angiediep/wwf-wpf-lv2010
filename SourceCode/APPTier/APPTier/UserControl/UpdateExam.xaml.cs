@@ -36,15 +36,10 @@ namespace APPTier
             DataGridTextColumn column = new DataGridTextColumn();
             dtgvExam.Columns.Add(column);
             dtgvExam.ItemsSource = busDotThi.getDataList();
-            dtgvExam.InitializingNewItem += new InitializingNewItemEventHandler(dtgvExam_InitializingNewItem);
-            //dtgvExam.
+           
         }
 
       
-        void dtgvExam_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
-        {
-            MessageBox.Show("ok");
-        }
 		private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Add event handler implementation here.

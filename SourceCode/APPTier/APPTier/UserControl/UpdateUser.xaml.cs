@@ -7,16 +7,16 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using BUSLayer;
 using DataLayer.DTO;
 using Microsoft.Windows.Controls;
-using Microsoft.Windows.Controls.Primitives;
 using QuanLyThi;
+using QuanLyThi.UserControl;
+using System.Text.RegularExpressions;
 namespace APPTier
 {
     /// <summary>
@@ -24,11 +24,42 @@ namespace APPTier
     /// </summary>
     public partial class UpdateUser : UserControl
     {
-        List<DtoNhanVienThuaHanh> m_lstOriginal = new List<DtoNhanVienThuaHanh>();
-        List<DtoNhanVienThuaHanh> m_lstEdited = new List<DtoNhanVienThuaHanh>();
-        List<DtoNhanVienThuaHanh> m_lstDeleted = new List<DtoNhanVienThuaHanh>();
         /// <summary>
-        /// Thêm dữ liệu phụ vào dataagrid. Dữ liệu này bao gồm: số thứ tự, button
+        /// Danh sách nhân viên được load từ csdl.
+        /// </summary>
+        List<DtoNhanVienThuaHanh> m_lstOriginal = new List<DtoNhanVienThuaHanh>();
+        /// <summary>
+        /// Danh sách nhân viên hiện thời trong datagrid
+        /// </summary>
+        List<DtoNhanVienThuaHanh> m_lstCurrent = new List<DtoNhanVienThuaHanh>();
+        /// <summary>
+        /// Danh sách nhân viên được cập nhật, đang chờ lưu.
+        /// </summary>
+        List<DtoNhanVienThuaHanh> m_lstEdited = new List<DtoNhanVienThuaHanh>();
+        /// <summary>
+        /// Danh sách nhân viên bị xóa. Đang chờ xóa khỏi csdl.
+        /// </summary>
+        List<DtoNhanVienThuaHanh> m_lstDeleted = new List<DtoNhanVienThuaHanh>();
+        public UpdateUser()
+        {
+            this.InitializeComponent();
+            BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
+            m_lstOriginal = users.getDataList();
+            LoadMainData();
+        }
+        public void ReloadData()
+        {
+            BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
+            m_lstOriginal = users.getDataList();
+            m_lstDeleted.Clear();
+            m_lstEdited.Clear();
+            m_lstCurrent.Clear();
+            dtgvUser.Columns.Clear();
+            LoadMainData();
+            dtgvUser_Loaded(null, null);
+        }
+        /// <summary>
+        /// Thêm dữ liệu phụ vào datagrid. Dữ liệu này bao gồm: số thứ tự, button
         /// xóa cho mỗi dòng.
         /// </summary>
         public void AddExtraData()
@@ -36,20 +67,25 @@ namespace APPTier
             /* 
            * Thêm dữ liệu cho cột thứ tự và cột deleteButton
            */
-            for (int i = 0; i < dtgvUser.Items.Count; i++)
+            for (int i = 0; i < dtgvUser.Items.Count - 1; i++)
             {
                 DataGridCell cell = new DataGridCell();
-                cell = GetCell(dtgvUser, i, 0);
+                cell = Utilities.GetCell(dtgvUser, i, 0);
                 cell.Content = i + 1;
                 cell.VerticalContentAlignment = VerticalAlignment.Center;
+                cell.IsEditing = false;
 
                 Button button = new Button();
                 button.Content = "Xóa";
                 button.Click += new RoutedEventHandler(btnDelete_Click);
-                cell = GetCell(dtgvUser, i, 8);
+                cell = Utilities.GetCell(dtgvUser, i, 8);
                 cell.Content = button;
+                cell.IsEditing = false;
             }
-
+            DataGridCell endCell = Utilities.GetCell(dtgvUser, dtgvUser.Items.Count - 1, 0);
+            endCell.IsEditing = false;
+            endCell = Utilities.GetCell(dtgvUser, dtgvUser.Items.Count - 1, 8);
+            endCell.IsEditing = false;
             /*
              * Ẩn các cột không cho xem
              */
@@ -58,14 +94,8 @@ namespace APPTier
             dtgvUser.Columns[4].Visibility = Visibility.Hidden; //salt
 
         }
-        public UpdateUser()
-        {
-            this.InitializeComponent();
-
-            LoadMainData();
-        }
         /// <summary>
-        /// Lấy dữ liệu nhân viên từ database
+        /// Nạp dữ liệu nhân viên vào datagrid
         /// </summary>
         public void LoadMainData()
         {
@@ -73,22 +103,160 @@ namespace APPTier
             DataGridTextColumn column = new DataGridTextColumn();
             dtgvUser.Columns.Add(column);
 
-            BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
-            m_lstOriginal = users.getDataList();
-
-            dtgvUser.ItemsSource = m_lstOriginal;
+            m_lstCurrent.Clear();
+            m_lstCurrent = m_lstOriginal.GetRange(0, m_lstOriginal.Count);
+            dtgvUser.ItemsSource = m_lstCurrent;
 
             dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
             dtgvUser.RowEditEnding += new EventHandler<DataGridRowEditEndingEventArgs>(dtgvUser_RowEditEnding);
             dtgvUser.CanUserSortColumns = false;
             
-            dtgvUser.CanUserAddRows = false;
+            dtgvUser.CanUserAddRows = true;
             dtgvUser.CanUserDeleteRows = false;
         }
+        /// <summary>
+        /// Thực hiện thao tác lưu trữ thông tin các nhân viên mới xuống cơ sở dữ liệu nếu có.
+        /// </summary>
+        /// <returns>1: thành công, 0: thất bại</returns>
+        public int PerformAdding()
+        {
+            BusNhanVienThuaHanh bus = new BusNhanVienThuaHanh();
+            DtoNhanVienThuaHanh dto = new DtoNhanVienThuaHanh();
+            int error = 0;
+            string strMessage = "";
+            for (int i = m_lstOriginal.Count - m_lstDeleted.Count; i < m_lstCurrent.Count; i++)
+            {
+                #region Kiểm tra thông tin đầu vào
+                dto = m_lstCurrent[i];
+                dto.MATKHAU = "123456"; //mật khẩu mặc định.
+                /*
+                 * Kiểm tra dữ liệu đầu vào có null hay không. Nếu null thì không cho lưu.
+                 */
+                
+                if (null == dto.TENDANGNHAP || null == dto.MATKHAU ||
+                    null == dto.TENNV || null == dto.DIENTHOAI ||
+                    null == dto.EMAIL)
+                {
 
+                    strMessage = "Dữ liệu không được nhập đầy đủ tại dòng " + (i + 1).ToString() + "\n\r";
+                    strMessage += "Vui lòng kiểm tra và thử lại sau";
+                    error = 1;
+                    goto QUIT;
+                }
 
-       
+                dto.TENDANGNHAP = dto.TENDANGNHAP.Trim().Replace('\'', ' ');
+                dto.TENNV = dto.TENNV.Trim().Replace('\'', ' ');
+                dto.DIENTHOAI = dto.DIENTHOAI.Trim().Replace('\'', ' ');
+                dto.EMAIL = dto.EMAIL.Trim().Replace('\'', ' ');
+               
+                
+                /*
+                 * Kiểm tra thông tin đầu vào hợp lệ hay không. Nếu không hợp lệ thì không cho lưu.
+                 */
+                if (0 == dto.TENDANGNHAP.Length || 0 == dto.MATKHAU.Length ||
+                    0 == dto.TENNV.Length || 0 == dto.DIENTHOAI.Length ||
+                    0 == dto.EMAIL.Length)
+                {
 
+                    strMessage = "Dữ liệu không được nhập đầy đủ tại dòng " + (i + 1).ToString() + "\n\r";
+                    strMessage += "Vui lòng kiểm tra và thử lại sau";
+                    error = 1;
+                    goto QUIT;
+                }
+                if (!Regex.IsMatch(dto.EMAIL, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
+                {
+                    strMessage = "Email không hợp lệ tại dòng " + (i + 1).ToString() + "\n\r";
+                    strMessage += "Vui lòng kiểm tra và thử lại sau";
+                    error = 1;
+                    goto QUIT;
+                }
+
+                #endregion
+                /*
+                 * Lưu thông tin đăng kí xuống cơ sở dữ liệu
+                 */
+                MyHashAlg hash = new MyHashAlg();
+
+                dto.SALT = MyHashAlg.CreateRandomSalt();
+                dto.MATKHAU = hash.Hash(dto.SALT, dto.MATKHAU);
+
+                int result = bus.insertData(dto);
+
+                #region Kiểm tra kết quả lưu trữ
+                if (result == -1)
+                {
+                    strMessage = "Có lỗi tại dòng " + (i + 1).ToString() + "\n\r";
+                    strMessage += "Tên đăng nhập đã tồn tại trong hệ thống. Vui lòng chọn tên khác";
+                    error = 1;
+                    goto QUIT;
+                }
+                if (result == -2)
+                {
+                    strMessage = "Có lỗi tại dòng " + (i + 1).ToString() + "\n\r";
+                    strMessage += "Địa chỉ email đã tồn tại trong hệ thống. Vui lòng chọn email khác";
+                    error = 1;
+                    goto QUIT;
+                }
+                if (result == 0)
+                {
+                    strMessage = "Có lỗi tại dòng " + (i + 1).ToString() + "\n\r";
+                    strMessage += "Đăng ký không thành công. Vui lòng liên hệ với quản lý để được giúp đỡ.";
+                    error = 1;
+                    goto QUIT;
+                }
+                #endregion
+            }
+            #region Thông báo lỗi nếu có
+        QUIT:
+            if (error == 1)
+            {
+                MessageBox.Show(strMessage,"Lỗi",MessageBoxButton.OK);
+                return 0;
+            }
+            strMessage = "Đã thêm thành công " + (m_lstCurrent.Count - m_lstOriginal.Count) + " nhân viên mới";
+            MessageBox.Show(strMessage,"Thông báo",MessageBoxButton.OK);
+            return 1;
+            #endregion
+        }
+        /// <summary>
+        /// Thực hiện thao tác xóa thông tin các nhân viên trong hàng đợi khỏi csdl.
+        /// </summary>
+        public void PerformDeleting()
+        {
+            DtoNhanVienThuaHanh dtoNhanVienThuaHanh = new DtoNhanVienThuaHanh();
+            BusNhanVienThuaHanh busNhanVienThuaHanh = new BusNhanVienThuaHanh();
+            int resut = 10;
+            for (int i = 0; i < m_lstDeleted.Count; i++)
+            {
+                dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstDeleted[i];
+                resut = busNhanVienThuaHanh.deleteData(dtoNhanVienThuaHanh);
+                if (resut != 1)
+                    break;
+            }
+            string strMessage = "";
+            if (resut == 0)
+                MessageBox.Show("Xóa không thành công. Lỗi không xác định.");
+            else
+                if (resut == -1)
+                {
+                    strMessage = "Không thể xóa nhân viên " + dtoNhanVienThuaHanh.TENNV;
+                    strMessage += "\n\r Nhân viên này hiện có tham gia hoặc đã tham gia vào các đợt thi nào đó.";
+                    MessageBox.Show(strMessage, "Lỗi", MessageBoxButton.OK);
+                }
+        }
+        /// <summary>
+        /// Thực hiện thao tác cập nhật thông tin nhân viên vào csdl.
+        /// </summary>
+        public void PerformUpdating()
+        {
+            DtoNhanVienThuaHanh dtoNhanVienThuaHanh;
+            BusNhanVienThuaHanh busNhanVienThuaHanh = new BusNhanVienThuaHanh();
+            for (int i = 0; i < m_lstEdited.Count; i++)
+            {
+                dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstEdited[i];
+                busNhanVienThuaHanh.updateData(dtoNhanVienThuaHanh);
+            }
+        }
 
         /// <summary>
         /// Được gọi sau khi dữ liệu được load lên datagrid
@@ -114,8 +282,42 @@ namespace APPTier
             dtgvUser.Columns[8].Header = "Xóa";
             AddExtraData();
         }
+        /// <summary>
+        /// Được gọi sau khi edit xong một dòng.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void dtgvUser_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+        { 
+            AddExtraData();
+            if (m_lstCurrent.Count == m_lstOriginal.Count)
+                m_lstEdited.Add((DtoNhanVienThuaHanh)dtgvUser.SelectedItem);
+            
+        }
+        /// <summary>
+        /// Xử lý xóa tạm thời một dòng dữ liệu. Dữ liệu cần xóa sẽ được lưu ra một danh sách.
+        /// Khi người dùng lưu hành động xóa thì sẽ xóa thật sự dưới cơ sở dữ liệu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDelete_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
 
+            if (m_lstCurrent.Count <= 0)
+                return;
 
+            //Nếu dòng bị delete là dòng được load từ csdl, thì thêm vào hàng đợi xóa.
+            if ((m_lstOriginal.Count - m_lstDeleted.Count) > dtgvUser.SelectedIndex)
+            {
+                DtoNhanVienThuaHanh nv = (DtoNhanVienThuaHanh)dtgvUser.SelectedItem;
+                m_lstDeleted.Add(nv);
+            }
+            m_lstCurrent.RemoveAt(dtgvUser.SelectedIndex);
+
+            dtgvUser.Items.Refresh();
+            AddExtraData();
+
+        }
         /// <summary>
         /// Lưu kết quả thay đổi dữ liệu
         /// </summary>
@@ -123,9 +325,7 @@ namespace APPTier
         /// <param name="e"></param>
         private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DtoNhanVienThuaHanh dtoNhanVienThuaHanh;
-            BusNhanVienThuaHanh busNhanVienThuaHanh = new BusNhanVienThuaHanh();
-            MessageBoxResult messageBoxResult = MessageBoxResult.Yes;
+            MessageBoxResult messageBoxResult = MessageBoxResult.No;
             string strMessage = "";
             if (m_lstEdited.Count > 0)
             {
@@ -134,12 +334,20 @@ namespace APPTier
                 messageBoxResult = MessageBox.Show(strMessage, "Nhắc lưu", MessageBoxButton.YesNo);
             }
             if (messageBoxResult == MessageBoxResult.No)
-                goto SAVE_DELETING;
-            for (int i = 0; i < m_lstEdited.Count; i++)
+                goto SAVE_CREATING;
+            PerformUpdating();
+        SAVE_CREATING:
+            messageBoxResult = MessageBoxResult.No;
+            if (m_lstOriginal.Count < (m_lstCurrent.Count + m_lstDeleted.Count))
             {
-                dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstEdited[i];
-                busNhanVienThuaHanh.updateData(dtoNhanVienThuaHanh);
+                strMessage = "Bạn vừa thực hiện một số thao tác thêm nhân viên mới.\n\r";
+                strMessage += "Bạn có chắc chắn muốn lưu những thông tin này không?";
+                messageBoxResult = MessageBox.Show(strMessage, "Nhắc lưu", MessageBoxButton.YesNo);
             }
+            if (messageBoxResult == MessageBoxResult.No)
+                goto SAVE_DELETING;
+            if (PerformAdding() == 0)
+                return;
         SAVE_DELETING:
             messageBoxResult = MessageBoxResult.No;
             if (m_lstDeleted.Count > 0)
@@ -150,14 +358,9 @@ namespace APPTier
             }
             if (messageBoxResult == MessageBoxResult.No)
                 goto QUIT;
-            for (int i = 0; i < m_lstDeleted.Count; i++)
-            {
-                dtoNhanVienThuaHanh = (DtoNhanVienThuaHanh)m_lstDeleted[i];
-                busNhanVienThuaHanh.deleteData(dtoNhanVienThuaHanh);
-            }
+            PerformDeleting();
         QUIT:
-            m_lstDeleted.Clear();
-            m_lstEdited.Clear();
+            ReloadData();
             return;
         }
         /// <summary>
@@ -178,109 +381,12 @@ namespace APPTier
             }
             m_lstDeleted.Clear();
             m_lstEdited.Clear();
-            m_lstOriginal.Clear();
+            m_lstCurrent.Clear();
 
             dtgvUser.Columns.Clear();
             LoadMainData();
             dtgvUser_Loaded(null, null);
 
         }
-        /// <summary>
-        /// Lấy và trả về một ô dữ liệu bất kỳ trong datagrid.
-        /// </summary>
-        /// <param name="dg">datagrid chứa ô dữ liệu cần lấy</param>
-        /// <param name="row">Dòng chứa ô dữ liệu cần lấy</param>
-        /// <param name="column">Cột chứa ô dữ liệu cần lấy</param>
-        /// <returns>Ô dữ liệu lấy được.</returns>
-        public DataGridCell GetCell(DataGrid dg, int row, int column)
-        {
-            DataGridRow rowContainer = GetRow(dg, row);
-
-            if (rowContainer != null)
-            {
-                DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(rowContainer);
-
-                // Try to get the cell but it may possibly be virtualized.
-                DataGridCell cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
-                if (cell == null)
-                {
-                    // Now try to bring into view and retreive the cell.
-                    dg.ScrollIntoView(rowContainer, dg.Columns[column]);
-                    cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
-                }
-                return cell;
-            }
-            return null;
-        }
-        /// <summary>
-        /// Lấy và trả về một dòng dữ liệu bất kỳ trong datagrid
-        /// </summary>
-        /// <param name="dg">Datagrid chứa dữ liệu cần lấy</param>
-        /// <param name="index">Chỉ số dòng cần lấy.</param>
-        /// <returns>Dòng dữ liệu lấy được.</returns>
-        public DataGridRow GetRow(DataGrid dg, int index)
-        {
-            DataGridRow row = (DataGridRow)dg.ItemContainerGenerator.ContainerFromIndex(index);
-            if (row == null)
-            {
-                // May be virtualized, bring into view and try again.
-                dg.UpdateLayout();
-                dg.ScrollIntoView(dg.Items[index]);
-                row = (DataGridRow)dg.ItemContainerGenerator.ContainerFromIndex(index);
-            }
-            return row;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="parent"></param>
-        /// <returns></returns>
-        public static T GetVisualChild<T>(Visual parent) where T : Visual
-        {
-            T child = default(T);
-            int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
-            for (int i = 0; i < numVisuals; i++)
-            {
-                Visual v = (Visual)VisualTreeHelper.GetChild(parent, i);
-                child = v as T;
-                if (child == null)
-                {
-                    child = GetVisualChild<T>(v);
-                }
-                if (child != null)
-                {
-                    break;
-                }
-            }
-            return child;
-        }
-
-        /// <summary>
-        /// Được gọi sau khi edit xong một dòng.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void dtgvUser_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
-        {
-            m_lstEdited.Add((DtoNhanVienThuaHanh)dtgvUser.SelectedItem);
-        }
-        /// <summary>
-        /// Xử lý xóa tạm thời một dòng dữ liệu. Dữ liệu cần xóa sẽ được lưu ra một danh sách.
-        /// Khi người dùng lưu hành động xóa thì sẽ xóa thật sự dưới cơ sở dữ liệu.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnDelete_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            DtoNhanVienThuaHanh nv = (DtoNhanVienThuaHanh)dtgvUser.SelectedItem;
-            m_lstDeleted.Add(nv);
-            if (dtgvUser.Items.Count > 0)
-                m_lstOriginal.RemoveAt(dtgvUser.SelectedIndex);
-            dtgvUser.Items.Refresh();
-            AddExtraData();
-
-        }
-
     }
 }

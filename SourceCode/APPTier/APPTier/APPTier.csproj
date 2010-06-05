@@ -246,6 +246,7 @@
     <Compile Include="UserControl\UserWfView.xaml.cs">
       <DependentUpon>UserWfView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\Utilities.cs" />
     <Compile Include="UserHomepage.xaml.cs">
       <DependentUpon>UserHomepage.xaml</DependentUpon>
     </Compile>
