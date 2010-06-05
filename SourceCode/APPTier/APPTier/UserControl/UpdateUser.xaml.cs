@@ -47,6 +47,9 @@ namespace APPTier
             m_lstOriginal = users.getDataList();
             LoadMainData();
         }
+        /// <summary>
+        /// Load lại toàn bộ dữ liệu lên datagrid.
+        /// </summary>
         public void ReloadData()
         {
             BusNhanVienThuaHanh users = new BusNhanVienThuaHanh();
