@@ -343,6 +343,66 @@ public class DaoTienDo
         con.Close();
         return lst;
     }
+    public List<DtoTienDo> getListDataDelayedByMaDT(int maDT)
+    {
+        DataConnector dc = new DataConnector();
+        string conStr = dc.getConnectionString();
+        SqlConnection conn = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("sp_layDSCongViecTreHan", conn);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maDT", maDT);
+        conn.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        List<DtoTienDo> lst = new List<DtoTienDo>();
+        DtoTienDo data = null;
+        while (dr.Read())
+        {
+            data = new DtoTienDo();
+            data.MATD = Convert.ToInt32(dr["maTD"]);
+            data.TONGKHOILUONGCV = Convert.ToInt32(dr["tongKhoiLuongCV"]);
+            data.KHOILUONGCVHT = Convert.ToInt32(dr["khoiLuongCVHT"]);
+            data.NGAYBATDAUQUYDINH = Convert.ToDateTime(dr["ngayBatDauQuyDinh"]);
+            data.NGAYKETTHUCQUYDINH = Convert.ToDateTime(dr["ngayKetThucQuyDinh"]);
+            data.NGAYBATDAUTHUCTE = Convert.ToDateTime(dr["ngayBatDauThucTe"]);
+            data.NGAYKETTHUCTHUCTE = Convert.ToDateTime(dr["ngayKetThucThucTe"]);
+            data.MADT = Convert.ToInt32(dr["maDT"]);
+            data.MACV = Convert.ToInt32(dr["maCV"]);
+            lst.Add(data);
+        }
+        dr.Close();
+        conn.Close();
+        return lst;
+    }
+    public List<DtoTienDo> getListDataEarlyByMaDT(int maDT)
+    {
+        DataConnector dc = new DataConnector();
+        string conStr = dc.getConnectionString();
+        SqlConnection conn = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("sp_layDSCongViecSomHan", conn);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maDT", maDT);
+        conn.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        List<DtoTienDo> lst = new List<DtoTienDo>();
+        DtoTienDo data = null;
+        while (dr.Read())
+        {
+            data = new DtoTienDo();
+            data.MATD = Convert.ToInt32(dr["maTD"]);
+            data.TONGKHOILUONGCV = Convert.ToInt32(dr["tongKhoiLuongCV"]);
+            data.KHOILUONGCVHT = Convert.ToInt32(dr["khoiLuongCVHT"]);
+            data.NGAYBATDAUQUYDINH = Convert.ToDateTime(dr["ngayBatDauQuyDinh"]);
+            data.NGAYKETTHUCQUYDINH = Convert.ToDateTime(dr["ngayKetThucQuyDinh"]);
+            data.NGAYBATDAUTHUCTE = Convert.ToDateTime(dr["ngayBatDauThucTe"]);
+            data.NGAYKETTHUCTHUCTE = Convert.ToDateTime(dr["ngayKetThucThucTe"]);
+            data.MADT = Convert.ToInt32(dr["maDT"]);
+            data.MACV = Convert.ToInt32(dr["maCV"]);
+            lst.Add(data);
+        }
+        dr.Close();
+        conn.Close();
+        return lst;
+    }
 	public int insertData(DtoTienDo data)
     {
         int Id = -1;

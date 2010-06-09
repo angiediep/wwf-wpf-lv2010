@@ -36,6 +36,17 @@ public class DtoDotThi_ChungChi
 		set { mmaCC = value ; }
 	}
 
+	private int msoLuongThiSinh ;
+
+
+	public int SOLUONGTHISINH 
+
+	{
+		get { return msoLuongThiSinh ; }
+
+		set { msoLuongThiSinh = value ; }
+	}
+
 }
 
 }

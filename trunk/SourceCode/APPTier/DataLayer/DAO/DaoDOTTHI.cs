@@ -11,10 +11,10 @@ using System.IO;
 using DataLayer.DTO;
 namespace DataLayer.DAO
 {
-public class DaoDotThi
+public class DaoDOTTHI
 {
 
-	public DaoDotThi()
+	public DaoDOTTHI()
 	{
 	}
 	#region "ExportFile" 
@@ -32,7 +32,7 @@ public class DaoDotThi
         {
             data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
-			data.TENDT =Convert.ToString(dr["tenDT"]);
+			data.TENDOTTHI =Convert.ToString(dr["tenDotThi"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
 			data.SOLUONGTHISINH =Convert.ToInt32(dr["soLuongThiSinh"]);
 		}
@@ -68,7 +68,7 @@ public class DaoDotThi
         {
             data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
-			data.TENDT =Convert.ToString(dr["tenDT"]);
+			data.TENDOTTHI =Convert.ToString(dr["tenDotThi"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
 			data.SOLUONGTHISINH =Convert.ToInt32(dr["soLuongThiSinh"]);
             lst.Add(data);
@@ -93,7 +93,7 @@ public class DaoDotThi
         {
             data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
-			data.TENDT =Convert.ToString(dr["tenDT"]);
+			data.TENDOTTHI =Convert.ToString(dr["tenDotThi"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
 			data.SOLUONGTHISINH =Convert.ToInt32(dr["soLuongThiSinh"]);
             lst.Add(data);
@@ -101,12 +101,12 @@ public class DaoDotThi
         con.Close();
         return lst;
     }
-	public List<DtoDotThi> getListDataBytenDT(string tenDT)    {
+	public List<DtoDotThi> getListDataBytenDotThi(string tenDotThi)    {
         DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
-        SqlCommand cmd = new SqlCommand("spGetListDataDOTTHIBytenDT " , con);
+        SqlCommand cmd = new SqlCommand("spGetListDataDOTTHIBytenDotThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.AddWithValue("@tenDT", tenDT);
+        cmd.Parameters.AddWithValue("@tenDotThi", tenDotThi);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
         List<DtoDotThi> lst = new List<DtoDotThi>();
@@ -115,7 +115,7 @@ public class DaoDotThi
         {
             data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
-			data.TENDT =Convert.ToString(dr["tenDT"]);
+			data.TENDOTTHI =Convert.ToString(dr["tenDotThi"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
             lst.Add(data);
 		}
@@ -137,7 +137,7 @@ public class DaoDotThi
         {
             data = new DtoDotThi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
-			data.TENDT =Convert.ToString(dr["tenDT"]);
+			data.TENDOTTHI =Convert.ToString(dr["tenDotThi"]);
 			data.NGAYTHI =Convert.ToDateTime(dr["ngayThi"]);
             lst.Add(data);
 		}
@@ -147,17 +147,23 @@ public class DaoDotThi
     }
 	public int insertData(DtoDotThi data)
     {
-        int Id = -1;
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); 
+        string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
-        SqlCommand cmd = new SqlCommand("spInsertDataDOTTHI " , con);
+        SqlCommand cmd = new SqlCommand("sp_themDotThi ", con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@tenDT", data.TENDT);
+		cmd.Parameters.AddWithValue("@tenDT", data.TENDOTTHI);
 		cmd.Parameters.AddWithValue("@ngayThi", data.NGAYTHI);
 		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
+        cmd.Parameters.Add("@kq", SqlDbType.Int);
+        cmd.Parameters["@kq"].Direction = ParameterDirection.Output;
+
         con.Open();
-        Id = Convert.ToInt32(cmd.ExecuteScalar());
-        return Id;
+        cmd.ExecuteNonQuery();
+        int result = int.Parse(cmd.Parameters["@kq"].Value.ToString());
+        con.Close();
+        return result;
+
     }
 	public bool deleteData(DtoDotThi data)
     {
@@ -171,13 +177,13 @@ public class DaoDotThi
         cmd.ExecuteNonQuery();
         return true;
     }
-	public bool deleteDataBytenDT(string tenDT)
+	public bool deleteDataBytenDotThi(string tenDotThi)
     {
         DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
-        SqlCommand cmd = new SqlCommand("spDelDataDOTTHIBytenDT " , con);
+        SqlCommand cmd = new SqlCommand("spDelDataDOTTHIBytenDotThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.AddWithValue("@tenDT", tenDT);
+        cmd.Parameters.AddWithValue("@tenDotThi", tenDotThi);
 
         con.Open();
         cmd.ExecuteNonQuery();
@@ -214,7 +220,7 @@ public class DaoDotThi
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHI " , con);
         cmd.CommandType = CommandType.StoredProcedure;
 		cmd.Parameters.AddWithValue("@maDT", data.MADT);
-		cmd.Parameters.AddWithValue("@tenDT", data.TENDT);
+		cmd.Parameters.AddWithValue("@tenDotThi", data.TENDOTTHI);
 		cmd.Parameters.AddWithValue("@ngayThi", data.NGAYTHI);
 		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
         con.Open();
@@ -227,7 +233,7 @@ public class DaoDotThi
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBymaDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@tenDT", data.TENDT);
+		cmd.Parameters.AddWithValue("@tenDotThi", data.TENDOTTHI);
 		cmd.Parameters.AddWithValue("@ngayThi", data.NGAYTHI);
 		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
 		cmd.Parameters.AddWithValue("@maDT",maDT);
@@ -235,16 +241,16 @@ public class DaoDotThi
         cmd.ExecuteNonQuery();
         return true;
     }
-	public bool updateDataBytenDT(DtoDotThi data,string tenDT)
+	public bool updateDataBytenDotThi(DtoDotThi data,string tenDotThi)
     {
         DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
-        SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBytenDT " , con);
+        SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIBytenDotThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
 		cmd.Parameters.AddWithValue("@maDT", data.MADT);
 		cmd.Parameters.AddWithValue("@ngayThi", data.NGAYTHI);
 		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
-		cmd.Parameters.AddWithValue("@tenDT",tenDT);
+		cmd.Parameters.AddWithValue("@tenDotThi",tenDotThi);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;
@@ -256,7 +262,7 @@ public class DaoDotThi
         SqlCommand cmd = new SqlCommand("spUpdateDataDOTTHIByngayThi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
 		cmd.Parameters.AddWithValue("@maDT", data.MADT);
-		cmd.Parameters.AddWithValue("@tenDT", data.TENDT);
+		cmd.Parameters.AddWithValue("@tenDotThi", data.TENDOTTHI);
 		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
 		cmd.Parameters.AddWithValue("@ngayThi",ngayThi);
         con.Open();

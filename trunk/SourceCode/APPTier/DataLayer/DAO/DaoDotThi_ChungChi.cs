@@ -1,4 +1,5 @@
 
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,7 @@ public class DaoDotThi_ChungChi
             data = new DtoDotThi_ChungChi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.MACC =Convert.ToInt32(dr["maCC"]);
+			data.SOLUONGTHISINH =Convert.ToInt32(dr["soLuongThiSinh"]);
 		}
         con.Close();
         return data;
@@ -67,6 +69,7 @@ public class DaoDotThi_ChungChi
             data = new DtoDotThi_ChungChi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.MACC =Convert.ToInt32(dr["maCC"]);
+			data.SOLUONGTHISINH =Convert.ToInt32(dr["soLuongThiSinh"]);
             lst.Add(data);
 		}
         con.Close();
@@ -90,8 +93,30 @@ public class DaoDotThi_ChungChi
             data = new DtoDotThi_ChungChi();
 			data.MADT =Convert.ToInt32(dr["maDT"]);
 			data.MACC =Convert.ToInt32(dr["maCC"]);
+			data.SOLUONGTHISINH =Convert.ToInt32(dr["soLuongThiSinh"]);
             lst.Add(data);
 		}
+        con.Close();
+        return lst;
+    }
+	public List<DtoDotThi_ChungChi> getListDataBymaCC(int maCC)    {
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("spGetListDataDotThi_ChungChiBymaCC " , con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maCC", maCC);
+        con.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        List<DtoDotThi_ChungChi> lst = new List<DtoDotThi_ChungChi>();
+        DtoDotThi_ChungChi data = null;
+        while (dr.Read())
+        {
+            data = new DtoDotThi_ChungChi();
+			data.MADT =Convert.ToInt32(dr["maDT"]);
+			data.MACC =Convert.ToInt32(dr["maCC"]);
+            lst.Add(data);
+		}
+        dr.Close();
         con.Close();
         return lst;
     }
@@ -103,6 +128,7 @@ public class DaoDotThi_ChungChi
         SqlCommand cmd = new SqlCommand("spInsertDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
 		cmd.Parameters.AddWithValue("@maCC", data.MACC);
+		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
         con.Open();
         Id = Convert.ToInt32(cmd.ExecuteScalar());
         return Id;
@@ -131,6 +157,18 @@ public class DaoDotThi_ChungChi
         cmd.ExecuteNonQuery();
         return true;
     }
+	public bool deleteDataBysoLuongThiSinh(int soLuongThiSinh)
+    {
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("spDelDataDotThi_ChungChiBysoLuongThiSinh " , con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@soLuongThiSinh", soLuongThiSinh);
+
+        con.Open();
+        cmd.ExecuteNonQuery();
+        return true;
+    }
 	public bool updateData(DtoDotThi_ChungChi data)
     {
         DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
@@ -139,6 +177,7 @@ public class DaoDotThi_ChungChi
         cmd.CommandType = CommandType.StoredProcedure;
 		cmd.Parameters.AddWithValue("@maDT", data.MADT);
 		cmd.Parameters.AddWithValue("@maCC", data.MACC);
+		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;
@@ -150,7 +189,21 @@ public class DaoDotThi_ChungChi
         SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChiBymaDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
 		cmd.Parameters.AddWithValue("@maCC", data.MACC);
+		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
 		cmd.Parameters.AddWithValue("@maDT",maDT);
+        con.Open();
+        cmd.ExecuteNonQuery();
+        return true;
+    }
+	public bool updateDataBymaCC(DtoDotThi_ChungChi data,int maCC)
+    {
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChiBymaCC " , con);
+        cmd.CommandType = CommandType.StoredProcedure;
+		cmd.Parameters.AddWithValue("@maDT", data.MADT);
+		cmd.Parameters.AddWithValue("@soLuongThiSinh", data.SOLUONGTHISINH);
+		cmd.Parameters.AddWithValue("@maCC",maCC);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;

@@ -47,7 +47,7 @@ namespace QuanLyThi.UserControl
         public static DataGridCell GetCell(DataGrid dg, int row, int column)
         {
             DataGridRow rowContainer = GetRow(dg, row);
-
+            
             if (rowContainer != null)
             {
                 DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(rowContainer);

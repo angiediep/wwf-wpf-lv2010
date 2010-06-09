@@ -25,15 +25,15 @@ public class DtoDotThi
 		set { mmaDT = value ; }
 	}
 
-	private string mtenDT ;
+	private string mtenDotThi ;
 
 
-	public string TENDT 
+	public string TENDOTTHI 
 
 	{
-		get { return mtenDT ; }
+		get { return mtenDotThi ; }
 
-		set { mtenDT = value ; }
+		set { mtenDotThi = value ; }
 	}
 
 	private DateTime mngayThi ;
