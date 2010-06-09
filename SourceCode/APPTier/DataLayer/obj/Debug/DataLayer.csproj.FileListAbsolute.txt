@@ -8,8 +8,8 @@ C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLa
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
 C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb

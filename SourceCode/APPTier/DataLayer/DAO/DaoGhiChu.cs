@@ -20,8 +20,7 @@ public class DaoGhiChu
 	#region "ExportFile" 
 	public DtoGhiChu getDataById(int maGC)
     {
-        DataConnector dc = new DataConnector();
-        string conStr = dc.getConnectionString();
+        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -99,12 +98,13 @@ public class DaoGhiChu
         con.Close();
         return lst;
     }
-	public List<DtoGhiChu> getListDataByGhiChu(string GhiChu)    {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+	public List<DtoGhiChu> getListDataByMaTD(int maTD)    {
+        DataConnector dc = new DataConnector(); 
+        string conStr = dc.getConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
-        SqlCommand cmd = new SqlCommand("spGetListDataGhiChuByGhiChu " , con);
+        SqlCommand cmd = new SqlCommand("sp_layGhiChuTheoMaTD ", con);
         cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.AddWithValue("@GhiChu", GhiChu);
+        cmd.Parameters.AddWithValue("@maTD", maTD);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
         List<DtoGhiChu> lst = new List<DtoGhiChu>();
@@ -116,6 +116,30 @@ public class DaoGhiChu
 			data.GHICHU =Convert.ToString(dr["GhiChu"]);
             lst.Add(data);
 		}
+        dr.Close();
+        con.Close();
+        return lst;
+    }
+    public List<DtoGhiChu> getListDataByMaCVMaDT(int maCV, int maDT)
+    {
+        DataConnector dc = new DataConnector();
+        string conStr = dc.getConnectionString();
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("sp_layGhiChuTheoMaCVMaDT ", con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maCV", maCV);
+        cmd.Parameters.AddWithValue("@maDT", maDT);
+        con.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        List<DtoGhiChu> lst = new List<DtoGhiChu>();
+        DtoGhiChu data = null;
+        while (dr.Read())
+        {
+            data = new DtoGhiChu();
+            data.MAGC = Convert.ToInt32(dr["maGC"]);
+            data.GHICHU = Convert.ToString(dr["GhiChu"]);
+            lst.Add(data);
+        }
         dr.Close();
         con.Close();
         return lst;

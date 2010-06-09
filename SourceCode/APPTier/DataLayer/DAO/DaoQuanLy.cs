@@ -59,16 +59,8 @@ public class DaoQuanLy
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataQuanLy " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-        try
-        {
-
-            con.Open();
-        }
-        catch (Exception ex)
-        {
-
-            string str = ex.Message;
-        }
+        
+        con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
         List<DtoQuanLy> lst = new List<DtoQuanLy>();
         DtoQuanLy data = null;

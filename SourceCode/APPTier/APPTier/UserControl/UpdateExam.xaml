@@ -77,6 +77,7 @@
 	<Grid x:Name="LayoutRoot">
 		<Border HorizontalAlignment="Right" Margin="0,55,202,187.357" Width="554" BorderThickness="1" BorderBrush="#FF787878" CornerRadius="6">
 			<Custom:DataGrid x:Name="dtgvExam" ItemsSource="{Binding Collection}" AutoGenerateColumns="True" DataContext="{Binding}" Margin="8"/>
+            
 		</Border>
 		<Button x:Name="btnSave" Margin="384,0,0,134.4"    VerticalAlignment="Bottom" Height="27" Content="Lưu" Click="btnSave_Click" HorizontalAlignment="Left" Width="73"/>
 		<Button x:Name="btnCancel" Margin="461,0,401,134.4"    VerticalAlignment="Bottom" Height="27" Content="Hủy" Click="btnCancel_Click" RenderTransformOrigin="0.5,0.5">
