@@ -21,7 +21,7 @@ public class DaoDotThi_ChungChi
 	#region "ExportFile" 
 	public DtoDotThi_ChungChi getDataById(int maDT)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -41,7 +41,7 @@ public class DaoDotThi_ChungChi
     }
 	public DataTable getDataTable()
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -55,7 +55,7 @@ public class DaoDotThi_ChungChi
     }
 	public List<DtoDotThi_ChungChi>  getDataList()
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -77,7 +77,7 @@ public class DaoDotThi_ChungChi
     }
 	public List<DtoDotThi_ChungChi>  getDataListSortBy(string col, bool flag)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataDotThi_ChungChiSortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -100,7 +100,7 @@ public class DaoDotThi_ChungChi
         return lst;
     }
 	public List<DtoDotThi_ChungChi> getListDataBymaCC(int maCC)    {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataDotThi_ChungChiBymaCC " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -123,7 +123,7 @@ public class DaoDotThi_ChungChi
 	public int insertData(DtoDotThi_ChungChi data)
     {
         int Id = -1;
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -135,7 +135,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool deleteData(DtoDotThi_ChungChi data)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -147,7 +147,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool deleteDataBymaCC(int maCC)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDotThi_ChungChiBymaCC " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -159,7 +159,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool deleteDataBysoLuongThiSinh(int soLuongThiSinh)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataDotThi_ChungChiBysoLuongThiSinh " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -171,7 +171,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool updateData(DtoDotThi_ChungChi data)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChi " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -184,7 +184,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool updateDataBymaDT(DtoDotThi_ChungChi data,int maDT)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChiBymaDT " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -197,7 +197,7 @@ public class DaoDotThi_ChungChi
     }
 	public bool updateDataBymaCC(DtoDotThi_ChungChi data,int maCC)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataDotThi_ChungChiBymaCC " , con);
         cmd.CommandType = CommandType.StoredProcedure;
