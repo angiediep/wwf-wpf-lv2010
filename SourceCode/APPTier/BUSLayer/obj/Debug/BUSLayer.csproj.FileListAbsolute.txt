@@ -19,3 +19,5 @@ F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.pdb

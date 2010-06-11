@@ -200,3 +200,5 @@ F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\o
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
 F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.pdb

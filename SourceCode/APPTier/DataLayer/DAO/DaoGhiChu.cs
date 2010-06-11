@@ -20,7 +20,7 @@ public class DaoGhiChu
 	#region "ExportFile" 
 	public DtoGhiChu getDataById(int maGC)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -40,7 +40,7 @@ public class DaoGhiChu
     }
 	public DataTable getDataTable()
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -54,7 +54,7 @@ public class DaoGhiChu
     }
 	public List<DtoGhiChu>  getDataList()
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -76,7 +76,7 @@ public class DaoGhiChu
     }
 	public List<DtoGhiChu>  getDataListSortBy(string col, bool flag)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataGhiChuSortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -100,7 +100,7 @@ public class DaoGhiChu
     }
 	public List<DtoGhiChu> getListDataByMaTD(int maTD)    {
         DataConnector dc = new DataConnector(); 
-        string conStr = dc.getConnectionString(); 
+        string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("sp_layGhiChuTheoMaTD ", con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -123,7 +123,7 @@ public class DaoGhiChu
     public List<DtoGhiChu> getListDataByMaCVMaDT(int maCV, int maDT)
     {
         DataConnector dc = new DataConnector();
-        string conStr = dc.getConnectionString();
+        string conStr = dc.getQuyTrinhThiConnectionString();
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("sp_layGhiChuTheoMaCVMaDT ", con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -147,7 +147,7 @@ public class DaoGhiChu
 	public int insertData(DtoGhiChu data)
     {
         int Id = -1;
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -159,7 +159,7 @@ public class DaoGhiChu
     }
 	public bool deleteData(DtoGhiChu data)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -171,7 +171,7 @@ public class DaoGhiChu
     }
 	public bool deleteDataByGhiChu(string GhiChu)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataGhiChuByGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -183,7 +183,7 @@ public class DaoGhiChu
     }
 	public bool deleteDataBymaTD(int maTD)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataGhiChuBymaTD " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -195,7 +195,7 @@ public class DaoGhiChu
     }
 	public bool updateData(DtoGhiChu data)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -208,7 +208,7 @@ public class DaoGhiChu
     }
 	public bool updateDataBymaGC(DtoGhiChu data,int maGC)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataGhiChuBymaGC " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -221,7 +221,7 @@ public class DaoGhiChu
     }
 	public bool updateDataByGhiChu(DtoGhiChu data,string GhiChu)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataGhiChuByGhiChu " , con);
         cmd.CommandType = CommandType.StoredProcedure;

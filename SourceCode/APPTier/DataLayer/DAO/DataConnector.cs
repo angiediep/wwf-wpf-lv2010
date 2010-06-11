@@ -19,7 +19,7 @@ namespace DataLayer.DAO
 
         public DataConnector()
         {
-            m_strServerName = "DHA-PC\\SQLEXPRESS";
+            m_strServerName = "nmbinh\\SQLEXPRESS";
             m_strDatabaseName = "QuyTrinhThiDB";
             m_strUserID = " ";
             m_strPass = " ";
@@ -48,13 +48,18 @@ namespace DataLayer.DAO
             get { return m_strPass; }
             set { m_strPass = value; }
         }
-
-        public string getConnectionString()
+        
+        public string getQuyTrinhThiConnectionString()
         {
             ReadBinary("dbinfo.dat");
             return "Data Source=" + m_strServerName + ";Initial Catalog=" + m_strDatabaseName + ";Integrated Security=True;User ID=" + m_strUserID + ";Password=" + m_strPass;
         }
-
+        public string getTrackingConnectionString()
+        {
+            ReadBinary("dbinfo.dat");
+            string trackingDBName = "tracking";
+            return "Data Source=" + m_strServerName + ";Initial Catalog=" + trackingDBName + ";Integrated Security=True;User ID=" + m_strUserID + ";Password=" + m_strPass;
+        }
         public string WriteBinary(string fileName)
         {
             try

@@ -18,9 +18,30 @@ public class DaoPhanCong
 	{
 	}
 	#region "ExportFile" 
+    private List<DtoPhanCong> extractData(SqlDataReader dr)
+    {
+        List<DtoPhanCong> lst = new List<DtoPhanCong>();
+        DtoPhanCong data = null;
+        while (dr.Read())
+        {
+            data = new DtoPhanCong();
+            data.MACV = Convert.ToInt32(dr["maCV"]);
+            data.MANV = Convert.ToInt32(dr["maNV"]);
+            data.NGAYAPDUNG = Convert.ToDateTime(dr["ngayApDung"]);
+            data.NGAYHETHAN = Convert.ToDateTime(dr["ngayHetHan"]);
+            lst.Add(data);
+        }
+        return lst ;
+    }
+    private void bindData(SqlParameterCollection para, DtoPhanCong data)
+    {
+        para.AddWithValue("@maNV", data.MANV);
+        para.AddWithValue("@ngayApDung", data.NGAYAPDUNG);
+        para.AddWithValue("@ngayHetHan", data.NGAYHETHAN);
+    }
 	public DtoPhanCong getDataById(int maCV)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -41,7 +62,7 @@ public class DaoPhanCong
     }
 	public DataTable getDataTable()
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -55,30 +76,20 @@ public class DaoPhanCong
     }
 	public List<DtoPhanCong>  getDataList()
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoPhanCong> lst = new List<DtoPhanCong>();
-        DtoPhanCong data = null;
-        while (dr.Read())
-        {
-            data = new DtoPhanCong();
-			data.MACV =Convert.ToInt32(dr["maCV"]);
-			data.MANV =Convert.ToInt32(dr["maNV"]);
-			data.NGAYAPDUNG =Convert.ToDateTime(dr["ngayApDung"]);
-			data.NGAYHETHAN =Convert.ToDateTime(dr["ngayHetHan"]);
-            lst.Add(data);
-		}
+        List<DtoPhanCong> lst = extractData(dr);
         con.Close();
         return lst;
     }
 	public List<DtoPhanCong>  getDataListSortBy(string col, bool flag)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         string sp ="spGetListDataPhanCongSortBy";
         SqlCommand cmd = new SqlCommand(sp , con);
@@ -87,60 +98,33 @@ public class DaoPhanCong
         cmd.Parameters.AddWithValue("@col", col); 
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoPhanCong> lst = new List<DtoPhanCong>();
-        DtoPhanCong data = null;
-        while (dr.Read())
-        {
-            data = new DtoPhanCong();
-			data.MACV =Convert.ToInt32(dr["maCV"]);
-			data.MANV =Convert.ToInt32(dr["maNV"]);
-			data.NGAYAPDUNG =Convert.ToDateTime(dr["ngayApDung"]);
-			data.NGAYHETHAN =Convert.ToDateTime(dr["ngayHetHan"]);
-            lst.Add(data);
-		}
+        List<DtoPhanCong> lst = extractData(dr);
+        dr.Close();
         con.Close();
         return lst;
     }
 	public List<DtoPhanCong> getListDataBymaNV(int maNV)    {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCongBymaNV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.AddWithValue("@maNV", maNV);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoPhanCong> lst = new List<DtoPhanCong>();
-        DtoPhanCong data = null;
-        while (dr.Read())
-        {
-            data = new DtoPhanCong();
-			data.MACV =Convert.ToInt32(dr["maCV"]);
-			data.MANV =Convert.ToInt32(dr["maNV"]);
-			data.NGAYAPDUNG =Convert.ToDateTime(dr["ngayApDung"]);
-            lst.Add(data);
-		}
+        List<DtoPhanCong> lst = extractData(dr);
         dr.Close();
         con.Close();
         return lst;
     }
 	public List<DtoPhanCong> getListDataByngayApDung(DateTime ngayApDung)    {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spGetListDataPhanCongByngayApDung " , con);
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.AddWithValue("@ngayApDung", ngayApDung);
         con.Open();
         SqlDataReader dr = cmd.ExecuteReader();
-        List<DtoPhanCong> lst = new List<DtoPhanCong>();
-        DtoPhanCong data = null;
-        while (dr.Read())
-        {
-            data = new DtoPhanCong();
-			data.MACV =Convert.ToInt32(dr["maCV"]);
-			data.MANV =Convert.ToInt32(dr["maNV"]);
-			data.NGAYAPDUNG =Convert.ToDateTime(dr["ngayApDung"]);
-            lst.Add(data);
-		}
+        List<DtoPhanCong> lst = extractData(dr);
         dr.Close();
         con.Close();
         return lst;
@@ -148,20 +132,18 @@ public class DaoPhanCong
 	public int insertData(DtoPhanCong data)
     {
         int Id = -1;
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spInsertDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@maNV", data.MANV);
-		cmd.Parameters.AddWithValue("@ngayApDung", data.NGAYAPDUNG);
-		cmd.Parameters.AddWithValue("@ngayHetHan", data.NGAYHETHAN);
+        bindData(cmd.Parameters, data);
         con.Open();
         Id = Convert.ToInt32(cmd.ExecuteScalar());
         return Id;
     }
 	public bool deleteData(DtoPhanCong data)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -173,7 +155,7 @@ public class DaoPhanCong
     }
 	public bool deleteDataBymaNV(int maNV)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCongBymaNV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -185,7 +167,7 @@ public class DaoPhanCong
     }
 	public bool deleteDataByngayApDung(DateTime ngayApDung)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCongByngayApDung " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -197,7 +179,7 @@ public class DaoPhanCong
     }
 	public bool deleteDataByngayHetHan(DateTime ngayHetHan)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spDelDataPhanCongByngayHetHan " , con);
         cmd.CommandType = CommandType.StoredProcedure;
@@ -209,56 +191,48 @@ public class DaoPhanCong
     }
 	public bool updateData(DtoPhanCong data)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCong " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@maCV", data.MACV);
-		cmd.Parameters.AddWithValue("@maNV", data.MANV);
-		cmd.Parameters.AddWithValue("@ngayApDung", data.NGAYAPDUNG);
-		cmd.Parameters.AddWithValue("@ngayHetHan", data.NGAYHETHAN);
+        
+        bindData(cmd.Parameters, data);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;
     }
 	public bool updateDataBymaCV(DtoPhanCong data,int maCV)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCongBymaCV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@maNV", data.MANV);
-		cmd.Parameters.AddWithValue("@ngayApDung", data.NGAYAPDUNG);
-		cmd.Parameters.AddWithValue("@ngayHetHan", data.NGAYHETHAN);
-		cmd.Parameters.AddWithValue("@maCV",maCV);
+        data.MACV = maCV;
+        bindData(cmd.Parameters, data);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;
     }
 	public bool updateDataBymaNV(DtoPhanCong data,int maNV)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCongBymaNV " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@maCV", data.MACV);
-		cmd.Parameters.AddWithValue("@ngayApDung", data.NGAYAPDUNG);
-		cmd.Parameters.AddWithValue("@ngayHetHan", data.NGAYHETHAN);
-		cmd.Parameters.AddWithValue("@maNV",maNV);
+        data.MANV = maNV;
+        bindData(cmd.Parameters, data);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;
     }
 	public bool updateDataByngayApDung(DtoPhanCong data,DateTime ngayApDung)
     {
-        DataConnector dc = new DataConnector(); string conStr = dc.getConnectionString(); 
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString(); 
         SqlConnection con = new SqlConnection(conStr);
         SqlCommand cmd = new SqlCommand("spUpdateDataPhanCongByngayApDung " , con);
         cmd.CommandType = CommandType.StoredProcedure;
-		cmd.Parameters.AddWithValue("@maCV", data.MACV);
-		cmd.Parameters.AddWithValue("@maNV", data.MANV);
-		cmd.Parameters.AddWithValue("@ngayHetHan", data.NGAYHETHAN);
-		cmd.Parameters.AddWithValue("@ngayApDung",ngayApDung);
+        data.NGAYAPDUNG = ngayApDung;
+        bindData(cmd.Parameters, data);
         con.Open();
         cmd.ExecuteNonQuery();
         return true;
