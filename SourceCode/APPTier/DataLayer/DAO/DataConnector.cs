@@ -54,11 +54,18 @@ namespace DataLayer.DAO
             ReadBinary("dbinfo.dat");
             return "Data Source=" + m_strServerName + ";Initial Catalog=" + m_strDatabaseName + ";Integrated Security=True;User ID=" + m_strUserID + ";Password=" + m_strPass;
         }
-        public string getTrackingConnectionString()
+        public string getTrackingServiceConnectionString()
         {
             ReadBinary("dbinfo.dat");
             string trackingDBName = "tracking";
             return "Data Source=" + m_strServerName + ";Initial Catalog=" + trackingDBName + ";Integrated Security=True;User ID=" + m_strUserID + ";Password=" + m_strPass;
+        }
+        public string getPersistenceServiceConnectionString()
+        {
+            ReadBinary("dbinfo.dat");
+            string persistenceDBName = "PersistenceService";
+            return "Data Source=" + m_strServerName + ";Initial Catalog=" + persistenceDBName + ";Integrated Security=True;User ID=" + m_strUserID + ";Password=" + m_strPass;
+
         }
         public string WriteBinary(string fileName)
         {
