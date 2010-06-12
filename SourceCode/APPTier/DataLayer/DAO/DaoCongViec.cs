@@ -323,6 +323,53 @@ public class DaoCongViec
         cmd.ExecuteNonQuery();
         return true;
     }
+
+    public int getNumOfLateCompletion(int maCV)
+    {
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString();
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("sp_laySoLanCongViecTreHan ", con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maCV", maCV);
+        cmd.Parameters.Add("@soLanTreHan",SqlDbType.Int);
+        cmd.Parameters["@soLanTreHan"].Direction = ParameterDirection.Output;
+
+        con.Open();
+        cmd.ExecuteNonQuery();
+        int result = int.Parse(cmd.Parameters["@soLanTreHan"].ToString());
+        return result;
+    }
+    public int getNumOfEarlyCompletion(int maCV)
+    {
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString();
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("sp_laySoLanCongViecSomHan ", con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maCV", maCV);
+        cmd.Parameters.Add("@soLanSomHan", SqlDbType.Int);
+        cmd.Parameters["@soLanSomHan"].Direction = ParameterDirection.Output;
+
+        con.Open();
+        cmd.ExecuteNonQuery();
+        int result = int.Parse(cmd.Parameters["@soLanTreHan"].ToString());
+        return result;
+    }
+    public int getNumOfExecution(int maCV)
+    {
+        DataConnector dc = new DataConnector(); string conStr = dc.getQuyTrinhThiConnectionString();
+        SqlConnection con = new SqlConnection(conStr);
+        SqlCommand cmd = new SqlCommand("sp_laySoLanThucHienCongViec ", con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@maCV", maCV);
+        cmd.Parameters.Add("@soLanThucHien", SqlDbType.Int);
+        cmd.Parameters["@soLanThucHien"].Direction = ParameterDirection.Output;
+
+        con.Open();
+        cmd.ExecuteNonQuery();
+        int result = int.Parse( cmd.Parameters["@soLanThucHien"].ToString());
+        return result;
+    }
+
 	#endregion
 }
 
