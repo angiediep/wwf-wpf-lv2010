@@ -245,6 +245,44 @@ public class BusCongViec
 		}
 		return true;
 	}
+
+    public int getNumOfLateCompletion(int maCV)
+    {
+        try
+        {
+            DaoCongViec dCongViec = new DaoCongViec();
+            return dCongViec.getNumOfLateCompletion(maCV);
+        }
+        catch
+        {
+            return 0;
+        }
+    }
+    public int getNumOfEarlyCompletion(int maCV)
+    {
+        try
+        {
+            DaoCongViec dCongViec = new DaoCongViec();
+            return dCongViec.getNumOfEarlyCompletion(maCV);
+        }
+        catch
+        {
+            return 0;
+        }
+    }
+    public int getNumOfExecution(int maCV)
+    {
+        try
+        {
+            DaoCongViec dCongViec = new DaoCongViec();
+            return dCongViec.getNumOfExecution(maCV);
+        }
+        catch
+        {
+            return 0;
+        }
+    }
+    
 	#endregion
 }
 
