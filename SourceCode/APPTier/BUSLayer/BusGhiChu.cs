@@ -31,33 +31,33 @@ public class BusGhiChu
 		}
 		return data;
 	}
-	public List<DtoGhiChu> getDataByMaTD(int maTD)
+	public DtoGhiChu getDataByMaTD(int maTD)
 	{
 		List<DtoGhiChu> lst = null;
 		try
 		{
 			DaoGhiChu dGhiChu = new DaoGhiChu();
 			lst = dGhiChu.getListDataByMaTD(maTD);
+            return lst[0];
 		}
 		catch
 		{
 			return null;
 		}
-		return lst;
 	}
-    public List<DtoGhiChu> getListDataByMaCVMaDT(int maCV, int maDT)
+    public DtoGhiChu getListDataByMaCVMaDT(int maCV, int maDT)
     {
         List<DtoGhiChu> lst = null;
         try
         {
             DaoGhiChu dGhiChu = new DaoGhiChu();
             lst = dGhiChu.getListDataByMaCVMaDT(maCV, maDT);
+            return lst[0];
         }
         catch
         {
             return null;
         }
-        return lst;
     }
 	public List<DtoGhiChu> getDataList()
 	{

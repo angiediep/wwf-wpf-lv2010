@@ -253,7 +253,7 @@ public class BusCongViec
             DaoCongViec dCongViec = new DaoCongViec();
             return dCongViec.getNumOfLateCompletion(maCV);
         }
-        catch
+        catch (Exception ex)
         {
             return 0;
         }
@@ -265,7 +265,7 @@ public class BusCongViec
             DaoCongViec dCongViec = new DaoCongViec();
             return dCongViec.getNumOfEarlyCompletion(maCV);
         }
-        catch
+        catch (Exception ex)
         {
             return 0;
         }
@@ -277,7 +277,7 @@ public class BusCongViec
             DaoCongViec dCongViec = new DaoCongViec();
             return dCongViec.getNumOfExecution(maCV);
         }
-        catch
+        catch ( Exception ex)
         {
             return 0;
         }

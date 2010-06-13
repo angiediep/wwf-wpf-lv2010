@@ -336,7 +336,8 @@ public class DaoCongViec
 
         con.Open();
         cmd.ExecuteNonQuery();
-        int result = int.Parse(cmd.Parameters["@soLanTreHan"].ToString());
+        int result = 0;
+        int.TryParse(cmd.Parameters["@soLanTreHan"].Value.ToString(),out result);
         return result;
     }
     public int getNumOfEarlyCompletion(int maCV)
@@ -351,7 +352,8 @@ public class DaoCongViec
 
         con.Open();
         cmd.ExecuteNonQuery();
-        int result = int.Parse(cmd.Parameters["@soLanTreHan"].ToString());
+        int result = 0;
+        int.TryParse(cmd.Parameters["@soLanSomHan"].Value.ToString(),out result);
         return result;
     }
     public int getNumOfExecution(int maCV)
@@ -366,7 +368,8 @@ public class DaoCongViec
 
         con.Open();
         cmd.ExecuteNonQuery();
-        int result = int.Parse( cmd.Parameters["@soLanThucHien"].ToString());
+        int result = 0;
+        int.TryParse(cmd.Parameters["@soLanThucHien"].Value.ToString(), out result);
         return result;
     }
 

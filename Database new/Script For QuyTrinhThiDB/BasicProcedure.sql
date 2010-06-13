@@ -180,18 +180,7 @@ AS
     From TienDo
 Where maTD=@maTD
 GO
- /****** Object:  StoredProcedure [dbo].[spDelDataTienDo]    Script Date: 6/11/2010 6:50:10 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataTienDo]
-@maTD int
-AS
-    Delete 
-    From TienDo
-Where maTD=@maTD
-GO
+
  /****** Object:  StoredProcedure [dbo].[spDelDataTienDoBytongKhoiLuongCV]    Script Date: 6/11/2010 6:50:10 PM******/
 SET ANSI_NULLS ON
 GO
@@ -498,7 +487,12 @@ CREATE PROCEDURE [dbo].[spUpdateDataTienDoBymaNV]
 	@maNV int
 AS
 	Update TienDo
-	 Set tongKhoiLuongCV = @tongKhoiLuongCV,khoiLuongCVHT = @khoiLuongCVHT,ngayBatDauQuyDinh = @ngayBatDauQuyDinh,ngayKetThucQuyDinh = @ngayKetThucQuyDinh,ngayBatDauThucTe = @ngayBatDauThucTe,ngayKetThucThucTe = @ngayKetThucThucTe,maDT = @maDT,maCV = @maCV,
+	 Set tongKhoiLuongCV = @tongKhoiLuongCV,khoiLuongCVHT = @khoiLuongCVHT,
+		ngayBatDauQuyDinh = @ngayBatDauQuyDinh,
+		ngayKetThucQuyDinh = @ngayKetThucQuyDinh,
+		ngayBatDauThucTe = @ngayBatDauThucTe,
+		ngayKetThucThucTe = @ngayKetThucThucTe,
+		maDT = @maDT,maCV = @maCV
 	 Where maNV=@maNV
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataPhanCong]    Script Date: 6/11/2010 6:50:11 PM******/
@@ -603,18 +597,7 @@ AS
     From PhanCong
 Where maCV=@maCV
 GO
- /****** Object:  StoredProcedure [dbo].[spDelDataPhanCong]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataPhanCong]
-@maCV int
-AS
-    Delete 
-    From PhanCong
-Where maCV=@maCV
-GO
+
  /****** Object:  StoredProcedure [dbo].[spDelDataPhanCongBymaNV]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
 GO
@@ -705,7 +688,7 @@ CREATE PROCEDURE [dbo].[spUpdateDataPhanCongByngayHetHan]
 	@ngayHetHan datetime
 AS
 	Update PhanCong
-	 Set maNV = @maNV,ngayApDung = @ngayApDung,
+	 Set maNV = @maNV,ngayApDung = @ngayApDung
 	 Where ngayHetHan=@ngayHetHan
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataGhiChu]    Script Date: 6/11/2010 6:50:11 PM******/
@@ -754,11 +737,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spGetListDataGhiChuByGhiChu]
-@GhiChu text(2147483647)
+@GhiChu text
 AS
     Select *
     From GhiChu
-Where GhiChu=@GhiChu
+Where GhiChu like @GhiChu
 GO
  /****** Object:  StoredProcedure [dbo].[spGetListDataGhiChuBymaTD]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -778,24 +761,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spInsertDataGhiChu]
-	@GhiChu text(2147483647),
+	@GhiChu text,
 	@maTD int
 AS
 	Insert Into GhiChu(GhiChu,maTD)
 	 Values(@GhiChu,@maTD)
 	 SELECT @@IDENTITY AS 'Identity'
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDataGhiChu]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataGhiChu]
-@maGC int
-AS
-    Delete 
-    From GhiChu
-Where maGC=@maGC
 GO
  /****** Object:  StoredProcedure [dbo].[spDelDataGhiChu]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -815,11 +786,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spDelDataGhiChuByGhiChu]
-@GhiChu text(2147483647)
+@GhiChu text
 AS
     Delete 
     From GhiChu
-Where GhiChu=@GhiChu
+Where GhiChu like @GhiChu
 GO
  /****** Object:  StoredProcedure [dbo].[spDelDataGhiChuBymaTD]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -840,7 +811,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spUpdateDataGhiChu]
 	@maGC int,
-	@GhiChu text(2147483647),
+	@GhiChu text,
 	@maTD int
 AS
 	Update GhiChu
@@ -853,12 +824,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spUpdateDataGhiChuByGhiChu]
-	@GhiChu text(2147483647),
+	@GhiChu text,
 	@maTD int
 AS
 	Update GhiChu
 	 Set maTD = @maTD
-	 Where GhiChu=@GhiChu
+	 Where GhiChu like @GhiChu
 GO
  /****** Object:  StoredProcedure [dbo].[spUpdateDataGhiChuBymaTD]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -866,11 +837,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spUpdateDataGhiChuBymaTD]
-	@GhiChu text(2147483647),
+	@GhiChu text,
 	@maTD int
 AS
 	Update GhiChu
-	 Set GhiChu = @GhiChu,
+	 Set GhiChu = @GhiChu
 	 Where maTD=@maTD
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataDotThi]    Script Date: 6/11/2010 6:50:11 PM******/
@@ -975,18 +946,6 @@ AS
 	Insert Into DotThi(tenDotThi,ngayThi,soLuongThiSinh,workflowInstanceID)
 	 Values(@tenDotThi,@ngayThi,@soLuongThiSinh,@workflowInstanceID)
 	 SELECT @@IDENTITY AS 'Identity'
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDataDotThi]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataDotThi]
-@maDT int
-AS
-    Delete 
-    From DotThi
-Where maDT=@maDT
 GO
  /****** Object:  StoredProcedure [dbo].[spDelDataDotThi]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -1121,7 +1080,7 @@ CREATE PROCEDURE [dbo].[spUpdateDataDotThiByworkflowInstanceID]
 	@workflowInstanceID nvarchar(250)
 AS
 	Update DotThi
-	 Set tenDotThi = @tenDotThi,ngayThi = @ngayThi,soLuongThiSinh = @soLuongThiSinh,
+	 Set tenDotThi = @tenDotThi,ngayThi = @ngayThi,soLuongThiSinh = @soLuongThiSinh
 	 Where workflowInstanceID=@workflowInstanceID
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataQuanLy]    Script Date: 6/11/2010 6:50:11 PM******/
@@ -1226,18 +1185,7 @@ AS
     From QuanLy
 Where tenDangNhap=@tenDangNhap
 GO
- /****** Object:  StoredProcedure [dbo].[spDelDataQuanLy]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataQuanLy]
-@tenDangNhap nvarchar(50)
-AS
-    Delete 
-    From QuanLy
-Where tenDangNhap=@tenDangNhap
-GO
+ 
  /****** Object:  StoredProcedure [dbo].[spDelDataQuanLyBymatKhau]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
 GO
@@ -1346,259 +1294,8 @@ CREATE PROCEDURE [dbo].[spUpdateDataQuanLyByemail]
 	@email nvarchar(250)
 AS
 	Update QuanLy
-	 Set tenDangNhap = @tenDangNhap,matKhau = @matKhau,SALT = @SALT,
+	 Set tenDangNhap = @tenDangNhap,matKhau = @matKhau,SALT = @SALT
 	 Where email=@email
-GO
- /****** Object:  StoredProcedure [dbo].[spGetDatasysdiagrams]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetDatasysdiagrams]
-@name 
-AS
-    Select *
-    From sysdiagrams
-Where name=@name
-GO
- /****** Object:  StoredProcedure [dbo].[spGetListDatasysdiagrams]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetListDatasysdiagrams]
-AS
-    Select *
-    From sysdiagrams
- /****** Object:  StoredProcedure [dbo].[spGetListDatasysdiagramsSortBy]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetListDatasysdiagramsSortBy]
-	@flag bit,
-	@col nvarchar(50)
-AS
-    if(@flag = 'True')
-	begin
-		Exec('select * from sysdiagrams order by ' + @col + ' asc') 
-	end
-	else
-	begin
-		Exec('select * from sysdiagrams order by ' + @col + ' desc') 
-	end
-
-
- /****** Object:  StoredProcedure [dbo].[spGetListDatasysdiagramsByprincipal_id]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetListDatasysdiagramsByprincipal_id]
-@principal_id 
-AS
-    Select *
-    From sysdiagrams
-Where principal_id=@principal_id
-GO
- /****** Object:  StoredProcedure [dbo].[spGetListDatasysdiagramsBydiagram_id]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetListDatasysdiagramsBydiagram_id]
-@diagram_id 
-AS
-    Select *
-    From sysdiagrams
-Where diagram_id=@diagram_id
-GO
- /****** Object:  StoredProcedure [dbo].[spGetListDatasysdiagramsByversion]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetListDatasysdiagramsByversion]
-@version 
-AS
-    Select *
-    From sysdiagrams
-Where version=@version
-GO
- /****** Object:  StoredProcedure [dbo].[spGetListDatasysdiagramsBydefinition]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spGetListDatasysdiagramsBydefinition]
-@definition 
-AS
-    Select *
-    From sysdiagrams
-Where definition=@definition
-GO
- /****** Object:  StoredProcedure [dbo].[spInsertDatasysdiagrams]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spInsertDatasysdiagrams]
-	@principal_id ,
-	@diagram_id ,
-	@version ,
-	@definition 
-AS
-	Insert Into sysdiagrams(principal_id,diagram_id,version,definition)
-	 Values(@principal_id,@diagram_id,@version,@definition)
-	 SELECT @@IDENTITY AS 'Identity'
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDatasysdiagrams]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDatasysdiagrams]
-@name 
-AS
-    Delete 
-    From sysdiagrams
-Where name=@name
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDatasysdiagrams]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDatasysdiagrams]
-@name 
-AS
-    Delete 
-    From sysdiagrams
-Where name=@name
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDatasysdiagramsByprincipal_id]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDatasysdiagramsByprincipal_id]
-@principal_id 
-AS
-    Delete 
-    From sysdiagrams
-Where principal_id=@principal_id
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDatasysdiagramsBydiagram_id]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDatasysdiagramsBydiagram_id]
-@diagram_id 
-AS
-    Delete 
-    From sysdiagrams
-Where diagram_id=@diagram_id
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDatasysdiagramsByversion]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDatasysdiagramsByversion]
-@version 
-AS
-    Delete 
-    From sysdiagrams
-Where version=@version
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDatasysdiagramsBydefinition]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDatasysdiagramsBydefinition]
-@definition 
-AS
-    Delete 
-    From sysdiagrams
-Where definition=@definition
-GO
- /****** Object:  StoredProcedure [dbo].[spUpdateDatasysdiagrams]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spUpdateDatasysdiagrams]
-	@name ,
-	@principal_id ,
-	@diagram_id ,
-	@version ,
-	@definition 
-AS
-	Update sysdiagrams
-	 Set principal_id = @principal_id,diagram_id = @diagram_id,version = @version,definition = @definition
-	 Where name=@name
-GO
- /****** Object:  StoredProcedure [dbo].[spUpdateDatasysdiagramsByname]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spUpdateDatasysdiagramsByname]
-	@name ,
-	@principal_id ,
-	@version ,
-	@definition 
-AS
-	Update sysdiagrams
-	 Set principal_id = @principal_id,version = @version,definition = @definition
-	 Where name=@name
-GO
- /****** Object:  StoredProcedure [dbo].[spUpdateDatasysdiagramsByprincipal_id]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spUpdateDatasysdiagramsByprincipal_id]
-	@name ,
-	@principal_id ,
-	@version ,
-	@definition 
-AS
-	Update sysdiagrams
-	 Set name = @name,version = @version,definition = @definition
-	 Where principal_id=@principal_id
-GO
- /****** Object:  StoredProcedure [dbo].[spUpdateDatasysdiagramsByversion]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spUpdateDatasysdiagramsByversion]
-	@name ,
-	@principal_id ,
-	@version ,
-	@definition 
-AS
-	Update sysdiagrams
-	 Set name = @name,principal_id = @principal_id,definition = @definition
-	 Where version=@version
-GO
- /****** Object:  StoredProcedure [dbo].[spUpdateDatasysdiagramsBydefinition]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spUpdateDatasysdiagramsBydefinition]
-	@name ,
-	@principal_id ,
-	@version ,
-	@definition 
-AS
-	Update sysdiagrams
-	 Set name = @name,principal_id = @principal_id,version = @version,
-	 Where definition=@definition
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataNhanVienThuaHanh]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -1728,18 +1425,6 @@ AS
 	Insert Into NhanVienThuaHanh(tenDangNhap,matKhau,SALT,email,tenNV,dienThoai)
 	 Values(@tenDangNhap,@matKhau,@SALT,@email,@tenNV,@dienThoai)
 	 SELECT @@IDENTITY AS 'Identity'
-GO
- /****** Object:  StoredProcedure [dbo].[spDelDataNhanVienThuaHanh]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataNhanVienThuaHanh]
-@maNV int
-AS
-    Delete 
-    From NhanVienThuaHanh
-Where maNV=@maNV
 GO
  /****** Object:  StoredProcedure [dbo].[spDelDataNhanVienThuaHanh]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -1942,7 +1627,7 @@ CREATE PROCEDURE [dbo].[spUpdateDataNhanVienThuaHanhBydienThoai]
 	@dienThoai varchar(11)
 AS
 	Update NhanVienThuaHanh
-	 Set tenDangNhap = @tenDangNhap,matKhau = @matKhau,SALT = @SALT,email = @email,tenNV = @tenNV,
+	 Set tenDangNhap = @tenDangNhap,matKhau = @matKhau,SALT = @SALT,email = @email,tenNV = @tenNV
 	 Where dienThoai=@dienThoai
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataCongViec]    Script Date: 6/11/2010 6:50:11 PM******/
@@ -2060,18 +1745,7 @@ AS
     From CongViec
 Where maCV=@maCV
 GO
- /****** Object:  StoredProcedure [dbo].[spDelDataCongViec]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataCongViec]
-@maCV int
-AS
-    Delete 
-    From CongViec
-Where maCV=@maCV
-GO
+ 
  /****** Object:  StoredProcedure [dbo].[spDelDataCongViecBytenCV]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
 GO
@@ -2193,7 +1867,7 @@ CREATE PROCEDURE [dbo].[spUpdateDataCongViecBymoTa]
 	@moTa nvarchar(250)
 AS
 	Update CongViec
-	 Set tenCV = @tenCV,ngayBatDau = @ngayBatDau,ngayKetThuc = @ngayKetThuc,
+	 Set tenCV = @tenCV,ngayBatDau = @ngayBatDau,ngayKetThuc = @ngayKetThuc
 	 Where moTa=@moTa
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataChungChi]    Script Date: 6/11/2010 6:50:11 PM******/
@@ -2272,18 +1946,7 @@ AS
     From ChungChi
 Where maCC=@maCC
 GO
- /****** Object:  StoredProcedure [dbo].[spDelDataChungChi]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataChungChi]
-@maCC int
-AS
-    Delete 
-    From ChungChi
-Where maCC=@maCC
-GO
+ 
  /****** Object:  StoredProcedure [dbo].[spDelDataChungChiBytenCC]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
 GO
@@ -2308,18 +1971,6 @@ AS
 	Update ChungChi
 	 Set tenCC = @tenCC
 	 Where maCC=@maCC
-GO
- /****** Object:  StoredProcedure [dbo].[spUpdateDataChungChiBytenCC]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spUpdateDataChungChiBytenCC]
-	@tenCC nvarchar(250)
-AS
-	Update ChungChi
-	 Set 
-	 Where tenCC=@tenCC
 GO
  /****** Object:  StoredProcedure [dbo].[spGetDataDotThi_ChungChi]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
@@ -2410,18 +2061,7 @@ AS
     From DotThi_ChungChi
 Where maDT=@maDT
 GO
- /****** Object:  StoredProcedure [dbo].[spDelDataDotThi_ChungChi]    Script Date: 6/11/2010 6:50:11 PM******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE PROCEDURE [dbo].[spDelDataDotThi_ChungChi]
-@maDT int
-AS
-    Delete 
-    From DotThi_ChungChi
-Where maDT=@maDT
-GO
+ 
  /****** Object:  StoredProcedure [dbo].[spDelDataDotThi_ChungChiBymaCC]    Script Date: 6/11/2010 6:50:11 PM******/
 SET ANSI_NULLS ON
 GO
@@ -2499,6 +2139,6 @@ CREATE PROCEDURE [dbo].[spUpdateDataDotThi_ChungChiBysoLuongThiSinh]
 	@soLuongThiSinh int
 AS
 	Update DotThi_ChungChi
-	 Set maDT = @maDT,maCC = @maCC,
+	 Set maDT = @maDT,maCC = @maCC
 	 Where soLuongThiSinh=@soLuongThiSinh
 GO
