@@ -54,6 +54,7 @@
     <Compile Include="DAO\DaoNhanVienThuaHanh.cs" />
     <Compile Include="DAO\DaoPhanCong.cs" />
     <Compile Include="DAO\DaoQuanLy.cs" />
+    <Compile Include="DAO\DaoThongBao.cs" />
     <Compile Include="DAO\DaoTienDo.cs" />
     <Compile Include="DAO\DataConnector.cs" />
     <Compile Include="DTO\DtoChungChi.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="DTO\DtoNhanVienThuaHanh.cs" />
     <Compile Include="DTO\DtoPhanCong.cs" />
     <Compile Include="DTO\DtoQuanLy.cs" />
+    <Compile Include="DTO\DtoThongBao.cs" />
     <Compile Include="DTO\DtoTienDo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
