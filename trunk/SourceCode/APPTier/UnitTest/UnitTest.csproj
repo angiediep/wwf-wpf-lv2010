@@ -63,6 +63,7 @@
     <Compile Include="BusGhiChuTest.cs" />
     <Compile Include="BusTienDoTest.cs" />
     <Compile Include="DaoThongBaoTest.cs" />
+    <Compile Include="DaoTienDoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
