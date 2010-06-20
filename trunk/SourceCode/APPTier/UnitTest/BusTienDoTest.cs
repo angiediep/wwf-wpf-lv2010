@@ -199,5 +199,27 @@ public void getListDataUpcomingByMaNVTest()
     Assert.IsNotNull(lst);
     Assert.AreNotEqual(0, lst.Count);
 }
+
+/// <summary>
+///A test for startWork
+///</summary>
+[TestMethod()]
+public void startWorkTest()
+{
+    BusTienDo bus = new BusTienDo();
+    int r = bus.startWork(967);
+    Assert.AreNotEqual(0, r, r.ToString());
+}
+
+/// <summary>
+///A test for finishWork
+///</summary>
+[TestMethod()]
+public void finishWorkTest()
+{
+    BusTienDo bus = new BusTienDo();
+    int r = bus.finishWork(1381);
+    Assert.AreNotEqual(0, r, r.ToString());
+}
     }
 }
