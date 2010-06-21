@@ -1,0 +1,113 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+	x:Class="APPTier.GeneralStatistics"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
+
+    <Grid x:Name="LayoutRoot">
+        <Label x:Name="lblFuncName" Margin="366.384,20.4,352.352,0" Content="BẢNG THỐNG KÊ TỔNG HỢP" FontSize="16" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Center"/>
+
+        <Border Margin="8,85,8,8" BorderBrush="#FFB1B1B1" BorderThickness="1" CornerRadius="5" Height="auto">
+            <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto">
+                <Grid x:Name="SuperGrid" Margin="0,0,-1,-1" Width="938">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="244"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" MinHeight="39" />
+                        <RowDefinition Height="auto" MinHeight="168" />
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="auto" MinHeight="24" />
+                        <RowDefinition Height="auto" MinHeight="168" />
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="auto" MinHeight="19" />
+                        <RowDefinition Height="auto" MinHeight="18" />
+                        <RowDefinition Height="auto" MinHeight="18" />
+                        <RowDefinition Height="auto" MinHeight="24" />
+                        <RowDefinition Height="auto" MinHeight="168" />
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="auto" MinHeight="192" />
+                        <RowDefinition Height="auto" MinHeight="214" />
+
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.RowSpan="14" BorderBrush="#FFB1B1B1" BorderThickness="0,0,1,0" Margin="-1,6,1,-5.28" />
+
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping ="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,15,0,8"><Run Text="Số thí sinh tham gia dự thi qua các đợt:"/></TextBlock>
+                    <TextBlock x:Name="tbxSoThiSinh" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" TextWrapping="Wrap" Foreground="#FF9B9B9B" Margin="5,15,0,8"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="25,5,0,0"/>
+                    <ComboBox Grid.Column="0" x:Name="cbxChiTiet" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="54,0,0,0" SelectionChanged="cbxChiTiet_SelectionChanged" Text="Biểu đồ cột" IsEditable="True">
+                        <ComboBoxItem >Biểu đồ cột</ComboBoxItem>
+                        <ComboBoxItem >Biểu đồ đường thẳng</ComboBoxItem>
+                    </ComboBox>
+                    <chartingToolkit:Chart x:Name="MyChart1" HorizontalAlignment="Left" Title="Chart Title" Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Background="White" Width="400" Height="300" >
+                        <chartingToolkit:LineSeries x:Name="mcChart1" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}" />
+
+                    </chartingToolkit:Chart>
+                    <chartingToolkit:Chart x:Name="MyChart11" HorizontalAlignment="Left" Title="Chart Title" Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Background="White" Width="400" Height="300" >
+                        <chartingToolkit:ColumnSeries x:Name="mcChart2" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}" />
+                    </chartingToolkit:Chart>
+
+                    <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="Số chứng chỉ cấp qua các đợt:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,8"/>
+                    <TextBlock x:Name="txbSLCC" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" TextWrapping="Wrap" Foreground="#FF9B9B9B" Margin="5,0,0,8"/>
+                    <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="25,5,0,0"/>
+                    <ComboBox Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="54,0,0,0" IsEditable="True" Text="Biểu đồ cột" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem >Biểu đồ cột</ComboBoxItem>
+                        <ComboBoxItem >Biểu đồ đường thẳng</ComboBoxItem>
+                    </ComboBox>
+                    <chartingToolkit:Chart x:Name="MyChart2" HorizontalAlignment="Left" Title="Chart Title" Grid.Column="1" Grid.Row="4" Margin="5,0,0,0" Background="White">
+                        <chartingToolkit:LineSeries x:Name="mcChart3" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}" />
+
+                    </chartingToolkit:Chart>
+                    <chartingToolkit:Chart x:Name="MyChart22" HorizontalAlignment="Left" Title="Chart Title" Grid.Column="1" Grid.Row="4" Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:ColumnSeries x:Name="mcChart4" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}" />
+                    </chartingToolkit:Chart>
+
+
+                    <TextBlock Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="Chi tiết từng công đoạn:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,3"/>
+                    <TextBlock Grid.Column="1" x:Name="txbChiTietTungCongDoan" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF9B9B9B" Margin="5,0,0,0"/>
+                    <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="1. Công đoạn thi:" Foreground="#FF9B9B9B" FontStyle="Italic" VerticalAlignment="Top" Margin="0,0,0,2"/>
+                    <TextBlock Grid.Column="1" x:Name="txbCongDoanThi" Grid.Row="7" TextWrapping="Wrap" Foreground="#FF9B9B9B"  Margin="5,0,0,0"/>
+                    <TextBlock Grid.Column="0" Grid.Row="8" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="2. Công đoạn chấm thi và phúc khảo:" VerticalAlignment="Top"  Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,2"/>
+                    <TextBlock Grid.Column="1" x:Name="txbChamThi" Grid.Row="8" TextWrapping ="Wrap" Foreground="#FF9B9B9B" Margin="5,0,0,0"/>
+                    <TextBlock Grid.Column="0" Grid.Row="9" HorizontalAlignment="Center" TextWrapping="Wrap" Text="3. Công đoạn cấp và in chứng chỉ:" VerticalAlignment="Center" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,8"/>
+                    <TextBlock Grid.Column="1" x:Name="txbCCVaIn" Grid.Row="9" TextWrapping="Wrap" Foreground="#FF9B9B9B" Margin="5,0,0,0"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="25,5,0,0"/>
+                    <ComboBox Grid.Column="0" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="54,0,0,0" Text="Biểu đồ cột" IsEditable="True" SelectionChanged="ComboBox_SelectionChanged_1">
+                        <ComboBoxItem >Biểu đồ cột</ComboBoxItem>
+                        <ComboBoxItem >Biểu đồ đường thẳng</ComboBoxItem>
+                    </ComboBox>
+                    <chartingToolkit:Chart x:Name="MyChart3" HorizontalAlignment="Left" Title="Chart Title" Grid.Column="1" Grid.Row="10" Margin="5,0,0,0" Background="White">
+                        <chartingToolkit:LineSeries x:Name="mcChart5" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}" />
+
+                    </chartingToolkit:Chart>
+                    <chartingToolkit:Chart x:Name="MyChart33" HorizontalAlignment="Left" Title="Chart Title" Grid.Column="1" Grid.Row="10" Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:ColumnSeries x:Name="mcChart6" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}" />
+                    </chartingToolkit:Chart>
+
+                    <TextBlock Grid.Column="0" Grid.Row="12" HorizontalAlignment="Center"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết từng thời kì:" Foreground="#FF9B9B9B" FontStyle="Italic"/>
+                    <TextBlock Grid.Column="1" x:Name="txbChiTietTungThoiKy" Grid.Row="12" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="#FF9B9B9B" Margin="5,0,0,0"><Run Text="1. Tháng ():"/><LineBreak/><Run Text="&#x9;Đợt thi ():"/><LineBreak/><Run Text="&#x9;&#x9;Công việc (): ()% hoàn thành - Nhân viên phụ trách: () - Nguyên nhân: ()"/><LineBreak/><Run Text="&#x9;&#x9;Công việc (): ()% hoàn thành - Nhân viên phụ trách: () - Nguyên nhân: ()"/><LineBreak/><Run Text="&#x9;&#x9;..."/><LineBreak/><Run Text="&#x9;Đợt thi ():"/><LineBreak/><Run Text="&#x9;&#x9;..."/><LineBreak/><Run Text="&#x9;..."/><LineBreak/><Run Text="2...."/><LineBreak/><Run Text=""/><LineBreak/><Run Text="(cái này động, vì số tháng nó động. Mỗi tháng cũng động, chỉ có các đợt thi mỗi tháng thì tĩnh vì cũng có cùng số công việc như nhau."/><LineBreak/><Run Text="Dấu ... nghĩa là tương tự"/></TextBlock>
+
+                    <TextBlock Grid.Column="0" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="Các nhân viên thường trễ hạn:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,20,0,0"/>
+                    <TextBlock Grid.Column="1" x:Name="txbCacNVTreHan" Grid.Row="13" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="194.5" Foreground="#FF9B9B9B" Margin="5,20,0,0"><Run Text="1. Nhân viên (): "/><LineBreak/><Run Text="&#x9;Tháng () năm (): trễ () công việc / tổng () công việc thực hiện"/><LineBreak/><Run Text="&#x9;Tháng () năm (): trễ () công việc / tổng () công việc thực hiện"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="&#x9;..."/><LineBreak/><Run Text="2. Nhân viên ():"/><LineBreak/><Run Text="&#x9;Tháng () năm (): trễ () công việc / tổng () công việc thực hiện"/><LineBreak/><Run Text="&#x9;Tháng () năm (): trễ () công việc / tổng () công việc thực hiện"/><LineBreak/><Run Text="&#x9;..."/><LineBreak/><Run Text="3...."/><LineBreak/><Run Text="( cái này cũng động nha :D:D)"/><LineBreak/><Run Text=""/></TextBlock>
+
+
+                </Grid>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>
