@@ -1,0 +1,73 @@
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Text;
+using System.Data.SqlClient;
+using System.IO;
+namespace DataLayer.DTO
+{
+public class DtoDotThi
+{
+
+	public DtoDotThi()
+	{
+	}
+	private int mmaDT ;
+
+
+	public int MADT 
+
+	{
+		get { return mmaDT ; }
+
+		set { mmaDT = value ; }
+	}
+
+	private string mtenDotThi ;
+
+
+	public string TENDOTTHI 
+
+	{
+		get { return mtenDotThi ; }
+
+		set { mtenDotThi = value ; }
+	}
+
+	private DateTime mngayThi ;
+
+
+	public DateTime NGAYTHI 
+
+	{
+		get { return mngayThi ; }
+
+		set { mngayThi = value ; }
+	}
+
+	private int msoLuongThiSinh ;
+
+
+	public int SOLUONGTHISINH 
+
+	{
+		get { return msoLuongThiSinh ; }
+
+		set { msoLuongThiSinh = value ; }
+	}
+
+
+    private string mworkflowInstanceID;
+
+
+    public string WORKFLOWINSTANCEID
+    {
+        get { return mworkflowInstanceID; }
+
+        set { mworkflowInstanceID = value; }
+    }
+}
+
+}

@@ -1,0 +1,10 @@
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
