@@ -51,3 +51,14 @@ C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\ModelReader\bin\Debug\
 C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\ModelReader\obj\Debug\ModelReader.dll
 C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\ModelReader\obj\Debug\ModelReader.pdb

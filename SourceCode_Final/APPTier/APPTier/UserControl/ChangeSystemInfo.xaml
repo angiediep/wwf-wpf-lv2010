@@ -9,11 +9,11 @@
 	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
 
 	<Grid x:Name="LayoutRoot">
-		<Label x:Name="lblFuncName" Margin="348,114,347.5,0" VerticalAlignment="Top" Height="39" Content="THAY ĐỔI THÔNG SỐ HỆ THỐNG" FontSize="16"/>
-		<Label x:Name="lblDatabaseName" Margin="170.5,231,0,0" VerticalAlignment="Top" Height="28.317" Content="Tên Database:" HorizontalAlignment="Left" Width="250.5"/>
-		<Label x:Name="lblUserID" Margin="170.5,274,0,0" VerticalAlignment="Top" Height="28.317" Content="Tên Truy cập Database:" HorizontalAlignment="Left" Width="250.5"/>
-		<Label x:Name="lblPass" Margin="170.5,0,0,282.683" Content="Mật khẩu truy cập Database:" HorizontalAlignment="Left" Width="250.5" VerticalAlignment="Bottom" Height="28.317"/>
-		<Label x:Name="lblServerName" Margin="170.5,188.817,0,0" VerticalAlignment="Top" Height="29" Content="Tên Server:" HorizontalAlignment="Left" Width="250.5"/>
+		<Label x:Name="lblFuncName" Margin="348,114,347.5,0" VerticalAlignment="Top" Height="39" Content="THAY ĐỔI THÔNG SỐ HỆ THỐNG" FontSize="16" Foreground="#FF0F1D04"/>
+		<Label x:Name="lblDatabaseName" Margin="170.5,231,0,0" VerticalAlignment="Top" Height="28.317" Content="Tên Database:" HorizontalAlignment="Left" Width="250.5" Foreground="#FF0F1D04"/>
+		<Label x:Name="lblUserID" Margin="170.5,274,0,0" VerticalAlignment="Top" Height="28.317" Content="Tên Truy cập Database:" HorizontalAlignment="Left" Width="250.5" Foreground="#FF0F1D04"/>
+		<Label x:Name="lblPass" Margin="170.5,0,0,282.683" Content="Mật khẩu truy cập Database:" HorizontalAlignment="Left" Width="250.5" VerticalAlignment="Bottom" Height="28.317" Foreground="#FF0F1D04"/>
+		<Label x:Name="lblServerName" Margin="170.5,188.817,0,0" VerticalAlignment="Top" Height="29" Content="Tên Server:" HorizontalAlignment="Left" Width="250.5" Foreground="#FF0F1D04"/>
 		<TextBox x:Name="tbxServerName" Margin="421,189.311,156.001,0" VerticalAlignment="Top" Height="27" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
 			<TextBox.RenderTransform>
 				<TransformGroup>

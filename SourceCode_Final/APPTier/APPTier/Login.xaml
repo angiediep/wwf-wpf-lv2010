@@ -5,7 +5,7 @@
 	x:Class="APPTier.Login"
 	x:Name="Window"
 	Title="Đăng nhập"
-	Width="499.7" Height="246.33" mc:Ignorable="d" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+	Width="487.255" Height="246.33" mc:Ignorable="d" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
 	<Window.Resources>
 		<LinearGradientBrush x:Key="TextBoxBorder" EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
@@ -101,20 +101,20 @@
 			</Setter>
 		</Style>
 	</Window.Resources>
-    <Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FF282828" MouseLeftButtonDown="Border_MouseLeftButtonDown">
-        <Grid Margin="-1" Width="474.81" ToolTip="Đăng nhập hệ thống.">
+    <Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FFB3FF47" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid Margin="-1" ToolTip="Đăng nhập hệ thống." d:LayoutOverrides="HorizontalMargin">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TabControl Margin="0,17.917,0,0" Grid.Column="1">
+            <TabControl Margin="1,20.167,1,5.75" Grid.Column="1" Background="{x:Null}" BorderBrush="#FFB3FF47" BorderThickness="1" Foreground="#FFB3FF47">
                 <TabItem Header="Đăng nhập">
                     <Grid>
-                        <Label x:Name="lblUsername" HorizontalAlignment="Left" Margin="34.552,65.966,0,0" Width="133" Content="Tên người dùng:" Foreground="White" Height="13.76" VerticalAlignment="Top" />
-                        <Label x:Name="lblPassword" HorizontalAlignment="Left" Margin="34.552,0,0,87.651" Width="133" Content="Mật khẩu:" Foreground="White" Height="11.103" VerticalAlignment="Bottom" />
-                        <Button x:Name="btnLogin" Margin="149.506,0,235.34,44.097"   Content="Đăng nhập" VerticalAlignment="Bottom" Height="23" Click="btnLogin_Click" TabIndex="2" IsDefault="True" ToolTip="Tiến hành đăng nhập" />
-                        <PasswordBox x:Name="tbxPassword" Password="123456" Margin="149.333,99.516,75.477,86.937" BorderThickness="0.5" MinWidth="250" MaxWidth="250" TabIndex="1" ToolTip="mật khẩu đăng nhập hệ thống">
+                        <Label x:Name="lblUsername" HorizontalAlignment="Left" Margin="44.552,45.966,0,0" Width="114.781" Content="Tên người dùng:" Foreground="#FF0F1D04" Height="17.288" VerticalAlignment="Top" Background="{x:Null}" />
+                        <Label x:Name="lblPassword" HorizontalAlignment="Left" Margin="44.552,79.699,0,95.937" Width="114.781" Content="Mật khẩu:" Foreground="#FF0F1D04" Background="{x:Null}" />
+                        <Button x:Name="btnLogin" Margin="145.333,0,0,44.097"   Content="Đăng nhập" VerticalAlignment="Bottom" Height="20" Click="btnLogin_Click" TabIndex="2" IsDefault="True" ToolTip="Tiến hành đăng nhập" HorizontalAlignment="Left" Width="85.582" />
+                        <PasswordBox x:Name="tbxPassword" Password="123456" Margin="159.333,79.516,65.477,95.937" BorderThickness="0.5" MinWidth="250" MaxWidth="250" TabIndex="1" ToolTip="mật khẩu đăng nhập hệ thống" d:LayoutOverrides="VerticalAlignment">
                             <PasswordBox.BorderBrush>
                                 <LinearGradientBrush EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
                                     <GradientStop Color="#FF888888" Offset="0.05"/>
@@ -123,9 +123,9 @@
                             </PasswordBox.BorderBrush>
                         </PasswordBox>
 
-                        <TextBlock x:Name="lblFuncName" Margin="149.333,28,140.73,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment" FontSize="16" Foreground="White"><Run Text="ĐĂNG NHẬP HỆ THỐNG"/></TextBlock>
-                        <Button x:Name="btnRegister" Margin="0,0,131.096,44.097" Content="Đăng kí" VerticalAlignment="Bottom" Height="23" Click="btnRegister_Click" HorizontalAlignment="Right" Width="86.033" TabIndex="3" ToolTip="Đăng ký tài khoản mới" />
-                        <TextBox x:Name="tbxUsername" Margin="148.742,60.254,76.068,0" VerticalAlignment="Top" Height="20" TextWrapping="Wrap" BorderThickness="0.5" Text="pnquan" Width="250" MinWidth="250" MaxWidth="250" TabIndex="0" ToolTip="tên đăng nhập hệ thống" />
+                        <TextBlock x:Name="lblFuncName" Margin="167.333,8,122.73,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment" FontSize="16" Foreground="#FF0F1D04"><Run Text="ĐĂNG NHẬP HỆ THỐNG"/></TextBlock>
+                        <Button x:Name="btnRegister" Margin="0,0,150.096,44.097" Content="Đăng kí" VerticalAlignment="Bottom" Height="20" Click="btnRegister_Click" HorizontalAlignment="Right" Width="72.533" TabIndex="3" ToolTip="Đăng ký tài khoản mới" />
+                        <TextBox x:Name="tbxUsername" Margin="163.964,40.254,71.29,0" VerticalAlignment="Top" Height="23" TextWrapping="Wrap" BorderThickness="0.5" Text="pnquan" Width="250" MinWidth="250" MaxWidth="250" TabIndex="0" ToolTip="tên đăng nhập hệ thống" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Cơ sở dữ liệu">
@@ -135,11 +135,11 @@
                             <ComboBoxItem Content="Tracking"/>
                             <ComboBoxItem Content="Persistency"/>
                         </ComboBox>
-                        <Label x:Name="lblDatabaseType" HorizontalAlignment="Left" Margin="47,12.123,0,0" VerticalAlignment="Top" Width="112" Height="23" Content="Cơ sở dữ liệu:"/>
-                        <Label x:Name="lblDatabaseName" Margin="47,72.123,0,0" Content="Tên Database:" HorizontalAlignment="Left" Width="112" VerticalAlignment="Top" Height="28.317"/>
-                        <Label x:Name="lblUserID" Margin="47,0,0,73.696" VerticalAlignment="Bottom" Height="28.317" Content="Tên Truy cập:" HorizontalAlignment="Left" Width="112"/>
-                        <Label x:Name="lblPass" Margin="47,0,0,41.379" Content="Mật khẩu truy cập:" VerticalAlignment="Bottom" Height="28.317" HorizontalAlignment="Left" Width="112"/>
-                        <Label x:Name="lblServerName" Margin="47,39.123,0,0" VerticalAlignment="Top" Height="29" Content="Tên Server:" HorizontalAlignment="Left" Width="112"/>
+                        <Label x:Name="lblDatabaseType" HorizontalAlignment="Left" Margin="47,12.123,0,0" VerticalAlignment="Top" Width="112" Height="23" Content="Cơ sở dữ liệu:" Foreground="#FF0F1D04"/>
+                        <Label x:Name="lblDatabaseName" Margin="47,67.123,0,0" Content="Tên Database:" HorizontalAlignment="Left" Width="112" VerticalAlignment="Top" Height="24.5" Foreground="#FF0F1D04" d:LayoutOverrides="VerticalAlignment"/>
+                        <Label x:Name="lblUserID" Margin="47,0,0,79.196" VerticalAlignment="Bottom" Height="22.94" Content="Tên Truy cập:" HorizontalAlignment="Left" Width="112" Foreground="#FF0F1D04"/>
+                        <Label x:Name="lblPass" Margin="47,0,0,50.636" Content="Mật khẩu truy cập:" VerticalAlignment="Bottom" Height="24.06" HorizontalAlignment="Left" Width="112" Foreground="#FF0F1D04"/>
+                        <Label x:Name="lblServerName" Margin="47,39.123,0,0" VerticalAlignment="Top" Height="24" Content="Tên Server:" HorizontalAlignment="Left" Width="112" Foreground="#FF0F1D04"/>
                         <TextBox x:Name="tbxServerName" Margin="163,39.324,77.811,0" VerticalAlignment="Top" Height="24" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
@@ -150,17 +150,27 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="tbxDatabaseName" Margin="163,70.317,78.81,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24"/>
-                        <TextBox x:Name="tbxUserID" Margin="163,101.817,77.81,80.636" TextWrapping="Wrap" Height="24"/>
-                        <TextBox x:Name="tbxPass" Margin="163,0,77.81,49.136" VerticalAlignment="Bottom" Height="24" TextWrapping="Wrap"/>
-                        <Button x:Name="btnSave" Margin="110,0,0,12.379" VerticalAlignment="Bottom" Height="23" Content="Lưu" Click="btnSave_Click" HorizontalAlignment="Left" Width="72"/>
-                        <Button x:Name="btnCancel" Margin="205,0,202.81,12.379" VerticalAlignment="Bottom" Height="23" Content="Hủy" Click="btnCancel_Click"/>
-                        <Button x:Name="btnReset" Margin="0,0,111.81,12.379" VerticalAlignment="Bottom" Height="23" Content="Reset" HorizontalAlignment="Right" Width="70" Click="btnReset_Click"/>
+                        <TextBox x:Name="tbxDatabaseName" Margin="163,67.623,77.81,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24"/>
+                        <TextBox x:Name="tbxUserID" Margin="163,95.757,77.81,78.696" TextWrapping="Wrap" Height="24" d:LayoutOverrides="VerticalAlignment"/>
+                        <TextBox x:Name="tbxPass" Margin="163,0,77.81,50.636" VerticalAlignment="Bottom" Height="24" TextWrapping="Wrap"/>
+                        <Button x:Name="btnSave" Margin="134.5,0,0,12.379" VerticalAlignment="Bottom" Height="20" Content="Lưu" Click="btnSave_Click" HorizontalAlignment="Left" Width="57"/>
+                        <Button x:Name="btnCancel" Margin="208,0,210.81,12.379" VerticalAlignment="Bottom" Height="20" Content="Hủy" Click="btnCancel_Click"/>
+                        <Button x:Name="btnReset" Margin="0,0,130.31,12.379" VerticalAlignment="Bottom" Height="20" Content="Reset" HorizontalAlignment="Right" Width="63" Click="btnReset_Click"/>
                     </Grid>
                 </TabItem>
             </TabControl>
-            <Rectangle Fill="#FF444444" VerticalAlignment="Top" Height="16.167" d:LayoutOverrides="HorizontalAlignment" Grid.Column="1" RadiusX="5" RadiusY="5" d:IsLocked="True"/>
-            <Rectangle Fill="#FF444444" Margin="0,3.57,0,0" VerticalAlignment="Top" Height="15.167" d:LayoutOverrides="HorizontalAlignment" Grid.Column="1" d:IsLocked="True"/>
+            <Image HorizontalAlignment="Right" Margin="0,0,5.667,0.21" Width="117.01" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Source="Images/floral1.png" Stretch="Fill" VerticalAlignment="Bottom" Height="91.937" Opacity="0.62">
+            	<Image.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform Angle="8.575"/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Image.RenderTransform>
+            </Image>
+            <Rectangle Fill="#FF0F1D04" VerticalAlignment="Top" Height="15.334" d:LayoutOverrides="HorizontalAlignment" Grid.Column="1" RadiusX="4" RadiusY="4" Margin="1,0.833,1,0"/>
+            <Rectangle Fill="#FF0F1D04" Margin="1,8,1,0" VerticalAlignment="Top" Height="11.22" d:LayoutOverrides="HorizontalAlignment" Grid.Column="1"/>
             <Button x:Name="btnMinimize" HorizontalAlignment="Right" Margin="0,3.026,35.728,0" Style="{DynamicResource btnMinimize}" VerticalAlignment="Top" Width="4.472" Height="16.194" Content="Button" Grid.Column="1" d:IsLocked="True"/>
             <Button x:Name="btnClose" HorizontalAlignment="Right" Margin="0,3.811,8,0" Style="{DynamicResource btnClose}" VerticalAlignment="Top" Width="14.292" Height="14.106" Content="Button" Grid.Column="1" d:IsLocked="True"/>
 

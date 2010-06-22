@@ -7,10 +7,10 @@
 	x:Class="APPTier.Tooltip1"
 	x:Name="UserControl" Width="295" Height="380" Background="#7F2C2C2C">
 
-	<Border BorderThickness="1" CornerRadius="6" BorderBrush="#FF787878">
+	<Border BorderThickness="1" CornerRadius="6" BorderBrush="#FF387E13" Background="#28000000">
 		<Grid x:Name="LayoutRoot" Margin="1,-1,-1,1">
-			<Border Margin="21,20,20.5,91.5" BorderBrush="#FF787878" BorderThickness="1" CornerRadius="3">
-				<TextBlock x:Name="tbxContent" Foreground="White" TextWrapping="Wrap"/>
+			<Border Margin="21,20,20.5,91.5" BorderBrush="#FF387E13" BorderThickness="1" CornerRadius="3">
+				<TextBlock x:Name="tbxContent" Foreground="#FF0F1D04" TextWrapping="Wrap"/>
 			</Border>
 			<Button x:Name="btnStart" HorizontalAlignment="Left" Margin="21,0,0,46.5" VerticalAlignment="Bottom" Width="77.667" Height="23.5" Content="Bắt đầu" Click="btnStart_Click"/>
 			<Button x:Name="btnChange" Margin="102.667,0,102,46.5" VerticalAlignment="Bottom" Height="23.5" Content="Chỉnh sửa" Click="btnChange_Click"/>

@@ -10,8 +10,8 @@
 	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
 
 	<Grid x:Name="LayoutRoot">
-		<Label x:Name="lblFuncName" Margin="292,76,293,0" VerticalAlignment="Top" Height="34" Content="THAY ĐỔI THỜI GIAN THỰC HIỆN CÁC CÔNG VIỆC" FontSize="16"/>
-		<Border Margin="167,136,167,147" BorderBrush="#FF787878" BorderThickness="1" CornerRadius="6" Width="360">
+		<Label x:Name="lblFuncName" Margin="292,76,293,0" VerticalAlignment="Top" Height="34" Content="THAY ĐỔI THỜI GIAN THỰC HIỆN CÁC CÔNG VIỆC" FontSize="16" Foreground="#FF0F1D04"/>
+		<Border Margin="167,136,167,147" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="6" Width="360">
 			<Custom:DataGrid x:Name="dtgvWorkItem" Margin="8" MouseLeftButtonDown="dtgvWorkItem_MouseLeftButtonDown" IsReadOnly="True" Width="340"/>
 		</Border>
 		
