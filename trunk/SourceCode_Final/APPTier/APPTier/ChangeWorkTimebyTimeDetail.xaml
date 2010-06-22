@@ -6,7 +6,7 @@
 	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
     x:Class="APPTier.ChangeWorkTimebyTimeDetail"
 	x:Name="Window"
-	Width="584.44" Height="370.658" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+	Width="542.914" Height="254" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <LinearGradientBrush x:Key="TextBoxBorder" EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
@@ -103,14 +103,14 @@
         </Style>
     </Window.Resources>
 
-    <Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FF282828" MouseLeftButtonDown="Border_MouseLeftButtonDown"  Width="542.914" Height="254">
-        <Grid Margin="1,-1,-1,1" Height="326.825" HorizontalAlignment="Left">
+    <Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FFB3FF47" MouseLeftButtonDown="Border_MouseLeftButtonDown"  Width="542.914" Height="254">
+        <Grid Margin="0" d:LayoutOverrides="Width">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="290.682*" />
-                <ColumnDefinition Width="250.232*" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="0*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="lblNgayThi" HorizontalAlignment="Left" Margin="63,124.35,0,0" Content="Ngày bắt đầu:" Width="77.523" Height="19" VerticalAlignment="Top" />
-            <TextBox x:Name="tbxNgayBatDau" Margin="0,115.35,-87.204,0" BorderThickness="0.5" d:LayoutOverrides="VerticalAlignment" TabIndex="2" Height="20" VerticalAlignment="Top" MaxHeight="20" MinHeight="20" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="188.712">
+            <Label x:Name="lblNgayThi" HorizontalAlignment="Left" Margin="63,124.35,0,110.65" Content="Ngày bắt đầu:" Width="77.523" d:LayoutOverrides="HorizontalAlignment" Foreground="#FF0F1D04" />
+            <TextBox x:Name="tbxNgayBatDau" Margin="0,115.35,183.32,0" BorderThickness="0.5" d:LayoutOverrides="GridBox" TabIndex="2" Height="20" VerticalAlignment="Top" MaxHeight="20" MinHeight="20" HorizontalAlignment="Right" Width="189.481">
                 <TextBox.BorderBrush>
                     <LinearGradientBrush EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
                         <GradientStop Color="#FF888888" Offset="0.05"/>
@@ -118,16 +118,16 @@
                     </LinearGradientBrush>
                 </TextBox.BorderBrush>
             </TextBox>
-            <Button x:Name="btnUpdate" HorizontalAlignment="Right" Margin="0,0,-22,121"   VerticalAlignment="Bottom" Width="75" Content="Cập Nhật" Height="23.077" BorderBrush="#FF333333" TabIndex="7" IsDefault="True" Click="btnUpdate_Click" Grid.ColumnSpan="2" />
-            <TextBlock x:Name="lblFuncName" Margin="0,39,-150.005,0" VerticalAlignment="Top" Text="THỜI GIAN THỰC HIỆN CÔNG VIỆC" Height="31" TextWrapping="Wrap" FontSize="16" Foreground="White" d:LayoutOverrides="HorizontalAlignment, GridBox" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="273.834"><Run FontWeight="Bold"/></TextBlock>
-            <Rectangle Fill="#FF444444" VerticalAlignment="Top" Height="25.474" d:LayoutOverrides="HorizontalAlignment, GridBox" RadiusX="5" RadiusY="5" d:IsLocked="True" Grid.ColumnSpan="2" Margin="0,-2.307,-249.925,0" />
-            <Rectangle Fill="#FF444444" Margin="0,8,-250.232,0" VerticalAlignment="Top" Height="15.167" d:LayoutOverrides="HorizontalAlignment, GridBox" d:IsLocked="True" Grid.ColumnSpan="2" />
-            <Button x:Name="btnMinimize" HorizontalAlignment="Right" Margin="0,2.776,-214.504,0" Style="{DynamicResource btnMinimize}" VerticalAlignment="Top" Width="4.472" Height="16.194" Content="Button" Grid.Column="1" />
-            <Button x:Name="btnClose" HorizontalAlignment="Right" Margin="0,3.561,-242.232,0" Style="{DynamicResource btnClose}" VerticalAlignment="Top" Width="14.292" Height="14.106" Content="Button" Grid.Column="1" />
-            <Label x:Name="lblTenDotThi" HorizontalAlignment="Left" Margin="63,87.372,0,0"  VerticalAlignment="Top" Content="Tên công việc:" Height="17.5" Width="77.523" />
-            <TextBlock x:Name="tbxTenCV" Margin="0,84.872,-147.318,0"  VerticalAlignment="Top" TextWrapping="NoWrap" MaxHeight="20" MinHeight="20" Height="20" MinWidth="250" MaxWidth="250" Width="250" Grid.ColumnSpan="2" HorizontalAlignment="Right" />
-            <Label Margin="63,159.794,128.481,143" Name="label1">Ngày kết thúc:</Label>
-            <TextBox BorderThickness="0.5" Margin="0,152.259,-87.973,154.566" Name="tbxNgayKetThuc" TabIndex="3" MaxHeight="20" MinHeight="20" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="189.481"/>
+            <Button x:Name="btnUpdate" HorizontalAlignment="Right" Margin="0,0,250.806,48.175"   VerticalAlignment="Bottom" Width="75" Content="Cập Nhật" Height="23.077" BorderBrush="#FF333333" TabIndex="7" IsDefault="True" Click="btnUpdate_Click" d:LayoutOverrides="GridBox" />
+            <TextBlock x:Name="lblFuncName" Margin="0,39,122.801,0" VerticalAlignment="Top" Text="THỜI GIAN THỰC HIỆN CÔNG VIỆC" Height="31" TextWrapping="Wrap" FontSize="16" Foreground="#FF0F1D04" HorizontalAlignment="Right" Width="273.834"><Run FontWeight="Bold"/></TextBlock>
+            <Rectangle Fill="#FF0F1D04" VerticalAlignment="Top" Height="25.474" d:LayoutOverrides="HorizontalAlignment" RadiusX="5" RadiusY="5" Margin="0,-0.088,0.006,0" />
+            <Rectangle Fill="#FF0F1D04" Margin="0,10.219,0.01,0" VerticalAlignment="Top" Height="15.167" d:LayoutOverrides="HorizontalAlignment" />
+            <Button x:Name="btnMinimize" HorizontalAlignment="Right" Margin="0,4.995,35.52,0" Style="{DynamicResource btnMinimize}" VerticalAlignment="Top" Width="4.472" Height="16.194" Content="Button" />
+            <Button x:Name="btnClose" HorizontalAlignment="Right" Margin="0,5.78,7.792,0" Style="{DynamicResource btnClose}" VerticalAlignment="Top" Width="14.293" Height="14.106" Content="Button" />
+            <Label x:Name="lblTenDotThi" HorizontalAlignment="Left" Margin="63,87.372,0,0"  VerticalAlignment="Top" Content="Tên công việc:" Height="17.5" Width="77.523" d:LayoutOverrides="HorizontalAlignment" Foreground="#FF0F1D04" />
+            <TextBlock x:Name="tbxTenCV" Margin="0,84.872,122.801,0"  VerticalAlignment="Top" TextWrapping="NoWrap" MaxHeight="20" MinHeight="20" Height="20" MinWidth="250" MaxWidth="250" Width="250" HorizontalAlignment="Right" d:LayoutOverrides="GridBox" />
+            <Label Margin="63,0,0,70.175" Name="label1" HorizontalAlignment="Left" Width="76.627" VerticalAlignment="Bottom" Height="24.031" Foreground="#FF0F1D04">Ngày kết thúc:</Label>
+            <TextBox BorderThickness="0.5" Margin="0,0,183.32,81.741" Name="tbxNgayKetThuc" TabIndex="3" MaxHeight="20" MinHeight="20" HorizontalAlignment="Right" Width="189.481" d:LayoutOverrides="GridBox" VerticalAlignment="Bottom" Height="20"/>
         </Grid>
     </Border>
 </Window>

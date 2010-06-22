@@ -70,15 +70,15 @@
 		</Style>
 	</Window.Resources>
 
-	<Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FF282828" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+	<Border Margin="0" CornerRadius="5" BorderThickness="1" BorderBrush="#FF1A1A1A" Background="#FFB3FF47" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 		<Grid Margin="0">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="0.708*"/>
 				<RowDefinition Height="0.292*"/>
 			</Grid.RowDefinitions>
 		
-			<Rectangle Fill="#FF444444" VerticalAlignment="Top" Height="16.167" RadiusX="5" RadiusY="5" d:IsLocked="True" d:LayoutOverrides="GridBox"/>
-			<Rectangle Fill="#FF444444" Margin="0,8,0,0" VerticalAlignment="Top" Height="15.167" d:IsLocked="True" d:LayoutOverrides="GridBox"/>
+			<Rectangle Fill="#FF0F1D04" VerticalAlignment="Top" Height="16.167" RadiusX="5" RadiusY="5" d:IsLocked="True" d:LayoutOverrides="GridBox"/>
+			<Rectangle Fill="#FF0F1D04" Margin="0,8,0,0" VerticalAlignment="Top" Height="15.167" d:IsLocked="True" d:LayoutOverrides="GridBox"/>
 			<TabControl x:Name="tabMainMenu" Margin="8,27.167,8,8" TabStripPlacement="Right" Grid.RowSpan="2">
 				<TabItem x:Name="tabUser" Header="Nhân viên">
 					<Grid>

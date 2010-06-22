@@ -9,11 +9,11 @@
 	x:Name="UserControl"
 	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
 	<Grid x:Name="LayoutRoot">
-		<Border HorizontalAlignment="center" Margin="0,86,111,164.357" Width="460" BorderBrush="#FF787878" BorderThickness="1" CornerRadius="6">
+		<Border Margin="238.5,86,247.5,164.357" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="6">
             <Custom:DataGrid x:Name="dtgvUser" IsReadOnly="True" AutoGenerateColumns="True" ItemsSource="{Binding Collection}" Margin="8" MouseLeftButtonDown="dtgvUser_MouseLeftButtonUp" Width="440">
             </Custom:DataGrid>
         </Border>
-		<TextBlock x:Name="lblFuncName" Margin="297,28,391,0" VerticalAlignment="Top" Height="52" FontSize="16" TextWrapping="Wrap" Foreground="White"><Run Text="CẬP NHẬT DANH SÁCH NHÂN VIÊN"/></TextBlock>
-        <Button Height="23" Margin="371,0,0,109" HorizontalAlignment="Left" Name="btnAdd" VerticalAlignment="Bottom" Click="btnAdd_Click" Width="90.353">Thêm Nhân Viên</Button>
+		<TextBlock x:Name="lblFuncName" Margin="348,28,340,0" VerticalAlignment="Top" Height="52" FontSize="16" TextWrapping="Wrap" Foreground="#FF0F1D04"><Run Text="CẬP NHẬT DANH SÁCH NHÂN VIÊN"/></TextBlock>
+        <Button Height="23" Margin="422,0,419.647,109" Name="btnAdd" VerticalAlignment="Bottom" Click="btnAdd_Click">Thêm Nhân Viên</Button>
     </Grid>
 </UserControl>

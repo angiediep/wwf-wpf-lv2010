@@ -14,32 +14,32 @@
 
     <!-- Main Colors -->
 
-    <Color x:Key="MainColor">#FF595959</Color>
-    <Color x:Key="HoverColor">#FF393939</Color>
-    <Color x:Key="DefaultColor">#FF9BB1C5</Color>
-    <SolidColorBrush x:Key="LightBrush" Color="#FF333333" />
-    <SolidColorBrush x:Key="ShadeBrush" Color="#FF434343" />
+    <Color x:Key="MainColor">#FF457905</Color>
+    <Color x:Key="HoverColor">#FFBFFF36</Color>
+    <Color x:Key="DefaultColor">#FFDCFF90</Color>
+    <SolidColorBrush x:Key="LightBrush" Color="#FFD7FF80" />
+    <SolidColorBrush x:Key="ShadeBrush" Color="#FF85B507" />
 
-    <Color x:Key="TopGradientSelectColor">#FFFFFFFF</Color>
-    <Color x:Key="BottomGradientSelectColor">#FF737373</Color>
+    <Color x:Key="TopGradientSelectColor">#FFDCFF90</Color>
+    <Color x:Key="BottomGradientSelectColor">#FF93D800</Color>
 
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
 
-    <SolidColorBrush x:Key="TextBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="TextBrush" Color="#FF3C3C3C" />
     <SolidColorBrush x:Key="NormalBrush" Color="{StaticResource MainColor}" />
     <SolidColorBrush x:Key="NormalBorderBrush" Color="#FF333333" />
     <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}" />
-    <SolidColorBrush x:Key="GlyphBrush" Color="#FFD1D1D1" />
+    <SolidColorBrush x:Key="GlyphBrush" Color="#FFFFFFFF" />
 
     <LinearGradientBrush x:Key="PressedBrush" EndPoint="0.5,0.971" StartPoint="0.5,0.042">
-        <GradientStop Color="#4C000000" Offset="0" />
-        <GradientStop Color="#26FFFFFF" Offset="1" />
-        <GradientStop Color="#4C000000" Offset="0.467" />
-        <GradientStop Color="#26FFFFFF" Offset="0.479" />
+        <GradientStop Color="#FFDCFF90" Offset="0" />
+        <GradientStop Color="#FFBFFF36" Offset="1" />
+        <GradientStop Color="#FFAEFF00" Offset="0.467" />
+        <GradientStop Color="#FF84ff00" Offset="0.479" />
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#FF333333" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#FFE6FF7C" />
 
     <LinearGradientBrush x:Key="SelectedBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="{StaticResource TopGradientSelectColor}" Offset="0" />
@@ -47,9 +47,9 @@
     </LinearGradientBrush>
 
     <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888" />
-    <SolidColorBrush x:Key="DisabledBackgroundBrush" Color="#FF787878" />
+    <SolidColorBrush x:Key="DisabledBackgroundBrush" Color="#FFd8ff8c" />
     <SolidColorBrush x:Key="DisabledBorderBrush" Color="#AAA" />
-    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#FF595959" />
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#FF5c7000" />
 
     <!-- EXPRESSION COMMON VALUES -->
 
@@ -143,7 +143,7 @@
 
         </ControlTemplate.Resources>
         <Grid x:Name="Grid">
-            <Border x:Name="Background" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="3" BorderThickness="1" />
+            <Border x:Name="Background" Background="{TemplateBinding OpacityMask}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="3" BorderThickness="1" />
             <Border x:Name="HoverBorder" Opacity="0" Background="{StaticResource HoverBrush}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="3" BorderThickness="1" />
             <Border x:Name="HoverShineBorder" Opacity="0" Background="{StaticResource HoverShineBrush}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="3" BorderThickness="1" />
             <Border x:Name="PressedBorder" Opacity="0" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="3" Background="{StaticResource PressedBrush}" BorderThickness="1" />
@@ -2055,7 +2055,7 @@
                         <Border x:Name="border" BorderBrush="{x:Null}" CornerRadius="2,2,2,2" Opacity="0.5">
                             <Border.Background>
                                 <LinearGradientBrush EndPoint="0.5,0.976" StartPoint="0.5,0.039">
-                                    <GradientStop Color="#7F595959" Offset="0" />
+                                    <GradientStop Color="#7F368700" Offset="0" />
                                     <GradientStop Color="#19FFFFFF" Offset="1" />
                                 </LinearGradientBrush>
                             </Border.Background>
@@ -2064,7 +2064,7 @@
                         <Border x:Name="HoverBorder" BorderBrush="{x:Null}" CornerRadius="2,2,2,2" Opacity="0">
                             <Border.Background>
                                 <LinearGradientBrush EndPoint="0.5,0.976" StartPoint="0.5,0.039">
-                                    <GradientStop Color="#7F595959" Offset="0" />
+                                    <GradientStop Color="#7F368700" Offset="0" />
                                     <GradientStop Color="#19FFFFFF" Offset="1" />
                                 </LinearGradientBrush>
                             </Border.Background>

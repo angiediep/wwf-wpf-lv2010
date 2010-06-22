@@ -10,9 +10,9 @@
 	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
 
     <Grid x:Name="LayoutRoot">
-        <Label x:Name="lblFuncName" Margin="366.384,20.4,352.352,0" Content="BẢNG THỐNG KÊ TỔNG HỢP" FontSize="16" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Center"/>
+        <Label x:Name="lblFuncName" Margin="366.384,20.4,352.352,0" Content="BẢNG THỐNG KÊ TỔNG HỢP" FontSize="16" VerticalAlignment="Top" Foreground="#FF0F1D04" HorizontalAlignment="Center"/>
 
-        <Border Margin="8,85,8,8" BorderBrush="#FFB1B1B1" BorderThickness="1" CornerRadius="5" Height="auto">
+        <Border Margin="8,85,8,8" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5" Height="auto">
             <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto">
                 <Grid x:Name="SuperGrid" Margin="0,0,-1,-1" Width="938">
 
@@ -40,7 +40,7 @@
 
                     </Grid.RowDefinitions>
 
-                    <Border Grid.RowSpan="14" BorderBrush="#FFB1B1B1" BorderThickness="0,0,1,0" Margin="-1,6,1,-5.28" />
+                    <Border Grid.RowSpan="14" BorderBrush="#FF0F1D04" BorderThickness="0,0,1,0" Margin="-1,6,1,-5.28" />
 
 
                     <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping ="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,15,0,8"><Run Text="Số thí sinh tham gia dự thi qua các đợt:"/></TextBlock>
