@@ -1,4 +1,4 @@
-
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,23 @@ namespace BUSLayer
         {
         }
         #region "ExportFile"
+		 /// <summary>
+    /// Lấy danh sách công việc mà một nhân viên đã từng được phân công
+    /// </summary>
+    /// <param name="maNV">mã nhân viên</param>
+    /// <returns></returns>
+    public List<DtoCongViec> getListDataByMaNV(int maNV)
+    {
+        try
+        {
+            DaoCongViec dao = new DaoCongViec();
+            return dao.getListDataByMaNV(maNV);
+        }
+        catch
+        {
+            return null;
+        }
+    }
         public DtoCongViec getDataById(int Id)
         {
             DtoCongViec data = null;
@@ -244,7 +261,43 @@ namespace BUSLayer
             }
             return true;
         }
-        #endregion
+        public int getNumOfLateCompletion(int maCV)
+    {
+        try
+        {
+            DaoCongViec dCongViec = new DaoCongViec();
+            return dCongViec.getNumOfLateCompletion(maCV);
+        }
+        catch (Exception ex)
+        {
+            return 0;
+        }
+    }
+ public int getNumOfEarlyCompletion(int maCV)
+    {
+        try
+        {
+            DaoCongViec dCongViec = new DaoCongViec();
+            return dCongViec.getNumOfEarlyCompletion(maCV);
+        }
+        catch (Exception ex)
+        {
+            return 0;
+        }
+    }
+    public int getNumOfExecution(int maCV)
+    {
+        try
+        {
+            DaoCongViec dCongViec = new DaoCongViec();
+            return dCongViec.getNumOfExecution(maCV);
+        }
+        catch ( Exception ex)
+        {
+            return 0;
+        }
+    }	
+	#endregion
 
         public string getTenCVByMaCV(int maCV)
         {

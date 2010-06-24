@@ -17,6 +17,46 @@ public class BusDotThi_ChungChi
 	{
 	}
 	#region "ExportFile" 
+	public bool updateDataBymaCC(DtoDotThi_ChungChi data,int maCC)
+	{
+		try
+		{
+			DaoDotThi_ChungChi dDotThi_ChungChi = new DaoDotThi_ChungChi();
+			dDotThi_ChungChi.updateDataBymaCC(data,maCC);
+		}
+		catch
+		{
+			return false;
+		}
+		return true;
+	}
+	public bool deleteDataBysoLuongThiSinh(int soLuongThiSinh)
+	{
+		try
+		{
+			DaoDotThi_ChungChi dDotThi_ChungChi = new DaoDotThi_ChungChi();
+			dDotThi_ChungChi.deleteDataBysoLuongThiSinh(soLuongThiSinh);
+		}
+		catch
+		{
+			return false;
+		}
+		return true;
+	}
+	public List<DtoDotThi_ChungChi> getListDataBymaCC(int maCC)
+	{
+		List<DtoDotThi_ChungChi> lst = null;
+		try
+		{
+			DaoDotThi_ChungChi dDotThi_ChungChi = new DaoDotThi_ChungChi();
+			lst = dDotThi_ChungChi.getListDataBymaCC(maCC);
+		}
+		catch
+		{
+			return null;
+		}
+		return lst;
+	}
 	public DtoDotThi_ChungChi getDataById(int Id)
 	{
 		DtoDotThi_ChungChi data = null;
