@@ -590,3 +590,6 @@ E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\D
 E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
 E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
 E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
+C:\minhbinh_wf\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
+C:\minhbinh_wf\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.exe
+C:\minhbinh_wf\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
