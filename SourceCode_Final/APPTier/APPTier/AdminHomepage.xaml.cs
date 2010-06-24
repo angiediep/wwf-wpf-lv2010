@@ -22,7 +22,10 @@ namespace APPTier
 		public AdminHomepage()
 		{
 			this.InitializeComponent();
-			
+            tabUser.IsSelected = false;
+            tabExam.IsSelected = true;
+            this.Loaded += new RoutedEventHandler(AdminHomepage_Loaded);
+
 			// Insert code required on object creation below this point.
             BusDotThi dt = new BusDotThi();
             List<DtoDotThi> listdt = dt.getDataList();
@@ -32,6 +35,12 @@ namespace APPTier
             xx.Height = gv.Height;
             xx.Visibility = Visibility.Hidden;
 		}
+
+        void AdminHomepage_Loaded(object sender, RoutedEventArgs e)
+        {
+            tabExam.IsSelected = false;
+            tabUser.IsSelected = true;
+        }
 		
 		private void Border_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
 		{

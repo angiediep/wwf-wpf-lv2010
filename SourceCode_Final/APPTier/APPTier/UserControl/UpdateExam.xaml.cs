@@ -25,6 +25,7 @@ namespace APPTier
         {
             this.InitializeComponent();
             setDataForDatagrid();
+            dtgvExam.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
         }
 
         private void setDataForDatagrid()
@@ -32,10 +33,14 @@ namespace APPTier
             BUSLayer.BusDotThi exams = new BUSLayer.BusDotThi();
             dt = exams.getDataTable();
             this.dtgvExam.ItemsSource = dt.DefaultView;
-            dtgvExam.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
         }
 
         void dtgvUser_Loaded(object sender, RoutedEventArgs e)
+        {
+            setColumn();
+        }
+
+        private void setColumn()
         {
             dtgvExam.Columns[0].Header = "Mã DT";
             dtgvExam.Columns[1].Header = "Tên đợt thi";
@@ -43,6 +48,7 @@ namespace APPTier
             dtgvExam.Columns[3].Header = "Số lượng thí sinh";
 
             dtgvExam.Columns[0].Visibility = Visibility.Hidden;
+            dtgvExam.Columns[4].Visibility = Visibility.Hidden;
         }
 
         private void btnSave_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -59,7 +65,10 @@ namespace APPTier
             UpdateExamDetail detail = new UpdateExamDetail(maDT);
             detail.ShowDialog();
             if (detail.Res == 0)
+            {
                 setDataForDatagrid();
+                setColumn();
+            }
         }
     }
 }

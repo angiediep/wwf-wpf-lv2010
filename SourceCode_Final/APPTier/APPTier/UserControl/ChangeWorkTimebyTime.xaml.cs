@@ -25,18 +25,24 @@ namespace APPTier
 		public ChangeWorkTimebyTime()
 		{
 			this.InitializeComponent();
+
             setDataForDatagrid();
+            dtgvWorkItem.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
 		}
 
         private void setDataForDatagrid()
         {
             BusCongViec cv = new BusCongViec();
-            dt = cv.getData();
+            dt = cv.getData();  
             this.dtgvWorkItem.ItemsSource = dt.DefaultView;
-            dtgvWorkItem.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
         }
 
         void dtgvUser_Loaded(object sender, RoutedEventArgs e)
+        {
+            setColumn();
+        }
+
+        private void setColumn()
         {
             dtgvWorkItem.Columns[0].Header = "Mã CV";
             dtgvWorkItem.Columns[1].Header = "Tên công việc";
@@ -63,11 +69,21 @@ namespace APPTier
 
         private void dtgvWorkItem_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            int maCV = int.Parse(dt.Rows[dtgvWorkItem.SelectedIndex]["maCV"].ToString());
-            ChangeWorkTimebyTimeDetail detail = new ChangeWorkTimebyTimeDetail(maCV);
-            detail.ShowDialog();
-            if (detail.Res == 0)
-                setDataForDatagrid();
+            if (dt != null)
+            {
+                int idx = dtgvWorkItem.SelectedIndex;
+                if (idx != -1)
+                {
+                    int maCV = int.Parse(dt.Rows[idx]["maCV"].ToString());
+                    ChangeWorkTimebyTimeDetail detail = new ChangeWorkTimebyTimeDetail(maCV);
+                    detail.ShowDialog();
+                    if (detail.Res == 0)
+                    {
+                        setDataForDatagrid();
+                        setColumn();
+                    }      
+                }
+            }
         }
 	}
 }

@@ -34,9 +34,15 @@ namespace APPTier
             this.InitializeComponent();
 
             setDataForGrid();
+            dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
         }
 
         void dtgvUser_Loaded(object sender, RoutedEventArgs e)
+        {
+            setColumn();
+        }
+
+        private void setColumn()
         {
             dtgvUser.Columns[0].Header = "Tên đăng nhập";
             dtgvUser.Columns[1].Header = "Email";
@@ -52,7 +58,10 @@ namespace APPTier
             if (regForm.MaNV == -2)
                 regForm.Close();
             else if (regForm.MaNV == -3)
+            {
                 setDataForGrid();
+                setColumn();
+            }
         }
 
         private void setDataForGrid()
@@ -70,7 +79,6 @@ namespace APPTier
                 temp.Add(te);
             }
             dtgvUser.ItemsSource = temp;
-            dtgvUser.Loaded += new RoutedEventHandler(dtgvUser_Loaded);
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -84,7 +92,6 @@ namespace APPTier
     public class NVInfoTemp
     {
         private string mtenDangNhap;
-
 
         public string TENDANGNHAP
         {

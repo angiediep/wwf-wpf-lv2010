@@ -1,595 +1,81 @@
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\Simple Styles.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.dll
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Simple Styles.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Simple Styles.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.dll
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.dll
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\Simple Styles.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.g.cs
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.baml
-C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\Simple Styles.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.dll
-C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.pdb
-E:\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-E:\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-E:\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.dll
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\Login.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\Register.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\App.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\Login.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\Register.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\App.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserHomepage.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.dll
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\ModelReader.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\DataLayer.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.g.cs
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.baml
-C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.baml
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.g.cs
-C:\Users\UMH\Downloads\SourceCode\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.exe
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\BUSLayer.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\DataLayer.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelLayouter.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelReader.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\WPFToolkit.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.dll
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelReader.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\BUSLayer.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\DataLayer.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\ExpressionDark.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\Login.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\Register.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\App.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\Login.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\Register.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\App.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\AdminHomepage.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\UserHomepage.baml
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
-E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
-C:\minhbinh_wf\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
-C:\minhbinh_wf\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.exe
-C:\minhbinh_wf\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.exe.config
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.exe
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThi.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelLayouter.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\WPFToolkit.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\ModelLayouter.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\WPFToolkit.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\AdminHomepage.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\ExpressionDark.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\Login.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\Register.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttView.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCParallel.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCSequence.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserInbox.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserWfView.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserHomepage.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\App.baml
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\AdminHomepage.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimeByExamDetail.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\ChangeWorkTimebyTimeDetail.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\DotThiDetailGanttView.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\Login.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\Register.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\AssignUser2.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeSystemInfo.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimeByExam.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ChangeWorkTimebyTime.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\ComparisionStatistics.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttView.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GanttViewTienDo.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\GeneralStatistics.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\InDetailStatistics.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExamDetail.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\Tooltip1.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCParallel.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCSequence.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UCWorkItem.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateExam.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UpdateUser.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserInbox.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserControl\UserWfView.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\UserHomepage.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\App.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi_MarkupCompile.lref
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.g.resources
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.Properties.Resources.resources
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\APPTier.csproj.GenerateResource.Cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.exe
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\APPTier\obj\Debug\QuanLyThi.pdb
