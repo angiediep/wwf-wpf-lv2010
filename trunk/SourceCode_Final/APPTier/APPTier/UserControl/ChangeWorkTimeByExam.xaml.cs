@@ -72,15 +72,20 @@ namespace APPTier
 
         private void dtgvWorkItem_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            int idx = dtgvWorkItem.SelectedIndex;
-            int maDT = int.Parse(dt.Rows[idx]["Mã DT"].ToString());
-            int maCV = int.Parse(dt.Rows[idx]["Mã CV"].ToString());
+            if (dt != null)
+            {
+                int idx = dtgvWorkItem.SelectedIndex;
+                if (idx != -1)
+                {
+                    int maDT = int.Parse(dt.Rows[idx]["Mã DT"].ToString());
+                    int maCV = int.Parse(dt.Rows[idx]["Mã CV"].ToString());
 
-            ChangeWorkTimeByExamDetail detail = new ChangeWorkTimeByExamDetail(maDT, maCV);
-            detail.ShowDialog();
-            if (detail.Res == 0)
-                setDataForDatagrid(maDT);
- 
+                    ChangeWorkTimeByExamDetail detail = new ChangeWorkTimeByExamDetail(maDT, maCV);
+                    detail.ShowDialog();
+                    if (detail.Res == 0)
+                        setDataForDatagrid(maDT);   
+                }
+            }
         }
 	}
 }

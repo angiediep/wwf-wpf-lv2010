@@ -114,7 +114,7 @@
                         <Label x:Name="lblUsername" HorizontalAlignment="Left" Margin="44.552,45.966,0,0" Width="114.781" Content="Tên người dùng:" Foreground="#FF0F1D04" Height="17.288" VerticalAlignment="Top" Background="{x:Null}" />
                         <Label x:Name="lblPassword" HorizontalAlignment="Left" Margin="44.552,79.699,0,95.937" Width="114.781" Content="Mật khẩu:" Foreground="#FF0F1D04" Background="{x:Null}" />
                         <Button x:Name="btnLogin" Margin="145.333,0,0,44.097"   Content="Đăng nhập" VerticalAlignment="Bottom" Height="20" Click="btnLogin_Click" TabIndex="2" IsDefault="True" ToolTip="Tiến hành đăng nhập" HorizontalAlignment="Left" Width="85.582" />
-                        <PasswordBox x:Name="tbxPassword" Password="123456" Margin="159.333,79.516,65.477,95.937" BorderThickness="0.5" MinWidth="250" MaxWidth="250" TabIndex="1" ToolTip="mật khẩu đăng nhập hệ thống" d:LayoutOverrides="VerticalAlignment">
+                        <PasswordBox x:Name="tbxPassword" Password="123" Margin="159.333,79.516,65.477,95.937" BorderThickness="0.5" MinWidth="250" MaxWidth="250" TabIndex="1" ToolTip="mật khẩu đăng nhập hệ thống" d:LayoutOverrides="VerticalAlignment">
                             <PasswordBox.BorderBrush>
                                 <LinearGradientBrush EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
                                     <GradientStop Color="#FF888888" Offset="0.05"/>
@@ -125,7 +125,7 @@
 
                         <TextBlock x:Name="lblFuncName" Margin="167.333,8,122.73,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment" FontSize="16" Foreground="#FF0F1D04"><Run Text="ĐĂNG NHẬP HỆ THỐNG"/></TextBlock>
                         <Button x:Name="btnRegister" Margin="0,0,150.096,44.097" Content="Đăng kí" VerticalAlignment="Bottom" Height="20" Click="btnRegister_Click" HorizontalAlignment="Right" Width="72.533" TabIndex="3" ToolTip="Đăng ký tài khoản mới" />
-                        <TextBox x:Name="tbxUsername" Margin="163.964,40.254,71.29,0" VerticalAlignment="Top" Height="23" TextWrapping="Wrap" BorderThickness="0.5" Text="pnquan" Width="250" MinWidth="250" MaxWidth="250" TabIndex="0" ToolTip="tên đăng nhập hệ thống" />
+                        <TextBox x:Name="tbxUsername" Margin="163.964,40.254,71.29,0" VerticalAlignment="Top" Height="23" TextWrapping="Wrap" BorderThickness="0.5" Text="admin" Width="250" MinWidth="250" MaxWidth="250" TabIndex="0" ToolTip="tên đăng nhập hệ thống" />
                     </Grid>
                 </TabItem>
                 <TabItem Header="Cơ sở dữ liệu">
