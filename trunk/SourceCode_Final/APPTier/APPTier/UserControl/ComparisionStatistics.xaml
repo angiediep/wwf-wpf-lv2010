@@ -1,0 +1,160 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+	x:Class="APPTier.ComparisionStatistics"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
+
+	
+	<Grid x:Name="LayoutRoot">
+        <Label x:Name="lblMonth1" HorizontalAlignment="Left" Margin="252.8,43,0,0"  VerticalAlignment="Top" Width="39" Height="21" Content="Tháng:" Foreground="#FF0F1D04"/>
+        <Label x:Name="lblYear1" HorizontalAlignment="Left" Margin="355.8,43,0,0"  VerticalAlignment="Top" Width="32" Height="21" Content="Năm:" Foreground="#FF0F1D04"/>
+        <ComboBox x:Name="cbxMonth1" HorizontalAlignment="Left" Margin="291.8,43,0,0"  VerticalAlignment="Top" Width="60" Height="21">
+        </ComboBox>
+        <ComboBox x:Name="cbxYear1" HorizontalAlignment="Left" SelectionChanged="cbxYear1_SelectionChanged" Margin="387.8,43,0,0"  VerticalAlignment="Top" Width="71" Height="21">
+        </ComboBox>
+        <Label x:Name="lblFuncName" Margin="473,16,186,0"  VerticalAlignment="Top" Content="BẢNG THỐNG KÊ SO SÁNH 2 KÌ THI" FontSize="16" Foreground="#FF0F1D04" Height="21.28" />
+        <Label x:Name="lblMonth2" HorizontalAlignment="Right" Margin="0,43,266.4,0"  VerticalAlignment="Top" Width="39" Height="21" Content="Tháng:" Foreground="#FF0F1D04"/>
+        <Label x:Name="lblYear2" HorizontalAlignment="Right" Margin="0,43,170.4,0"  VerticalAlignment="Top" Width="32" Height="21" Content="Năm:" Foreground="#FF0F1D04"/>
+        <ComboBox x:Name="cbxMonth2" HorizontalAlignment="Right" Margin="0,43,206.4,0"  VerticalAlignment="Top" Width="60" Height="21">
+        </ComboBox>
+        <ComboBox x:Name="cbxYear2" HorizontalAlignment="Right" Margin="0,43,99.4,0"  VerticalAlignment="Top" Width="71" Height="21" SelectionChanged="cbxYear2_SelectionChanged">
+        </ComboBox>
+
+        <Button x:Name="btnApply" HorizontalAlignment="Right" Margin="0,43,363.002,0"   VerticalAlignment="Top" Width="75" Content="Thống kê" Foreground="White" Height="21" Click="btnApply_Click" />
+        <Border Margin="0,73,0,0" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5" Height="auto">
+            <ScrollViewer>
+                <Grid x:Name="SuperGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="244"/>
+                        <ColumnDefinition Width="362"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Border  BorderThickness="1" CornerRadius="5" Height="auto" Grid.Column="1" Grid.Row="0" Grid.RowSpan="14">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
+                                <GradientStop Color="#FFABADB3" Offset="0.05"/>
+                                <GradientStop Color="#FFE2E3EA" Offset="0.07"/>
+                                <GradientStop Color="#FF555555" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                    </Border>
+
+                    <Border  BorderThickness="1" CornerRadius="5" Height="auto" Grid.Column="2" Grid.Row="0" Grid.RowSpan="14">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0,20" StartPoint="0,0" MappingMode="Absolute">
+                                <GradientStop Color="#FFABADB3" Offset="0.05"/>
+                                <GradientStop Color="#FFE2E3EA" Offset="0.07"/>
+                                <GradientStop Color="#FF555555" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                    </Border>
+
+
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping ="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,15,0,8"><Run Text="Số thí sinh tham gia dự thi qua các đợt:"/></TextBlock>
+                    <TextBlock x:Name="tbxSoThiSinh1" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" TextWrapping="Wrap" Text="" Foreground="#FF9B9B9B" Margin="5,15,0,8"/>
+                    <TextBlock x:Name="tbxSoThiSinh2" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" TextWrapping="Wrap" Text="" Foreground="#FF9B9B9B" Margin="5,15,0,8"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="25,5,0,0"/>
+                    <ComboBox Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="54,0,0,0" />
+                    <chartingToolkit:Chart x:Name="MyChart1" HorizontalAlignment="Center" Title="Chart Title" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Background="White">
+                        
+                        <chartingToolkit:ColumnSeries x:Name="mcChart11" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                        <chartingToolkit:ColumnSeries x:Name="mcChart12" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                    </chartingToolkit:Chart>
+
+                    <chartingToolkit:Chart x:Name="MyChart11" HorizontalAlignment="Center" Title="Chart Title" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:LineSeries x:Name="mcChart21" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                        <chartingToolkit:LineSeries x:Name="mcChart22" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                    </chartingToolkit:Chart>
+
+
+                    <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="Số chứng chỉ cấp qua các đợt:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,8"/>
+                    <TextBlock x:Name="txbSLCC1" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" TextWrapping="Wrap" Text="" Foreground="#FF9B9B9B" Margin="5,0,0,8"/>
+                    <TextBlock Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" TextWrapping="Wrap" Text="" x:Name="txbSLCC2" Foreground="#FF9B9B9B" Margin="5,0,0,8"/>
+                    <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="25,5,0,0"/>
+                    <ComboBox Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="54,0,0,0" />
+                    <chartingToolkit:Chart x:Name="MyChart3" HorizontalAlignment="Center" Title="Chart Title" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4"  Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:ColumnSeries x:Name="mcChart31" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                        <chartingToolkit:ColumnSeries x:Name="mcChart32" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                    </chartingToolkit:Chart>
+
+                    <chartingToolkit:Chart x:Name="MyChart4" HorizontalAlignment="Center" Title="Chart Title" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4"  Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:LineSeries x:Name="mcChart41" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                        <chartingToolkit:LineSeries x:Name="mcChart42" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                    </chartingToolkit:Chart>
+                    
+
+                    <TextBlock Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết từng công đoạn:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0"/>
+                    <TextBlock x:Name="txbChiTietTungCongDoan1" Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" VerticalAlignment="Top" Foreground="#FF9B9B9B" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txbChiTietTungCongDoan2" Grid.Column="2" Grid.Row="6" TextWrapping="Wrap" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" VerticalAlignment="Top" Foreground="#FF9B9B9B" Margin="5,0,0,0"/>
+                    <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="1. Công đoạn thi:" Foreground="#FF9B9B9B" FontStyle="Italic" VerticalAlignment="Top" Margin="0,0,0,2"/>
+                    <TextBlock x:Name="txbCongDoanThi1" Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Foreground="#FF9B9B9B" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txbCongDoanThi2"  Grid.Column="2" Grid.Row="7" TextWrapping="Wrap" Foreground="#FF9B9B9B" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" Margin="5,0,0,0"/>
+                    <TextBlock Grid.Column="0" Grid.Row="8" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="2. Công đoạn chấm thi và phúc khảo:" VerticalAlignment="Top"  Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,2"/>
+                    <TextBlock x:Name="txbChamThi1" Grid.Column="1" Grid.Row="8" TextWrapping ="Wrap" Foreground="#FF9B9B9B" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txbChamThi2" Grid.Column="2" Grid.Row="8" TextWrapping ="Wrap" Foreground="#FF9B9B9B" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" Margin="5,0,0,0"/>
+                    <TextBlock Grid.Column="0" Grid.Row="9" HorizontalAlignment="Center" TextWrapping="Wrap" Text="3. Công đoạn cấp và in chứng chỉ:" VerticalAlignment="Top" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,0,0,8"/>
+                    <TextBlock x:Name="txbCCVaIn1" Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" Foreground="#FF9B9B9B" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" Margin="5,0,0,8"/>
+                    <TextBlock x:Name="txbCCVaIn2" Grid.Column="2" Grid.Row="9" TextWrapping="Wrap" Foreground="#FF9B9B9B" Text="Tổng số công việc hoàn thành đúng hạn: ()(công việc); Tổng số công việc trễ hạn: :() (công việc)" Margin="5,0,0,8"/>
+                    <TextBlock Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="25,5,0,0"/>
+                    <ComboBox Grid.Column="0" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="54,0,0,0" />
+                    <chartingToolkit:Chart x:Name="MyChart5" HorizontalAlignment="Center" Title="Chart Title"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10"  Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:ColumnSeries x:Name="mcChart51" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                        <chartingToolkit:ColumnSeries x:Name="mcChart52" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                    </chartingToolkit:Chart>
+
+                    <chartingToolkit:Chart x:Name="MyChart6" HorizontalAlignment="Center" Title="Chart Title"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10" Margin="5,0,0,0" Background="White">
+
+                        <chartingToolkit:LineSeries x:Name="mcChart61" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                        <chartingToolkit:LineSeries x:Name="mcChart62" AnimationSequence="FirstToLast" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                    </chartingToolkit:Chart>
+
+
+                   
+                    <TextBlock Grid.Column="0" Grid.Row="12" HorizontalAlignment="Center"  VerticalAlignment="Top" TextWrapping="Wrap" Text="Chi tiết từng thời kì:" Foreground="#FF9B9B9B" FontStyle="Italic"/>
+                    <TextBlock x:Name="txbChiTietTungThoiKy1" Grid.Column="1" Grid.Row="12" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="#FF9B9B9B" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock x:Name="txbChiTietTungThoiKy2" Grid.Column="2" Grid.Row="12" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="#FF9B9B9B" Margin="5,0,0,0"></TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="Các nhân viên thường trễ hạn:" Foreground="#FF9B9B9B" FontStyle="Italic" Margin="0,20,0,0"/>
+                    <TextBlock x:Name="txbCacNVTreHan1" Grid.Column="1" Grid.Row="13" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="194.5" Foreground="#FF9B9B9B" Margin="5,20,0,0"></TextBlock>
+                    <TextBlock x:Name="txbCacNVTreHan2" Grid.Column="2" Grid.Row="13" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="194.5" Foreground="#FF9B9B9B" Margin="5,20,0,0"></TextBlock>
+
+
+
+                </Grid>
+
+            </ScrollViewer>
+        </Border>
+
+
+    </Grid>
+</UserControl>

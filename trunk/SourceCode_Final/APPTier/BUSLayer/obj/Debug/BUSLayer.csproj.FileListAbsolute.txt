@@ -1,0 +1,64 @@
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\obj\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\BUSLayer\obj\Debug\BUSLayer.pdb

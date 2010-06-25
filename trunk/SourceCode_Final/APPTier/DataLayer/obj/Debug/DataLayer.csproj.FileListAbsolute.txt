@@ -1,0 +1,40 @@
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN\wwf-wpf-lv2010\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Documents and Settings\temp\Desktop\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\My Dropbox\SourceCode\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\SVN_20062010\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.pdb
