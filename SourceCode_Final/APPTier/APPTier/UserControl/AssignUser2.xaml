@@ -21,16 +21,17 @@
 				<Label x:Name="lblTo" HorizontalAlignment="Left" Margin="8,100.227,0,0" VerticalAlignment="Top" Width="29.467" Height="22.667" Content="Đến:" Foreground="#FF0F1D04"/>
 				<Custom:DatePicker x:Name="dpkFrom" HorizontalAlignment="Left" Margin="37.467,69.56,0,0" VerticalAlignment="Top" Width="124.8" Height="24"/>
 				<Custom:DatePicker x:Name="dpkTo" HorizontalAlignment="Left" Margin="37.467,96.227,0,0" VerticalAlignment="Top" Width="124.8" Height="24" />
-				<Border x:Name="bdrWfView" Margin="180,43.2,0,8" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5"/>
-                <ScrollViewer Margin="188,46,0,6" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Border x:Name="bdrWfView" Margin="180,43.2,0,8" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5">
+                    <ScrollViewer Margin="1,1,1,1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
 
-                    <Canvas x:Name="canv" Width="1200" Height="1000">
-                        <Canvas.LayoutTransform>
-                            <ScaleTransform ScaleX="{Binding Path=Value, ElementName=zoomSlider}"
+                        <Canvas x:Name="canv" Width="1200" Height="1000">
+                            <Canvas.LayoutTransform>
+                                <ScaleTransform ScaleX="{Binding Path=Value, ElementName=zoomSlider}"
                             ScaleY="{Binding Path=Value, ElementName=zoomSlider}"/>
-                        </Canvas.LayoutTransform>
-                    </Canvas>
-                </ScrollViewer>
+                            </Canvas.LayoutTransform>
+                        </Canvas>
+                    </ScrollViewer>
+                </Border>
                 <Slider x:Name="zoomSlider" Minimum="0.1" Maximum="5" Value="1"/>
             </Grid>
 		</Border>

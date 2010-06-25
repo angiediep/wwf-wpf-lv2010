@@ -10,8 +10,8 @@
 	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
       <Grid x:Name="LayoutRoot">
         <Grid Margin="8,8,51,55">
-            <Border x:Name="bdrWfView" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5" Margin="142.8,39.2,0,0"/>
-            <ScrollViewer Margin="144,37,0,2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Border x:Name="bdrWfView" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5" Margin="142.8,39.2,0,0">
+            <ScrollViewer Margin="1,1,1,1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
 
                 <Canvas x:Name="canv" Width="1200" Height="1000">
                     <Canvas.LayoutTransform>
@@ -20,6 +20,7 @@
                     </Canvas.LayoutTransform>
                 </Canvas>
             </ScrollViewer>
+            </Border>
             <Slider x:Name="zoomSlider" Minimum="0.1" Maximum="5" Value="1"/>
             <ListBox x:Name="lbxExam" HorizontalAlignment="Left" SelectionChanged="lbxExam_SelectionChanged" Width="138.8" VerticalAlignment="Top" Height="241.2" Margin="0,38,0,0" BorderBrush="#FF0F1D04"/>
             <ListBox x:Name="lblUser" HorizontalAlignment="Left"  Width="138.8" Margin="0,0,0,1" VerticalAlignment="Bottom" Height="261.2" BorderBrush="#FF0F1D04" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown"/>

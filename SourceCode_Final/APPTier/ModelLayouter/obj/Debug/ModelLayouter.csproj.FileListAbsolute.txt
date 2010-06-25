@@ -43,3 +43,8 @@ C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\ModelLayouter\bi
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
