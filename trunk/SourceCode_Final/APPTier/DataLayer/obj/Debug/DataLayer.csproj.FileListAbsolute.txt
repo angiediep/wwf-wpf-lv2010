@@ -38,3 +38,8 @@ C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\bin\De
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.pdb
