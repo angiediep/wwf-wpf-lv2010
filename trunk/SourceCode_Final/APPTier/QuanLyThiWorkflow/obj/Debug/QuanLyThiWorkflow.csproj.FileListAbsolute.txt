@@ -18,3 +18,8 @@ C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\QuanLyThiWorkflo
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
 C:\Users\Nghia Tran\Desktop\New folder\SourceCode_Final\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
