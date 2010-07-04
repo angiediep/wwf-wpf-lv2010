@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelReader", "ModelReader\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyThiWorkflow", "QuanLyThiWorkflow\QuanLyThiWorkflow.csproj", "{59540064-74E8-4EB6-B16D-5D77B19E8E78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{C0512C53-2C01-49A9-8DB2-35EE0EC2CE1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{59540064-74E8-4EB6-B16D-5D77B19E8E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59540064-74E8-4EB6-B16D-5D77B19E8E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59540064-74E8-4EB6-B16D-5D77B19E8E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0512C53-2C01-49A9-8DB2-35EE0EC2CE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0512C53-2C01-49A9-8DB2-35EE0EC2CE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0512C53-2C01-49A9-8DB2-35EE0EC2CE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0512C53-2C01-49A9-8DB2-35EE0EC2CE1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

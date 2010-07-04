@@ -48,3 +48,8 @@ E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\bin\Debug\ModelL
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb

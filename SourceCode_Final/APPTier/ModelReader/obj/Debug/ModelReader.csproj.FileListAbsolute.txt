@@ -84,3 +84,14 @@ E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelReader\bin\Debug\QuanLyTh
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelReader\obj\Debug\ModelReader.dll
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\ModelReader.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\DataLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\obj\Debug\ModelReader.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\ModelReader\obj\Debug\ModelReader.pdb

@@ -43,3 +43,8 @@ E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.dll
 E:\My Dropbox\WF_LuanVan\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.dll
+F:\data\Learning Documents\Luan Van\Source Luan van\SourceCode_Final\APPTier\DataLayer\obj\Debug\DataLayer.pdb
