@@ -1,0 +1,1316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luồng công việc và Ứng dụng</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {font-family: "Times New Roman", Times, serif}
+.style3 {font-size: small}
+.style4 {font-size: medium}
+-->
+</style></head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div class="style1" id="mainContent">
+    <a href="TOC.htm">[BACK]</a>
+    <h2 align="center"><a name="_Toc004" id="_Toc004">Chương 4: Hiện thực ứng dụng</a></h2>
+    <p align="center">***</p>
+    <p align="justify"><strong>NỘI DUNG CHÍNH</strong></p>
+    <p align="justify"><a href="#_Toc268951708">Chương 4: Hiện thực ứng dụng</a> <br />
+        <a href="#_Toc268951709">1.        Tổng quan về LCV tổ chức  thi, cấp chứng chỉ quốc gia</a> <br />
+        <a href="#_Toc268951710">1.1.         Các  quy trình ứng dụng</a> <br />
+        <a href="#_Toc268951711">1.1.1.         Quy trình tổ chức  thi</a> <br />
+        <a href="#_Toc268951712">1.1.2.         Quy trình cấp chứng  chỉ</a> <br />
+        <a href="#_Toc268951713">1.2.         Các  vấn đề còn tồn tại</a> <br />
+        <a href="#_Toc268951714">2.        Yêu  cầu chức năng</a> <br />
+        <a href="#_Toc268951715">2.1.         Chức  năng thông báo.</a> <br />
+        <a href="#_Toc268951716">2.2.         Chức  năng theo dõi công việc</a> <br />
+        <a href="#_Toc268951717">2.2.1.         Đối với các nhân  viên thực hiện các công việc</a> <br />
+        <a href="#_Toc268951718">2.2.2.         Đối với người quản  lý</a> <br />
+        <a href="#_Toc268951719">2.3.         Chức  năng cập nhật thông tin</a> <br />
+        <a href="#_Toc268951720">2.4.         Chức  năng thống kê</a> <br />
+        <a href="#_Toc268951721">2.4.1.     Thống  kê tổng thể</a> <br />
+        <a href="#_Toc268951722">2.4.2.         Thống kê chi tiết</a> <br />
+        <a href="#_Toc268951723">2.4.3.         Thống kê so sánh</a> <br />
+        <a href="#_Toc268951724">2.4.4.         Thống kê theo thời  gian</a> <br />
+        <a href="#_Toc268951725">2.5.         Chức  năng cảnh báo</a> <br />
+        <a href="#_Toc268951726">2.6.         Chức  năng phân quyền</a> <br />
+        <a href="#_Toc268951727">2.7.         Chức  năng biểu diễn luồng công việc dưới dạng sơ đồ trực quan</a> <br />
+        <a href="#_Toc268951728">3.        Yêu  cầu phi chức năng</a> <br />
+        <a href="#_Toc268951729">3.1.         Tính  tiến hóa. </a> <br />
+        <a href="#_Toc268951730">3.2.         Yêu  cầu về giao diện</a> <br />
+        <a href="#_Toc268951731">3.3.         Tính  hiệu quả. </a> <br />
+        <a href="#_Toc268951732">4.        Phân tích mức quan niệm</a> <br />
+        <a href="#_Toc268951733">4.1.         Mô  hình dữ liệu ở mức quan niệm</a> <br />
+        <a href="#_Toc268951739">4.1.1     Nhân viên</a> <br />
+        <a href="#_Toc268951740">4.1.2     Nhân viên quản lý &amp;  Nhân viên thừa hành</a> <br />
+        <a href="#_Toc268951741">4.1.3     Công việc</a> <br />
+        <a href="#_Toc268951742">4.1.4     Phân công</a> <br />
+        <a href="#_Toc268951743">4.1.5     Đợt thi</a> <br />
+        <a href="#_Toc268951744">4.1.6     Tiến độ</a> <br />
+        <a href="#_Toc268951745">4.1.7     Ghi chú</a> <br />
+        <a href="#_Toc268951746">4.1.8     Chứng chỉ</a> <br />
+        <a href="#_Toc268951747">4.2.         Mô hình xử lý mức quan niệm</a> <br />
+        <a href="#_Toc268951748">4.2.1.         Tổng quan</a> <br />
+        <a href="#_Toc268951749">4.2.2.         Quản lý nhân viên</a> <br />
+        <a href="#_Toc268951750">4.2.3.         Quản lý quy trình</a> <br />
+        <a href="#_Toc268951751">4.2.4.         Thống kê</a> <br />
+        <a href="#_Toc268951752">4.2.5.         Thực thi quy trình</a> <br />
+        <a href="#_Toc268951753">5.        Cài đặt mức vật lý</a> <br />
+        <a href="#_Toc268951754">6.        Mô tả  chức năng và các giao diện</a> <br />
+        <a href="#_Toc268951755">6.1.         Thiết  kế User-case</a> <br />
+        <a href="#_Toc268951756">6.1.1.         Lược đồ User-case</a> <br />
+        <a href="#_Toc268951757">6.1.2.         Danh sách các Actor</a> <br />
+        <a href="#_Toc268951758">6.1.3.         Danh sách các  Use-case. </a> <br />
+        <a href="#_Toc268951759">6.2.         Thiết  kế giao diện</a> <br />
+        <a href="#_Toc268951760">6.2.1.         Cấu trúc các màn  hình xử lý chính</a> <br />
+        <a href="#_Toc268951761">6.2.2.         Danh sách các màn  hình xử lý chính</a> <br />
+        <a href="#_Toc268951762">7.        Giải pháp kĩ thuật</a> <br />
+        <a href="#_Toc268951763">7.1.         Chức năng hiển thị luồng công  việc dạng sơ đồ</a> <br />
+        <a href="#_Toc268951764">7.2.         Chức năng thống kê tình trạng  các đợt thi đang tiến hành</a> <br />
+        <a href="#_Toc268951765">7.3. Custom Activity</a> <br />
+    </p>
+    <p align="center">***</p>
+    <h2 align="justify"><a name="_Toc268951708" id="_Toc268951708"></a><a name="_Toc268944478" id="_Toc268944478"></a><a name="_Toc266246119" id="_Toc266246119">Chương  4</a> <a name="_Toc266246120" id="_Toc266246120"></a>: Hiện thực ứng dụng </h2>
+    <p align="justify"><em>Tiếp theo, chương này sẽ giới thiệu tổng thể về hiện  thực ứng dụng mà nhóm chúng tôi đã thực hiện. Chương này sẽ gồm hai phần chính. </em><br />
+        <em>Trong phần đầu của chương, chúng tôi sẽ trình bày kết  quả khảo sát bối cảnh quản lý công tác tổ chức thi, cấp chứng chỉ tin học Quốc  gia và các yêu cầu cụ thể đối với ứng dụng LCV phục vụ cho lĩnh vực này.</em><br />
+        <em>Sau đó, trong phần hai của chương, chúng tôi sẽ thể  hiện lại kết quả phân tích và thiết kế một ứng dụng cụ thể, dựa trên những tiêu  chuẩn đã mô tả ở chương 2, bao gồm kết quả phân tích ứng dụng ở góc độ dữ liệu,  kết quả thiết kế xử lý, giao diện và các giải pháp được đề xuất nhằm giải quyết  các vấn đề gặp phải trong quá trình xây dựng ứng dụng.</em></p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951709" id="_Toc268951709"></a><a name="_Toc268944479" id="_Toc268944479"></a><a name="_Toc266246086" id="_Toc266246086"><strong>1. Tổng quan về LCV</strong></a> <strong>tổ chức thi, cấp chứng chỉ quốc gia</strong> </h2>
+    </div>
+    <p align="justify">Như đã đề cập, việc quản lý công  tác tổ chức thi, tuyển sinh ở Việt Nam là thật sự quan trọng và hầu như không  cho phép xảy ra bất cứ sai sót nào. Trong khóa luận này, chúng tôi chỉ đề cập  tới một quy trình điển hình nhất đó là quy trình tổ chức thi, cấp chứng chỉ tin học  Quốc gia<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">(33)</a>. <br />
+      Một quy trình thi chuẩn bao gồm  nhiều công việc xảy ra đồng thời hoặc nối tiếp nhau, được đặc trưng bởi ngày  thi và địa điểm tổ chức thi. Địa điểm thi có thể là  ngay tại đơn vị tổ chức thi và cấp chứng chỉ, cũng có thể là tại các đơn vị  khác có liên kết đào tạo với đơn vị này <a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">(34)</a>. Một công việc có thể do  một hoặc nhiều nhân viên thừa hành (là  nhân viên trực tiếp thực hiện công việc) <a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">(35)</a> cùng  phụ trách, đồng thời mỗi nhân viên có thể được giao phụ  trách một hoặc nhiều công việc khác nhau. Ngoài ra, quy trình thi có thể chịu  sự chi phối của các tổ chức khác (tác nhân ngoài) tại các công đoạn thực hiện  các công việc đặc thù.</p>
+    <div align="justify">
+      <blockquote>
+        <h3 id="_Toc268951710" name="_Toc268951710"><a name="_Toc268951710" id="_Toc268951710"></a><a name="_Toc268944480" id="_Toc268944480"></a><a name="_Toc266246087" id="_Toc266246087"><strong>1.1. Các quy trình ứng dụng</strong></a></h3>
+      </blockquote>
+    </div>
+    <p align="justify">Một quy trình thi bao gồm 2 giai đoạn chính: <em>Tổ chức thi</em> và <em>Cấp chứng chỉ</em>.  Trong thực tế, hai giai đoạn nàygắn kết với nhau thành một quá trình xuyên  suốt như hình vẽ Hình 9.  Tuy nhiên, để dễ dàng trong việc mô hình hóa và mô tả chi tiết các nghiệp vụ,  mỗi giai đoạn đó sẽ được “mịn hóa” thành một quy trình con (Hình 10. và Hình 11.). <br />
+Giai đoạn Tổ chức thi kéo dài từ  thời điểm bắt đầu nhận hồ sơ đăng ký dự thi của thí sinh đến thời điểm công bố  điểm thi phúc khảo. Khi giai đoạn này kết thúc, danh sách thí sinh thi đạt sẽ  được duyệt và xin cấp chứng chỉ. Khi đó, giai đoạn Cấp chứng chỉ được bắt đầu  và kéo dài cho đến khi các chứng chỉ đã được hoàn tất và sẵn sàng cấp. </p>
+    <p align="center"><img src="images/FIG04-01.jpg" alt="1" width="166" height="295" /></p>
+    <p align="center">Hình 9. Quy trình thi và cấp chứng chỉ</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <h4 id="_Toc268951711" name="_Toc268951711"><a name="_Toc268951711" id="_Toc268951711"></a><a name="_Toc268944481" id="_Toc268944481"></a><a name="_Toc266246088" id="_Toc266246088"><strong>1.1.1. Quy  trình tổ chức thi</strong></a></h4>
+        </blockquote>
+      </blockquote>
+    </div>
+    <p align="justify">Hình vẽ Hình 10. mô tả một cách chi  tiết các công việc cần được thực hiện để phục vụ cho quy trình tổ chức thi. Mỗi  ô hình chữ nhật trong sơ đồ thể hiện cho một đơn vị công việc, kèm theo đó là thông tin  về ngày bắt đầu và ngày kết thúc đơn vị công việc đó. </p>
+    <p align="center"><br />
+      <a name="h2" id="h2"><img src="images/FIG04-02.jpg" alt="3" width="516" height="768" /></a><br />
+      Hình  10. Quy trình tổ chức thi </p>
+    <p align="justify">Như đã trình bày  ở trên, ngày thi là thông tin đặc trưng quan trọng nhất cho mỗi đợt thi. Và  theo đó, trong mô hình luồng công việc, đơn vị công việc Thi cũng là công việc  quan trọng nhất. Gọi t là ngày thi, khi đó lấy t làm chuẩn sẽ tính được tất cả  các mốc thời gian cho các đơn vị công việc khác.  Ví dụ, công việc Nhận hồ sơ đăng ký thi có  mốc thời gian bắt đầu là t – 21 mang ý nghĩa:  thời  điểm bắt đầu nhận hồ sơ đăng ký thi là ngày thứ 21 trước ngày thi; Hoặc công  việc Chấm thi có mốc thời gian kết thúc là t + 7 mang ý nghĩa: công việc chấm  thi sẽ kết thúc muộn nhất là ngày thứ 7 sau ngày thi v.v…<br />
+      Trong hình vẽ  H2, những công việc diễn ra song song một phần hoặc song song toàn bộ sẽ được  biểu diễn ngang hàng nhau. Cụ thể hơn, công việc Nhận hồ sơ đăng ký thi và Phân  công chấm thi là song song hoàn toàn, chúng được thực hiện trong cùng một  khoảng thời gian từ ngày t – 21 đến t – 4; trong khi đó công việc Kiểm tra điểm  thi và Nộp bảng điểm gốc là song song một phần (chỉ diễn ra đồng thời trong ngày t  + 12). Ngoài ra, với các công việc diễn ra nối tiếp nhau sẽ được mô hình hóa  dạng nối tiếp, ví dụ: công việc Thi, Chấm thi… <br />
+      Đến đây, cũng  cần nhấn mạnh lại rằng một mô hình LCV được mô hình hóa từ các yêu cầu thực  tiễn và sự thực hiện các quy trình nghiệp vụ tương ứng. Việc sắp xếp thực hiện một số công việc song song nhau nhằm mục đích rút ngắn  tối đa tổng thời gian thực hiện của cả quy trình thi. Tuy nhiên cũng có một số  công việc (mà theo tính chất của công việc đó) bắt buộc phải thực hiện tuần tự  nhau. Trong những trường hợp này, thông thường sự kết thúc công việc trước là  điều kiện cần và đủ để bắt đầu công việc sau. Cụ thể hơn, trong LCV của quy  trình tổ chức thi, công việc Chấm thi không thể diễn ra trước hoặc đồng thời  với công việc Thi được, vì như vậy là phi thực tế.</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <h4><a name="_Toc268951712" id="_Toc268951712"></a><a name="_Toc268944482" id="_Toc268944482"></a><a name="_Toc266246089" id="_Toc266246089"><strong>1.1.2. Quy  trình cấp chứng chỉ</strong></a> </h4>
+        </blockquote>
+      </blockquote>
+    </div>
+    <p align="justify">Quy trình <em>Cấp chứng chỉ</em> không có nhiều công việc phức tạp như quy trình <em>Tổ chức thi</em>, tuy nhiên lại phụ thuộc rất  nhiều vào các ứng dụng bên ngoài. Chính vì lý do này, các mốc thời gian trong  quy trình này hầu hết là tương đối. Việc thực thi các công việc chịu sự chi  phối của ứng dụng bên ngoài có ảnh hưởng rất lớn đến tiến độ của quy trình.<br />
+      Sau khi công bố điểm thi, chậm nhất  là ngày t + 14, danh sách các thí sinh thi đạt sẽ được lập. Cùng với đó, công  văn mua phôi chứng chỉ cũng sẽ được lập để gửi lên giám đốc hoặc hiệu trưởng  đơn vị tổ chức thi  ký rồi gửi lên Bộ  Giáo Dục &amp; Đào  Tạo (GD-ĐT). Sau đó  tiếp tục gửi công văn đến bộ GD-ĐT và chờ duyệt mua phôi chứng chỉ.  Đơn  vị tổ chức thi không  làm chủ được về thời gian để Hiệu trưởng và Bộ GD-ĐT ký  và duyệt bán phôi chứng chỉ. <br />
+      Thông thường, vào ngày t + 40 là phôi chứng chỉ được chuyển  về tới đơn vị tổ chức thi, sẵn sàng để in, ký tên và đóng dấu. Quá trình này  diễn ra tới ngày t + 45. Quy trình <em>Cấp  chứng chỉ </em> kết thúc khi các chứng chỉ  đã sẵn sàng để được cấp cho thí sinh thi đạt.</p>
+    <p align="center"><a name="h3" id="h3"><img src="images/FIG04-03.jpg" alt="4" width="485" height="692" /></a><br />
+    Hình  11. Quy trình cấp chứng chỉ </p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268951713" id="_Toc268951713"></a><a name="_Toc268944483" id="_Toc268944483"></a><a name="_Toc266246090" id="_Toc266246090"><strong>1.2. Các vấn đề còn tồn tại</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Hiện tại, việc thực hiện các công  việc trong quy trình thi được giám sát và điều phối  một  cách thủ công. Khi mỗi đợt thi đến gần, nhân viên quản lý sẽ phân công các nhân  viên thực hiện việc ghi danh thí sinh dự thi, lập danh sách thi, phân công coi  thi v.v… Sau đó, trong quá  trình thực hiện các công việc, người quản lý sẽ phải theo dõi, đôn đốc các công  việc nhằm đảm bảo cho quy trình tổ  chức thi được diễn ra đúng kế hoạch đã định.<br />
+      Phương pháp quản lý một cách thủ  công chiếm nhiều thời gian, đồng thời cũng có nhiều hạn chế trong việc phát  hiện và xử lý các tình huống gây trễ hạn công việc. Để theo dõi tiến độ, người  quản lý phải giữ liên lạc thường xuyên với các nhân viên của mình để yêu cầu  cung cấp thông tin về tình hình công việc. Để có được một cái nhìn tổng thể về  ứng dụng và đưa ra các nhận định, dự báo… người quản lý phải tập hợp các thông  tin đã thu thập được rồi thực hiện thống kê, so sánh, mô hình hóa… Ngoài ra,  tại một thời điểm bất kỳ, có thể có nhiều quy trình thi cùng diễn ra đồng thời  như mô tả ở hình vẽ H.4.  Điều này làm cho việc quản lý cũng như việc thực hiện nhiệm vụ đối với các nhân  viên khác trở nên khó khăn và nhiều áp lực hơn. Theo đó, có thể xảy ra các tình  huống bất lợi sau:</p>
+    <div align="justify">
+      <ul>
+        <li>Nhân  viên có thể nhầm lẫn về thời gian hoàn thành các công việc của các quy trình.</li>
+        <li>Có  thể xảy ra những thời điểm mà nhân viên thực hiện không xuể các công việc nếu  như không được quản lý tốt.</li>
+        <li>Khó  khăn trong công tác quản lý, theo dõi tiến độ, dự báo, cảnh báo. </li>
+      </ul>
+    </div>
+    <p align="center"><img src="images/FIG04-04.jpg" alt="5" width="602" height="231" /></p>
+    <div>
+      <p align="center">Hình      12. Nhiều đợt thi có thể diễn ra song song </p>
+    </div>
+      
+    <div align="right"><a href="#_Toc004" class="style4">[TOP]</a></div>
+    <h2 align="justify"><a name="_Toc268951714" id="_Toc268951714"></a><a name="_Toc268944484" id="_Toc268944484"></a><a name="_Toc266246091" id="_Toc266246091"><strong>2. Yêu  cầu </strong></a><strong>chức năng</strong> </h2>
+    <div align="justify"></div>
+    <p align="justify"><a name="_Toc266246092" id="_Toc266246092">Mục  này đưa ra một số các chức năng chính được đề nghị cho một ứng dụng quản lý quy  trình thi tổng quát. Bao gồm các chức năng phục vụ quá trình thực hiện công  việc của nhân viên thừa hành và chức năng phục vụ công tác quản lý của nhân  viên quản lý.</a> </p>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268951715" id="_Toc268951715"></a><a name="_Toc268944485" id="_Toc268944485"></a><a name="_Toc266246093" id="_Toc266246093"><strong>2.1. Chức năng thông báo.</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Ứng  dụng cần cung cấp chức năng thông báo cho nhân viên sử dụng chương trình dưới  dạng email, tin nhắn... trước và trong   các mốc thời gian quan trọng nhằm giúp nhân viên sắp xếp thời gian biểu  của riêng mình và thực hiện công việc sớm nhất có thể. Cụ thể hơn, ứng dụng sẽ  gửi thông báo trong các trường hợp  sau:</p>
+    <div align="justify">
+      <ul>
+        <li>Với  mỗi đợt thi, trước khi một công việc được bắt đầu hay kết thúc theo hạn định,  ứng dụng tự động gửi thông báo tới cho nhân viên được phân công phụ trách công  việc đó. Việc thông báo này là nhằm giúp gợi nhớ cho các nhân viên thực hiện  đúng hạn trách nhiệm của mình, tránh xảy ra các tình trạng trễ hạn hoặc ứ đọng  các công việc.</li>
+        <li>Với  những công việc có khả năng trễ hạn cao (ví dụ: gần hết thời hạn mà công việc  vẫn chưa được tiến hành,...), ứng dụng cũng phải tự động gửi thông báo nhắc nhở  một lần nữa.</li>
+        <li>Với  những công việc hoàn thành sớm hạn <a href="#_ftn1" name="_ftnref1" title="" id="_ftnref4">(36)</a>,  ứng dụng sẽ tự động gửi thông báo đến người nhân viên chịu trách nhiệm cho công  việc tiếp theo, giúp họ nhanh chóng sắp xếp và thực hiện ngay công việc này.        </li>
+      </ul>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ul>
+        <div align="right"></div>
+      </ul>
+      <h3 id="_Toc268951716" name="_Toc268951716"><a name="_Toc268951716" id="_Toc268951716"></a><a name="_Toc268944486" id="_Toc268944486"></a><a name="_Toc266246094" id="_Toc266246094">2.2. <strong>Chức năng theo dõi công  việc</strong></a> </h3>
+    </div>
+    <p align="justify">Đây là một trong  những chức năng quan trọng mà ứng dụng quản lý LCV phải có.  Chức năng này cho phép nhân  viên và người quản lý theo dõi LCV và  tình trạng của từng  công việc thành phần  trên LCV đó. Cụ thể là:</p>
+    <div align="justify">
+      <ol>
+        <blockquote>
+          <h4 id="_Toc268951717" name="_Toc268951717"><a name="_Toc268951717" id="_Toc268951717"></a><a name="_Toc268944487" id="_Toc268944487"></a><a name="_Toc266246095" id="_Toc266246095"><strong>2.2.1. Đối  với các nhân viên thực hiện các công việc:</strong></a> </h4>
+        </blockquote>
+      </ol>
+    </div>
+    <p align="justify">Đối với các nhân viên thực hiện các  công việc, sau khi đăng nhập,  có thể quan sát được tiến độ của các công việc mà họ đang thực hiện. Ví dụ nhân  viên giáo vụ có thể xem được các thông tin về tổng số bài thi, số bài được  chấm, thời gian chấm được cho phép, phần trăm công việc đã hoàn thành... đối  với từng đợt thi cụ thể mà nhân viên  này được phân công.<br />
+      Ngoài ra, các công việc mà nhân  viên phải thực hiện trong tương lai gần cũng được hiển thị một cách rõ ràng  giúp nhân viên có thể lên lịch làm việc sắp tới cho hiệu quả.</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <h4 id="_Toc268951718" name="_Toc268951718"><a name="_Toc268951718" id="_Toc268951718"></a><a name="_Toc268944488" id="_Toc268944488"></a><a name="_Toc266246096" id="_Toc266246096"><strong>2.2.2. Đối  với người quản lý:</strong></a> </h4>
+        </blockquote>
+      </blockquote>
+    </div>
+    <p align="justify">Đối với người quản lý, ứng dụng cần  cung cấp chức năng cho phép theo dõi tiến độ của công việc trên toàn bộ LCV, bao gồm các thông tin: ngày bắt đầu và kết thúc theo quy định, ngày bắt đầu và kết thúc trong thực tế, người thực  hiện công việc, v.v… Ngoài ra, với các công việc đang diễn ra, thông tin về  tiến độ thực hiện công việc là rất quan trọng và cần phải theo dõi trong chức  năng này.</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268951719" id="_Toc268951719"></a><a name="_Toc268944489" id="_Toc268944489"></a><a name="_Toc266246097" id="_Toc266246097"><strong>2.3. Chức năng cập nhật  thông tin</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Song song với việc theo dõi tiến độ  thực hiện các công việc, nhân  viên có nhu cầu cập nhật trạng thái của các công việc mà họ phụ trách. Bao gồm  các thông tin sau:</p>
+    <div align="justify">
+      <ul>
+        <li>Thời  gian bắt đầu và kết thúc công việc thực tế: Mỗi công việc trên LCV đều có thời điểm bắt  đầu và kết thúc, hai mốc thời gian này xác định khoảng thời gian thực tế mà  công việc được tiến hành.</li>
+        <li>Khối  lượng công việc hoàn thành: là mức độ hoàn thành công việc đối với một công  việc đang được tiến hành. Thông tin này được cung cấp bởi chính nhân viên thực  hiện công việc đó. </li>
+        <li>Thông  tin ghi chú: Trong các trường hợp các công việc được hoàn thành sớm hoặc trễ  hơn so với khoảng thời gian quy định, người quản lý cần biết nguyên nhân gây ra  việc sớm hoặc trễ hạn đó. Ngoài ra, các thông tin khác mà bản thân người thực  hiện công việc cho là quan trọng cũng có thể được lưu trữ dưới dạng này.</li>
+      </ul>
+    </div>
+    <p align="justify">Ngoài ra, sau  khi hoàn thành một công việc, nhân viên cần phải cung cấp các đơn từ, biễu mẫu  (nếu có) liên quan đến công việc này cho ứng dụng. Những dữ liệu này vừa có tác  dụng chứng minh rằng  công việc đã thực sự kết thúc, vừa là cách để cung cấp các kết quả công việc  cho người quản lý phục vụ cho công tác quản lý và cải tiến quy trình về sau. Do  vậy ứng dụng cần phải linh hoạt trong quá trình tương tác với người dùng, tiếp  nhận và lưu trữ hợp lý các thông tin đó.<br />
+      Ứng dụng cung cấp chức năng thống  kê từ tổng quát đến chi tiết nhằm giúp người quản lý có cái nhìn toàn diện về  quy trình. Cụ thể như sau:</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268951720" id="_Toc268951720"></a><a name="_Toc268944490" id="_Toc268944490"></a><a name="_Toc266246098" id="_Toc266246098"><strong>2.4. Chức năng thống kê</strong></a><a name="_Toc266246099" id="_Toc266246099"></a> </h3>
+        <blockquote>
+          <p id="_Toc268951721" name="_Toc268951721"><a name="_Toc268951721" id="_Toc268951721"></a><a name="_Toc268944491" id="_Toc268944491"><strong>2.4.1. Thống  kê tổng thể:</strong></a> </p>
+        </blockquote>
+      </blockquote>
+    </div>
+<p align="justify">Dựa trên dữ liệu về các đợt thi đã  thực hiện trong suốt quá trình từ khi ứng dụng hoạt động đến thời điểm hiện  tại, từ đó đưa ra các thống kê tổng thể theo thời gian theo các tiêu chí khác  nhau: số đợt thi hoàn thành sớm hạn, số đợt thi bị trễ hạn, tỉ lệ hoàn thành  của một công đoạn cụ thể đối với các đợt thi... Các tiêu chí này được xây dựng  sẵn trên ứng dụng, đồng thời cho phép người quản lý có thể tạo thêm các tiêu  chí thống kê mới theo nhu cầu của thực tế nghiệp vụ.
+<p align="right"><a href="#_Toc004" class="style4">[TOP]</a>
+
+<div align="justify">
+      <ol>
+        <blockquote>
+          <h4 id="_Toc268951722" name="_Toc268951722"><a name="_Toc268951722" id="_Toc268951722"></a><a name="_Toc268944492" id="_Toc268944492"><strong>2.4.2. Thống  kê chi tiết:</strong></a> </h4>
+        </blockquote>
+      </ol>
+</div>
+    <p align="justify">Đối với những  đợt thi đã thực hiện xong, người quản lý có thể có nhu cầu xem các thông tin  chi tiết: những  công việc nào bị trễ hạn, những công việc nào được hoàn thành sớm hạn, nguyên  nhân gây sớm/trễ hạn, những nhân viên được phân công thực hiện công việc...</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <ol>
+        <blockquote>
+          <p align="left" id="_Toc268951723" name="_Toc268951723"><a name="_Toc268951723" id="_Toc268951723"></a><a name="_Toc268944493" id="_Toc268944493"><strong>2.4.3. Thống  kê so sánh:</strong></a></p>
+        </blockquote>
+      </ol>
+    </div>
+    <p align="justify">So sánh các đợt  thi trong cùng khoảng thời gian nhưng khác niên khóa. Ví dụ, người quản lý có  nhu cầu so sánh  lượng thí sinh dự thi và tình hình thực hiện quy trình thi trong tháng 5 của  năm 2009, 2008, 2007... Từ đó đưa ra dự đoán về tình hình tháng 5, năm  2010,2011... để có chuẩn bị cần thiết... </p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <ol>
+        <blockquote>
+          <p id="_Toc268951724" name="_Toc268951724"><a name="_Toc268951724" id="_Toc268951724"></a><a name="_Toc268944494" id="_Toc268944494"><strong>2.4.4. Thống  kê theo thời gian</strong></a> <strong>:</strong> </p>
+        </blockquote>
+      </ol>
+    </div>
+    <p align="justify">Ứng dụng cần  cung cấp chức năng thống kê theo thời gian. Cụ thể, chức năng này cho biết  trong một khoảng thời gian hiện tại có những đợt thi nào diễn ra, đợt thi nào  đã hoàn thành, chưa hoàn thành, đợt thi nào có nguy cơ bị trễ hạn; đối với mỗi đợt thi, ứng dụng  cũng sẽ cung cấp chức năng thống kê cụ thể tình hình hoạt động của các công  việc trong đợt thi đó ... Kết quả thống kê dạng này được hiển thị dưới dạng sơ  đồ Gantt.</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <h3 id="_Toc268951725" name="_Toc268951725"><a name="_Toc268951725" id="_Toc268951725"></a><a name="_Toc268944495" id="_Toc268944495"><strong>2.5. Chức năng cảnh báo:</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Tương tự như chức năng thông báo,  đối với những công việc có nguy cơ trễ hạn cao, ứng dụng sẽ kích hoạt chức năng  cảnh báo. Chức năng này được biểu hiện ở hai dạng:</p>
+    <div align="justify">
+      <ul>
+        <li>Gửi  thông báo đến các nhân viên có liên quan nhằm nhắc nhở nhân viên nhanh chóng  thực hiện công việc và đến người quản lý với thông tin về phần trăm công việc  và người chịu trách nhiệm nhằm giúp quản lý nhanh chóng kiểm soát tình hình và  đưa ra giải quyết phù hợp.</li>
+        <li>Hiển  thị dưới dạng màu sắc trên lược đồ của người quản lý cùng các thông tin cần  thiết (phần trăm đã thực hiện được, người chịu trách nhiệm...) để nhân viên  quản lý có thể nhanh chóng phát hiện phạm vi được cảnh báo (công việc gì) cùng  những thông tin đó để đưa ra tình huống xử lý thích hợp.</li>
+      </ul>
+      <ol>
+        <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      </ol>
+      <h3><a name="_Toc268951726" id="_Toc268951726"></a><a name="_Toc268944496" id="_Toc268944496"><strong>2.6. Chức năng phân công</strong></a><strong>:</strong> </h3>
+    </div>
+    <p align="justify">Ứng dụng phải có chức năng cho phép phân công các nhân  viên phụ trách các công việc. Sự phân công này cần phải có khả năng thay đổi khi cần thiết. Bao gồm các  dạng sau:</p>
+    <div align="justify">
+      <ul>
+        <li><a name="_Toc268944497" id="_Toc268944497">Phân  công mặc định: Quy trình thi được diễn ra lặp lại nhiều năm. Bộ phận tổ chức  thi bao gồm các nhân viên của trung tâm được phân công nắm giữ các công việc  một cách ổn định trong thời gian dài. Do vậy, mỗi khi mở một đợt thi mới nhân  viên quản lý không cần thiết thực hiện tao tác phân công, thay vào đó ứng dụng  phải có khả năng tự động ghi nhận phân công.</a> </li>
+        <li><a name="_Toc268944498" id="_Toc268944498">Phân  công lại: Trải qua nhiều năm làm việc, có thể sẽ có nhiều tình huống cần thực  hiện phân công lại các công việc cho nhân viên (thay đổi quy trình, thay đổi  nhân sự...). Do đó ứng dụng cũng phải cung cấp khả năng thực hiện phân công lại  khi cần.</a> </li>
+        <li><a name="_Toc268944499" id="_Toc268944499">Phân  công trong một khoảng thời gian: Chức năng này cho phép phân công công việc  trong một khoảng thời gian giới hạn. Sau khoảng thời gian này người quản lý cần  phải thực hiện gia hạn hoặc phân công lại cho công việc đó. Chức năng này hữu  ích trong trường hợp có nhân viên A được cử đi công tác một thời gian, người  quản lý muốn phân công nhân viên B đảm nhận tạm thời công việc trong thời gian  A đi công tác, sau đó sẽ trở lại bình thường.</a> </li>
+        <li><a name="_Toc268944500" id="_Toc268944500">Phân  công riêng (phân công cụ thể): Chức năng này cho phép phân công công việc trên  một đợt thi riêng nào đó. Chức năng này đặc biệt hữu ích đối với những đợt thi  có số lượng thí sinh đột biến</a><a href="#_ftn2" name="_ftnref2" title="" id="_ftnref5">(37) </a>, cần được sắp xếp lại  chế độ phân công cho hợp lý nhằm đảm bảo công việc được hoàn thành đúng hạn với  hiệu quả cao nhất có thể.<a name="_Toc266246105" id="_Toc266246105"></a>        </li>
+      </ul>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ul>
+        <div align="right"></div>
+      </ul>
+      <h3><a name="_Toc268951727" id="_Toc268951727"></a><a name="_Toc268944501" id="_Toc268944501"><strong>2.7. Chức năng biểu diễn  luồng công việc dưới dạng sơ đồ trực quan</strong></a> </h3>
+    </div>
+    <p align="justify">Để tăng tính tiện dụng và thân  thiện, ứng dụng phải cung cấp chức năng biểu diễn LCV dưới dạng sơ đồ nhằm  giúp người quản lý có cái nhìn trực quan hơn đối với quy trình đang thực thi.  Các dạng sơ đồ đề nghị là sơ đồ Gantt, sơ đồ LCV,... Các thông tin liên quan đến các đợt  thi được bố trí một cách hợp lý sao cho mang lại hiệu suất làm việc tốt nhất  cho người dùng. Hình H5  là một ví dụ cho cách biểu diễn dưới dạng sơ đồ Gantt các công việc của một đợt  thi điển hình.</p>
+    <p align="center"><a name="h5" id="h5"><img src="images/FIG04-05.jpg" alt="6" width="595" height="238" /></a><br />
+    Hình  13. Biểu diễn quy trình dưới dạng sơ  đồ Gantt </p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951728" id="_Toc268951728"></a><a name="_Toc268944502" id="_Toc268944502"></a><a name="_Toc266246106" id="_Toc266246106"><strong>3. Yêu  cầu phi chức năng</strong></a><a name="_Toc266246107" id="_Toc266246107"></a> </h2>
+      <blockquote>
+        <p id="_Toc268951729" name="_Toc268951729"><a name="_Toc268951729" id="_Toc268951729"></a><a name="_Toc268944503" id="_Toc268944503"><strong>3.1. Tính tiến hóa</strong></a> </p>
+      </blockquote>
+    </div>
+    <p align="justify">Ứng dụng cần có tính tiến hóa, cho  phép có khả năng nâng cấp ứng dụng trong tương lai mà không ảnh hưởng đến các  chức năng đang được sử dụng. Các nâng cấp có thể xảy ra như: thay đổi hệ quản  trị cơ sở dữ liệu, thay đổi thời gian thực hiện quy trình, thay đổi nhân sự,...</p>
+    <div align="justify">
+      <blockquote>
+        <p id="_Toc268951730" name="_Toc268951730"><a name="_Toc268951730" id="_Toc268951730"></a><a name="_Toc268944504" id="_Toc268944504"><strong>3.2. Yêu cầu về giao diện</strong></a> </p>
+      </blockquote>
+      <ul>
+        <li><a name="_Toc268944505" id="_Toc268944505">Giao  diện đồ họa dễ sử dụng, trực quan, thân thiện với nhân viên.</a> </li>
+        <li><a name="_Toc268944506" id="_Toc268944506">Hỗ  trợ chức năng thống kê, theo dõi luồng công việc dạng sơ đồ quen thuộc với  người quản lý.</a> </li>
+        <li><a name="_Toc268944507" id="_Toc268944507">Ứng  dụng có hướng dẫn đầy đủ, ít tương tác, hỗ trợ tối đa cho người sử dụng.</a></li>
+      </ul>
+      <blockquote>
+        <p id="_Toc268951731" name="_Toc268951731"><a name="_Toc268951731" id="_Toc268951731"></a><a name="_Toc268944508" id="_Toc268944508"><strong>3.3. Tính hiệu quả</strong></a> </p>
+      </blockquote>
+      <ul>
+        <li><a name="_Toc268944509" id="_Toc268944509">Các  thao tác cung cấp dữ liệu đầu vào cho luồng công việc gọn nhẹ, đơn giản, không  phức tạp.</a> </li>
+        <li><a name="_Toc268944510" id="_Toc268944510">Cập  nhật nhanh, hỗ trợ nhiều nhân viên có thể cùng truy cập ứng dụng cùng lúc mà  không bị hiện tượng thắt cổ chai.</a> </li>
+      </ul>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    </div>
+    <h2 align="justify"><a name="_Toc268951732" id="_Toc268951732"></a><a name="_Toc266246121" id="_Toc266246121">4. Phân  tích</a> mức quan niệm </h2>
+    <p align="justify">Đến đây, chúng  ta đã biết được các tính chất quan trọng của mô hình LCV cũng như các yêu cầu  cụ thể đối với một ứng dụng quản lý LCV là như thế nào. Tùy vào từng lĩnh vực  khác nhau, mỗi hệ thống ứng dụng quản lý được xây dựng cho lĩnh vực đó sẽ có sự khác biệt về các yêu cầu nghiệp vụ. Ứng với mỗi  quy trình nghiệp vụ chúng ta phải MHH thành một sơ đồ LCV sao cho thỏa mãn tất  cả các yêu cầu logic của nghiệp vụ đó, đồng thời phải có khả năng tương tác với  người dùng trong các chức năng điều khiển hoạt động thực thi công việc.<br />
+    Ngoài ra, chúng  ta cũng đã biết được các chức năng quan trọng cần có ở một ứng dụng quản lý LCV  tổ chức thi gồm những gì, mỗi một chức năng ấy có vai trò và vị trí như thế nào v.v…. Trong phần này, chúng tôi sẽ thể hiện lại kết  quả phân tích và thiết kế ứng dụng trên.</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <h2 id="_Toc268951733" name="_Toc268951733"><a name="_Toc268951733" id="_Toc268951733"></a><a name="_Toc268944511" id="_Toc268944511"></a><a name="_Toc266246122" id="_Toc266246122"><strong>4.1. Mô hình dữ liệu ở mức  quan niệm</strong></a> </h2>
+      </blockquote>
+    </div>
+    <p align="justify">Phần này mô tả chi tiết về mô hình  dữ liệu ở mức quan niệm. Các thực thể (đối tượng dữ liệu) mà ứng dụng cần phải  lưu trữ bao gồm:</p>
+    <div align="justify">
+      <table width="616" border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="37" valign="top"><br />
+              <strong>STT</strong> </td>
+          <td width="205" valign="top"><p><strong>Tên</strong></p></td>
+          <td width="374" valign="top"><p><strong>Mô    tả</strong></p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>1</strong></p></td>
+          <td width="205" valign="top"><p><strong>Nhân    viên</strong></p></td>
+          <td width="374" valign="top"><p>Bao gồm nhân    viên quản lý và nhân viên thừa hành</p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>2</strong></p></td>
+          <td width="205" valign="top"><p><strong>Công    việc</strong></p></td>
+          <td width="374" valign="top"><p>Các công việc    trong mỗi đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>3</strong></p></td>
+          <td width="205" valign="top"><p><strong>Phân    công</strong></p></td>
+          <td width="374" valign="top"><p>Sự phân công    công việc cho các nhân viên</p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>4</strong></p></td>
+          <td width="205" valign="top"><p><strong>Đợt    thi</strong></p></td>
+          <td width="374" valign="top"><p>Các đợt thi    cấp chứng chỉ hằng năm </p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>5</strong></p></td>
+          <td width="205" valign="top"><p><strong>Tiến    độ</strong></p></td>
+          <td width="374" valign="top"><p>Tiến độ của    mỗi sự phân công, tương ứng với từng đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>6</strong></p></td>
+          <td width="205" valign="top"><p><strong>Ghi    chú</strong></p></td>
+          <td width="374" valign="top"><p>Thông tin ghi    chú cho quá trình thực hiện công việc</p></td>
+        </tr>
+        <tr>
+          <td width="37" valign="top"><p><strong>7</strong></p></td>
+          <td width="205" valign="top"><p><strong>Chứng    chỉ</strong></p></td>
+          <td width="374" valign="top"><p>Các    chứng chỉ được tổ chức thi trong mỗi đợt thi</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center">Bảng 1. Các đối tượng dữ liệu được lưu trữ<br />
+      <img src="images/FIG04-06.jpg" alt="7" width="589" height="513" /><br />
+      Hình  14. Mô hình dữ liệu quan niệm</p>
+    <p align="center"><br />
+      Ghi chú: <br />
+      <img src="CHAPTER04_clip_image004_0000.jpg" alt="8" width="602" height="277" /><br />
+    Bảng 2. Ý nghĩa kí hiệu trong mô hình dữ liệu mức quan niệm</p>
+    <p align="justify"><br />
+      Hình 18. thể  hiện lược đồ dữ liệu  ở mức quan niệm. Bao gồm các thực thể, thuộc tính cho mỗi thực thể và mối quan  hệ giữa chúng.<br />
+      Thành phần nhân viên thuộc bộ phận  tổ chức thi của một đơn vị đào  tạo chứng chỉ quốc gia thông thường bao gồm hai loại nhân  viên cơ bản, đó là nhân viên quản  lý và nhân viên thừa hành. Nhân viên thừa hành là người trực tiếp chịu trách  nhiệm thực hiện các công việc được phân công bởi nhân viên quản lý. Ngoài các  thông tin chung tối thiểu để sử dụng ứng dụng, nhân viên thừa hành còn phải  cung cấp thêm họ tên đầy đủ và số điện thoại liên lạc dùng trong công tác quản  lý của người quản lý. <br />
+      Thực thể Công việc lưu trữ các công  việc thành phần trong một đợt thi (ghi danh, lập danh sách, coi thi...). Thông  tin ngày bắt đầu và ngày kết thúc của thực thể Công việc là ngày thứ tự (lưu  trữ dưới dạng số nguyên) lấy ngày tổ chức thi làm chuẩn<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref6">(38)</a>. <br />
+      Mỗi công việc sẽ được phân công cho  một hoặc nhiều nhân viên cùng phụ trách. Đồng thời, một nhân viên nào đó có thể  được phân công một hoặc nhiều công việc khác nhau. Để phục vụ lưu trữ cho chức  năng phân công mặc định như đã mô tả ở phần yêu cầu của khách hàng, mỗi thể  hiện phân công được lưu trữ cố định tương ứng với một nhân viên thừa hành và  một công việc. Ngoài ra, mỗi thể hiện phân công được kèm theo thông tin ngày áp  dụng và ngày hết hạn phân công đó. Trong trường hợp sự phân công là không có  thời hạn, thuộc tính ngày hết hạn mang giá trị null.<br />
+      Trên thực tế, một đợt thi có thể  được tổ chức cho một hoặc nhiều loại chứng chỉ. Và tương ứng với các đợt thi  khác nhau, mỗi một sự phân công sẽ có quá trình thực thi khác nhau. Thực thể  Tiến độ chịu trách nhiệm theo dõi quá trình thực thi đó. Các mốc thời gian ngày  bắt đầu, ngày kết thúc của mỗi công việc sẽ được chuyển đổi ra ngày lịch, lưu  trữ ở hai thuộc tính Ngày bắt đầu quy định và Ngày kết thúc quy định.<br />
+      Cuối cùng, trong một số trường hợp  công việc được kết thúc trễ hạn hoặc sớm hạn so với quy định, có thể nhân viên  quản lý sẽ cần biết nguyên nhân gây ra sự sớm/trễ hạn đó. Để phục vụ chức năng  này, mỗi thể hiện Tiến độ được gắn kết với tối đa một thể hiện Ghi chú (Có thể  có hoặc không có). Ngược lại, một thông tin ghi chú luôn luôn dành cho duy nhất  một tiến độ.<br />
+      Dưới đây sẽ liệt kê thông tin chi  tiết các thuộc tính của từng thực thể bao gồm tên gọi, miền giá trị, ý  nghĩa,...</p>
+    <div align="justify">
+      <ol>
+            <blockquote>
+              <p id="_Toc268951739" name="_Toc268951739"><a name="_Toc268951739" id="_Toc268951739"></a><a name="_Toc268944517" id="_Toc268944517"><strong>4.1.1. Nhân  viên</strong></a> </p>
+            </blockquote>
+      </ol>
+      <div align="center"></div>
+      <table border="1" cellspacing="0" cellpadding="0" align="center" width="601">
+        <tr>
+          <td width="45"><p align="center">STT</p></td>
+          <td width="94"><p align="center">Tên thuộc tính</p></td>
+          <td width="90"><p align="center">Miền giá trị</p></td>
+          <td width="78"><p align="center">Kích thước</p></td>
+          <td width="84"><p align="center">Cho    phép null (C/K)</p></td>
+          <td width="210"><p align="center">Ý nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>1</p></td>
+          <td width="94" valign="top"><p>Tên    đăng nhập</p></td>
+          <td width="90" valign="top"><p>Chuỗi</p></td>
+          <td width="78" valign="top"><p>50</p></td>
+          <td width="84" valign="top"><p>K</p></td>
+          <td width="210" valign="top"><p>Tên    đăng nhập vào ứng dụng.</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>2</p></td>
+          <td width="94" valign="top"><p>Mật    khẩu</p></td>
+          <td width="90" valign="top"><p>Chuỗi</p></td>
+          <td width="78" valign="top"><p>250</p></td>
+          <td width="84" valign="top"><p>K</p></td>
+          <td width="210" valign="top"><p>Mật    khẩu đăng nhập</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>3</p></td>
+          <td width="94" valign="top"><p>Email</p></td>
+          <td width="90" valign="top"><p>Chuỗi </p></td>
+          <td width="78" valign="top"><p>250</p></td>
+          <td width="84" valign="top"><p>K</p></td>
+          <td width="210" valign="top"><p>Địa chỉ email.</p></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div align="justify"></div>
+    </div>
+    <div align="justify">
+      <p align="center">Bảng 3. Thông tin chi tiết thực thể nhân viên</p>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ol>
+        <blockquote>
+          <p name="_Toc266246124"><a name="_Toc266246124"><strong>4.1.2. Nhân  viên quản lý &amp; Nhân viên thừa hành</strong></a> </p>
+        </blockquote>
+      </ol>
+    </div>
+    <p align="justify">Nhân viên quản lý và nhân viên thừa  hành đều thừa kế các thuộc tính từ thực thể nhân viên. Riêng nhân viên thừa  hành cần có thêm các thông tin sau:</p>
+    <div align="justify">
+      <table width="598" border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="41"><br />
+            STT </td>
+          <td width="118"><p align="center">Tên thuộc tính</p></td>
+          <td width="91"><p align="center">Miền giá trị</p></td>
+          <td width="79"><p align="center">Kích    thước</p></td>
+          <td width="80"><p align="center">Cho phép null (C/K)</p></td>
+          <td width="188"><p align="center">Ý nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="41" valign="top"><p>1</p></td>
+          <td width="118" valign="top"><p>Họ tên</p></td>
+          <td width="91" valign="top"><p>Chuỗi</p></td>
+          <td width="79" valign="top"><p>50</p></td>
+          <td width="80" valign="top"><p>K</p></td>
+          <td width="188" valign="top"><p>Tên đầy đủ của nhân viên thừa    hành</p></td>
+        </tr>
+        <tr>
+          <td width="41" valign="top"><p>2</p></td>
+          <td width="118" valign="top"><p>Điện thoại</p></td>
+          <td width="91" valign="top"><p>Chuỗi</p></td>
+          <td width="79" valign="top"><p>11</p></td>
+          <td width="80" valign="top"><p>C</p></td>
+          <td width="188" valign="top"><p>Điện    thoại liên lạc</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center">Bảng 4.Thông tin chi tiết thực thể Nhân viên thừa hành</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <ol>
+            <blockquote>
+              <h4 id="_Toc268951741" name="_Toc268951741"><a name="_Toc268951741" id="_Toc268951741"></a><a name="_Toc268944519" id="_Toc268944519"><strong>4.1.3. Công  việc</strong></a> </h4>
+            </blockquote>
+      </ol>
+      <table border="1" cellspacing="0" cellpadding="0" align="center" width="589">
+        <tr>
+          <td width="45"><p align="center">STT</p></td>
+          <td width="123"><p align="center">Tên    thuộc tính</p></td>
+          <td width="95"><p align="center">Miền    giá trị</p></td>
+          <td width="76"><p align="center">Kích    thước</p></td>
+          <td width="85"><p align="center">Cho    phép null (C/K)</p></td>
+          <td width="166"><p align="center">Ý    nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>1</p></td>
+          <td width="123" valign="top"><p>Mã công việc</p></td>
+          <td width="95" valign="top"><p>Số nguyên dương</p></td>
+          <td width="76" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Mỗi công việc được    phân biệt bởi một mã duy nhất.</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>2</p></td>
+          <td width="123" valign="top"><p>Tên công việc</p></td>
+          <td width="95" valign="top"><p>Chuỗi</p></td>
+          <td width="76" valign="top"><p>100</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Tên công việc</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>3</p></td>
+          <td width="123" valign="top"><p>Ngày bắt đầu</p></td>
+          <td width="95" valign="top"><p>Số nguyên</p></td>
+          <td width="76" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Ngày bắt đầu công    việc theo quy định</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>4</p></td>
+          <td width="123" valign="top"><p>Ngày kết thúc.</p></td>
+          <td width="95" valign="top"><p>Số nguyên</p></td>
+          <td width="76" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Ngày kết thúc công    việc theo quy định</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>5</p></td>
+          <td width="123" valign="top"><p>Mô tả</p></td>
+          <td width="95" valign="top"><p>Chuỗi</p></td>
+          <td width="76" valign="top"><p>250</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Mô    tả công việc</p></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div align="justify"></div>
+    </div>
+    <div></div>
+    <div align="justify">
+      <p align="center">Bảng 5.Thông tin chi    tiết thực thể Công việc</p>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ol>
+        <blockquote>
+          <h4 id="_Toc268951742" name="_Toc268951742"><a name="_Toc268951742" id="_Toc268951742"></a><a name="_Toc268944520" id="_Toc268944520"><strong>4.1.4. Phân  công</strong></a></h4>
+        </blockquote>
+      </ol>
+      <table border="1" cellspacing="0" cellpadding="0" align="center" width="589">
+        <tr>
+          <td width="45"><p align="center">STT</p></td>
+          <td width="123"><p align="center">Tên thuộc tính</p></td>
+          <td width="95"><p align="center">Miền giá trị</p></td>
+          <td width="76"><p align="center">Kích    thước</p></td>
+          <td width="85"><p align="center">Cho phép null (C/K)</p></td>
+          <td width="166"><p align="center">Ý nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>1</p></td>
+          <td width="123" valign="top"><p>Ngày    áp dụng</p></td>
+          <td width="95" valign="top"><p>ngày    tháng</p></td>
+          <td width="76" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Ngày    đầu tiên áp dụng phân công</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>2</p></td>
+          <td width="123" valign="top"><p>Ngày    hết hạn</p></td>
+          <td width="95" valign="top"><p>Ngày    tháng</p></td>
+          <td width="76" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Ngày mà sự phân công    tương ứng hết hiệu lực.</p></td>
+        </tr>
+      </table>
+      <p align="center" name="_Toc268951742">Bảng 6.Thông tin chi    tiết thực thể Phân Công</p>
+      <p align="right" name="_Toc268951742"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    </div>
+    <div align="justify">
+      <ol>
+        <blockquote>
+          <h4>4.1.5. <strong>Đợt  thi</strong></h4>
+        </blockquote>
+      </ol>
+      <table border="1" cellspacing="0" cellpadding="0" align="center" width="580">
+        <tr>
+          <td width="45"><p align="center">STT</p></td>
+          <td width="123"><p align="center">Tên    thuộc tính</p></td>
+          <td width="104"><p align="center">Miền giá trị</p></td>
+          <td width="57"><p align="center">Kích thước</p></td>
+          <td width="85"><p align="center">Cho phép null (C/K)</p></td>
+          <td width="166"><p align="center">Ý nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>1</p></td>
+          <td width="123" valign="top"><p>Mã đợt thi</p></td>
+          <td width="104" valign="top"><p>Số    nguyên</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Mã    đại diện cho một đợt thi.</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>2</p></td>
+          <td width="123" valign="top"><p>Tên đợt thi</p></td>
+          <td width="104" valign="top"><p>Chuỗi</p></td>
+          <td width="57" valign="top"><p>250</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Tên    đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>3</p></td>
+          <td width="123" valign="top"><p>Ngày thi</p></td>
+          <td width="104" valign="top"><p>Ngày    tháng</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p> Ngày tổ chức thi</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>4</p></td>
+          <td width="123" valign="top"><p>Số lượng thí sinh</p></td>
+          <td width="104" valign="top"><p>Số    nguyên dương</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="166" valign="top"><p>Số lượng thí sinh dự    kiến tham dự kỳ thi.</p></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div align="justify"></div>
+    </div>
+    <div align="justify">
+      <p align="center">Bảng 7. Thông tin chi    tiết thực thể Đợt thi</p>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ol>
+        <blockquote>
+          <h4 id="_Toc268951744" name="_Toc268951744"><a name="_Toc268951744" id="_Toc268951744"></a><a name="_Toc268944522" id="_Toc268944522"><strong>4.1.6. Tiến  độ</strong></a> </h4>
+        </blockquote>
+      </ol>
+      <table border="1" cellspacing="0" cellpadding="0" align="center" width="589">
+        <tr>
+          <td width="45"><p align="center">STT</p></td>
+          <td width="123"><p align="center">Tên    thuộc tính</p></td>
+          <td width="104"><p align="center">Miền giá trị</p></td>
+          <td width="57"><p align="center">Kích    thước</p></td>
+          <td width="85"><p align="center">Cho    phép null (C/K)</p></td>
+          <td width="176"><p align="center">Ý    nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>1</p></td>
+          <td width="123" valign="top"><p>Tổng khối lượng CV</p></td>
+          <td width="104" valign="top"><p>Số    nguyên dương</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>C</p></td>
+          <td width="176" valign="top"><p>Tổng khối lượng công    việc cần phải hoàn thành</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>2</p></td>
+          <td width="123" valign="top"><p>Khối lượng CV hoàn    thành</p></td>
+          <td width="104" valign="top"><p>Số    nguyên dương</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>C</p></td>
+          <td width="176" valign="top"><p>Khối lượng công việc    đã hoàn thành</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>3</p></td>
+          <td width="123" valign="top"><p>Ngày bắt đầu quy định</p></td>
+          <td width="104" valign="top"><p>Ngày    tháng</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="176" valign="top"><p>Ngày bắt đầu công    việc theo quy định (ngày lịch)</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>4</p></td>
+          <td width="123" valign="top"><p>Ngày kết thúc quy    định</p></td>
+          <td width="104" valign="top"><p>Ngày    tháng</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="176" valign="top"><p>Ngày kết thúc công    việc theo quy định (ngày lịch)</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>5</p></td>
+          <td width="123" valign="top"><p>Ngày bắt đầu thực tế</p></td>
+          <td width="104" valign="top"><p>Ngày    tháng</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>C</p></td>
+          <td width="176" valign="top"><p>Ngày công việc thự sự    được nhân viên thừa hành bắt đầu</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>6</p></td>
+          <td width="123" valign="top"><p>Ngày kết thúc thực tế</p></td>
+          <td width="104" valign="top"><p>Ngày    tháng</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>C</p></td>
+          <td width="176" valign="top"><p>Ngày    công việc thự sự được nhân viên thừa hành kết thúc.</p></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div align="justify"></div>
+    </div>
+    
+    <p align="center" name="_Toc268951745">Bảng 8. Thông tin chi    tiết thực thể tiến độ</p>
+    <p align="right" name="_Toc268951745"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify" name="_Toc268951745"><a name="_Toc268951745" id="_Toc268951745"></a><a name="_Toc268944523" id="_Toc268944523"><strong>4.1.7. Ghi  chú</strong></a> </h4>
+      </blockquote>
+    </blockquote>
+    <div align="center">
+<table border="1" cellspacing="0" cellpadding="0" align="center" width="589">
+          <tr>
+            <td width="45"><p align="center">STT</p></td>
+            <td width="123"><p align="center">Tên    thuộc tính</p></td>
+            <td width="104"><p align="center">Miền    giá trị</p></td>
+            <td width="57"><p align="center">Kích    thước</p></td>
+            <td width="85"><p align="center">Cho    phép null (C/K)</p></td>
+            <td width="176"><p align="center">Ý nghĩa</p></td>
+          </tr>
+          <tr>
+            <td width="45"><p align="center">1</p></td>
+            <td width="123"><p align="center">Mã    ghi chú</p></td>
+            <td width="104"><p align="center">Số    nguyên</p></td>
+            <td width="57"><p align="center">&nbsp;</p></td>
+            <td width="85"><p align="center">K</p></td>
+            <td width="176"><p align="center">Khóa chính, là mã duy    nhất cho mỗi ghi chú.</p></td>
+          </tr>
+          <tr>
+            <td width="45"><p align="center">2</p></td>
+            <td width="123"><p align="center">Nội    dung</p></td>
+            <td width="104"><p align="center">Văn    bản</p></td>
+            <td width="57"><p align="center">1024</p></td>
+            <td width="85"><p align="center">K</p></td>
+            <td width="176"><p align="center">Nội    dung ghi chú</p></td>
+          </tr>
+      </table>
+    </div>
+    <div>
+      <div align="justify"></div>
+    </div>
+    <div align="justify">
+      <p align="center">Bảng 9. Thông tin chi    tiết thực thể Ghi chú</p>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ol>
+        <blockquote>
+          <p><a name="_Toc268944524"><strong>4.1.8. Chứng  chỉ</strong></a> 
+          </p>
+        </blockquote>
+      </ol>
+      <table border="1" cellspacing="0" cellpadding="0" align="center" width="589">
+        <tr>
+          <td width="45"><p align="center">STT</p></td>
+          <td width="123"><p align="center">Tên    thuộc tính</p></td>
+          <td width="104"><p align="center">Miền giá trị</p></td>
+          <td width="57"><p align="center">Kích thước</p></td>
+          <td width="85"><p align="center">Cho phép null (C/K)</p></td>
+          <td width="176"><p align="center">Ý    nghĩa</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>1</p></td>
+          <td width="123" valign="top"><p>Mã chứng chỉ</p></td>
+          <td width="104" valign="top"><p>Số    nguyên dương</p></td>
+          <td width="57" valign="top"><p>&nbsp;</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="176" valign="top"><p>Mã đại diện cho mỗi    chứng chỉ</p></td>
+        </tr>
+        <tr>
+          <td width="45" valign="top"><p>2</p></td>
+          <td width="123" valign="top"><p>Tên chứng chỉ</p></td>
+          <td width="104" valign="top"><p>Chuỗi</p></td>
+          <td width="57" valign="top"><p>250</p></td>
+          <td width="85" valign="top"><p>K</p></td>
+          <td width="176" valign="top"><p>Tên    chứng chỉ.</p></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div align="justify"></div>
+    </div>
+    
+
+    <div align="center">
+      <p>Bảng 10. Thông tin chi    tiết thực thể chứng chỉ </p>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <div align="justify">
+        <blockquote>
+          <h3 id="_Toc268951747" name="_Toc268951747"><a name="_Toc268951747" id="_Toc268951747"></a><a name="_Toc268944525" id="_Toc268944525"><strong>4.2. Mô hình xử  lý mức quan niệm</strong></a></h3>
+        </blockquote>
+      </div>
+    </div>
+    <p align="justify">Phần này mô hình hóa một cách chi  tiết các xử lý của ứng dụng ở mức quan niệm. Bao gồm các cụm xử lý chính, tác  nhân đầu/cuối và các luồng dữ liệu luân chuyển giữa các đối tượng. </p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <p id="_Toc268951748" name="_Toc268951748"><a name="_Toc268951748" id="_Toc268951748"></a><a name="_Toc268944526" id="_Toc268944526"></a><a name="_Toc266246132" id="_Toc266246132"></a><a name="_Toc263796586" id="_Toc263796586"></a><a name="_Toc262558548" id="_Toc262558548"><strong>4.2.1. Tổng  quan</strong></a> </p>
+        </blockquote>
+      </blockquote>
+    </div>
+    <p align="justify">Ở mức tổng quát, ứng dụng có 7 cụm  xử lý chính (Hình 15.),  cung cấp 7 chức năng chính của một  ứng dụng quản lý  luồng công việc thi, cấp chứng chỉ và in văn bằng nói chung.  Đó là các xử lý sau:</p>
+    <p align="center"><img src="images/FIG04-07.jpg" alt="1" width="544" height="402" /><br />
+    Hình  15. Mô hình xử lý tổng quát </p>
+    <p align="justify">      Giải  thích các dòng dữ liệu lưu chuyển:</p>
+    <div align="justify">
+      <table width="586" border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="38" valign="top"><br />
+            Số </td>
+          <td width="236" valign="top"><p align="center">Diễn giải</p></td>
+          <td width="38" valign="top"><p align="center">Số</p></td>
+          <td width="274" valign="top"><p align="center">Diễn    giải</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>1</p></td>
+          <td width="236" valign="top"><p>Yêu cầu quản lý quy trình</p></td>
+          <td width="38" valign="top"><p>15</p></td>
+          <td width="274" valign="top"><p>Thông tin nhân viên cập nhật</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>2</p></td>
+          <td width="236" valign="top"><p>Kết quả quản lý quy trình</p></td>
+          <td width="38" valign="top"><p>16</p></td>
+          <td width="274" valign="top"><p>Thông tin nhân viên</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>3</p></td>
+          <td width="236" valign="top"><p>Cấu trúc quy trình</p></td>
+          <td width="38" valign="top"><p>17</p></td>
+          <td width="274" valign="top"><p>Dữ liệu cập    nhật phân công</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>4</p></td>
+          <td width="236" valign="top"><p>Cấu trúc quy trình cập nhật</p></td>
+          <td width="38" valign="top"><p>18</p></td>
+          <td width="274" valign="top"><p>Dữ liệu phân    công</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>5</p></td>
+          <td width="236" valign="top"><p>Yêu cầu thống kê</p></td>
+          <td width="38" valign="top"><p>19</p></td>
+          <td width="274" valign="top"><p>Dữ liệu thực    thi quy trình cập nhật</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>6</p></td>
+          <td width="236" valign="top"><p>Kết quả thống kê</p></td>
+          <td width="38" valign="top"><p>20</p></td>
+          <td width="274" valign="top"><p>Dữ liệu thực    thi quy trình</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>7</p></td>
+          <td width="236" valign="top"><p>Dữ liệu thực thi quy trình</p></td>
+          <td width="38" valign="top"><p>21</p></td>
+          <td width="274" valign="top"><p>Tiến độ thực    thi quy trình</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>8</p></td>
+          <td width="236" valign="top"><p>Dữ liệu phân công</p></td>
+          <td width="38" valign="top"><p>22</p></td>
+          <td width="274" valign="top"><p>Mã thông báo</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>9</p></td>
+          <td width="236" valign="top"><p>Ngày thi</p></td>
+          <td width="38" valign="top"><p>23</p></td>
+          <td width="274" valign="top"><p>Dữ    liệu phân công     </p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>10</p></td>
+          <td width="236" valign="top"><p>Yêu cầu tạo thể hiện</p></td>
+          <td width="38" valign="top"><p>24</p></td>
+          <td width="274" valign="top"><p>Nội dung thông báo</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>11</p></td>
+          <td width="236" valign="top"><p>Dữ liệu đợt thi cập nhật</p></td>
+          <td width="38" valign="top"><p>25</p></td>
+          <td width="274" valign="top"><p>Dữ liệu phân    công</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>12</p></td>
+          <td width="236" valign="top"><p>Dữ liệu đợt thi</p></td>
+          <td width="38" valign="top"><p>26</p></td>
+          <td width="274" valign="top"><p>Lịch phân công    dạng sơ đồ gantt</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>13</p></td>
+          <td width="236" valign="top"><p>Kết quả thực hiện quản lý ND</p></td>
+          <td width="38" valign="top"><p>27</p></td>
+          <td width="274" valign="top"><p>Trạng thái    công việc</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>14</p></td>
+          <td width="236" valign="top"><p>Yêu cầu quản lý nhân viên</p></td>
+          <td width="38" valign="top"><p>28</p></td>
+          <td width="274" valign="top"><p>Thông tin ghi    chú thực thi</p></td>
+        </tr>
+        <tr>
+          <td width="38" valign="top"><p>&nbsp;</p></td>
+          <td width="236" valign="top"><p>&nbsp;</p></td>
+          <td width="38" valign="top"><p>29</p></td>
+          <td width="274" valign="top"><p>Ngày    thi</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center">Bảng 11. Các dòng dữ liệu di chuyển trong mô  hình xử lý tổng quát</p>
+    <div align="justify">
+      <ul>
+        <li>Quản  lý quy trình: xử lý này bao gồm các xử lý thành phần như xem cấu trúc của một  luồng công việc, tiến hành các cập nhật đối với luồng công việc đó (thêm, xóa,  sửa các công việc)… Xử lý này nhận vào các lệnh quản lý và trả ra kết quả sau  khi thực hiện các lệnh quản lý đó.</li>
+        <li>Thống  kê: Bao gồm các xử lý thống kê quá trình thực thi luồng công việc đối với các  đợt thi. Đầu vào là các lệnh yêu cầu thống kê, kết quả trả ra là các dạng sơ đồ  thể hiện kết quả thống kê (sơ đồ gantt, biểu đồ, lược đồ mô phỏng luồng công  việc …)</li>
+        <li>Thêm  đợt thi: Xử lý này phục vụ cho chức năng thêm đợt thi mới. Khi cần thêm một đợt  thi, người quản lý sẽ cung cấp cho ứng dụng ngày thi của đợt thi đó. Xử lý này  sẽ tự động gửi yêu cầu tạo ra một luồng công việc mới, đồng thời khởi tạo các  giá trị dùng cho việc quản lý đợt thi và lưu trữ xuống cơ sở dữ liệu.</li>
+        <li>Quản  lý nhân viên: thực hiện các xử lý cập nhật thông tin, cập nhật phân công công  việc cho nhân viên.</li>
+        <li>Thực  thi quy trình: Bao gồm các xử lý cho phép nhân viên tương tác với ứng dụng để  cập nhật trạng thái công việc mà họ đang thực hiện, cập nhật thông tin ghi chú  thực thi nếu có…</li>
+        <li>Thông  báo: Trong quá trình thực thi quy trình thi, ứng dụng sẽ tự động phát sinh các  thông báo cho nhân viên được phân công công việc nếu như công việc đó sắp được  bắt đầu, sắp kết thúc, có nguy cơ trễ hạn … Các yêu cầu thông báo đó sẽ được  đơn vị xử lý “ThongBao” tiếp nhận và phát sinh các nội dung thông báo phù hợp  để gửi tới nhân viên phụ trách công việc.</li>
+        <li>Xem  phân công: Mỗi nhân viên khi đăng nhập vào ứng dụng có quyền xem lịch công tác  mà họ được phân công trong từng đợt thi. Đơn vị xử lý này sẽ đọc dữ liệu phân  công từ cơ sở dữ liệu và hiển thị dưới dạng sơ đồ gantt.        </li>
+      </ul>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <ul><blockquote>
+            <p align="justify" id="_Toc268951749" name="_Toc268951749"><a name="_Toc268951749" id="_Toc268951749" align="justify"></a><a name="_Toc268944527" id="_Toc268944527"></a><a name="_Toc266246133" id="_Toc266246133"></a><a name="_Toc263796587" id="_Toc263796587"></a><a name="_Toc262558549" id="_Toc262558549"><strong>4.2.2. Quản  lý nhân viên</strong></a> </p>
+          </blockquote>
+        
+      </ul>
+    </div>
+    <p align="justify">Cụm quản lý nhân viên bao gồm các  xử lý thêm/xóa/sửa một nhân viên ứng dụng và thêm/xóa/sửa các phân công công  việc cho nhân viên đó.</p>
+    <p align="center"><a name="h10" id="h10"><img src="images/FIG04-08.jpg" alt="1" width="557" height="245" /></a><br />
+    Hình  16. Mô hình xử lý Quản lý nhân viên</p>
+    <div align="justify">
+      <table border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="51" valign="top"><br />
+            Số </td>
+          <td width="251" valign="top"><p align="center">Diễn giải</p></td>
+          <td width="49" valign="top"><p align="center">Số</p></td>
+          <td width="218" valign="top"><p align="center">Diễn giải</p></td>
+        </tr>
+        <tr>
+          <td width="51" valign="top"><p>301</p></td>
+          <td width="251" valign="top"><p>thông tin nhân    viên cần cập nhật</p></td>
+          <td width="49" valign="top"><p>304</p></td>
+          <td width="218" valign="top"><p>Kết quả cập    nhật nhân viên</p></td>
+        </tr>
+        <tr>
+          <td width="51" valign="top"><p>302</p></td>
+          <td width="251" valign="top"><p>thông tin phân    công cần cập nhật</p></td>
+          <td width="49" valign="top"><p>305</p></td>
+          <td width="218" valign="top"><p>Kết quả cập    nhật phân công</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center"><a name="_Toc266246134" id="_Toc266246134"></a><a name="_Toc263796588" id="_Toc263796588"></a><a name="_Toc262558550" id="_Toc262558550">Bảng </a>12. Các dòng dữ liệu di chuyển trong mô hình xử lý quản lý nhân  viên</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951750" id="_Toc268951750"></a><a name="_Toc268944528" id="_Toc268944528"><strong>4.2.3. Quản  lý quy trình</strong></a> </h4>
+      </blockquote>
+    </blockquote>
+    <div align="justify"><ol>
+    </ol>
+    </div>
+    <p align="center"><a name="h11" id="h11"><img src="images/FIG04-09.jpg" alt="2" width="517" height="252" /></a><br />
+Hình  17. Mô hình xử lý Quản lý quy trình</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <ol>
+        <blockquote>
+          <h4 id="_Toc268951751" name="_Toc268951751"><a name="_Toc268951751" id="_Toc268951751"></a><a name="_Toc268944529" id="_Toc268944529"></a><a name="_Toc266246135" id="_Toc266246135"></a><a name="_Toc263796589" id="_Toc263796589"></a><a name="_Toc262558551" id="_Toc262558551"><strong>4.2.4. Thống  kê</strong></a> </h4>
+        </blockquote>
+      </ol>
+    </div>
+    <p align="justify">Cụm xử lý thống kê bao gồm 4 loại  thống kê sau:</p>
+    <div align="justify">
+      <ul>
+        <li>Thống  kê tổng quát: tiến hành thống kê quá trình thực thi cho các đợt thi đã kết  thúc. Bao gồm các thống kê về số lượng thí sinh dự thi qua các đợt, tỉ lệ đúng  hạn, sớm và trễ hạn…</li>
+        <li>Thống  kê chi tiết một  đợt thi: thống kê ở cấp độ chi tiết các công việc trong từng đợt thi cụ thể.  Những công việc đúng/sớm/trễ hạn, các thông tin ghi chú cho từng công việc (nếu  có),…</li>
+        <li>Thống  kê so sánh: so sánh việc thực thi các công việc giữa hai đợt thi bất kỳ.</li>
+        <li>Thống  kê theo thời gian: thống kê trong một khoảng thời gian nhất định có bao nhiêu  đợt thi đang diễn ra, tiến độ của từng đợt thi… kết quả của loại thống kê này  được biểu diễn dưới dạng sơ đồ Gantt.</li>
+      </ul>
+    </div>
+    <p align="center"><a name="h12" id="h12"><img src="images/FIG04-10.jpg" alt="3" width="518" height="328" /></a><br />
+      Hình  18. Mô hình xử lý Thống kê</p>
+    <div align="justify">
+      <table width="586" border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="51" valign="top"><br />
+            Số </td>
+          <td width="242" valign="top"><p align="center">Diễn giải</p></td>
+          <td width="49" valign="top"><p align="center">Số</p></td>
+          <td width="244" valign="top"><p align="center">Diễn giải</p></td>
+        </tr>
+        <tr>
+          <td width="51" valign="top"><p>201</p></td>
+          <td width="242" valign="top"><p>Yêu cầu thống kê tổng quát</p></td>
+          <td width="49" valign="top"><p>205</p></td>
+          <td width="244" valign="top"><p>Kết quả thống kê tổng quát</p></td>
+        </tr>
+        <tr>
+          <td width="51" valign="top"><p>202</p></td>
+          <td width="242" valign="top"><p>Yêu cầu thống kê 1 đợt thi</p></td>
+          <td width="49" valign="top"><p>206</p></td>
+          <td width="244" valign="top"><p>Kết quả thống kê 1 đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="51" valign="top"><p>203</p></td>
+          <td width="242" valign="top"><p>Yêu cầu thống kê so sánh</p></td>
+          <td width="49" valign="top"><p>207</p></td>
+          <td width="244" valign="top"><p>Kết quả thống kê so sánh</p></td>
+        </tr>
+        <tr>
+          <td width="51" valign="top"><p>204</p></td>
+          <td width="242" valign="top"><p>Yêu cầu thống kê theo thời gian</p></td>
+          <td width="49" valign="top"><p>208</p></td>
+          <td width="244" valign="top"><p>Kết    quả thống kê theo thời gian</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center">Bảng 13. Các dòng dữ liệu di chuyển trong mô hình xử lý thống kê</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4 id="_Toc268951752" name="_Toc268951752"><a name="_Toc268951752" id="_Toc268951752"></a><a name="_Toc268944530" id="_Toc268944530"><strong>4.2.5. Thực  thi quy trình</strong></a> </h4>
+        </blockquote>
+        <li>Tạo  thể hiện quy trình mới: tạo một đối tượng LCV  cho  đợt thi mới.</li>
+        <li>Lập  lịch thực thi: Mỗi đợt thi đặc trưng bởi một ngày thi. Xử lý “lập lịch thực  thi” chịu trách nhiệm tính toán các mốc thời gian thực tế tương ứng với thời  hạn đã được mô tả trong quy trình.</li>
+        <li>Thực  thi activity: Nhận thông tin đầu vào từ nhân viên là trạng thái mới nhất về  công việc mà họ được phân công thực hiện, xử lý này tiến hành cập nhật vào ứng  dụng trạng thái của công việc nhằm phục vụ cho công tác quản lý luồng công  việc.</li>
+        <li>Cập  nhật thông tin thực thi: trong trường hợp công việc trễ hạn hoặc sớm hạn so với  quy định, người quản lý có nhu cầu biết nguyên nhân gây nên sự sớm hoặc trễ hạn  đó. Xử lý này nhận thông tin từ nhân viên và tiến hành cập nhật thông tin đó  vào ứng dụng.</li>
+        <li>Nhận  các yêu cầu thông báo trong quá trình thực thi các công việc, tiến hành đối  sánh và gửi mã thông báo phù hợp ra ngoài.</li>
+      </ul>
+    </div>
+    <p align="center"><a name="h13" id="h13"><img src="images/FIG04-11.jpg" alt="1" width="601" height="357" /></a><br />
+    Hình  19. Mô hình xử lý Thực thi quy trình</p>
+    <div align="justify">
+      <table border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="52" valign="top"><br />
+            Số </td>
+          <td width="227" valign="top"><p>Diễn giải</p></td>
+          <td width="49" valign="top"><p>Số</p></td>
+          <td width="266" valign="top"><p>Diễn giải</p></td>
+        </tr>
+        <tr>
+          <td width="52" valign="top"><p>601</p></td>
+          <td width="227" valign="top"><p>Ngày thi</p></td>
+          <td width="49" valign="top"><p>604</p></td>
+          <td width="266" valign="top"><p>Thông tin ghi chú thực thi cập    nhật</p></td>
+        </tr>
+        <tr>
+          <td width="52" valign="top"><p>602</p></td>
+          <td width="227" valign="top"><p>Lịch công việc</p></td>
+          <td width="49" valign="top"><p>605</p></td>
+          <td width="266" valign="top"><p>Thông tin ghi chú thực thi</p></td>
+        </tr>
+        <tr>
+          <td width="52" valign="top"><p>603</p></td>
+          <td width="227" valign="top"><p>Yêu cầu thông báo</p></td>
+          <td width="49" valign="top"><p>&nbsp;</p></td>
+          <td width="266" valign="top"><p>&nbsp;</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center"><a name="_Toc266246137" id="_Toc266246137">Bảng </a>14. Các dòng dữ liệu  di chuyển trong mô hình xử lý thực thi quy trình</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951753" id="_Toc268951753"></a><a name="_Toc268944531" id="_Toc268944531"><strong>5. Cài đặt mức vật lý</strong></a> </h2>
+    </div>
+    <p align="justify">Phần trên đây vừa trình bày mô hình  dữ liệu ở mức phân tích và chi tiết các thực thể cần được tổ chức lưu trữ. Mô  hình này chỉ mới dừng lại ở mục đích là làm sao thỏa mãn được nhu cầu lưu trữ  để thực hiện các chức năng của ứng  dụng chứ chưa xét đến tính tối ưu về mặc lưu trữ cũng như  khai thác dữ liệu. Phần này tiếp tục trình bày về mô hình dữ liệu được cài đặt  thực tế trong ứng dụng, theo đó cũng diễn giải một số điểm tối ưu hóa đã được  áp dụng lên lược đồ phân tích.<br />
+      Như đã trình bày ở trên, nhân viên  thuộc bộ phận thi gồm có hai loại: Nhân viên quản lý và Nhân viên thừa hành.  Một phương pháp đã được đề nghị là gộp chung hai loại nhân viên này vào cùng  một bảng dữ liệu (table) và thêm thuộc tính LoaiNV (loại nhân viên) để phân  biệt. Tuy nhiên, theo tính toán, chi phí dùng cho việc lưu trữ, khai thác, kiểm  tra... trong quá trình khai thác dữ liệu cao hơn nhiều so với việc lưu riêng ra hai bảng dữ  liệu. Giải pháp được  lựa chọn là lưu  trữ danh sách nhân viên thừa hành vào bảng dữ liệu NhanVienThuaHanh, bảng dữ  liệu QuanLy lưu thông tin người quản lý (Chỉ có một thể hiện). Ngoài ra, dùng  một thuộc tính dạng số nguyên (maNV) để làm khóa chính cho bảng dữ liệu nhân  viên cũng là một bước tối ưu hóa.<br />
+      Để phục vụ cho  chức năng phân công, bảng TienDo và bảng PhanCong cùng tham chiếu tới CongViec  và NhanVienThuaHanh. Lúc này, bảng dữ liệu PhanCong chỉ đóng vai trò là một  bảng danh mục, lưu trữ các thể hiện phân công mẫu sẽ được áp dụng mỗi khi chức  năng phân công  tự động được kích hoạt.</p>
+    <p align="center"><a name="h14" id="h14"><img src="images/FIG04-12.jpg" alt="2" width="581" height="540" /></a><br />
+    Hình  20. Mô hình dữ liệu mức vật lý</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <h2 id="_Toc268951754" name="_Toc268951754"><a name="_Toc268951754" id="_Toc268951754"></a><a name="_Toc268944532" id="_Toc268944532"></a><a name="_Toc266246141" id="_Toc266246141"><strong>6. Mô  tả chức năng và các giao diện</strong></a> </h2>
+      <blockquote>
+        <h3><a name="_Toc268951755" id="_Toc268951755"></a><a name="_Toc268944533" id="_Toc268944533"></a><a name="_Toc266246142" id="_Toc266246142"></a><a name="_Toc263796599" id="_Toc263796599"></a><a name="_Toc262558554" id="_Toc262558554"><strong>6.1. Thiết kế User</strong></a><strong>-case</strong> </h3>
+        <blockquote>
+          <h4 id="_Toc268951756" name="_Toc268951756"><a name="_Toc268951756" id="_Toc268951756"></a><a name="_Toc268944534" id="_Toc268944534"></a><a name="_Toc266246143" id="_Toc266246143"></a><a name="_Toc263796600" id="_Toc263796600"></a><a name="_Toc262558555" id="_Toc262558555"><strong>6.1.1. Lược  đồ User-case:</strong></a> </h4>
+        </blockquote>
+      </blockquote>
+    </div>
+    <p align="center"><a name="h15" id="h15"><img src="images/FIG04-13.jpg" alt="4" width="635" height="283" /></a><br />
+    Hình  21. Lược đồ User-Case</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <p id="_Toc268951757" name="_Toc268951757"><a name="_Toc268951757" id="_Toc268951757"></a><a name="_Toc268944535" id="_Toc268944535"></a><a name="_Toc266246144" id="_Toc266246144"></a><a name="_Toc263796601" id="_Toc263796601"></a><a name="_Toc262558556" id="_Toc262558556"><strong>6.1.2. Danh  sách các Actor</strong></a> </p>
+        </blockquote>
+      </blockquote>
+      <table border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="44" valign="top"><p align="center"><strong>STT</strong></p></td>
+          <td width="95" valign="top"><p align="center"><strong>Tên    Actor</strong></p></td>
+          <td width="451" valign="top"><p align="center"><strong>Ý nghĩa</strong></p></td>
+        </tr>
+        <tr>
+          <td width="44" valign="top"><p>1</p></td>
+          <td width="95" valign="top"><p>Nhân viên</p></td>
+          <td width="451" valign="top"><p>Các nhân viên    có sử dụng đến ứng dụng để cung cấp thông tin thực thi các công đoạn trên    luồng công việc</p></td>
+        </tr>
+        <tr>
+          <td width="44" valign="top"><p>2</p></td>
+          <td width="95" valign="top"><p>Quản lý</p></td>
+          <td width="451" valign="top"><p>Người    quản lý chính của luồng công việc</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center"><a name="_Toc266246145" id="_Toc266246145"></a><a name="_Toc263796602" id="_Toc263796602"></a><a name="_Toc262558557" id="_Toc262558557">Bảng </a>15. Danh sách các Actor</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <p id="_Toc268951758" name="_Toc268951758"><a name="_Toc268951758" id="_Toc268951758"></a><a name="_Toc268944536" id="_Toc268944536"><strong>6.1.3. Danh  sách các Use-case</strong></a> </p>
+        </blockquote>
+      </blockquote>
+      <table width="571" border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="47" valign="top"><p align="center"><strong>STT</strong></p></td>
+          <td width="244" valign="top"><p align="center"><strong>Tên Use-case</strong></p></td>
+          <td width="280" valign="top"><p align="center"><strong>Ý nghĩa</strong></p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>1</p></td>
+          <td width="244" valign="top"><p>Đăng nhập</p></td>
+          <td width="280" valign="top"><p>Đăng nhập sử    dụng ứng dụng</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>2</p></td>
+          <td width="244" valign="top"><p>Xem thông tin    công việc được phân công</p></td>
+          <td width="280" valign="top"><p>Xem thông tin    về công việc thuộc trách nhiệm của nhân viên trên đợt thi </p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>3</p></td>
+          <td width="244" valign="top"><p>Xem lịch phân    công</p></td>
+          <td width="280" valign="top"><p>Xem lịch nhân    viên được phân công thực hiện 1 công đoạn nào đó trên 1 đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>4</p></td>
+          <td width="244" valign="top"><p>Cập nhật thông    tin công việc được phân công</p></td>
+          <td width="280" valign="top"><p>Cập nhật thông    tin về công việc thuộc trách nhiệm của nhân viên trên đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>5</p></td>
+          <td width="244" valign="top"><p>Xem thống kê    tổng thể các đợt thi</p></td>
+          <td width="280" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>6</p></td>
+          <td width="244" valign="top"><p>Xem thống kê    chi tiết 1 đợt thi</p></td>
+          <td width="280" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>7</p></td>
+          <td width="244" valign="top"><p>Xem thống kê    so sánh 2 đợt thi</p></td>
+          <td width="280" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>8</p></td>
+          <td width="244" valign="top"><p>Xem thông tin    các đợt thi dạng sơ đồ Gantt</p></td>
+          <td width="280" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>9</p></td>
+          <td width="244" valign="top"><p>Phân công Nhân    viên theo đợt thi</p></td>
+          <td width="280" valign="top"><p>Phân công Nhân    viên vào các công đoạn trên các đợt thi</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>10</p></td>
+          <td width="244" valign="top"><p>Phân công Nhân    viên theo kì</p></td>
+          <td width="280" valign="top"><p>Phân công Nhân    viên vào các công đoạn trong 1 khoảng thời gian cụ thể</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>11</p></td>
+          <td width="244" valign="top"><p>Cập nhật thông    tin Nhân Viên</p></td>
+          <td width="280" valign="top"><p>Thay đổi    (thêm, xóa, sửa) thông tin của nhân viên trên ứng dụng</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>12</p></td>
+          <td width="244" valign="top"><p>Thay đổi thông    tin cá nhân</p></td>
+          <td width="280" valign="top"><p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>13</p></td>
+          <td width="244" valign="top"><p>Thay đổi thông    số ứng dụng</p></td>
+          <td width="280" valign="top"><p>Cập nhật lại    các thông số thời gian thực hiện các công đoạn tương ứng trong luồng công    việc</p></td>
+        </tr>
+        <tr>
+          <td width="47" valign="top"><p>14</p></td>
+          <td width="244" valign="top"><p>Cập nhật đợt    thi</p></td>
+          <td width="280" valign="top"><p>Thay    đổi (thêm, xóa, sửa) thông tin đợt thi</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center"><a name="_Toc263796603" id="_Toc263796603"></a><a name="_Toc262558558" id="_Toc262558558">Bảng </a>16.  Danh sách các Use-case</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268951759" id="_Toc268951759"></a><a name="_Toc268944537" id="_Toc268944537"></a><a name="_Toc266246146" id="_Toc266246146"></a><a name="_Toc263796618" id="_Toc263796618"></a><a name="_Toc262558573" id="_Toc262558573"><strong>6.2. Thiết kế giao diện</strong></a> </h3>
+        <blockquote>
+          <h4 id="_Toc268951760" name="_Toc268951760"><a name="_Toc268951760" id="_Toc268951760"></a><a name="_Toc268944538" id="_Toc268944538"></a><a name="_Toc266246147" id="_Toc266246147"></a><a name="_Toc263796619" id="_Toc263796619"></a><a name="_Toc262558574" id="_Toc262558574"><strong>6.2.1. Cấu  trúc các màn hình xử lý chính</strong></a> </h4>
+        </blockquote>
+      </blockquote>
+    </div>
+    <p align="center"><a name="h16" id="h16"><strong><img src="images/FIG04-14.jpg" alt="11" width="492" height="200" /></strong></a></p>
+    <p align="center">Hình  22. Cấu trúc màn hình chính </p>
+    <p align="justify">      Khi nhân viên  chọn sử dụng chương trình, đầu tiên, cửa sổ đăng nhập  hiện ra và yêu cầu nhân viên cần  phải đăng nhập trước khi có thể sử dụng chương trình. Nếu người đăng nhập với  tài khoản hợp lệ (Tên tài khoản và Mật khẩu đúng với tên tài khoản và mật khẩu  đã lưu trên cơ sở dữ liệu), cửa sổ đăng nhập sẽ đóng lại, và thay vào đó cửa sổ  tương ứng với vai trò nhân viên sẽ hiện ra (nếu tài khoản phù hợp với lo­­­ại  nhân viên là Nhân viên, trang nhân viên sẽ được kích hoạt, ngược lại, nếu tài  khoản phù hợp với loại nhân viên là Quản lý, trang quản lý sẽ được kích hoạt).  Ngược lại, nếu tài khoản không  hợp lệ, trang báo lỗi sẽ hiện ra, yêu cầu nhân viên nhập lại tên tài khoản và  mật khẩu. <br />
+      Theo đó, mỗi  trang nhân viên tương ứng sẽ thể hiện các chức năng tương ứng mà họ được phép  thực hiện<br />
+      Khi không sử dụng chương trình nữa,  ứng dụng sẽ tự động đăng xuất. </p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <blockquote>
+        <blockquote>
+          <h4><a name="_Toc268951761" id="_Toc268951761"></a><a name="_Toc268944539" id="_Toc268944539"></a><a name="_Toc266246148" id="_Toc266246148"></a><a name="_Toc263796620" id="_Toc263796620"></a><a name="_Toc262558575" id="_Toc262558575"><strong>6.2.2. Danh  sách các màn hình xử lý chính</strong></a> </h4>
+        </blockquote>
+      </blockquote>
+      <table border="1" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="49" valign="top"><p><strong>STT</strong></p></td>
+          <td width="148" valign="top"><p><strong>Tên màn hình</strong></p></td>
+          <td width="386" valign="top"><p><strong>Ý    nghĩa/Ghi chú</strong></p></td>
+        </tr>
+        <tr>
+          <td width="49" valign="top"><p>1</p></td>
+          <td width="148" valign="top"><p>ĐăngNhập</p></td>
+          <td width="386" valign="top"><p>Cho phép nhân viên đăng nhập với    tài khoản hợp lệ trước khi sử dụng chương trình</p></td>
+        </tr>
+        <tr>
+          <td width="49" valign="top"><p>2</p></td>
+          <td width="148" valign="top"><p>TrangNgườiDùng</p></td>
+          <td width="386" valign="top"><p>Màn hình làm việc chính của nhân    viên</p></td>
+        </tr>
+        <tr>
+          <td width="49" valign="top"><p>3</p></td>
+          <td width="148" valign="top"><p>TrangQuảnLý</p></td>
+          <td width="386" valign="top"><p>Màn hình làm việc chính của Quản    lý</p></td>
+        </tr>
+        <tr>
+          <td width="49" valign="top"><p>4</p></td>
+          <td width="148" valign="top"><p>TrangBáoLỗi</p></td>
+          <td width="386" valign="top"><p>Trang    thông báo các lỗi xảy ra trong quá trình sử dụng ứng dụng</p></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center"><a name="_Toc266246149" id="_Toc266246149"></a><a name="_Toc263796621" id="_Toc263796621"></a><a name="_Toc262558576" id="_Toc262558576">Bảng </a>17. Danh sách các màn hình xử lý chính</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951762" id="_Toc268951762"></a><a name="_Toc268944540" id="_Toc268944540"></a><a name="_Toc266246169" id="_Toc266246169"><strong>7. Giải pháp kĩ thuật</strong></a> </h2>
+    
+    <p>Trong quá trình thực hiện chương  trình, đa số các chức năng đều được thiết kế sử dụng hai nền tảng trong bộ .Net  Framwork 3.5 của Microsoft. Tuy nhiên, hai chức năng quan trọng nhất trong ứng  dụng là hiển thị LCV dạng  sơ đồ và thống kê tình trạng các đợt thi đang tiến hành dưới dạng sơ đồ Gantt  có thể xem là hai chức năng khá phức tạp. Để thiết kế được hai chức năng này,  chúng tôi đã sử dụng một số kĩ thuật do  chúng tôi tự đề xuất. Đồng thời, vì để đáp ứng đúng đặc điểm của LCV tổ chức thi, chúng thôi đã  thiết kế riêng đối tượng Custom Activity, gọi là WorkItem để làm cơ sở cho các  đơn vị công việc con trong LCV.</p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <blockquote>
+        <h3 id="_Toc268951763" name="_Toc268951763"><a name="_Toc268951763" id="_Toc268951763"></a><a name="_Toc268944541" id="_Toc268944541"></a><a name="_Toc266246170" id="_Toc266246170"><strong>7.1. Chức</strong></a><strong> năng hiển thị luồng công việc dạng sơ đồ:</strong></h3>
+      </blockquote>
+    
+    Để xây dựng chức  năng này,  chúng tôi đã viết thêm thư viện hỗ trợ cho  việc vẽ sơ đồ luồng công việc lên giao diện.
+    
+      <ul>
+        <li>Thư viện ModelReader: dùng để đọc file XOML và các  thông tin của các đối tượng trong file XOML (bao gồm các đối tượng WorkItem,  đối tượng Parallel, đối tượng Sequence). Thư viện này còn cho chúng tôi biết  được cấu trúc file XOML bao gồm các cấu trúc cha và con của các đối tượng bất  kỳ.</li>
+        <li>Thư viện ModelLayouter: dùng để quy định tọa độ và  chiều dài , chiều rộng của các đối tượng trong file XOML. Sau khi có được cấu  trúc của file XOML thì thư viện này sẽ tính toán tọa độ hiển thị của các đối  tượng lên trên giao diện.</li>
+      </ul>
+    
+    Ngoài ra, chúng  tôi thiết kế thêm ba UserControl tương ứng với ba đối tượng WorkItem, Parallel,  Sequence để có thể vẽ sơ đồ LCV lên trên giao diện. Ba UserControl này sẽ lấy  tọa độ từ thư viện ModelLayouter để vẽ lên trên giao diện các đối tượng tương  ứng với các thuộc tính và tọa độ được quy định sẵn trong file XOML. Nếu mỗi đối  tượng WorkItem, Parallel hay Sequence có các đối tượng con thì các UserControl  đó sẽ tự gọi các UserControl tương ứng với các đối tượng con để vẽ các chúng  lên trên giao diện.Từ đó chúng tôi đã có thể hiển thị được sơ đồ luồng công  việc lên trên giao diện một cách tùy biến.   <br />
+      Đặc điểm: 
+ 
+      <ul>
+        <li>Sử dụng định nghĩa LCV bằng XAML có sẵn của WF làm  ngôn ngữ MHH LCV</li>
+        <li>Chỉ thể hiện các đối tượng chính mà người dùng quan  tâm</li>
+        <li>Độc lập với nghiệp vụ. Chức năng này hoàn toàn linh  động, có thể đọc được bất cứ LCV nào được thiết kế bằng ngôn ngữ XAML và sử  dụng tối tượng cơ bản là WorkItem do chúng tôi thiết kế</li>
+        <li>Tương tác kéo thả: Hỗ trợ người dùng có thể kéo thả  vào sơ đồ. Đặc điểm này được thể hiện trong chức năng phân công người thực hiện  vào LCV</li>
+        <li>Hỗ trợ phóng to, thu nhỏ sơ đồ: Cho phép người dùng  điều chỉnh kích thước của sơ đồ sao cho phù hợp nhất với chính mìn</li>
+        <li>Linh động, hỗ trợ nhiều nhu cầu khác nhau: Phân công,  cập nhật kết quả thực hiện tác vụ đối với người nhân viên thừa hành...</li>
+      </ul>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+      <blockquote>
+        <h3 id="_Toc268951764" name="_Toc268951764"><a name="_Toc268951764" id="_Toc268951764"></a><a name="_Toc268944542" id="_Toc268944542"></a><a name="_Toc266246171" id="_Toc266246171"><strong>7.2. C</strong></a><strong>hức  năng thống kê tình trạng các đợt thi đang tiến hành:</strong> </h3>
+      </blockquote>
+    
+    <p>Để xây dựng chức  năng này, chúng tôi  tạo ra “Sơ đồ Gantt” trên nền tảng Grid (một control được WPF xây dựng sẵn).Về  cơ bản, chúng tôi đã xây dựng các hàm nhằm lấy lên thời điểm bắt đầu và thời  điểm kết thúc của tất cả các đợt thi đang diễn ra, từ đó tính toán số lượng cột  để vẽ lên trên Grid. Sau đó, dựa trên thời điểm bắt đầu và thời gian thực hiện  của mỗi đợt thi để có thể hiển thị được thời gian đợt thi này đang diễn ra và  đã diễn ra được trong bao lâu. Đồng thời, ứng với mỗi đợt thi sẽ có ngày bắt  đầu và ngày kết thúc nên chúng tôi sẽ có được các chỉ số tương ứng so với ngày  bắt đầu của thời gian trong “Sơ đồ Gantt” để có thể hiện thị lên thời gian diễn  ra và thông tin chi tiết của các đợt thi tương ứng. Từ đây chúng tôi có thể xây  dựng “Sơ đồ Gantt” với giao diện và hiển thị thông tin một cách tùy biến theo  nhu cầu sử dụng.<br />
+      Đặc điểm:</p>
+    
+      <ul>
+        <li>Thiết kế dựa trên control GridView của WPF</li>
+        <li>Đọc tự động đối tượng công việc và thời gian lên sơ đồ</li>
+        <li>Hỗ trợ chức năng cảnh báo bằng các màu khác nhau tương  ứng với các tình trạng thực thi của từng thể hiện LCV, cũng nhu các công việc  tương ứng trong các thể hiện đó.</li>
+        <li>Linh động, tùy biến</li>
+      </ul>
+      <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    </div>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951765" id="_Toc268951765">7.3. Custom  Activity</a> </h3>
+    </blockquote>
+    <p align="justify">Như  đã trình bày ở phần trước, WF hỗ trợ nhiều dịch vụ khác nhau để xây dựng, quản  lý và thực thi LCV. Với <em>Persistency  Service,</em> ứng dụng quản lý LCV  có thể bảo đảm  cho một LCV bất kỳ thực  hiện trong một khoảng thời gian dài. Sau mỗi phiên làm việc, ứng dụng có thể  được tắt và bật lại trong các phiên làm việc sau, điều đó không ảnh hưởng tới  việc thực thi một LCV. Tuy nhiên, không có dịch vụ nào hỗ trợ việc thực thi một  công việc thành phần của LCV trong một khoảng thời gian cho trước.  Cụ thể hơn, bản thân WF chỉ cho phép thực  hiện một số xử lý trong mỗi công việc, và bất cứ khi nào các xử lý này kết thúc  thì công việc cũng kết thúc, các công việc tiếp sau đó sẽ được tự động bắt đầu.<br />
+      Với  các LCV tổ chức thi, các ràng  buộc về thời gian thực hiện công việc là cực kỳ quan trọng. Từng công việc  trong LCV này không thể chỉ diễn ra trong vòng vài giây. Từng công việc như tổ  chức thi, chấm thi, cấp chứng chỉ v.v… có các mốc thời gian cụ thể để thực  hiện. Thậm chí, đơn vị thời gian dùng trong công tác quản lý của lĩnh vực này  là đơn vị ngày hoặc buổi chứ không chi tiết đến từng giây. Giờ làm việc của các  nhân viên trực tiếp thực hiện công việc là giờ hành chính và bản thân họ cũng  chỉ cần quan tâm công việc do họ phụ trách có ngày bắt đầu và ngày kết thúc là  ngày nào mà không cần quan tâm đến mức giờ, phút, giây…  Ngoài ra, như đã giới thiệu, LCV tổ chức thi  có những công việc đặc biệt mà thời gian thực hiện công việc đó phụ thuộc hoàn  toàn vào các hệ thống bên ngoài. Chính bản thân người thực hiện công việc không  chủ động quản lý được. Chính vì thế, việc quản lý thực thi công việc bằng  phương pháp đơn giản như hẹn giờ hay tính tổng thời gian thực hiện không có  hiệu quả.<br />
+      Giải  pháp được sử dụng là tự thiết kế lại một đối tượng công việc, dựa trên các <em>Activity </em>cơ bản đã hỗ trợ sẵn. Mỗi công  việc sẽ có 2 activity bên trong chờ nhận sự kiện bắt đầu hoặc kết thúc từ người  thực hiện công việc. Khi đó, việc quản lý thực thi công việc sẽ trở nên linh  động hơn, dựa vào hành động thực tế từ người sử dụng của ứng dụng.</p>
+    <p align="center"><img src="images/FIG04-15.jpg" alt="12" width="468" height="221" /><br />
+      Hình  23. WorkItem</p>
+    <p align="justify">      Thêm  một vấn đề nữa, tất cả các công việc trong LCV tổ chức thi có cấu trúc như  nhau. Nghĩa là đều nhận 2 sự kiện bắt đầu và kết thúc công việc như  nhau. Chính vì lý do đó, khi có nhiều công  việc cùng chờ nhận cùng một sự kiện giống nhau, vậy khi sự kiện đó được chuyển  tới LCV, công việc nào sẽ nhận được sự kiện ấy? Bản thân WF không hỗ trợ việc  này, khi có nhiều công việc cùng chờ nhận cùng một sự kiện, thì công việc đầu  tiên trong nhóm các công việc song song đó sẽ luôn nhận được sự kiện. WF mặc  định chuyển sự kiện cho công việc đầu tiên trong hàng đợi. Giải pháp cho vấn đề  này là mỗi công việc trước khi nhận sự kiện sẽ thực hiện gửi một thông điệp ra  ngoài, tạm gọi là đăng ký nhận sự kiện thông qua một mã duy nhất. Dựa vào mã  này, ứng dụng chủ có thể gửi sự kiện đến đích danh công việc mà người dùng đang  tương tác. </p>
+    <p align="right"><a href="#_Toc004" class="style4">[TOP]</a></p>
+    <p align="center">***</p>
+    <p align="justify" class="style3"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"> </a>  (33)Từ đây về sau, chúng tôi dùng cụm từ “quy trình thi” để chỉ quy trình  tổ chức thi và cấp chứng chỉ tin học Quốc gia</p>
+<div>
+    <div class="style3" id="ftn2">
+        <p align="justify"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2"> </a>  (34)Trong khóa luận  này, chúng tôi dùng cụm từ “Cơ sở liên kết” (Viết tắt là CSLK) để chỉ đến những  đơn vị liên kết đào tạo mà đợt thi diễn ra.</p>
+  </div>
+      <div id="ftn">
+        <p align="justify" class="style3"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3"> </a> (35)Sau đây gọi tắt là Nhân  viên.</p>
+      </div>
+</div>
+    
+      <div id="ftn4">
+        <div align="justify"><span class="style3"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn4"> </a> (36)Sớm hạn: Công  việc hoàn thành trước thời  gian dự kiến </span></div>
+</div>
+      <div class="style3" id="ftn5">
+        <p align="justify"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn5"> </a> (37)Nhiều hơn hoặc ít hơn rất  nhiều so với các đợt thi khác, đòi hỏi người quản lý phải thêm hoặc bớt nhân  viên thực hiện các công đoạn trong đợt thi</p>
+      </div>
+    
+<p align="justify" class="style3"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn6"> </a>(38) Một công việc có giá trị ngày bắt đầu là n nghĩa là nó được bắt đầu sau n  ngày so với ngày tổ chức thi. Ngược lại, ngày bắt đầu nhận giá trị -m mang ý  nghĩa công việc phải được bắt đầu trước m ngày so với ngày thi </p>
+<p align="right" class="style3"><a href="#_Toc004" class="style4">[TOP]</a></p>
+<p align="center">***</p>
+
+   
+      <!-- end #mainContent -->
+    </div>
+</div>
+<!-- end #container --></div>
+</body>
+</html>

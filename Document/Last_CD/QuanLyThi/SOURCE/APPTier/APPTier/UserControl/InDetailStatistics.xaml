@@ -1,0 +1,50 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+    xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+	x:Class="APPTier.InDetailStatistics"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
+	
+
+	<Grid x:Name="LayoutRoot">
+        <Border Margin="165.8,115.5,10,12" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5" Height="auto">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="auto">
+            	<Grid Height="498.5">
+            		<Grid.RowDefinitions>
+            			<RowDefinition Height="auto" />
+            			<RowDefinition Height="auto" MinHeight="475.223"/>
+            		</Grid.RowDefinitions>
+            		<TextBlock x:Name="tRes" Margin="5,5,21,5"/>
+            		<my:DataGrid xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"  x:Name="gRes" IsReadOnly="True" Visibility="Hidden" Margin="5,-18.277,21,0" VerticalAlignment="Top" Height="170.277" Grid.Row="1"/>
+            		<chartingToolkit:Chart x:Name="cResCol" Margin="5,5,21,0" Grid.Row="1" VerticalAlignment="Top" Height="147" >
+            			<chartingToolkit:ColumnSeries x:Name="mcChart3" IndependentValueBinding="{Binding Key}" DependentValueBinding="{Binding Value}"/> 
+                    
+            		</chartingToolkit:Chart>
+            		<chartingToolkit:Chart x:Name="cResLine" Margin="5,5,21,0" Grid.Row="1" VerticalAlignment="Top" Height="147">
+            			<chartingToolkit:ColumnSeries x:Name="mcChart4" IndependentValueBinding="{Binding Key}" DependentValueBinding="{Binding Value}"/> 
+                    
+            		</chartingToolkit:Chart>
+            	</Grid>
+            </ScrollViewer>
+        </Border>
+
+		<ListBox x:Name="lbxExam" HorizontalAlignment="Left"  Width="145.8" Margin="8,115.5,0,12" BorderBrush="#FF0F1D04" SelectionChanged="lbxExam_SelectionChanged"/>
+		<Label x:Name="lblFuncName" Margin="384,12,329,0" VerticalAlignment="Top" Height="34" Content="THỐNG KÊ CHI TIẾT ĐỢT THI" FontSize="16" Foreground="#FF0F1D04"/>
+		<Border Margin="131,39.002,129.492,0" VerticalAlignment="Top" Height="42.833" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5">
+			<Grid>
+				<ComboBox x:Name="cbxObject" HorizontalAlignment="Left" Margin="132.5,8.496,0,0" VerticalAlignment="Top" Width="121" Height="23" SelectedIndex="0" SelectionChanged="cbxObject_SelectionChanged">
+				</ComboBox>
+				<ComboBox x:Name="cbxCriteria" Margin="326.508,8.496,255,0" VerticalAlignment="Top" Height="23" SelectionChanged="cbxCriteria_SelectionChanged"/>
+				<ComboBox x:Name="cbxType" HorizontalAlignment="Right" Margin="0,8.496,24,0" VerticalAlignment="Top" Width="121" Height="23" SelectionChanged="cbxType_SelectionChanged"/>
+				<Label x:Name="lblObject" HorizontalAlignment="Left" Margin="16.5,10.496,0,0" VerticalAlignment="Top" Width="116" Height="23" Content="Đối tượng thống kê:" Background="{x:Null}" Foreground="#FF0F1D04"/>
+				<Label x:Name="lblCriteria" HorizontalAlignment="Left" Margin="274.5,10.496,0,0" Width="48.008" Content="Tiêu chí:" Background="{x:Null}" Foreground="#FF0F1D04" VerticalAlignment="Top" Height="23"/>
+				<Label x:Name="lblType" Margin="0,10.496,149,0" Content="Kiểu thống kê:" Background="{x:Null}" Foreground="#FF0F1D04" HorizontalAlignment="Right" VerticalAlignment="Top" Width="79.508" Height="23"/>
+			</Grid>
+		</Border>
+		<Button x:Name="btnOk" Margin="457,85.835,410,0" VerticalAlignment="Top" Height="25.665" Content="Thống kê" Click="btnOk_Click" />
+	</Grid>
+</UserControl>

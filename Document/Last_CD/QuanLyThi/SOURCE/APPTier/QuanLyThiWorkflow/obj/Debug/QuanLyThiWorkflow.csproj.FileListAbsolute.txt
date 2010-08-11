@@ -1,0 +1,90 @@
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\Final Source\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\Final Source\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\Final Source\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\Final Source\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\Final Source\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\Final\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\Final\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\Final\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\Final\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\Final\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\16072010\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\16072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\16072010\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\16072010\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\16072010\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\16072010\1772010Code_sql2005\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\19072010\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\19072010\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\19072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\19072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\19072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+D:\2172010\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+D:\2172010\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+D:\2172010\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+D:\2172010\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+D:\2172010\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\QuanLyThiWorkflow\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\QuanLyThiWorkflow\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\QuanLyThiWorkflow\obj\Debug\QuanLyThiWorkflow.pdb

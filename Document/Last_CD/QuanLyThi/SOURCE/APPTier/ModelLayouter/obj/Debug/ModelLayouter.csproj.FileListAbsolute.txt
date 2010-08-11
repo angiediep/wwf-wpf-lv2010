@@ -1,0 +1,100 @@
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\Final Source\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\Final Source\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\Final Source\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\Final Source\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\Final Source\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\Final\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\16072010\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\16072010\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\16072010\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\16072010\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\My Dropbox\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\My Dropbox\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\My Dropbox\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\My Dropbox\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\16072010\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\16072010\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\16072010\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\16072010\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\1772010Code_sql2005\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\My Dropbox\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\My Dropbox\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\My Dropbox\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\My Dropbox\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\19072010\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\19072010\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\19072010\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\19072010\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\19072010\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+D:\2172010\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+D:\2172010\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+D:\2172010\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+D:\2172010\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+D:\2172010\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelLayouter\bin\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelLayouter\bin\Debug\ModelLayouter.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelLayouter\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelLayouter\obj\Debug\ModelLayouter.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelLayouter\obj\Debug\ModelLayouter.pdb

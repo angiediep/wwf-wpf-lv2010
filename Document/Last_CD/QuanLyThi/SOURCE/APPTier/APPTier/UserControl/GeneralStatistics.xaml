@@ -1,0 +1,60 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+	x:Class="APPTier.GeneralStatistics"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
+
+    <Grid x:Name="LayoutRoot">
+        <Label x:Name="lblFuncName" Margin="366.384,6.4,352.352,0" Content="BẢNG THỐNG KÊ TỔNG HỢP" FontSize="16" VerticalAlignment="Top" Foreground="#FF0F1D04" HorizontalAlignment="Center"/>
+
+        <Border Margin="8,166,8,8" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5" Height="auto">
+            <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto">
+                <Grid>
+				<Grid.RowDefinitions>
+				<RowDefinition Height="auto" />
+				<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+                    <TextBlock x:Name="tRes" Margin="5"></TextBlock>
+                    <my:DataGrid  Name="gRes" IsReadOnly="True" xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit" Visibility="Hidden" Margin="5" Grid.RowSpan="2"/>
+                    <chartingToolkit:Chart x:Name="cResCol" Margin="5" Grid.Row="1" >
+                        <chartingToolkit:ColumnSeries x:Name="mcChart1" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/> 
+                    
+					</chartingToolkit:Chart>
+					<chartingToolkit:Chart x:Name="cResLine" Margin="5" Grid.Row="1">
+					 <chartingToolkit:LineSeries x:Name="mcChart2" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/> 
+                    
+					</chartingToolkit:Chart>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+        <Border Margin="131,39.002,129.492,0" VerticalAlignment="Top" Height="83.333" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="5">
+        	<Grid>
+        		<ComboBox x:Name="cbxObject" HorizontalAlignment="Left" Margin="132.5,8.496,0,0" Width="121" Height="23" VerticalAlignment="Top" SelectedIndex="0" SelectionChanged="cbxObject_SelectionChanged">
+        		</ComboBox>
+        		<ComboBox x:Name="cbxCriteria" Margin="326.508,8.496,255,0" Height="23" VerticalAlignment="Top" SelectionChanged="cbxCriteria_SelectionChanged"/>
+        		<ComboBox x:Name="cbxType" HorizontalAlignment="Right" Width="121" Height="23" Margin="0,8.496,24,0" VerticalAlignment="Top" SelectionChanged="cbxType_SelectionChanged" />
+        		<Label x:Name="lblObject" HorizontalAlignment="Left" Margin="16.5,10.496,0,0" Width="116" Content="Đối tượng thống kê:" Background="{x:Null}" Foreground="#FF0F1D04" Height="23" VerticalAlignment="Top"/>
+        		<Label x:Name="lblCriteria" HorizontalAlignment="Left" Margin="274.5,10.496,0,0" Width="48.008" Content="Tiêu chí:" Background="{x:Null}" Foreground="#FF0F1D04" Height="23" VerticalAlignment="Top"/>
+        		<Label x:Name="lblType" Margin="0,10.496,149,0" Content="Kiểu thống kê:" Background="{x:Null}" Foreground="#FF0F1D04" HorizontalAlignment="Right" Width="79.508" Height="23" VerticalAlignment="Top"/>
+        		<Label x:Name="lblTime" HorizontalAlignment="Left" Margin="16.5,0,0,10.668" VerticalAlignment="Bottom" Width="116" Height="23" Content="Thời gian thống kê:" Background="{x:Null}" Foreground="#FF0F1D04"/>
+        		<ComboBox x:Name="cbxFromMonth" HorizontalAlignment="Left" Margin="218.508,0,0,12" VerticalAlignment="Bottom" Width="54.333" Height="23">
+        		</ComboBox>
+        		<ComboBox x:Name="cbxFromYear" Margin="313.349,0,306.159,12.668" VerticalAlignment="Bottom" Height="23" SelectionChanged="cbxFromYear_SelectionChanged"/>
+        		<Label x:Name="lblFromYear" HorizontalAlignment="Left" Margin="276.841,0,0,10.668" Width="32.508" Content="Năm" Background="{x:Null}" Foreground="#FF0F1D04" VerticalAlignment="Bottom" Height="23"/>
+        		<Label x:Name="lblFromMonth" HorizontalAlignment="Left" Margin="160.5,0,0,10.668" Width="54.008" Content="Từ tháng" Background="{x:Null}" Foreground="#FF0F1D04" VerticalAlignment="Bottom" Height="23"/>
+        		<ComboBox x:Name="cbxToMonth" HorizontalAlignment="Right" Margin="0,0,164.667,12.668" VerticalAlignment="Bottom" Width="54.333" Height="23">
+        		</ComboBox>
+        		<ComboBox x:Name="cbxToYear" Margin="0,0,60.159,12.668" VerticalAlignment="Bottom" Height="23" HorizontalAlignment="Right" Width="64" SelectionChanged="cbxToYear_SelectionChanged"/>
+        		<Label x:Name="lblToYear" HorizontalAlignment="Right" Margin="0,0,128.159,10.668" Width="32.508" Content="Năm" Background="{x:Null}" Foreground="#FF0F1D04" VerticalAlignment="Bottom" Height="23"/>
+        		<Label x:Name="lblToMonth" HorizontalAlignment="Right" Margin="0,0,223,10.668" Width="58.008" Content="Đến tháng" Background="{x:Null}" Foreground="#FF0F1D04" VerticalAlignment="Bottom" Height="23"/>
+        	</Grid>
+        </Border>
+        <Button x:Name="btnOk" Margin="354,130.335,0,0" VerticalAlignment="Top" Height="25.665" Content="Thống kê" HorizontalAlignment="Left" Width="79" Click="btnOk_Click" />
+        <Button x:Name="btnAdd" Margin="446,130.335,352.976,0" VerticalAlignment="Top" Height="25.665" Content="Thêm tiêu chí thống kê" Click="btnAdd_Click" />
+    </Grid>
+</UserControl>

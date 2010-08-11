@@ -1,0 +1,231 @@
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+D:\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+D:\Final Source\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\Final Source\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\Final Source\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\Final Source\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\Final Source\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\Final Source\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\Final Source\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\Final Source\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\Final Source\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\Final Source\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\Final Source\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\My Dropbox\Final\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\16072010\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\16072010\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\My Dropbox\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\My Dropbox\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+D:\16072010\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\16072010\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\16072010\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\16072010\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\16072010\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\16072010\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\16072010\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\16072010\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\16072010\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\16072010\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ModelReader.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\My Dropbox\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\My Dropbox\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\My Dropbox\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\19072010\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\19072010\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\19072010\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\19072010\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+D:\2172010\APPTier\ModelReader\bin\Debug\ModelReader.dll
+D:\2172010\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+D:\2172010\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+D:\2172010\APPTier\ModelReader\bin\Debug\DataLayer.dll
+D:\2172010\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+D:\2172010\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+D:\2172010\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+D:\2172010\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+D:\2172010\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+D:\2172010\APPTier\ModelReader\obj\Debug\ModelReader.dll
+D:\2172010\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\ModelReader\obj\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\ModelReader.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\BUSLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\BUSLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\bin\Debug\QuanLyThiWorkflow.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\obj\Debug\ModelReader.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\ModelReader\obj\Debug\ModelReader.pdb

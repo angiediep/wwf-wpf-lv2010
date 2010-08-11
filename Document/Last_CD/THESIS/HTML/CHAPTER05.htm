@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luồng công việc và Ứng dụng</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {font-family: "Times New Roman", Times, serif}
+-->
+</style></head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div class="style1" id="mainContent">
+    <a href="TOC.htm">[BACK]</a>
+    <h2 align="center" class="style1"><a name="_Toc005" id="_Toc005">Chương 5: Tổng Kết</a></h2>
+    <p align="center" class="style1">***</p>
+    <p align="justify" class="style1"><strong>NỘI DUNG CHÍNH</strong></p>
+    <p align="justify"><a href="#_Toc268951766">Chương 5: Tổng kết</a> <br />
+      <a href="#_Toc268951767">1. Tóm  tắt công việc đã làm</a> <br />
+      <a href="#_Toc268951768">2. Đặc điểm của Công việc</a> <br />
+      <a href="#_Toc268951769">2.1. Nội dung</a> <br />
+      <a href="#_Toc268951770">2.2. Hướng phát triển nhằm giải quyết những hạn chế về mặt nội dung</a> <br />
+    </p>
+    <p align="center" class="style1">***</p>
+    <h2 align="justify"><a name="_Toc268951766" id="_Toc268951766"></a><a name="_Toc268944543" id="_Toc268944543"></a><a name="_Toc266246172" id="_Toc266246172">Chương  5</a> <a name="_Toc266246173" id="_Toc266246173"></a>: Tổng kết </h2>
+    <p align="justify"><em>Trong  chương này, chúng tôi sẽ tổng kết các kết quả đã đạt được sau quá trình nghiên cứu lý thuyết và </em>xây<em> dựng ứng dụng thực tế. Đồng thời, chương  cũng sẽ nêu ra một số ưu, khuyết điểm của ứng dụng, những khó khăn mà chúng tôi  đã gặp phải trong suốt quá trình xây dựng, cũng như hướng phát triển trong  tương lai đối với ứng dụng mà chúng tôi đã xây dựng.</em></p>
+    <p align="right"><a href="#_Toc005">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951767" id="_Toc268951767"></a><a name="_Toc268944544" id="_Toc268944544"></a><a name="_Toc266246174" id="_Toc266246174"><strong>1. Tóm  tắt công việc đã làm</strong></a> </h2>
+    </div>
+    <p align="justify">Ngay từ đầu, sau khi nghiên cứu về  các chuẩn mô MHH LCV  được đưa ra bởi WfMC cũng như nền tảng WF mà Microsoft đã xây dựng hỗ trợ trong  việc xây dựng ứng dụng, chúng tôi đã xác định sẽ xây dựng phần mềm trên nền  .Net với WF. Trên thực  tế, có nhiều Engine hỗ trợ thiết kế ứng  dụng LCV dưới nhiều hình thức khác nhau được xây  dựng trên nền WF như Sharepoint Workflow, Silverlight, ASP.Net... Tuy nhiên, do đặc điểm của  ứng dụng và yêu cầu của đề cương là phải thử nghiệm trên một  nền công cụ khác với nền công cụ đã sử dụng trong những khóa luận trước đây,  chúng tôi đã quyết định xây dựng một ứng dụng chạy trên mạng cục bộ chứ không  xây dựng ứng dụng Web trên trình  duyệt, đồng thời sử dụng công nghệ WPF cũng do Microsoft  cung cấp trên bộ .Net 3.5 làm công nghệ thiết kế giao diện và xây dựng chương  trình tích hợp với WF. Vì vậy, chúng tôi đã quyết định sử dụng ngôn ngữ C# làm  ngôn ngữ lập trình chính cho ứng dụng. Chương trình có thể thực thi trực tiếp  trên máy tính có hệ điều hành Windows được cài sẵn .Net Framework 3.5 mà không  cần đến quá trình cài đặt phức tạp nào. </p>
+    <p align="right"><a href="#_Toc005">[TOP]</a></p>
+    <h2 align="justify"><a name="_Toc268951768" id="_Toc268951768"></a><a name="_Toc268944545" id="_Toc268944545"></a><a name="_Toc266246175" id="_Toc266246175">2. Đặc  điểm của Công việc</a> </h2>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951769" id="_Toc268951769"></a><a name="_Toc268944546" id="_Toc268944546"></a><a name="_Toc266246176" id="_Toc266246176">2.1. Nội dung</a> </h3>
+    </blockquote>
+    <p align="justify">Trong suốt quá  trình thực hiện khóa  luận, thông qua tìm hiểu thực tế nghiệp vụ quản lý quy trình, cụ thể là quy  trình thi, cấp chứng chỉ và in văn bằng cho các đơn vị đào tạo chứng chỉ quốc  gia, chúng tôi đã thiết kế một ứng dụng mà theo chúng tôi là đã có khả năng đáp  ứng các nhu cầu hiện tại của nghiệp vụ. ứng dụng được hoàn thành với các ưu  điểm sau:</p>
+    <div align="justify">
+      <ol>
+        <li>Ứng dụng có khả năng thể hiện tốt quy trình dưới dạng  sơ đồ LCV rất trực quan và rất dễ hiểu. Hơn nữa, ở đây, việc vẽ nên LCV không  phải được thiết kế cứng nhắc với quy trình thi, cấp chứng chỉ và in văn bằng;  mà với bất kì quy trình nào được thiết kế kế thừa các định dạng của chúng tôi  thì chương trình đều có thể thể hiện được. </li>
+        <li>Ứng dụng cũng thể hiện tốt lược đồ các thể hiện của  quy trình dưới dạng sơ đồ Gantt vốn gắn bó với người Quản lý. Vì vậy, người sử  dụng chương trình không cần phải tìm hiểu nghiên cứu cách sử dụng một cách quá  khó khăn.</li>
+        <li>Với các chức năng thống kê, ứng dụng đưa ra các tiêu  chí rất tổng quát, đồng thời cho phép thêm các tiêu chí mới phù hợp với các nhu  cầu của người quản lý. </li>
+        <li>Tạo nền tảng cho việc có thể  phát triển WF View , Gantt Viewvà SQL  Generator.</li>
+        <li> Ứng dụng còn  kết hợp thêm các chức năng kiểm soát hoạt động của các nhân viên như: gửi thông  báo nhắc nhở tự động khi nhân viên chưa kích hoạt các tác vụ trên ứng dụng;  buộc nhân viên phải nộp bảng báo cáo kết quả thực hiện công việc trước khi báo  cáo kết thúc công việc đang thực hiện; kiểm tra các thời gian thực hiện từng  công việc nhằm đánh giá tình trạng của công việc (sớm/ trễ hay đúng thời hạn);  cho phép nhân viên cập nhật nguyên nhân khi không hoàn thành công việc đúng  thời gian.</li>
+        <li>Tích hợp chức năng bảo mật tài khoản người dùng thông  qua các phương thức bảo mật.</li>
+      </ol>
+    </div>
+    <p align="justify">Tuy nhiên, thông  qua tìm hiểu một cách chi tiết độ phức tạp của quy trình, chúng tôi hiểu ứng  dụng mà chúng  tôi đã xây dựng trong khóa luận này thật sự còn tồn tại nhiều hạn chế:</p>
+    <div align="justify">
+      <ol>
+        <li> Ứng dụng được  thiết kế với mỗi đơn vị l LCV nhỏ nhất là đợt thi. Tuy nhiên trên thực tế, mỗi  đợt thi có thể được tổ chức tại nhiều cơ sở khác nhau, với số lượng thí sinh  khác nhau. Vì vậy thời gian thực hiện các công việc tương ứng, cũng như các  phân công nhân sự... cũng khác nhau (chẳng hạn như đối với một đợt thi tổ chức  tại hai tỉnh thành khác nhau, thì tỉnh thành ở xa cần được phân công thực hiện  trước để có thể gửi kết quả về kịp cho thí sinh). Do đó, theo thực tế quy  trình, các đơn vị LCV nhỏ nhất nên là địa điểm thi chứ không phải là đợt thi.  Tuy nhiên do thời gian hạn chế và khả năng hỗ trợ của WF mà chúng tôi chỉ thiết  kế đến đơn vị đợt thi mà không chia nhỏ hơn nữa.</li>
+        <li> Ứng dụng thiết  kế đối với một LCV cụ thể. Tuy các chức năng thể hiện sơ đồ được thiết kế động,  nhưng toàn chương trình tạm thời chỉ có thể đáp ứng các quy trình thi trong  nghiệp vụ quản lý đào tạo (do cơ sở dữ liệu chỉ phù hợp với nghiệp vụ này). LCV  được định nghĩa sử dụng định dạng XAML do .Net Framework của Microsoft hỗ trợ,  được thiết kế sử dụng công cụ Workflow Designer tích hợp trong Visual Studio.  Vì thế, tập tin định nghĩa tuy có dạng cấu trúc, nhưng vẫn rất khó tiếp cận đối  với người dùng. Khi cần thay đổi LCV khác, đòi hỏi ứng dụng phải được nâng cấp  ở mức thiết kế.</li>
+        <li>Chưa cho phép người dùng tùy biến LCV theo nhu cầu như  thêm, bớt công việc trong LCV, mà chỉ hỗ trợ thay đổi các thuộc tính của bản  thân công việc như: tên công việc, thời gian thực hiện.</li>
+        <li>Giao diện và chức năng chưa hoàn toàn hướng người  dùng.</li>
+        <li>Chưa giải quyết được hiện tượng thắt cổ chai khi có  quá nhiều thể hiện LCV cùng diễn ra một lúc, dẫn đến khối lượng công việc quá  nhiều gây khó khăn cho người quản lý do thời gian thực hiện khóa luận có giới  hạn.</li>
+      </ol>
+    </div>
+    <p align="justify">Vì vậy, chúng  tôi rất mong chương trình này có thể tiếp tục được cải thiện trong tương lai, để có thể hỗ  trợ tốt hơn cho người quản lý trong việc thực hiện nghiệp vụ của mình.<a name="_GoBack" id="_GoBack"></a> </p>
+    <p align="right"><a href="#_Toc005">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951770" id="_Toc268951770"></a><a name="_Toc268944547" id="_Toc268944547"></a><a name="_Toc266246177" id="_Toc266246177">2.</a>2. Hướng  phát triển nhằm giải quyết những hạn chế về mặt nội dung </h3>
+    </blockquote>
+    <p align="justify">Như đã đề cập ở  phần 2.1, ứng dụng được thiết kế trong luận văn này còn tồn tại nhiều hạn chế.  Tuy nhiên, những hạn chế này không phải không giải quyết được. Vì vậy, trong  phần này, chúng  tôi sẽ đề cập đến hướng phát triển tương lai cho ứng dụng, nhằm giải quyết các  hạn chế kể trên và hỗ trợ tốt hơn cho người dùng:</p>
+    <div align="justify">
+      <ol>
+        <li> Ứng dụng có thể  xây dựng một cách tổng hợp. Nghĩa là không chỉ đối với quy trình thi, mà bất cứ  quy trình nghiệp vụ nào cũng có thể sử dụng ứng dụng này. Từ đó, ứng dụng có  khả năng cho phép người dùng thiết lập ngay trên giao diện quy trình của mình,  các chức năng họ mong muốn trong chương trình; cho phép thêm bớt các chức năng  khác nhau theo nhu cầu sử dụng; hoặc thay đổi các thông số mặc định của ứng  dụng một cách trực quan</li>
+        <li>Giao diện hoàn toàn kéo thả, cập nhật kết quả tự động.</li>
+        <li>Kết quả cập nhật liên tục; nghĩa là khi một công việc  được hoàn thành sẽ cập nhật ngay trên giao diện quản lý, có thể dưới dạng thông  báo, email, hoặc dạng thông tin trực tiếp trên sơ đồ Gantt</li>
+        <li>Có thể xây dựng thêm ứng dụng web và ứng dụng di động,  giúp người quản lý có thể theo dõi tiến độ công việc, và người nhân viên có thể  cập nhật thông tin kết quả công việc của mình mọi lúc mọi nơi.</li>
+        <li>Có thể sử dụng WF4, được tích hợp trong bộ .Net  Framework 4 được Microsoft phát hành tháng 4/2010, sử dụng Visual Studio 10 để  xây dựng  Ứng dụng mới (nâng cấp từ  chương trình hiện tại). Vì theo chúng tôi tìm hiểu, tuy vẫn có khả năng tương  thích với các WF cũ (3.0 và 3.5) - nghĩa là không cần thiết kế lại ứng dụng từ  đầu, nhưng WF4 được thiết kế với bộ Engine hoàn toàn mới, đổi mới các dịch vụ  hỗ trợ (Hosting, Persistence...), các đơn vị Avtivity, lưu trữ dữ liệu.... cho  phép xử lý các vấn đề còn hạn chế ở WF3.0 và WF3.5. </li>
+        <li>Mở rộng, cho phép ứng dụng có thể cùng lúc quản lý  nhiều LCV khác nhau, chứ không chỉ gói gọn trong LCV tổ chức thi</li>
+      </ol>
+    </div>
+    <p align="justify">Như vậy, với các  hướng phát triển đã đề nghị, chúng tôi hi vọng ứng dụng có thể phát triển tốt  hơn trong tương lai, để người quản lý Việt Nam và các doanh nghiệp nước nhà có thể sử dụng  chương trình tốt nhất hoàn toàn miễn phí.</p>
+    <p align="right"><a href="#_Toc005">[TOP]</a></p>
+    <p align="center">***</p>
+    <div align="justify">
+      <!-- end #mainContent -->
+    </div>
+  </div>
+<!-- end #container --></div>
+</body>
+</html>
