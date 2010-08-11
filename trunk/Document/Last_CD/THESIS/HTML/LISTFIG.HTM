@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luồng công việc và Ứng dụng</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {
+	color: #FF9900;
+	font-weight: bold;
+}
+.style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style></head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div class="style2" id="mainContent">
+    <h2 align="center" class="style1"><strong>Danh Mục Hình</strong></h2>
+    <p align="left"><br />
+      <a href="images/FIG02-01.jpg">Hình 1. Luồng công việc Thi tuyển sinh  đại học dưới góc nhìn của thí sinh</a><br />
+      <a href="images/FIG02-02.jpg">Hình 2. Luồng công việc Tổ chức tuyển  sinh đại học dưới góc nhìn của đơn vị tổ<br />
+      chức tuyển sinh</a><br />
+      <a href="images/FIG02-03.jpg">Hình 3. WfRM</a><br />
+      <a href="images/FIG02-04.jpg">Hình 4. Mô hình chuyển đổi trạng thái</a><br />
+      <a href="images/FIG03-01.jpg">Hình 5. Các mô hình LCV tuần tự</a><br />
+      <a href="images/FIG03-02.jpg">Hình 6. MH LCV trạng thái</a><br />
+      <a href="images/FIG03-03.jpg">Hình 7. Cấu trúc luồng công việc</a><br />
+      <a href="images/FIG03-04.jpg">Hình 8. HelloWorld</a><br />
+      <a href="images/FIG04-01.jpg">Hình 9. Quy trình thi và cấp chứng chỉ</a><br />
+      <a href="images/FIG04-02.jpg">Hình 10. Quy trình tổ chức thi</a><br />
+      <a href="images/FIG04-03.jpg">Hình 11. Quy trình cấp chứng chỉ</a><br />
+      <a href="images/FIG04-04.jpg">Hình 12. Nhiều đợt thi có thể diễn ra song song</a><br />
+      <a href="images/FIG04-05.jpg">Hình 13. Biểu diễn quy trình dưới dạng sơ đồ Gantt</a><br />
+      <a href="images/FIG04-06.jpg">Hình 14. Mô hình dữ liệu quan niệm</a><br />
+      <a href="images/FIG04-07.jpg">Hình 15. Mô hình xử lý tổng quát</a><br />
+      <a href="images/FIG04-08.jpg">Hình 16. Mô hình xử lý Quản lý Nhân viên</a><br />
+      <a href="images/FIG04-09.jpg">Hình 17. Mô hình xử lý Quản lý Quy trình</a><br />
+      <a href="images/FIG04-11.jpg">Hình 18. Mô hình xử lý Thống kê</a><br />
+      <a href="images/FIG04-11.jpg">Hình 19. Mô hình xử lý Thực thi quy trình</a><br />
+      <a href="images/FIG04-12.jpg">Hình 20. Mô hình dữ liệu mức vật lý</a><br />
+      <a href="images/FIG04-13.jpg">Hình 21. Lược đồ Use-case</a><br />
+      <a href="images/FIG04-14.jpg">Hình 22. Cấu trúc màn hình chính</a><br />
+    <a href="images/FIG04-15.jpg">Hình 23. WorkItem</a></p>
+    <p align="center">&nbsp;</p>
+    <p align="center">***</p>
+    <h2 align="center"><br clear="all" />
+      <span class="style1">Danh mục bảng</span></h2>
+    <p>      Bảng 1. Các đối tượng dữ liệu được lưu  trữ<br />
+      Bảng 2. Ý nghĩa kí hiệu trong mô hình  dữ liệu mức quan niệm<br />
+      Bảng 3. Thông tin chi tiết thực thể  nhân viên<br />
+      Bảng 4.Thông tin chi tiết thực thể Nhân  viên thừa hành<br />
+      Bảng 5.Thông tin chi tiết thực thể công  việc<br />
+      Bảng 6.Thông tin chi tiết thực thể Phân  Công<br />
+      Bảng 7.Thông tin chi tiết thực thể Đợt thi<br />
+      Bảng 8. Thông tin chi tiết thực thể  tiến độ<br />
+      Bảng 9. Thông tin chi tiết thực thể Ghi  chú<br />
+      Bảng 10. Thông tin chi tiết thực thể  chứng chỉ<br />
+      Bảng 11. Các dòng dữ liệu di chuyển trong  mô hình xử lý tổng quát<br />
+      Bảng 12. Các dòng dữ liệu di chuyển  trong mô hình xử lý quản lý nhân viên<br />
+      Bảng 13. Các dòng dữ liệu di chuyển  trong mô hình xử lý thống kê<br />
+      Bảng 14. Các dòng dữ liệu di chuyển  trong mô hình xử lý thực thi quy trình<br />
+      Bảng 15. Danh sách các Actor<br />
+      Bảng 16. Danh sách các Use-case<br />
+      Bảng 17. Danh sách các màn hình xử lý chính<br />
+      Bảng 18. Danh sách control màn hình đăng  nhập<br />
+      Bảng 19.Danh sách control màn hình chính  của nhân viên<br />
+      Bảng 20. Danh sách control màn hình cập  nhật đợt thi<br />
+      Bảng 21. Danh sách control màn hình xử lý cập nhật đợt thi<br />
+      Bảng 22. Danh sách control màn hình thêm  đợt thi<br />
+      Bảng 23. Danh sách control màn hình phân  công theo đợt thi<br />
+      Bảng 24. Danh sách control màn hình phân  công theo kì<br />
+      Bảng 25. Danh sách control màn hình  thốgn kê chi tiết<br />
+      Bảng 26. Danh sách control màn hình  thống kê so sánh<br />
+      Bảng 27. Danh sách control màn hình  thống kê tổng hợp<br />
+      Bảng 28. Danh sách control màn hình thêm  tiêu chí thống kê<br />
+      Bảng 29. Danh sách control Màn hình thay  đổi thời gian thực hiện công việc theo đợt thi<br />
+      Bảng 30. Danh sách control Màn hình xem  báo cáo kết quả công việc</p>
+    <p>&nbsp;</p>
+    <p align="center">***</p>
+    <p align="center">&nbsp;</p>
+  </div>
+<!-- end #container --></div>
+</body>
+</html>

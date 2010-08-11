@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luồng công việc và Ứng dụng</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {font-family: "Times New Roman", Times, serif}
+.style2 {color: #FF9900}
+-->
+</style></head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div class="style1" id="mainContent">
+    <h2 align="center" class="style2">Mục Lục</h2>
+    <p><a href="CHAPTER01.htm">Chương 1: Đề Dẫn Đề Tài</a> <br />
+      1.        Chủ đề<br />
+      2.        Yêu cầu của ứng dụng<br />
+      3.        Nội dung cần thực hiện để đáp ứng  yêu cầu trên <br />
+      3.1.         Tìm hiểu thực tế ứng dụng <br />
+      3.2.         Khảo sát và lựa chọn môi trường công  nghệ phù hợp <br />
+      3.2.1.         Khảo sát <br />
+      3.2.2.         Nhu cầu <br />
+      3.2.3.         Các công nghệ <br />
+      3.2.4.         Lựa chọn môi trường<br />
+      4.        Bố cục khóa luận tốt nghiệp</p>
+    <p><a href="CHAPTER02.htm">Chương 2: Luồng công việc và ứng dụng luồng  công việc</a> <br />
+      1.Tổng quan về mô hình luồng  công việc <br />
+      1.1.         Luồng  công việc <br />
+      1.2.         Mô  hình luồng công việc<br />
+      1.3.         Sự  thực thi các LCV <br />
+      2.        Tầm  quan trọng trong việc đưa LCV và MH LCV vào ứng dụng <br />
+      3.        Mô hình hóa luồng công việc và vấn  đề tồn tại <br />
+      4.        Workflow Management Coalition (WfMC) <br />
+      4.1.         Mô hình tham chiếu LCV (<em>Workflow Reference Model - WfRM</em>) <br />
+      4.2.         Các ngôn ngữ MHH LCV</a> <br />
+      <em>4.2.1.</em>         <em>XML Process Definition  Language  (XPDL)</em> <br />
+      4.2.2.         Wf-XML <br />
+      4.3.         Các loại LCV <br />
+      4.3.1.         <em>Production</em> <br />
+      4.3.2.         Administrative <br />
+      4.3.3.         Collaborative <br />
+    4.3.4.         Ad-Hoc </p>
+      5.            Yêu cầu của một ứng dụng quản lý LCV tổng quát<br />
+    <p><a href="CHAPTER03.htm">Chương 3: Môi trường công nghệ để xây dựng  một ứng dụng quản lý luồng công việc</a> <br />
+      <em>1.</em>        <em>Workflow Management System (viết tắt là   WfMS)</em> <br />
+      2.        <em>Windows Workflow Foundation </em>(viết tắt là WF)  <br />
+      2.1.         Đặc điểm<br />
+      2.2.         Các loại LCV trong WF <br />
+      <em>2.2.1.</em>         <em>Sequential Workflow  (Workflow tuần tự)</em> <br />
+      <em>2.2.2.</em>         <em>State-Machine Workflow  (Workflow trạng thái)</em> <br />
+      <em>2.2.3.</em>         <em>Rules-based Workflow  (Workflow dựa vào quy luật)</em> <br />
+      2.3.         Kiến trúc cơ bản của WF <br />
+      2.3.1.         Activity và Custom Activity <br />
+      2.3.2.         WF Runtime <br />
+      2.4.         Thiết kế LCV trong WF <br />
+      2.4.1.         C#, VB.net <br />
+      2.4.2.         <em>XAML</em> <br />
+      2.5.         Sự lưu trú của WF trên ứng dụng <br />
+      3.        Sự khác nhau giữa WfMC và WF <br />
+      3.1.         Về ngôn ngữ MHH LCV <br />
+      3.2.         Về phân loại LCV <br />
+      <em>3.2.1.</em>         <em>Production Workflow</em><<br />
+      <em>3.2.2.</em>         <em>Administrative Workflow</em> <br />
+      3.2.3.         <em>Collaborative Workflow</em> <br />
+      <em>3.2.4.</em>         <em>Ad-hoc</em> <br />
+      4.        Windows Presentation Foundation  (WPF) <br />
+      4.1.         Tổng quan</a> <br />
+      4.2.         XAML <br />
+      4.3.         Những  tính năng nổi bật <br />
+      4.3.1.         Data Binding (liên kết dữ liệu) <br />
+      4.3.2.         Layout <br />
+      4.3.3.         Resource <br />
+      4.3.4.         Style <br />
+      4.3.5.         Transformation <br />
+    4.3.6.         Animation </p>
+    <p><a href="CHAPTER04.htm">Chương 4: Hiện thực ứng dụng</a> <br />
+      1.        Tổng quan về LCV tổ chức  thi, cấp chứng chỉ quốc gia <br />
+      1.1.         Các  quy trình ứng dụng <br />
+      1.1.1.         Quy trình tổ chức  thi <br />
+      1.1.2.         Quy trình cấp chứng  chỉ <br />
+      1.2.         Các  vấn đề còn tồn tại <br />
+      2.        Yêu  cầu chức năng <br />
+      2.1.         Chức  năng thông bá <br />
+      2.2.         Chức  năng theo dõi công việc <br />
+      2.2.1.         Đối với các nhân  viên thực hiện các công việc<br />
+      2.2.2.         Đối với người quản  lý <br />
+      2.3.         Chức  năng cập nhật thông tin <br />
+      2.4.         Chức  năng thống kê <br />
+      2.4.1.     Thống  kê tổng thể <br />
+      2.4.2.         Thống kê chi tiết <br />
+      2.4.3.         Thống kê so sánh <br />
+      2.4.4.         Thống kê theo thời  gian <br />
+      2.5.         Chức  năng cảnh báo <br />
+      2.6.         Chức  năng phân quyền <br />
+      2.7.         Chức  năng biểu diễn luồng công việc dưới dạng sơ đồ trực quan <br />
+      3.        Yêu  cầu phi chức năng <br />
+      3.1.         Tính  tiến hóa <br />
+      3.2.         Yêu  cầu về giao diện <br />
+      3.3.         Tính  hiệu quả <br />
+      4.        Phân tích mức quan niệm <br />
+      4.1.         Mô  hình dữ liệu ở mức quan niệm <br />
+      4.1.1     Nhân viên <br />
+      4.1.2     Nhân viên quản lý &amp;  Nhân viên thừa hành <br />
+      4.1.3     Công việc<br />
+      4.1.4     Phân công<br />
+      4.1.5     Đợt thi <br />
+      4.1.6     Tiến độ <br />
+      4.1.7     Ghi chú <br />
+      4.1.8     Chứng chỉ <br />
+      4.2.         Mô hình xử lý mức quan niệm <br />
+      4.2.1.         Tổng quan <br />
+      4.2.2.         Quản lý nhân viên <br />
+      4.2.3.         Quản lý quy trình <br />
+      4.2.4.         Thống kê <br />
+      4.2.5.         Thực thi quy trình <br />
+      5.        Cài đặt mức vật lý <br />
+      6.        Mô  tả chức năng và các giao diện <br />
+      6.1.         Thiết  kế User-case <br />
+      6.1.1.         Lược đồ User-case <br />
+      6.1.2.         Danh sách các Actor <br />
+      6.1.3.         Danh sách các  Use-case <br />
+      6.2.         Thiết  kế giao diện <br />
+      6.2.1.         Cấu trúc các màn  hình xử lý chính <br />
+      6.2.2.         Danh sách các màn  hình xử lý chính <br />
+      7.        Giải pháp kĩ thuật <br />
+      7.1.         Chức năng hiển thị luồng công  việc dạng sơ đồ <br />
+      7.2.         Chức năng thống kê tình trạng  các đợt thi đang tiến hành <br />
+    7.3. Custom Activity</a> </p>
+    <p><a href="CHAPTER05.htm">Chương 5: Tổng kết</a> <br />
+      1.        Tóm  tắt công việc đã làm <br />
+      2. Đặc điểm của Công  việc <br />
+      2.1. Nội dung <br />
+    2.2. Hướng phát triển nhằm giải quyết  những hạn chế về mặt nội dung</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">*** </p>
+    <p>&nbsp;</p>
+  </div>
+<!-- end #container --></div>
+</body>
+</html>

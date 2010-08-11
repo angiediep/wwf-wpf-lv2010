@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luồng công việc và Ứng dụng</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {font-family: "Times New Roman", Times, serif}
+.style2 {font-size: small}
+.style3 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: small;
+}
+-->
+</style></head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div class="style1" id="mainContent">
+    <a href="TOC.htm">[BACK]</a>
+    <h2 align="center" class="style1"><a name="_Toc003" id="_Toc003">Chương 3: Môi trường công nghệ để xây dựng một ứng dụng quản lý luồng công việc</a></h2>
+    <p align="center" class="style1">***</p>
+    <p align="left" class="style1"><strong>NỘI DUNG CHÍNH</strong></p>
+    <p><a href="#_Toc268951676">Chương 3: Môi trường công nghệ để xây dựng một ứng dụng quản lý luồng công việc</a> <br />
+      <a href="#_Toc268951677">1.        Workflow Management System (viết tắt là  WfMS)</a> <br />
+      <a href="#_Toc268951678">2.        Windows Workflow Foundation (viết tắt là WF) </a> <br />
+      <a href="#_Toc268951679">2.1.         Đặc điểm</a> <br />
+      <a href="#_Toc268951680">2.2.         Các loại LCV trong WF</a> <br />
+      <a href="#_Toc268951681">2.2.1.         Sequential Workflow (Workflow tuần tự)</a> <br />
+      <a href="#_Toc268951682">2.2.2.         State-Machine Workflow (Workflow trạng thái)</a> <br />
+      <a href="#_Toc268951683">2.2.3.         Rules-based Workflow (Workflow dựa vào quy  luật)</a> <br />
+      <a href="#_Toc268951684">2.3.         Kiến trúc cơ bản của WF</a> <br />
+      <a href="#_Toc268951685">2.3.1.         Activity và Custom Activity</a> <br />
+      <a href="#_Toc268951686">2.3.2.         WF Runtime</a> <br />
+      <a href="#_Toc268951687">2.4.         Thiết kế LCV trong WF</a> <br />
+      <a href="#_Toc268951688">2.4.1.         C#, VB.net</a> <br />
+      <a href="#_Toc268951689">2.4.2.         XAML</a> <br />
+      <a href="#_Toc268951690">2.5.         Sự lưu trú của WF trên ứng dụng</a> <br />
+      <a href="#_Toc268951691">3.        Sự khác nhau giữa WfMC và WF</a> <br />
+      <a href="#_Toc268951692">3.1.         Về ngôn ngữ MHH LCV</a> <br />
+      <a href="#_Toc268951693">3.2.         Về phân loại LCV</a> <br />
+      <a href="#_Toc268951694">3.2.1.         Production Workflow</a> <br />
+      <a href="#_Toc268951695">3.2.2.         Administrative  Workflow.. </a> <br />
+      <a href="#_Toc268951696">3.2.3.         Collaborative  Workflow.. </a> <br />
+      <a href="#_Toc268951697">3.2.4.         Ad-hoc</a> <br />
+      <a href="#_Toc268951698">4.        Windows Presentation Foundation (WPF)</a> <br />
+      <a href="#_Toc268951699">4.1.         Tổng quan</a> <br />
+      <a href="#_Toc268951700">4.2.         XAML</a> <br />
+      <a href="#_Toc268951701">4.3.         Những  tính năng nổi bật</a> <br />
+      <a href="#_Toc268951702">4.3.1.         Data Binding (liên kết dữ liệu)</a> <br />
+      <a href="#_Toc268951703">4.3.2.         Layout</a> <br />
+      <a href="#_Toc268951704">4.3.3.         Resource</a> <br />
+      <a href="#_Toc268951705">4.3.4.         Style</a> <br />
+      <a href="#_Toc268951706">4.3.5.         Transformation</a> <br />
+      <a href="#_Toc268951707">4.3.6.         Animation</a> </p>
+    <p align="center" class="style1">***</p>
+    <h2 align="justify"><a name="_Toc268951676" id="_Toc268951676"></a><a name="_Toc268944463" id="_Toc268944463">Chương  3</a><a name="_Toc266246111" id="_Toc266246111">: Môi trường công nghệ để xây dựng một ứng dụng quản lý luồng công việc</a> </h2>
+    <p align="justify"><em>Chương  này đề nghị một quy cách mô hình hóa dựa trên công cụ mô hình hóa cung cấp  bởi Microsoft trong bộ .Net 3.0. Quy cách này có thể thích ứng tốt với các ứng  dụng quản lý cho phép người dùng tương tác trực tiếp đến các thành phần LCV  trong quy trình. Tại đó có thể đưa ra các điều khiển đối với sự thực thi công  việc thành phần mà </em>người<em> dùng có quyền truy cập. Tuy nhiên, trước khi bàn đến  vấn đề này, chúng tôi xin điểm lại một số khái niệm và kiến trúc quan trọng  liên quan đến việc MHH LCV. Đó cũng là nội dung chính mà chúng tôi đã nghiên  cứu trong suốt thời gian thực hiện khóa luận. </em><br />
+        <em>Vì  đề tài LCV đã  được đề cập đến ở một các khóa luận tốt nghiệp trước<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1"> (24)</a>,nên chúng  tôi chỉ đề cập đến những vấn đề thật sự quan trọng và cần thiết trong khóa luận  này, phần còn lại sẽ bị bỏ qua hoặc có tham chiếu trực tiếp đến các khóa luận  đó. Cũng cần nói thêm rằng, một trong 2 khóa luận trước nghiên cứu về mô hình LCV  trên môi trường mã nguồn mở jBPM, khóa luận còn lại nghiên cứu về Windows  Workflow Foundation với sự hỗ trợ của SharePoint Workflow. SharePoint Workflow  là công cụ hỗ trợ tương tác giữa người dùng với các LCV, đáp ứng hầu hết các  nhu cầu thiết kế cũng như xử lý của hệ thống cần xây dựng. Trong khóa luận này,  chúng tôi chỉ sử dụng Windows Workflow Foundation làm môi trường thiết kế và  triển khai các mô hình LCV cùng với công nghệ Windows Presentation Foundation  làm nền tảng thiết kế ứng dụng. Ngoài ra, chúng tôi không sử dụng thêm công cụ  hỗ trợ nào khác.</em></p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951677" id="_Toc268951677"></a><a name="_Toc268944464" id="_Toc268944464"></a><a name="_Toc266246113" id="_Toc266246113">1. <strong><em>Workflow  Management System (viết tắt là  WfMS):</em></strong></a></h2>
+    </div>
+    <p align="justify">Tuy đã được đề  cập đến trong chương 2, nhưng vì chúng tôi chưa đưa ra định nghĩa nào cho WfMS  nên trong chương này chúng tôi cũng xin mạn phép đưa ra định nghĩa cho WfMS<a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">(25) </a>. <br />
+      WfMS (HQT LCV)  là một hệ thống phần mềm hỗ trợ việc thiết kế, thực thi các LCV. Mỗi WfMS đưa  ra các phương pháp định nghĩa mô hình LCV và điều khiển sự thực thi các  LCV cũng như các công việc thành phần bên trong nó. Ngoài ra, WfMS còn có  chức năng luân chuyển dữ liệu, phân  phối các công việc tới các tác nhân dựa vào các công cụ và dịch vụ  hỗ trợ. </p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <h2 align="justify"><a name="_Toc268951678" id="_Toc268951678"></a><a name="_Toc268944465" id="_Toc268944465"></a><a name="_Toc266246115" id="_Toc266246115"><em>2. Windows Workflow Foundation </em></a>(viết tắt là WF) <a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">26 </a> </h2>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951679" id="_Toc268951679">2.1. Đặc điểm</a> </h3>
+    </blockquote>
+    <p align="justify">Hiện  nay, trên thế giới,  có rất nhiều nền tảng công nghệ được thiết kế nhằm hỗ trợ việc xây dựng các sản  phẩm MHH LCV<a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">(27) </a>,  cũng như các phần mềm mã nguồn mở khác  với mục đích tương tự. Trong đó, Windows Workflow  Foundation là một  nền tảng công nghệ do Microsoft nghiên cứu, xây dựng và đóng gói trong bộ <em>.Net Framework</em> (từ phiên bản 3.0 trở lên). WF cho phép người dùng định nghĩa, thực thi  và quản LCV với các những điểm khác  biệt so với các hệ thống khác như sau:</p>
+    <div align="justify">
+      <ul>
+        <li>WF  cho phép điều khiển các công việc thực  thi trong thời gian dài (nhiều ngày, nhiều tháng, …).</li>
+        <li>WF  có thể chỉnh sửa động khi đang thực  thi.</li>
+        <li>WF  là một phương pháp lập trình khai báo kết nối các thành phần được định nghĩa  sẵn (<em>activity</em>).</li>
+        <li>WF  cho phép người dùng định nghĩa các LCV.</li>
+        <li>WF  hỗ trợ nhiều kiểu ứng dụng khác  nhau.</li>
+      </ul>
+    </div>
+    <p align="justify">Với WF, việc phát triển ứng dụng  .Net trở nên dễ dàng hơn, đồng thời chất lượng ứng dụng cũng được nâng cao. Đây  không phải là một ứng dụng độc lập, mà là một nền tảng phần mềm được thiết kế  nhằm cho phép đưa LCV vào trong ứng dụng. Sức  mạnh của việc sử dụng LCV kết  hợp vào trong ứng dụng là ở chỗ:</p>
+    <div align="justify">
+      <ul>
+        <li>Đối  với những ứng dụng hỗ trợ nghiệp vụ kinh doanh, WF giúp ta có thể kết hợp các quy trình nghiệp vụ đó.</li>
+        <li>Đối  với những ứng dụng đòi hỏi nhiều tương tác với người dùng, WF cung cấp một loại  ứng dụng chuyên biệt (WF State Machine) giúp thực thi các quy tắc luận lý nhằm  xử lý các tương tác đó.</li>
+        <li>Đối  với những ứng dụng có khả năng tùy chỉnh cao, WF giúp ta tách biệt giữa các thành phần nghiệp vụ kinh doanh  với LCV. Điều này cho phép  chúng ta có thể thay đổi được cả luồng điều khiển mà không ảnh hưởng đến những  login bên dưới trong doanh nghiệp.</li>
+      </ul>
+    </div>
+    <p align="justify">Đồng  thời, WF cũng có một số đặc điểm ưu việt sau:</p>
+    <div align="justify">
+      <ul>
+        <li>Cung cấp một kiến trúc mạnh mẽ và linh hoạt cho việc  phát triển ứng dụng LCV</li>
+        <li>Thúc đẩy sự nhất quán trong phát triển ứng dụng, giúp  cải thiện năng suất trong việc tạo ra ứng dụng mới cũng như sửa chữa, nâng cấp  ứng dụng cũ</li>
+        <li>Hỗ trợ hai kiểu định nghĩa LCV khác nhau: LCV tuần tự  hay LCV trạng thái - cho phép xây dựng LCV theo hướng tương tác ứng dụng hay  tương tác với người dùng .</li>
+        <li>Cung cấp dịch vụ <em>Persistence</em>,  cho phép thực thi LCV trong một thời gian dài.</li>
+        <li>Có khả năng mở rộng vô hạn; nghĩa là Microsoft cung cấp  một số điểm mở rộng cho phép chúng ta có  thể sửa đổi những thuộc tính mặc định của LCV. Chẳng hạn như khi dịch vụ SQL  Persistence nêu trên không đáp ứng được nhu cầu của chúng ta, chúng ta có thể  tự xây dựng dịch vụ riêng của mình</li>
+        <li>Được tích hợp vào trong .Net Framework và là thành  phần miễn phí. </li>
+      </ul>
+    </div>
+    <p align="justify">Trên đây  cũng chính là những nguyên nhân đã thuyết phục chúng tôi quyết định sử dụng WF  để xây dựng ứng dụng cho khóa luận  này. </p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951680" id="_Toc268951680">2.2. Các loại LCV trong WF</a>: </h3>
+    </blockquote>
+    <p align="justify">Trong WF, người ta không chia  rõ ràng các loại LCV  theo như chuẩn WfMC, mà thay vào đó, WF phân loại theo loại ứng dụng LCV, chủ yếu gồm 3  loại sau:</p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4><strong><em> <a name="_Toc268951681" id="_Toc268951681"></a><a name="_Toc268944466" id="_Toc268944466"></a><a name="_Toc266247153" id="_Toc266247153"></a><a name="_Toc266246199" id="_Toc266246199">2.2.1. Sequential Workflow (Workflow tuần tự):</a> </em></strong></h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Trong  ứng dụng WF theo dạng này, các tác vụ có thể được thực thi 1 cách  tự động với không có hoặc có rất ít tác động từ bên ngoài. Bản  thân LCV có thể tự điều  khiển việc thực thi các tác vụ. Như thế, trong loại ứng dụng này sẽ  có rất ít các tương tác qua lại với người dùng. Các Activity<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5"> (28)</a> trong LCV sẽ được thực thi  theo thứ tự người lập trình mô tả khi xây dựng ứng dụng. Đặc điểm: Các công việc sẽ được biểu diễn liên tiếp  nhau. Một công việc chỉ được thực hiện khi các công  việc phía trước đó đã hoàn thành </p>
+    <p align="center"><br />
+      <img src="images/FIG03-01.jpg" alt="1" width="354" height="165" /><br />
+      Hình  5. Các mô hình LCV tuần tự</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <p><strong><em> <a name="_Toc268951682" id="_Toc268951682"></a><a name="_Toc268944467" id="_Toc268944467"></a><a name="_Toc266247154" id="_Toc266247154"></a><a name="_Toc266246200" id="_Toc266246200">2.2.2. State-Machine Workflow (Workflow trạng  thái):</a> </em></strong></p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Trong  ứng dụng WF theo dạng này, LCV về  cơ bản sẽ phụ thuộc vào các sự kiện bên ngoài tác động vào để có  thể thực thi tác vụ kế tiếp. Như vậy, các tác vụ phụ thuộc chặt  chẽ vào các tác động bên ngoài điều khiển quá trình thực thi của  nó. Loại ứng dụng LCV này  cần rất nhiều sự tương tác với người dùng: người dùng sẽ tác động,  xác nhận hay thực thi các hành động khác nhau trong suốt LCV và ghi nhận kết quả  để LCV xác định trạng thái  của nó và quyết định hoạt động tiếp theo cho nó. Đặc điểm: LCV sẽ được mô hình  hóa thành một tập các trạng thái cụ thể. Tại mỗi trạng thái có thể có một tập  các sự kiện được phép xảy ra. Mỗi một sự kiện xảy ra sẽ dẫn tới việc chuyển đổi  hệ thống từ trạng thái này sang trạng thái khác.</p>
+    <p align="center"> <img src="images/FIG03-02.jpg" alt="2" width="341" height="232" /><br />
+        </p>
+    <div>
+      <p align="center">Hình      6. MH LCV trạng thái </p>
+    </div>
+     
+    <div align="right"><a href="#_Toc003">[TOP]</a></div>
+    <div align="justify"></p>
+        <ul>
+          <blockquote>
+            <p><strong><em> <a name="_Toc268951683" id="_Toc268951683"></a><a name="_Toc268944468" id="_Toc268944468"></a><a name="_Toc266247155" id="_Toc266247155"></a><a name="_Toc266246201" id="_Toc266246201">2.2.3. Rules-based Workflow (Workflow dựa vào quy  luật)</a> </em></strong></p>
+          </blockquote>
+        </ul>
+    </div>
+    <p align="justify">Các quy luật kinh doanh tồn tại  giúp giải quyết các quyết định phức tạp là vấn đề thường có trong  các LCV lớn, có độ phức  tạp cao, nhưng bản thân Sequential Workflow hay State-machine Workflow đều  không cung cấp trực tiếp cách xử lý cho các quy luật kinh doanh này.  Rules-based Workflow được xây dựng dựa trên Sequential Workflow, nhưng nó  là rules-driven, tức là có thêm các quy luật nhằm điều khiển các  hoạt động của các tác vụ. Thay vì chỉ thực thi các hoạt động lập  trình viên mô tả, loại LCV này  sẽ kết hợp thêm các <em>Policy activity</em> (1 loại Activity trong WF dùng để xây dựng quy tắc hoạt động của các Activity)  và các Rule Conditions để thi hành các tác vụ dựa trên quy luật kinh  doanh được mô tả trong LCV. <br />
+      Tóm lại, một  LCV có một trạng thái bắt  đầu và một trạng thái kết thúc nhất định. Trạng thái bắt đầu là điểm khởi đầu  mặc định của một quá trình thực thi quy trình. Còn trạng thái kết thúc thì tùy  vào loại mô hình LCV mà  có những điều kiện khác nhau để đạt được đến các trạng thái này. Ví dụ, với LCV Tuần tự thì trạng thái  kết thúc sẽ được đạt đến khi tất cả các công việc thành phần đều được thực hiện  xong; còn với LCV  trạng thái thì có thể kết thúc bất cứ khi nào xảy ra sự kiện dẫn đến trạng thái  này. </p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951684" id="_Toc268951684"></a><a name="_Toc266246116" id="_Toc266246116">2.3. Kiến</a> trúc cơ bản của WF </h3>
+    </blockquote>
+    <p align="justify">Kiến trúc cơ bản  của WF gồm có 3 thành phần chính: BAL (<em>Base  Activity Library</em>), <em>Runtime Engine</em> và <em>Runtime Services</em>; có thể được mô  tả như hình sau:</p>
+    <p align="center"><a name="h7" id="h7"><img src="images/FIG03-03.jpg" alt="5" width="155" height="212" /></a><br />
+      Hình  7. Cấu trúc luồng công việc<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6"> (29)</a></p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951685" id="_Toc268951685">2.3.1. Activity  và Custom Activity</a> </h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">Một LCV trong WF được tạo thành từ các <em>Activity</em>,  là các đối tượng được xây dựng sẵn tương tự các đối tượng  quen thuộc (button, textbox…) trong ứng dụng dành cho Windows.  Mỗi đơn vị công việc trong thực  tế khi mô hình hóa sẽ thành một đối tượng Activity. Đây cũng chính là thành  phần nhỏ nhất trong mô hình LCV định nghĩa bởi WF.<br />
+      Để  xây dựng ứng dụng WF, Microsoft cung cấp một thư viện các Activity cơ bản<a href="#_ftn7" name="_ftnref7" title="" id="_ftnref7">(30)</a>, gọi là Base Activity  Library (gọi tắt là BAL). Ngoài ra, người sử dụng có thể tự định nghĩa các  Activity khác nhằm phục vụ cho nhu cầu đặc trưng của từng quy trình nghiệp vụ -  gọi là các Custom Activity. Các Activity này cũng như cả LCV có thể được thiết  kế, định nghĩa thông qua Workflow Designer tích hợp sẵn trong công cụ Visual  Studio hoặc bằng cách viết mã XAML<a href="#_ftn8" name="_ftnref8" title="" id="_ftnref8"> </a> trực tiếp.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4 id="_Toc268951686" name="_Toc268951686"><a name="_Toc268951686" id="_Toc268951686"></a><a name="_Toc268944469" id="_Toc268944469"><strong>2.3.2. WF Runtime</strong></a> </h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify"><a name="_Toc268944470" id="_Toc268944470">Cung cấp các thành phần cơ  bản để thực thi và quản lý thể hiện LCV, cung cấp chức năng trả về tình trạng  thực thi của thể hiện, đồng thời lưu trú các thể hiện LCV độc lập. WF Runtime  gồm 2 loại là Runtime Services và Runtime Local Services</a> </p>
+    <div align="justify">
+      <ul>
+        <ul>
+          <blockquote>
+            <p align="left"><strong>2.3.2.1. Runtime Services</strong></p>
+          </blockquote>
+        </ul>
+      </ul>
+    </div>
+    <p align="justify">Cung cấp khả  năng đăng kí các dịch vụ có thể được chạy bên trong nó. Mỗi LCV được thiết kế  có thể đăng kí nhiều dịch vụ khác nhau. Những dịch vụ này được Microsoft thiết  kế sẵn nhằm đáp ứng nhiều mục đích khác nhau của người thiết kế cũng như của  bản thân LCV và ứng dụng hỗ trợ. Những dịch vụ này bao gồm: </p>
+    <div align="justify">
+      <ul>
+        <li>Handle Thread Scheduling Services: lập lịch thực thi  các thể LCV</li>
+        <li>Persistence Services: rất hữu ích trong việc thực thi  LCV trong một thời gian dài. Dịch vụ này giúp lưu trữ lại tình trạng thực thi  của từng thể hiện LCV vào trong hệ quản trị cơ sở dữ liệu với dữ liệu riêng  được thiết kế sẵn.</li>
+        <li>Transaction Services</li>
+        <li>Queuing Services</li>
+        <li>Tracking Services: Theo vết quá trình thực thi các  công việc trong LCV</li>
+        <li>CommitWorkBatch Services</li>
+      </ul>
+    </div>
+    <p align="justify">Tuy nhiên, nếu  những dịch vụ này chưa đáp ứng đủ nhu cầu của LCV cũng như ứng dụng hỗ trợ,  người thiết kế hoàn toàn có thể tự xây dựng dịch vụ riêng và đăng kí với WF  Runtime trước khi thể hiện LCV được khởi tạo và thực thi.<br />
+      Vì LCV được  thiết kế trong ứng dụng cần được thực thi trong khoảng thời gian dài, chúng tôi  đã quyết định nghiên cứu và sử dụng Persistence Service, đồng thời thiết kế cơ  sở dữ liệu riêng để lưu vết quá trình thực thi, mà không dùng các dịch vụ khác. </p>
+    <div align="justify">
+      <ul>
+        <ul>
+          <blockquote>
+            <p><strong>2.3.2.2. WF Runtime Local Services</strong></p>
+          </blockquote>
+        </ul>
+      </ul>
+    </div>
+    <p align="justify">WF Runtime cho  phép những dịch vụ do người thiết kế tạo ra chạy bên trong nó, những dịch vụ  này được gọi là WF Runtime Local Services. Một dịch vụ cục bộ như thế có thể  được thiết kế nhằm đáp ứng bất kì mục đích nào, chẳng hạn như cho phép thể hiện  LCV có thể giao tiếp với ứng dụng chủ.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951687" id="_Toc268951687">2.4. Thiết kế LCV trong WF</a> </h3>
+    </blockquote>
+    <p align="justify">Khác với nhiều phần mềm LCV khác, WF không hỗ  trợ XPDL hay Wf-XML. Thay vào đó, LCV  trong WF được thiết kế bằng các công cụ design (Workflow Design Tools)  được tích hợp vào trong bộ Visual Studio 2008 (với Visual Studio 2005  cần phải cài đặt thêm các thành phần bổ sung ), đồng thời tự động  phát sinh ra file thiết kế với 2 định dạng: C# (hoặc VB) tương thích  với nền .net 2.5 framework trở lên, và đặc biệt là XAML trên nền  .Net3.0 trở lên.</p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <p align="left"><strong> <a name="_Toc268951688" id="_Toc268951688"></a><a name="_Toc268944471" id="_Toc268944471"></a><a name="_Toc266247143" id="_Toc266247143"></a><a name="_Toc266246189" id="_Toc266246189">2.4.1. C#, VB.net:</a></strong></p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Khi thiết kế LCV với WF, mỗi LCV được mô tả bởi 2  file: file *.cs xử lý các sự kiện bên trong LCV, và file *.designer.cs (với VB.net  tương ứng là file *.vb và *.designer.vb, mô tả sơ đồ các activity bên  trong LCV đó. File này được  tự động phát sinh bởi trình biên dịch (Visual studio) tương tự như file  design của Form trong 1 ứng dụng  Windows.<br />
+      Khi lập trình viên thêm mới 1  activity vào LCV,  trình biên dịch sẽ cập nhật thông tin của activity này vào trong file  designer (phát sinh code bằng C# hoặc VB.net). Cũng tương tự như project  WinForm vậy, ở đây, ta có thể xem 1 LCV  như  1 Form. Trong đó xử lý các LCV là  các event, còn các Activity trong LCV  chính  là các control trong Windows Form.<a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9"> (31)</a>        </p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <p id="_Toc268951689" name="_Toc268951689"><a name="_Toc268951689" id="_Toc268951689"></a><a name="_Toc268944472" id="_Toc268944472"></a><a name="_Toc266247144" id="_Toc266247144"></a><a name="_Toc266246190" id="_Toc266246190"><strong><em>2.4.2. XAML</em></strong></a><strong>:</strong> </p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Ngoài cách sử dụng C# hay  VB.net để định nghĩa LCV (thường  được gọi là <em>imperative definition</em>),  WF còn có khả năng  thực thi LCV dựa  trên <em>declarative definition</em>, nghĩa  là định nghĩa LCV bằng  ngôn ngữ Markup XML (cách này giống với Wf-XML do WfMC phát triển). Tuy  nhiên, WF không hỗ trợ Wf-XML (để có thể tận dụng cấu trúc chuẩn của  WfMC Wf-XML, lập trình viên cần phải tự xây dựng bộ biên dịch để  chuyển đổi cấu trúc Wf-XML thành dạng Workflow Runtime có thể hiểu và  thực thi).<br />
+      Mỗi cách đều có những lợi  điểm và nhược điểm riêng của nó. Việc sử dụng C#, VB.Net sẽ giúp  chương trình thực thi nhanh hơn. Tuy nhiên, điểm yếu của nó chính là  việc LCV phải được định  nghĩa lúc buildtime. Nếu có sự thay đổi trong tiến trình nghiệp vụ,  chương trình cần được thiết kế lại, biên dịch lại (ngoại trừ trường  hợp chương trình có sử dụng các Rules Condition cho phép thay đổi  Business Process theo 1 quy luật cụ thể nào trước đó). Điều này khiến  cho LCV trở nên thiếu linh  hoạt. Trong khi nhu cầu thay đổi LCV  đối  với các doanh nghiệp ngày càng cần thiết (nhất là những doanh nghiệp  có tiến trình nghiệp vụ thay đổi theo thời gian). Việc sử dụng XML  để định nghĩa LCV có  thể giải quyết được vấn đề này.<br />
+      Vì Workflow Runtime có thể chấp  nhận gần như tất cả các dạng định nghĩa LCV (phụ thuộc vào người lập trình),  tức là lập trình viên chỉ cần thông dịch định nghĩa LCV được cung cấp thành  định dạng mà Workflow Runtime có thể hiểu và thực thi. Tuy nhiên, điều  may mắn ở đây là WF  hỗ trợ định nghĩa LCV sử  dụng ngôn ngữ nền tảng xml (XML-based Workflow Definition), đó là XAML  (Extensive Application Markung Language). Việc định nghĩa LCV theo cấu trúc xml  giúp LCV có thể dễ dàng  được sửa đổi và triển khai. Thay vì phải biên dịch lại trong Visual  Studio, người dùng chỉ cần chỉnh sửa lại file định nghĩa LCV bằng bất kì trình Editor  nào (ngay cả notepad), và đưa vào Workflow Runtime trước khi nó tạo lại  mô hình LCV.<br />
+      XAML ban đầu được đưa vào sử  dụng trong WPF (Windows Presentation Foundation, 1 công nghệ được Microsoft  đưa vào sử dụng từ .Net Framework 3.0 trở đi, trong đó giao diện chương  trình thiết kế bằng WPF được định nghĩa thông qua file XAML). 1 file  *.xaml về bản chất không cần phải được biên dịch, mà bản thân nó có  thể chạy được trên bất kì trình duyệt nào ở bất kì máy tính  Windows nào có cài đặt .Net 3.0 trở lên. Chẳng hạn như, với file  hello.xaml sau đây thể hiện 1 button có chữ Helloworld:<br />
+ <div class="style3" style="background-color:#CCFFFF"> &lt;?xml  version=&quot;1.0&quot;?&gt;<br />
+      &lt;Button  xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;<br />
+      Margin=&quot;36&quot;  Foreground=&quot;Blue&quot; FontSize=&quot;36pt&quot;&gt; Hello, World!<br />
+    &lt;/Button&gt;</div>
+    <p>Dùng trình  duyệt mở File hello.xaml sẽ hiển thị kết quả như sau:</p>
+    <p align="center"><img src="images/FIG03-04.jpg" alt="6" width="357" height="261" /><br />
+      Hình  8. HelloWorld</p>
+    <p>      WF đã tận dụng khái niệm này  từ WPF và đưa XAML vào WF. Tuy nhiên, dù WF XML được thiết kế theo XAML,  định dạng file WF XML ở đây được đổi thành *.xoml, để các công cụ tự  động hóa có thể hiểu đây là 1 file mô tả LCV chứ không phải là 1 file trình bày  giao diện. </p>
+    </p>
+    <div align="right"><a href="#_Toc003">[TOP]</a></div>
+    <div align="justify">
+      <blockquote>
+        <h3 align="justify" id="_Toc268951690" name="_Toc268951690"><a name="_Toc268951690" id="_Toc268951690"></a><a name="_Toc268944473" id="_Toc268944473"></a><a name="_Toc266246118" id="_Toc266246118"><strong>2.5. Sự lưu trú  của WF trên ứng dụng</strong></a><em>:</em> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">WF không phải là ứng dụng chạy độc  lập nên nó cần được lưu trú trong một ứng dụng chủ (<em>host application</em>).NET nào đó như Winform,  ASP.NET, Console, Web Service… Với đặc tính này, WF chỉ cần tập trung vào xử lý  các nghiệp vụ, những phần còn  lại  được giao cho  ứng dụng chủ xử lý.<br />
+      Để tương tác với  ứng dụng chủ WF cung cấp cơ chế cho phép truyền tải dữ liệu vào ra từ LCV cùng với các phương  thức để điều khiển sự kiện nhằm tương tác với bên ngoài. <br />
+      Dưới đây là danh  sách một số dịch vụ quan trọng nhằm phục vụ cho sự lưu trú cũng như thực thi LCV  trong ứng dụng chủ:</p>
+    <div align="justify">
+      <ul>
+        <li>Persistence :</li>
+        <ul>
+          <li>Mô tả : Là cơ chế cho phép lưu trữ LCV xuống đĩa nhớ một cách  bền bỉ và khôi phục lại bất cứ khi nào. Nhờ cơ chế này, các LCV có thể được  thực thi trong một khoảng thời gian dài (nhiều ngày, nhiều tháng…) đồng thời  làm giảm gánh nặng cho hệ thống phần cứng khi có nhiều LCV cùng lưu trú trong  các ứng dụng. </li>
+          <li>Các lớp đối tượng :  SqlWorkflowPersistenceService </li>
+        </ul>
+        <li>Data  Exchange: Quản lý các dịch vụ truyền thông tùy biến</li>
+        <li>Dịch  vụ tùy biến (của người dùng): WF cho phép người dùng định nghĩa các dịch vụ của  riêng họ và được sử dụng như các dịch vụ chuẩn được cung cấp sẵn trong  framework</li>
+      </ul>
+    </div>
+    <p align="justify">Vì vậy, trong ứng dụng được xây dựng ở khóa luận này,  chúng tôi đã lựa chọn giữa nhiều ứng dụng chủ khác nhau để thiết kế hệ thống.  Vì sự phức tạp và nhu cầu đồ họa tương tác cao của nhiều chức năng quan trọng,  chúng tôi đã quyết định sử dụng một dòng công nghệ khác, chuyên về đặc tả,  thiết kế giao diện, đồng thời cũng được tích hợp trong bộ .Net 3.0 trở lên cùng  với WF, đó là WPF; và chúng tôi sẽ trình bày một số kiến thức cơ bản về WPF  ngay trong phần sau.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951691" id="_Toc268951691"><strong>3. Sự khác nhau giữa WfMC và WF</strong></a> </h2>
+      <blockquote>
+        <h3 id="_Toc268951692" name="_Toc268951692"><a name="_Toc268951692" id="_Toc268951692"><strong>3.1. Về ngôn ngữ  MHH LCV</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Với WfMC, rõ ràng tổ chức này  đã định ra 2 chuẩn định dạng lưu trữ lại LCV nhằm giúp cho các phần mềm LCV mã nguồn mở khác  nhau có thể cùng trao đổi 1 thiết kế chung,  đáp ứng xu hướng hiện nay của doanh  nghiệp, cả về nhu cầu chất lượng LCV  (LCV có xu hướng càng  phức tạp hơn), về vấn đề theo dõi tình trạng, tiến độ công việc  cũng như thay đổi các Business Process Definition ngay trong thời gian  thực thi (Workflow runtime) ứng với những doanh nghiệp có các nghiệp  vụ thay đổi theo thời gian, theo đối tượng công việc.... Cả 2 chuẩn  XPDL và Wf-XML bổ sung cho nhau, có khả năng đáp ứng các yêu cầu chung  của các doanh nghiệp hiện nay và trong tương lai gần. Sử dụng XPDL và  Wf-XML sẽ giúp doanh nghiệp có sự linh động hơn trong việc chọn lựa  sử dụng các ứng dụng LCV,  xây dựng HQT LCV, thay  đổi, nâng cấp ứng dụng đang sử dụng hiện tại mà không sợ mất dữ  liệu cũng như mọi thông tin về tình trạng hiện tại của hệ thống.<br />
+      Đáng tiếc là cho đến nay, WF do  Microsoft phát triển vẫn không hề hỗ trợ bất kì định dạng nào do WfMC  đề ra một cách trực tiếp. Mặc dù Workflow Runtime của WF có thể chấp  nhận hầu hết các dạng định nghĩa LCV,  đặc biệt là với các định nghĩa được thiết kế theo định dạng xml.  Vì vậy nên, về cơ bản người dùng có thể sử dụng XPDL và Wf-XML trong  WF, tuy nhiên, do WF không xây dựng sẵn, nên lập trình viên cần xây dựng  bộ biên dịch riêng để chuyển đổi mô  hình LCV được định nghĩa bằng XPDL hay  Wf-XML thành mô hình LCV  trong WF.<br />
+      Vì  bản chất không hỗ trợ sẵn XPDL hay Wf-XML nên WF giải quyết các vấn  đề doanh nghiệp theo 1 cách khác - sử dụng nhiều dịch vụ khác nhau  để xử lý từng nhu cầu của doanh nghiệp. Bản chất WF là 1 nền tảng  công nghệ, nghĩa là nó cung cấp 1 chuẩn chung cho các sản phẩm LCV trên Windows. Các ứng  dụng, engine sử dụng công nghệ này cũng chia sẻ cùng 1 cách thức  chung do Microsoft xây dựng. Cụ thể:</p>
+    <div align="justify">
+      <ul>
+        <li>XAML  chỉ lưu trữ phần giao diện của WF, và danh sách các xử lý của từng  activity tương ứng (cũng như trong WPF, XAML chỉ lưu trữ thiết kế giao  diện và danh sách các Event ứng với các Controls chứ không lưu trữ  các xử lý Event, việc xử lý được thực hiện ở file xử lý của form  tương ứng). </li>
+        <li>Vấn  đề lưu trữ tình trạng hệ thống được WF xử lý bằng các sử dụng 1  dịch vụ khác, gọi là TrackingService, sử dụng SQLTrackingService để lưu  lại vết quá trình thực thi vào cơ sở dữ liệu.        </li>
+      </ul>
+      <p align="right"><a href="#_Toc003">[TOP]</a>      </p>
+      <blockquote>
+        <h3 id="_Toc268951693" name="_Toc268951693"><a name="_Toc268951693" id="_Toc268951693"><strong>3.2. Về phân  loại LCV</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">WF  hoàn toàn không phân loại LCV theo cách mà tổ chức WfMC phân loại. Trong đó,  WfMC phân loại LCV theo đặc tính của nghiệp vụ kinh doanh tương ứng, còn WF  phân loại theo mức độ tương tác với người sử dụng hệ thống. Điều này là hợp lý,  bởi WfMC là chuẩn chung, không chỉ cung cấp cho các nhà thiết kế ứng dụng, mà  còn là tiêu chuẩn để các nhà kinh doanh MHH LCV tương ứng trong nghiệp vụ để  phục vụ từng mục tiêu cụ thể; trong khi WF là một công nghệ hỗ trợ xây dựng ứng  dụng, nên dĩ nhiên sẽ có cách phân loại riêng. Tuy nhiên, ứng với từng loại LCV  cụ thể theo WfMC, hoàn toàn có thể triển khai ứng dụng tương ứng với LCV được  thiết kế sử dụng WF, phụ thuộc vào LCV  đó có cần nhiều sự tương tác hay không, và với mỗi tác vụ, có các  quy luật phức tạp nào được định nghĩa cho nó hay không, để tương ứng  xác định trong WF loại ứng dụng được dùng để khởi tạo và xây dựng LCV.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4><strong><em> <a name="_Toc268951694" id="_Toc268951694"></a><a name="_Toc268944474" id="_Toc268944474"></a><a name="_Toc266246203" id="_Toc266246203">3.2.1. Production Workflow:</a> </em></strong></h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Với dạng LCV này (được mô tả  trong chuẩn WfMC), LCV  bao gồm nhiều thao tác giống nhau lặp đi lặp lại nhiều lần, giống như  quá trình sản xuất 1 sản phẩm của phân xưởng. Như vậy, với WF, chẳng  hạn khi xây dựng 1 LCV  mô tả qui trình sản xuất sản phẩm, lập trình viên có thể sử dụng  các Activity như Parallel Activity, hay WhileActivity để biểu diễn quá  trình sản xuất, phụ thuộc vào quy tắc của phân xưởng: sản xuất đồng  loạt (parallel) hay tuần tự (while)...</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4><strong><em> <a name="_Toc268951695" id="_Toc268951695"></a><a name="_Toc268944475" id="_Toc268944475"></a><a name="_Toc266246204" id="_Toc266246204">3.2.2. Administrative  Workflow:</a> </em></strong></h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Với dạng này, tổ chức có thể  xây dựng 1 hệ thống LCV  bao gồm nhiều phần mềm khác nhau cùng tuân thủ 1 chuẩn chung (Theo  WfMC). Như vậy, tương tự trong WF, với mỗi mô hình LCV, người lập trình  có thể chọn sử dụng các Engine nào đó được xây dựng trên cùng nền  tảng WF có khả năng đáp ứng quy luật kinh doanh của tổ chức. Tuy  nhiên, 1 hướng tiếp cận khác, là xây dựng LCV theo loại thứ 3 của WF, tức là  dạng rule-based, khi đó, các quy luật kinh doanh phức tạp trong công ty  có thể được giải quyết, thông qua việc sử dụng các Policy Activity và  các Rule Conditions.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4><strong><em> <a name="_Toc268951696" id="_Toc268951696"></a><a name="_Toc268944476" id="_Toc268944476"></a><a name="_Toc266246205" id="_Toc266246205">3.2.3. Collaborative Workflow:</a></em></strong>  </h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Với dạng này, có thể sử dụng  Sharepoint Workflow của Microsoft để giải quyết<a href="#_ftn10" name="_ftnref10" title="" id="_ftnref10">(32) </a></p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4><strong> <a name="_Toc268951697" id="_Toc268951697"></a><a name="_Toc268944477" id="_Toc268944477"></a><a name="_Toc266246206" id="_Toc266246206"><em>3.2.4. Ad-hoc:</em></a></strong></h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Với sự phát triển hiện nay  của WF, các mô hình LCV  có thể được chỉnh sửa trực tiếp trên giao diện, có thể thay đổi cho  phù hợp với quy luật kinh doanh. Kết hợp với sự phân quyền của từng người sử dụng, có thể cho  phép các người sử dụng  có thể chỉ sửa đổi được các phần LCV  nằm trong phạm vi hoạt động của mình, nhưng vẫn đảm bảo đầu ra cho  tác vụ tiếp theo của người dùng  khác. </p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951698" id="_Toc268951698"><strong>4. Windows Presentation Foundation (WPF)</strong></a> </h2>
+      <blockquote>
+        <h3 id="_Toc268951699" name="_Toc268951699"><a name="_Toc268951699" id="_Toc268951699"><strong>4.1. Tổng quan</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Windows Presentaion Foundation (viết tắt là WPF) có mã  là Avalon, là một bước tiến quan trọng của Microsoft trong việc xây dựng các  ứng dụng của windows với giao diện lộng lẫy.  WPF là thư viện lập trình giao diện đồ họa có trong Microsoft .NET Framework từ  phiên bản 3.0 - thế hệ kế tiếp của WinForms. Được xây dựng trên nền Direct3D –  đồ họa ba chiều, WPF phát huy tối đa sức mạnh xử lý của card đồ họa, hỗ trợ các  cải tiến về giao diện trong Windows Vista, Windows 7 và độc lập với mọi độ phân  giải của màn hình. WPF hướng đến sự hợp nhất của một ứng dụng dịch vụ, kế thừa  và mở rộng các đặc trưng phát triển ứng dụng bao gồm: ngôn ngữ XAML (eXtensible Application  Markup Language) - một loại mã đơn giản gần giống như HTML dùng để tạo và tinh  chỉnh các đối tượng đồ họa, các điều khiển (control), liên kết dữ liệu (data  binding), bố cục, giao diện đồ họa 2D và 3D, các văn bản cố định và động, các  mô hình đồ họa nâng cao, đồ họa vector cho phép hình ảnh tự điều chỉnh kích  thước phù hợp với độ phân giải, hình ảnh động, hoạt hình, kiểu dáng (style),  mẫu (template), đa phương tiện (Media), Audio và Video, văn bản và in ấn. Một  ứng dụng WPF có thể được biên dịch để chạy trên máy tính hoặc 1 thiết bị thông qua trình duyệt  web phổ biến như IE, Firefox, Safari...  Do đó WPF không chỉ dành cho các ứng dụng trên  máy tính, nó còn cho phép phát triển các ứng  dụng web phong phú (Rich Internet Application – RIA). Ngoài ra WPF cung cấp một  mô hình lập trình nhất quán cho việc phát triển ứng dụng và cung cấp sự tách  biệt rõ ràng giữa giao diện người dùng và logic nghiệp vụ. </p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951700" id="_Toc268951700">4.2. XAML</a> </h3>
+    </blockquote>
+    <p align="justify">XAML (<em>eXtensible Application Markup Language</em>)  là một ngôn ngữ đánh dấu được sử dụng để tạo ra các đối tượng trong .NET. XAML  được tạo ra để xây dựng giao diện trong các ứng dụng WPF. Ta có thể tạo ra giao  diện đồ họa với khai báo thông qua XAML và dùng mã lệnh (code-behind) để tạo ra  những sự kiện điều khiển những đối tượng mà ta đã định nghĩa sẵn trong XAML.  Với những đòi hỏi yêu cầu cao về giao diện thì phương pháp hiệu quả nhất là  tách biệt việc thiết kế giao diện và viết mã lệnh ứng dụng. Với phương pháp này  thì người thiết kế và người phát triển cho ứng dụng sẽ làm việc độc lập với  nhau. Với XAML thì người thiết kế và người phát triển ứng dụng hoàn toàn có thể  làm việc song song với nhau. Và với <em>Microsoft  Expression Studio</em>, bộ công cụ hỗ trợ trong việc thiết kế giao diện trên nền  tảng XAML, cùng với <em>Microsoft Visual  Studio</em> hỗ trợ cho phần <em>code-behind</em> của XAML để xử lý sự kiện cho các đối tượng mang đến sự kết hợp hoàn hảo cho  người thiết kế và người phát triển ứng dụng.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951701" id="_Toc268951701">4.3. Những  tính năng nổi bật</a> </h3>
+    </blockquote>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <h4 id="_Toc268951702" name="_Toc268951702"><a name="_Toc268951702" id="_Toc268951702"><strong>4.3.1. Data Binding (liên kết dữ liệu)</strong></a> </h4>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify"> Là phương pháp  kết nối để lấy dữ liệu từ trong cơ sở dữ liệu để hiển thị trên giao diện. Có ba  loại liên kết dữ liệu.</p>
+    <div align="justify">
+      <ul>
+        <ul>
+          <li>One Time: dữ liệu được lấy lên từ cơ sở dữ liệu đúng  một lần và không được cập nhật lại trên giao diện. </li>
+          <li>One Way: dữ liệu chỉ được ảnh hưởng một chiều (từ một  Control này đến một Control khác).</li>
+          <li>Two Way: dữ liệu được truy cập và cập nhật từ hai  chiều (từ một Control này đến một Control khác).</li>
+        </ul>
+      </ul>
+      <p align="right"><a href="#_Toc003">[TOP]</a></p>
+      <ul>
+        <blockquote>
+          <p id="_Toc268951703" name="_Toc268951703"><a name="_Toc268951703" id="_Toc268951703"><strong>4.3.2. Layout</strong></a> </p>
+        </blockquote>
+        <ul>
+          <li>StackPanel: Bố trí các phần tử con nằm theo chiều dọc  và chiều ngang theo thứ tự mà các chúng được khai báo trong XAML.</li>
+          <li> WrapPanel: Bố  trí các phần tử con từ trái sang phải và từ trên xuống dưới.</li>
+          <li>DockPanel: Bố trí các phần tử liên tiếp nhau và bám vào  các lề của DockPanel (lề trên, lề dưới, lề trái, lề phải)</li>
+          <li>Canvas: cho phép sắp xếp các phần tử con theo vị trí  bằng cách đặt các thuộc tính Top, Left, Bottom, Right. Các phần tử con trong  Canvas có thể được xếp chồng lên nhau tùy theo khai báo của chúng trong XAML.</li>
+          <li>Grid: cho phép chúng ta phân chia dòng và cột theo một  mạng lưới kẻ ô và sắp đặt các phần tử con vào các ô tùy ý.</li>
+        </ul>
+      </ul>
+      <p align="right"><a href="#_Toc003">[TOP]</a></p>
+      <ul>
+        <blockquote>
+          <p id="_Toc268951704" name="_Toc268951704"><a name="_Toc268951704" id="_Toc268951704"><strong>4.3.3. Resource</strong></a> </p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Trong WPF có hai loại Resources</p>
+    <div align="justify">
+      <ul>
+        <ul>
+          <li>Assembly Resource: Loại tài nguyên này được sử dụng  trong trường hợp lưu tài nguyên hình ảnh và âm thanh để có thể sẵn sàng truy  cập.</li>
+          <li>Object Resource: Là loại tài nguyên chứa những đối  tượng được định nghĩa tại một vị trí nào đó để được sử dụng trong toàn bộ  chương trình.
+            <p align="right"><a href="#_Toc003">[TOP]</a></p>
+          </li>
+        </ul>
+        <blockquote>
+          <p id="_Toc268951705" name="_Toc268951705"><a name="_Toc268951705" id="_Toc268951705"><strong>4.3.4. Style</strong></a>  </p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Là các loại thuộc tính được sử dụng trong một đối  tượng đồ họa tương tự như CSS trong HTML. Style cho phép định nghĩa các tập hợp  định dạng chung dùng cho toàn bộ chương trình đảm bảo tính nhất quán.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <p id="_Toc268951706" name="_Toc268951706"><a name="_Toc268951706" id="_Toc268951706"><strong>4.3.5. Transformation</strong></a>  </p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify">Transformation là sự biến đổi hệ tọa độ cho phép đưa  hình ảnh từ tọa độ này sang tọa độ khác để làm hình ảnh khác đi. Phép chuyển  đổi tọa độ này được thực hiện thông qua ma trận. Mỗi phép biến đổi tọa độ như  phóng to, thu nhỏ, tạo ảnh đối xứng, dịch chuyển và xoay đều có một ma trận đặc  trưng cho nó.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <ul>
+        <blockquote>
+          <p id="_Toc268951707" name="_Toc268951707"><a name="_Toc268951707" id="_Toc268951707"><strong>4.3.6. Animation</strong></a>  </p>
+        </blockquote>
+      </ul>
+    </div>
+    <p align="justify"> Có ba loại cơ  bản</p>
+    <div align="justify">
+      <ul>
+        <ul>
+          <li>Linear interpolation: là tác động từ từ lên một thuộc  tính của một phần tử nào đó tính từ điểm bắt đầu đến điểm kết thúc.</li>
+          <li>Key Frame: Được sử dụng trên đối tượng tham chiếu hay  các dữ liệu chuỗi.</li>
+          <li>Path-based: Là hiệu ứng chuyển động theo quỹ đạo cho  sẵn.</li>
+          <li><strong>Microsoft  Silverlight</strong> (tên mã WPF/E)</li>
+        </ul>
+      </ul>
+      <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    </div>
+    <p align="justify">Microsoft Silverlight là công nghệ hoạt động được trên  tất cả các nền tảng, tất cả trình duyệt dựa trên nền tảng công nghệ WPF. Silverlight  cung cấp một mội trường đồ họa mới hơn so với những trang web sử dụng HTML và  JavaScript truyền thống. Silverlight hoạt động tương tự Flash và các ứng dụng  di động với các chương trình ứng dụng như một ứng dụng .NET. Silverlight đã hỗ  trợ tương tác đồ họa với những hiệu ứng vector, hiển thị hình ảnh, âm thanh và  video.</p>
+    <p align="right"><a href="#_Toc003">[TOP]</a></p>
+    <div align="justify">
+      <p><em> Tóm lại, WF là một nền  tảng do Microsoft cung cấp với rất nhiều dịch vụ khác nhau, giúp người thiết kế  có thể xây dựng được phần mềm đáp ứng các yêu cầu đa dạng của khách hàng. Đến  đây, chúng ta đã bàn khá đầy đủ về các khái niệm và các kiến trúc quan trọng  liên quan đến việc MHH LCV. Chương tiếp theo sẽ đi vào hiện thực hóa ứng dụng  quản lý LCV, sử dụng kiến trúc WF và công nghệ WPF vừa được trình bày ở chương  này.</em> </p>
+      <p align="right"><a href="#_Toc003">[TOP]</a></p>
+      <p align="center">***</p>
+    </div>
+    <div>
+      <div id="ftn1">
+        <p align="justify"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"> </a> <span class="style2">(24)(Khóa luận tốt  nghiệp &quot;Nghiên cứu giải pháp nguồn mở cho Workflow quản lý hồ sơ công văn  - do sinh viên Võ Hữu Phúc - Đào Anh Vũ thực hiện, tháng 3 năm 2009; và đề tài  &quot;Tìm hiểu và ứng dụng Windows Workflow Foundation để hỗ trợ các quy trình  nghiệp vụ - do sinh viên Lê Nhựt Minh - Nguyễn Trần Minh Tú thực hiện, tháng 3  năm 2009&quot;);</span></p>
+      </div>
+      <div id="ftn2">
+        <p align="justify" class="style2"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2"> </a> (25)Workflow Management Systems: A Survey - SHI Meilin, YANG Guangxin, XIANG Yong,  WU Shangg. Department of Computer Science, Tsinghua University, Beijing,  P.R.China 100084</p>
+      </div>
+      <div class="style2" id="ftn3">
+        <p align="justify"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3"> </a> (26)Microsoft  Windows  Workflow Foundation Step by Step - Redmond,  Washington 98052-6399<br />
+          Copyright © 2007 by Kenn Scribner</p>
+      </div>
+      <div class="style2" id="ftn4">
+        <p align="justify"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4"> </a> (27)Xem khóa luận &quot;Tìm hiểu và ứng dụng  Windows Workflow Foundation để hỗ trợ các quy trình nghiệp vụ&quot; - Chương 2</p>
+      </div>
+      <div class="style2" id="ftn5">
+        <p align="justify"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5"> </a> (28)Đơn vị nhỏ nhất trong luồng công việc, được quy định trong WF. Chi tiết về kiến trúc LCV trong WF chúng tôi  sẽ đề cập ngay trong phần sau</p>
+      </div>
+      <div class="style2" id="ftn6">
+        <p align="justify"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6"> </a> (29)Introduction to Workflow Foundation</p>
+      </div>
+      <div class="style2" id="ftn7"></div>
+      <div class="style2" id="ftn8">
+        <p align="justify"><a href="#_ftnref8" name="_ftn8" title="" id="_ftn8"> </a> (30)eXtensible Application Mark-up Language – là một ngôn ngữ  dạng khái báo mới của Microsoft </p>
+      </div>
+      <div class="style2" id="ftn9">
+        <p align="justify"><a href="#_ftnref9" name="_ftn9" title="" id="_ftn9"> </a> (31)Xem phụ lục: Định dạng mẫu tập  tin Designer của WF</p>
+      </div>
+      <div id="ftn10">
+        <p align="justify" class="style2"><a href="#_ftnref10" name="_ftn10" title="" id="_ftn10"> </a> (32)Xem chi tiết ở luận văn “Tìm hiểu và ứng dụng  Windows Workflow Foundation để hỗ trợ   các qua trình nghiệp vụ”</p>
+        <p align="center">***</p>
+        <p align="right"><a href="#_Toc003">[TOP]</a></p>
+      </div>
+    </div>
+    <div align="justify">
+      <!-- end #mainContent -->
+    </div>
+  </div>
+<!-- end #container --></div>
+</body>
+</html>

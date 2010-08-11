@@ -1,0 +1,162 @@
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\SqlGenerator\bin\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\SqlGenerator\bin\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\SqlGenerator\obj\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\SqlGenerator\obj\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\Final Source\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\Final Source\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\Final Source\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\Final Source\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\Final Source\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\Final Source\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\Final Source\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\My Dropbox\Final\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\16072010\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\16072010\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\16072010\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\16072010\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\16072010\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\16072010\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\My Dropbox\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\My Dropbox\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\My Dropbox\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\My Dropbox\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\16072010\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\16072010\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\16072010\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\16072010\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\16072010\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\16072010\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\16072010\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\My Dropbox\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\19072010\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\19072010\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\19072010\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\19072010\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\19072010\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\19072010\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\19072010\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+D:\2172010\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+D:\2172010\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+D:\2172010\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+D:\2172010\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+D:\2172010\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\2172010\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+D:\2172010\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\bin\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\bin\Debug\SqlGenerator.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\obj\Debug\SqlGenerator.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\SqlGenerator\obj\Debug\SqlGenerator.pdb

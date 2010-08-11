@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Luồng công việc và Ứng dụng</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {font-family: "Times New Roman", Times, serif}
+.style2 {font-size: small}
+.style3 {font-size: 100%}
+-->
+</style></head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div class="style1" id="mainContent">
+    <a href="TOC.htm">[BACK]</a>
+    <h2 align="center" class="style1"><a name="_Toc002" id="_Toc002">Chương 2: Luồng công việc và ứng dụng luồng công việc</a></h2>
+    <p align="center" class="style1">***</p>
+    <p align="left" class="style1"><strong>NỘI DUNG CHÍNH</strong></p>
+    <p><a href="#_Toc268951658">Chương 2: Luồng công việc và ứng dụng luồng công việc</a> <br />
+        <a href="#_Toc268951659">1. Tổng quan về mô hình luồng công việc</a> <br />
+        <a href="#_Toc268951660">1.1.         Luồng  công việc. </a> <br />
+        <a href="#_Toc268951661">1.2.         Mô  hình luồng công việc</a> <br />
+        <a href="#_Toc268951662">1.3.         Sự  thực thi các LCV</a> <br />
+        <a href="#_Toc268951663">2.        Tầm quan trọng trong việc đưa LCV  và MH LCV vào ứng dụng</a> <br />
+        <a href="#_Toc268951664">3.        Mô hình hóa luồng công việc và vấn đề tồn tại</a> <br />
+        <a href="#_Toc268951665">4.        Workflow Management Coalition (WfMC)</a> <br />
+        <a href="#_Toc268951666">4.1.         Mô hình tham chiếu LCV (Workflow  Reference Model - WfRM)</a> <br />
+        <a href="#_Toc268951667">4.2.         Các ngôn ngữ MHH LCV</a> <br />
+        <a href="#_Toc268951668">4.2.1.         XML Process Definition Language  (XPDL)</a> <br />
+        <a href="#_Toc268951669">4.2.2.         Wf-XML</a> <br />
+        <a href="#_Toc268951670">4.3.         Các loại LCV</a> <br />
+        <a href="#_Toc268951671">4.3.1.         Production</a> <br />
+        <a href="#_Toc268951672">4.3.2.         Administrative</a> <br />
+        <a href="#_Toc268951673">4.3.3.         Collaborative</a> <br />
+        <a href="#_Toc268951674">4.3.4.         Ad-Hoc</a> <br />
+      <a href="#_Toc268951675">5.        Yêu cầu của một ứng dụng quản lý LCV tổng quát</a></p>
+    <p align="center" class="style1">***</p>
+    <h2 align="justify"><a name="_Toc268951658" id="_Toc268951658"></a><a name="_Toc268944456" id="_Toc268944456">Chương 2: Luồng công việc và ứng dụng  luồng công việc</a> </h2>
+    <p align="justify"><em>Phần mở đầu của khóa luận này đã bàn đến sự phát triển  mạnh mẽ cũng như sự ứng dụng ngày một rộng rãi trong hầu hết các lĩnh vực của  Công nghệ Thông tin, kèm theo đó là nhu cầu mỗi lúc một cấp thiết hơn đối với  các ứng dụng quản lý đa năng, linh động và thật sự mạnh mẽ. Đó là các yêu cầu  về các mức độ quản lý từ tổng quát đến chi tiết, về phương thức quản lý trực  tiếp đến quản lý từ xa, về khả năng đưa ra các thông tin quan trọng hỗ trợ tối  đa quá trình dự báo, cảnh báo cũng như giải quyết các rủi ro v.v… Và quan trọng  hơn hết, một ứng dụng quản lý cấp cao phải thật sự linh động đối với sự thay  đổi quy trình nghiệp vụ bên trong…</em><br />
+        <em>Phần này tiếp tục giới thiệu các khái niệm liên quan  đến mô hình luồng công việc. Tiếp sau đó chúng tôi sẽ đề cập đến tầm quan trọng  của một ứng dụng quản lý luồng công việc, cùng với các vấn đề tồn tại, và sự ra  đời của tổ chức Workflow Management Coalition với các đóng góp của tổ chức này  trong việc tiêu chuẩn hóa việc Mô Hình Hóa Luồng Công Việc. Phần cuối sẽ trình  bày về các yêu cầu đối với một ứng dụng quản lý luồng công việc tổng quát. </em></p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <h2 align="justify"><a name="_Toc268951659" id="_Toc268951659">1.Tổng quan  về mô hình luồng công việc</a> </h2>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268944457" id="_Toc268944457"><strong> </strong></a><a name="_Toc268951660" id="_Toc268951660"><strong>1.1. Luồng  công việc</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify">Vào những năm  tám mươi của thế kỷ hai mươi, khái niệm Luồng công việc (Workflow) mới được sử  dụng lần đầu tiên trong ngành công nghệ phần mềm<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">(3)</a>.  Tuy thế, sự xuất hiện của Luồng công việc và Mô hình luồng công việc trong cuộc  sống của con người hẳn đã từ rất lâu. Giữa vô vàn các hoạt động của mình trong  cuộc sống, có nhiều công việc mà con người lặp đi lặp lại nhiều lần. Một hoặc  một số các công việc có thể được lặp lại theo chu kỳ nhiều giờ, nhiều ngày,  nhiều tháng v.v… hoặc xảy ra bất kỳ lúc nào. Dựa vào kinh nghiệm đúc kết được,  con người vạch ra các bước phải làm và dần dần hoàn thiện chúng cho các lần  thực hiện sau. Nói khác hơn, dựa vào kinh nghiệm và sự hiểu biết của mình, con  người có thể vạch ra các kế hoạch; xác định  thành phần con người, cũng như công  cụ cần có để thực hiện công việc nhằm đạt được mục đích nhất định. Các bước cần  thực hiện trong các kế hoạch đó có mối  quan hệ với nhau và tạo thành luồng công việc.<br />
+        <em>Luồng công việc là một tập có thứ tự các công việc  tuân theo các quy tắc nhất định, được định sẵn sao cho việc thực hiện theo đó  sẽ đạt được các mục đích công việc đã đề ra. <a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2"> (4)</a> </em><br />
+      Khái niệm về luồng công việc là một khái niệm tương đối. Cùng tham gia vào  một hệ thống trong cùng một môi trường, nhưng những đối tượng với vai trò khác  nhau sẽ có các luồng công việc khác nhau. Hình vẽ dưới đây là ví dụ về các  luồng công việc trong hệ thống tổ chức thi tuyển sinh đại học tại Việt Nam. Dưới  góc nhìn của các thí sinh, luồng công việc thi tuyển sinh gồm 3 việc chính phải  làm. Thực hiện luồng công việc này, các thí sinh  đạt được mục đích là dự thi đại học thành công. Dưới góc nhìn của đơn vị tổ  chức tuyển sinh thì lại khác, luồng công việc tổ chức thi tuyển sinh gồm có 9 công việc chính phải  làm, thực hiện luồng công việc này sẽ đạt được mục đích là tổ chức thành công  một kỳ tuyển sinh đại học.</p>
+    <p align="center"><br />
+      <img src="images/FIG02-01.jpg" alt="1" width="299" height="88" /></p>
+    <p align="center"><br />
+      Hình 1. Luồng công việc Thi tuyển  sinh đại học dưới góc nhìn của thí sinh</p>
+    <p align="center"><img src="images/FIG02-02.jpg" alt="2" width="696" height="73" /><br />
+      Hình  2. Luồng công việc Tổ chức tuyển sinh đại học dưới góc nhìn của đơn vị tổ chức  tuyển sinh</p>
+    <div align="justify">
+      <blockquote>
+        <h3><a name="_Toc268951661" id="_Toc268951661"><strong>1.2. Mô hình luồng công việc</strong></a> </h3>
+      </blockquote>
+    </div>
+    <p align="justify"><em>Mô  hình luồng công việc là một dạng  biểu diễn luồng công việc thành sơ đồ.</em> <a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3"> (5)</a><br />
+      Việc biểu diễn một LCV thành mô  hình LCV gọi là <em>Mô hình hóa luồng công việc.</em> Một công  việc thực tế sẽ mô hình hóa thành một thành phần xử lý của MH LCV, và quy tắc  thực hiện công việc trong thực tế sẽ được mô hình hóa thành các quan hệ logic  giữa các thành phần xử lý đó.</p>
+    <div align="justify">
+      <div align="left">
+        <blockquote>
+          <h3><a name="_Toc268951662" id="_Toc268951662"><strong>1.3. Sự thực thi </strong></a><strong>các LCV</strong> </h3>
+        </blockquote>
+      </div>
+    </div>
+    <p align="justify">Ứng với một quá trình thực thi LCV  là một thể hiện của LCV đó. Một LCV có thể có nhiều thể hiện khác nhau do quá  trình thực thi khác nhau. Mỗi LCV khi thực thi sẽ phải tuân thủ các quy tắc  nhất định. Đó là các quy định về quy trình nghiệp vụ thực tế của tổ chức, doanh  nghiệp tạo ra và thực thi LCV đó như các ràng buộc về sự tương tác với người  thực hiện công việc, ràng buộc về thời gian thực thi, các điều kiện cho phép xảy ra sự  kiện chuyển đổi trạng thái v.v… Ngoài ra, từng công việc thành phần bên trong  một LCV cũng có các ràng buộc riêng của nó trong quá trình thực thi. <br />
+      Ví dụ, công việc “Nhận đăng ký thi”  trong ví dụ về LCV Tổ chức tuyển sinh đại học ở phần trước có thể có một số  ràng buộc như: bắt đầu từ ngày t1 và kết thúc vào ngày t2;  chỉ cho phép đăng ký khi các giấy tờ đều hợp lệ, thí sinh đăng ký phải tốt  nghiệp trung học phổ thông trước đó, v.v… </p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <h2 align="justify"><a name="_Toc268951663" id="_Toc268951663">2. Tầm  quan trọng trong việc đưa LCV và MH LCV vào ứng dụng</a> </h2>
+    <p align="justify">Hiện nay, trên  thế giới, đã có rất nhiều ứng dụng hỗ trợ thực thi và quản lý LCV. Những ứng  dụng loại này được xem là các Hệ Quản Trị Luồng Công Việc (HQT LCV)<a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">(6)</a>.  Các HQT LCV ngày càng được sử dụng rộng rãi trong doanh nghiệp và ngày càng trở  nên quan trọng hơn bởi:</p>
+    <div align="justify">
+      <ul>
+        <li>Các ứng dụng thường chỉ hỗ trợ người dùng thực hiện  đúng công việc của mình. Các công việc này thường được thiết kế một cách tách  biệt, giữa chúng thường không có mối quan hệ nào về thứ tự thực hiện, cũng như  không có những ràng buộc quan trọng liên quan đến quy luật hoạt động của doanh  nghiệp. Trên thực tế, những ứng dụng này thật sự giúp ích cho doanh nghiệp,  nhưng xét cho cùng, vì nó không thể hiện được các quy luật kinh doanh thực tế  của doanh nghiệp, nên ngày càng khó đáp ứng được các nhu cầu ngày càng cao của  họ. Sự xuất hiện của các HQT LCV giúp giải quyết những vấn đề này.</li>
+        <li>HQT LCV đồng thời hỗ trợ người dùng thực hiện công việc  của mình, theo một quy luật cụ thể. Trên thực tế, các công việc được hoàn tất  không độc lập với nhau mà có mối quan hệ nhất định. Công việc này phải được  thực hiện trước công việc kia, để thực hiện công việc này đòi hỏi phải theo  những quy định... Tất cả hoàn thành sẽ đạt được một mục tiêu nhất định. Chẳng  hạn như hoàn thành việc nhận và kí hồ sơ, tổ chức thành công kì thi tuyển sinh  đại học... Nó có một quy trình, một LCV cụ thể ứng với từng mục tiêu. Các LCV  có thể tách biệt hoặc có trình tự thực hiện riêng... HQT LCV giúp thực thi  những LCV trong doanh nghiệp, đảm bảo thứ tự và quy tắc thực hiện, đồng thời  giảm thiểu những rủi ro có thể có khi thực hiện các công việc thủ công... </li>
+        <li>HQT LCV đồng thời cung cấp chức năng quản lý LCV hỗ  trợ người quản lý của doanh nghiệp nắm bắt tình hình hoạt động của các LCV  nhanh chóng, kịp thời, nhằm đưa ra những xử lý thích hợp, giảm thiểu tình trạng  gặp rắc rối mà không biết sớm dẫn đến công việc bị thất bại; vì thế cũng góp  phần giảm thiểu rủi ro thực thi cho doanh nghiệp.</li>
+      </ul>
+    </div>
+    <p align="justify">Ngoài ra, theo thời gian, các HQT LCV được các công ty  lập trình thiết kế phát triển, mở rộng nhiều tính năng nên ngày càng phù hợp  với quy luật hoạt động tự nhiên của doanh nghiệp, đồng thời tăng cường tối đa  sự hỗ trợ, nên ngày càng trở nên quan trọng hơn.</p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <h2 align="justify"><a name="_Toc268951664" id="_Toc268951664">3. Mô  hình hóa luồng công việc và vấn đề tồn tại</a> </h2>
+    <p align="justify">Việc MHH LCV  bằng các ngôn ngữ MHH là nhằm mục đíc­­­­­­­­h phục vụ cho việc đưa LCV vào  trong các HQT LCV. Tuy nhiên, các HQT LCV thật sự giúp ích rất nhiều cho doanh  nghiệp dẫn đến một vấn nạn, đó là việc ngày càng nhiều doanh nghiệp có nhu cầu  đưa LCV vào trong ứng dụng hỗ trợ dẫn tới việc phát sinh nhiều loại HQT LCV  khác nhau. Các HQT này được thiết kế bởi nhiều tổ chức khác nhau nên sẽ có  nhiều quy cách MHH riêng biệt đặc trưng. Điều này dẫn đến sự khó khăn cho các  doanh nghiệp khi muốn thay đổi một HQT LCV này sang một HQT LCV khác, bởi họ  phải thay đổi toàn bộ mô hình đã được thiết kế và thực thi, dẫn đến việc ngừng  sử dụng HQT này cho đến khi thay đổi bằng 1 HQT khác phù hợp hơn. <br />
+      Nhu cầu thay đổi  xảy ra khi HQT LCV trở nên cũ, không còn đáp ứng nhu cầu ngày càng phát triển  của doanh nghiệp, hoặc HQT LCV đó không có khả năng đáp ứng hết các yêu cầu của  doanh nghiệp khiến họ phải nghĩ đến việc thay đổi một HQT LCV khác.<br />
+      Đặc biệt là việc  đưa vào trong HQT LCV mới các ứng dụng hỗ trợ khác nhau đáp ứng các nhu cầu  khác nhau của doanh nghiệp. Đây là điều hiển nhiên bởi trên thực tế, khó có HQT  nào đáp ứng hết các nhu cầu đa dạng của doanh nghiệp, nhất là trong việc xử lý  các quy tắc kinh doanh hay các quy luật bản chất bên trong do doanh nghiệp định  ra. Nhưng các ứng dụng không tương thích hoặc không hỗ trợ cùng một định dạng  MHH dẫn đến sự bế tắc trong việc sử dụng nhiều giải pháp hỗ trợ, khiến các  doanh nghiệp không thỏa mãn được hết các nhu cầu của họ.<br />
+      Chính những điều  kiện này đã phát sinh nhu cầu tạo ra một tiêu chuẩn quốc tế cho việc xây dựng  các HQT LCV và các ngôn ngữ MHH LCV. WfMC (<em>Workflow  Management Coalition</em>) ra đời nhằm mục đích này.</p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <h2 align="justify"><a name="_Toc268951665" id="_Toc268951665"><em>4. Workflow Management Coalition</em></a> (WfMC) </h2>
+    <p align="justify"><em>Workflow Management Coalition</em> là tổ chức thế giới (gọi tắt là WfMC) được  thành lập nhằm mục đích quy định ra các tiêu chuẩn cho việc tự động hóa  LCV.<br />
+      Được thành lập  vào tháng 8 năm 1993, hiện nay WfMC đã có hơn 200 thành viên đến từ các ngành  công nghiệp và các khu nghiên cứu khác nhau. Nhiệm vụ của tổ chức WfMC là tập  trung vào việc xác định các phạm vi chức năng quản lý LCV phổ biến, từ đó phát  triển các chức năng này và bổ sung 1 cách thích hợp cho các ứng dụng hỗ trợ và  các HQT LCV.<br />
+      Cho đến nay,  WfMC đã đưa ra mô hình tham chiếu chuẩn cho LCV và liên tục cải tiến, đồng thời  phát triển các ngôn ngữ chuẩn cho việc MHH LCV sử dụng trong các ứng dụng tự  động hóa và các HQT LCV.</p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951666" id="_Toc268951666"></a><a name="_Toc268944458" id="_Toc268944458">4.1.Mô hình tham chiếu LCV (<em>Workflow Reference Model - WfRM</em>)</a> </h3>
+    </blockquote>
+    <p align="justify"> WfRM phát triển cấu trúc tổng quát của một ứng  dụng LCV bằng cách sử dụng các giao thức (interface) cho phép sản phẩm tương  tác với nhau theo nhiều cấp độ. Tất cả những HQT LCV chứa đựng nhiều thành phần  khác nhau được định nghĩa theo nhiều cách đồng thời cùng một thành phần nhưng  với các sản phẩm khác nhau sẽ được thể hiện khác nhau.<br />
+      Hình bên dưới mô  tả những thành phần và giao thức quan trọng bên trong kiến trúc LCV.</p>
+    <p align="center"><br />
+      <img src="images/FIG02-03.jpg" alt="3" width="438" height="302" /><br />
+      Hình  3. WfRM<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5"> (7)</a></p>
+    <div align="justify">
+      <ul>
+        <li><em>Workflow Enactment Services (WES):  </em></li>
+        <ul>
+          <li>Định nghĩa: là  một dịch vụ chứa một hay nhiều <em>engine</em> để tạo ra, quản lý và thực thi các thể hiện LCV (<em>workflow instance)</em></li>
+          <li>Những ứng dụng  bên ngoài tương tác với dịch vụ này thông qua API của LCV, gọi là WAPI<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6"> (8)</a>.  LCV và các tác vụ được ngăn cách với nhau một cách logic. Chính sự ngăn cách  này tạo nên một khả năng ứng dụng rộng rãi đối với từng loại nghiệp vụ khác  nhau hoặc giữa các ứng dụng với nhau. Những tài nguyên bên ngoài được truyền  vào WES bằng 1 trong 2 giao thức sau:</li>
+          <ul>
+            <li>Giao thức cho các ứng dụng phía người dùng (client):  trình điều khiển danh sách công việc sẽ chịu trách nhiệm cho việc chọn lựa và  thực thi các công việc. Việc khởi tạo những ứng dụng cũng nằm trong sự quản lý  của trình điều khiển này.</li>
+            <li>Giao thức cho các ứng dụng được gọi thực thi: sẽ làm  cho <em>Workflow Engine</em> có khả năng khởi  động các ứng dụng chịu trách nhiệm một tác vụ cụ thể nào đó, có thể đó là một  ứng dụng về phía server. Nó được gọi thực thi thông qua <em>Interface Worklist</em> nhằm đem lại sự linh động hơn cho điều phối  những thể hiện LCV của người dùng. </li>
+          </ul>
+          <li>Chức năng: </li>
+          <ul>
+            <li>Cung cấp môi trường thực thi để việc khởi tạo và khởi  động thể hiện LCV xảy ra.</li>
+            <li>Sử dụng <em>Management  Engine</em> của LCV, chịu trách nhiệm trong việc thông dịch và khởi động các thể  hiện LCV.</li>
+            <li>Tương tác với những tài nguyên cần thiết để thực thi  các tác vụ khác nhau.</li>
+          </ul>
+        </ul>
+        <li><em>Workflow Engine (WE):</em></li>
+        <ul>
+          <li>Định nghĩa: là  một dịch vụ, engine cung cấp môi trường để một thể hiện LCV thực thi. Một WES  có thể chứa nhiều WE.</li>
+          <li>Chức năng:</li>
+          <ul>
+            <li>Thông dịch sự khởi tạo của 1 thể hiện LCV.</li>
+            <li>Quản lý các thể hiện LCV bao gồm: tạo ra, khởi động,  tạm ngưng, kết thúc v.v…</li>
+            <li>Đăng ký và kết thúc một LCV tham gia nhất định.</li>
+            <li>Nhận diện những công việc cụ thể để người dùng hoặc  các giao thức để người dùng có thể can thiệp được.</li>
+            <li>Bảo trì dữ liệu của các <em>Workflow Control</em>, các LCV liên quan và truyền tải dữ liệu đến hoặc  đi từ những ứng dụng của người dùng.</li>
+            <li>Gọi thực thi các ứng dụng bên ngoài và kết nối những  dữ liệu liên quan. </li>
+          </ul>
+        </ul>
+        <li><em>Homogeneous &amp; Heterogeneous Workflow Enactment  Services</em>:</li>
+        <ul>
+          <li>Homogeneous WES:  bao gồm một hay nhiều WE cung cấp môi trường thực thi các LCV với các thuộc  tính được định nghĩa sẵn. </li>
+          <li>Heterogeneous  WES: bao gồm 2 hay nhiều dịch vụ khác nhau với một chuẩn mực nhất định về khả  năng tương tác ở một mức độ nhất định. </li>
+          <li>Chức năng:</li>
+          <ul>
+            <li>Hỗ trợ các LCV trong việc định nghĩa các đối tượng và  thuộc tính.</li>
+            <li>Hỗ trợ việc vận chuyển dữ liệu liên quan.</li>
+            <li>Hỗ trợ LCV hoặc các tác vụ giữa các WE khác nhau.</li>
+            <li>Hỗ trợ những chức năng quản trị và điều khiển.</li>
+          </ul>
+          <li>LCV và các trạng  thái chuyển của các tác vụ:</li>
+          <ul>
+            <li>WES được xem như một cái máy chuyển đổi trạng thái,  nơi mà những LCV riêng rẽ hoặc các thể hiện của các tác vụ chuyển đổi trạng  thái khi có những sự kiện bên ngoài tác động hoặc điều khiển những quyết định  của WE.</li>
+            <li>Mô hình chuyển đổi trạng thái:</li>
+          </ul>
+        </ul>
+      </ul>
+    </div>
+    <p align="center"><img src="images/FIG02-04.jpg" alt="4" width="451" height="182" /><br />
+      Hình  4. Mô hình chuyển đổi trạng thái<a href="#_ftn7" name="_ftnref7" title="" id="_ftnref7">(9) </a></p>
+    <div align="justify">
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Initiated – thể hiện LCV được khởi tạo bao gồm những  trạng thái của các LCV và những dữ liệu liên quan. Tuy nhiên ở giai đoạn này  các LCV chưa hoàn toàn đầy đủ thông tin về các điều kiện để phát tín hiện thực  thi.</li>
+              <li>Running –  thể  hiện LCV bắt đầu khởi tạo.</li>
+              <li>Active -  một  hoặc nhiều các tác vụ được bắt đầu.</li>
+              <li>Suspended – thể hiện LCV dừng hoạt động và không có  bất cứ một tác nào được thực hiện cho đến khi LCV trở lại trạng thái Running.</li>
+              <li>Completed – thể hiện LCV có được đầy đủ thông tin để  hoàn tất. Thể hiện bị hủy.</li>
+              <li>Terminated – sự thực thi của các thể hiện LCV dừng  trước khi hoàn tất, tất cả các những hoạt động như những ghi nhận lỗi sẽ được  thông báo và thể hiện LCV bị hủy.</li>
+            </ul>
+          </ul>
+        </ul>
+        <li><em>Process Definition Tools</em>: Là các công cụ khác nhau được sử dụng để phân tích,  MHH, mô tả và ghi nhận một LCV của một nghiệp vụ nào đó. Mục đích cuối cùng từ  việc MHH LCV và thiết kế tác vụ chính là định nghĩa LCV được thông dịch lúc  thực thi bời WE bên trong WES.</li>
+        <p align="right"><a href="#_Toc002">[TOP]</a></p>
+      </ul>
+      <h3><a name="_Toc268951667" id="_Toc268951667"></a><a name="_Toc268944459" id="_Toc268944459"><strong>4.2. Các ngôn  ngữ MHH LCV</strong></a> </h3>
+    </div>
+    <p align="justify">WfMC đã đưa ra  tiêu chuẩn nhằm thống nhất định dạng ngôn ngữ MHH chung cho các HQT LCV,  nhằm giúp các doanh nghiệp thay đổi hoặc kết hợp sử dụng các phần  mềm quản lý LCV khác nhau 1 cách thống nhất, dễ dàng, không phải xây  dựng lại khi thay đổi hay thêm phần mềm khác vào hệ thống.<br />
+      Hiện nay, có 2  chuẩn đã được WfMC đề nghị là XPDL và Wf-XML.</p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951668" id="_Toc268951668"></a><a name="_Toc268944460" id="_Toc268944460"><em>4.2.1. XML Process Definition Language  (XPDL):</em></a></h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">XPDL là 1 trong  2 định dạng chuẩn được WfMC xem xét và đề nghị. Mục đích của XPDL  là trao đổi các định nghĩa và thể hiện của các tiến trình nghiệp vụ (<em>Business Process</em><a href="#_ftn8" name="_ftnref8" title="" id="_ftnref8"> (10)</a>),  LCV giữa các sản phẩm LCV khác nhau, chẳng hạn như giữa công cụ MHH  và HQT LCV. XPDL định nghĩa 1 lược đồ xml (<em>XML schema</em>) nhằm xác định phần khai báo của LCV/ Tiến trình  nghiệp vụ.<br />
+      Hiện nay XPDL  được xem là định dạng file tốt nhất cho việc trao đổi sơ đồ BPMN (<em>Business Process Modelling Notation</em><a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9">(11) </a>),  cũng như sơ đồ LCV. Nó được thiết kế đặc biệt để có thể lưu trữ tất  cả các tình trạng của 1 sơ đồ BPMN. XPDL chứa các đối tưởng để lưu  trữ thông tin đồ họa, như vị trí X,Y của node, cũng như các tình trạng  thực thi, dùng để chạy 1 thể hiện LCV. Điều này giúp phân biệt XPDL  với BPEL (<em>Business Process </em>Execution<em> Language<a href="#_ftn10" name="_ftnref10" title="" id="_ftnref10">(12) </a></em>), chỉ  tập trung vào tình trạng thực thi của thể hiện LCV. BPEL không chứa các  đối tượng diễn tả thông tin đồ họa của sơ đồ LCV.<br />
+      Cho đến hiện  nay, trên thế giới đã có khoảng hơn 80 sản phẩm, ứng dụng sử dụng XPDL  được xây dựng trên cả nền Java, Microsoft.Net Framework và Linux<a href="#_ftn11" name="_ftnref11" title="" id="_ftnref11">(13) </a>.<br />
+  <em><u>Ví</u></em> <em><u>dụ:</u></em> 1 file mô tả 1  workflow sử dụng XPDL 2.0 có thể download tại trang web sau: http://wfmc.org/Download-document/XPDL-Sample-Workflow-Schema.html </p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951669" id="_Toc268951669"></a><a name="_Toc268944461" id="_Toc268944461">4.2.2. Wf-XML</a>: </h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">Wf-XML là  1 định dạng file tuân theo chuẩn BPM (<em>Business Process Management</em>) được phát triển bởi WfMC.<br />
+      Wf-XML được thiết kế và thực thi  như 1 phần mở rộng cho giao thức ASAP (<em>OASIS  Asynchronous </em>Service<em> Access Protocol</em>)  - 1 giao thức đã được chuẩn hóa cung cấp các dịch vụ bất đồng bộ,  nghĩa là cung cấp cách thức để các chương trình bắt đầu, theo dõi  sự thay đổi trạng thái của các chương trình hay dịch vụ khác thực  thi trong khoản thời gian dài. ASAP cung cấp cho người dùng chức năng  giám sát dịch vụ đang thực thi, đồng thời thông báo cho người dùng  sự thay đổi trạng thái của nó. Wf-XML đã mở rộng chức năng này từ  ASAP bằng cách cung cấp thêm 1 dịch vụ mạng cho phép gửi và nhận  chương trình hoặc định nghĩa của dịch vụ được cung cấp.  1 <em>Engine</em> có tính năng này sẽ có thể  cung cấp 1 dịch vụ hoạt động trong khoảng thời gian dài, có thể được  lập trình bằng cách cho phép cài đặt thêm các định nghĩa LCV.<br />
+      Wf-XML cung cấp 1 phương thức  chuẩn hóa cho 1 engine BPM<a href="#_ftn12" name="_ftnref12" title="" id="_ftnref12"> (14)</a> để gọi  1 thể hiện LCV trong 1 <em>engine</em> khác, đồng thời đợi cho thể  hiện LCV đó hoàn tất. Vì công cụ chỉnh sửa LCV và công cụ thực thi  LCV có thể được sản xuất từ nhiều nhà phát triển khác nhau, nên cần có 1 phương  thức chung để trao đổi giữa các công cụ đó. Với phương thức Wf-XML  cung cấp (chuẩn hóa việc trao đổi định nghĩa LCV giữa các công cụ  thiết kế và <em>engine</em> thực thi),  người dùng có thể kết hợp chính xác các <em>Process Definition Tools<a href="#_ftn13" name="_ftnref13" title="" id="_ftnref13"> (15)</a></em> tốt  nhất với <em>Process Execution Engine</em><a href="#_ftn14" name="_ftnref14" title="" id="_ftnref14"> (16)</a> tương ứng theo nhu cầu.<br />
+      Wf-XML được nghiên cứu từ  khoảng năm 1997 với tên gọi là SWAP (<em>Simple  Workflow Access Protocol</em>) bởi các nhà phát triển như Netscape,  Oracle.... Tiếp theo đó, WfMC đã tiếp bước và liên tục phát triển, cải tiến,  đầu tiên là Wf-XML 1.0 và Wf-XML 1.1. Wf-XML đã được ra đời và đưa vào sử  dụng trong một số sản phẩm thương mại. Phiên bản hiện nay là Wf-XML 2.0<a href="#_ftn15" name="_ftnref15" title="" id="_ftnref15"> (17)</a> và đang được tiếp tục nghiên cứu, phát triển. Tuy nhiên, các sản phẩm  xây dựng với Wf-XML 2.0 không tương thích ngược được với các sản phẩm  sử dụng Wf-XML 1.1. </p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <blockquote>
+      <h3 align="justify"><a name="_Toc268951670" id="_Toc268951670"></a><a name="_Toc268944462" id="_Toc268944462">4.3. Các loại LCV</a> </h3>
+    </blockquote>
+    <p align="justify">Chuẩn WfMC  định ra các loại LCV dựa trên quy tắc hoạt động của LCV và loại  nghiệp vụ kinh tế đang được đề cập, bao gồm:  Production, Administrative,   Collaborative, và Ad-Hoc<a href="#_ftn16" name="_ftnref16" title="" id="_ftnref16">(18) </a></p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951671" id="_Toc268951671"><em>4.3.1. Production</em></a> </h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">Production Quản  lý 1 số lượng lớn các tác vụ tương tự nhau, nhằm tối ưu hóa năng  suất nghiệp vụ. Cách thức hoạt động của LCV loại này là tự động  hóa, nghĩa là các tác vụ bên trong LCV được thực hiện một cách tự  động, con người chỉ tác động lên các công việc không nằm trong tiến  trình đã được định nghĩa sẵn, tức là các ngoại lệ (exceptions). Như  vậy, trong loại LCV này, thời gian và độ phức tạp của các sự kiện  cần sự tương tác với con người được giảm thiểu... Việc tối ưu hóa  nhằm đạt chất lượng và độ chính xác cao trong loại LCV này có thể  đạt được bằng cách thi hành các tác vụ có tính lặp lại cao theo  cùng 1 phương pháp 1 cách liên tục. Ứng dụng của LCV thuộc loại  Production là để quản lý các tiến trình có độ phức tạp cao, đặc  biệt có thể kết hợp chặt chẽ với những hệ thống đang tồn tại. Tuy  nhiên, xu hướng hiện nay của việc sử dụng loại LCV này là nhúng các  thành phần chức năng trong LCV vào trong các ứng dụng lớn dưới vai trò  như các Rules Engine. Điều này dẫn đến việc phân chia bên trong loại LCV  này thành 2 loại nhỏ: Autonomous Workflow Engines và Embed Workflow. Trong  đó, sự khác nhau giữa 2 loại này ở chỗ, Autonomous Workflow bản thân  nó không cần thêm các phần mềm bổ sung, còn Embed Workflow cần phải  được gắn vào 1 hệ thống nào đó, chẳng hạn như hệ thống ERP<a href="#_ftn17" name="_ftnref17" title="" id="_ftnref17">(19) </a>.</p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951672" id="_Toc268951672"><em>4.3.2. Administrative</em></a></h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">Dễ dàng xác định LCV. Thông thường sẽ có có rất  nhiều thể hiện LCV cùng thực thi đồng thời, và chúng cần sử dụng 1  lượng lớn nhân viên. Thể hiện LCV luôn dc tạo ra từ trong chương trình, và  nếu chương trình đó quá phức tạp, thì họ chỉ cần sử dụng chương trình khác. Điều này có nghĩa là loại LCV này rất  linh hoạt trong việc sử dụng các chương trình quản lý LCV. Như vậy,  tính linh hoạt ở đây quan trọng hơn năng suất, và những hệ thống theo  dạng này xử lý các trường hợp mỗi giờ với cường độ thấp hơn từ 1  đến 2 lần so với các hệ thống <em>Production  Workflow</em>.</p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951673" id="_Toc268951673"><em>4.3.3. Collaborative</em></a></h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">Tập trung vào các hoạt động làm việc nhóm. Các  nhóm cùng hoạt động với nhau để xây dựng 1 mục tiêu chung, từ những  nhóm nhỏ, hướng đề tài, đến những nhóm người khác nhau có cùng 1  mục tiêu chung... Hiệu quả của việc sử dụng mô hình LCV này để là hỗ  trợ làm việc nhóm, hiện nay được xem như 1 yếu tố quan trọng trong sự  thành công của các doanh nghiệp. Lợi ích của việc sử  dụng Internet và www hổ trợ liên lạc nhóm giữa các doanh nghiệp cũng  là 1 thành công thực tế trong hầu hết các tổ chức. Định nghĩa LCV ở  đây không cứng nhắc mà có thể thường xuyên được thay đổi, Thỉnh  thoảng người ta gọi các chương trình theo loại này là <em>Groupware<a href="#_ftn18" name="_ftnref18" title="" id="_ftnref18"> (20)</a></em>.  Dĩ nhiên là có rất nhiều loại Groupware không được xem như 1 ứng dụng  LCV loại Collaborative, chẳng hạn như <em>Bulletin  Boards<a href="#_ftn19" name="_ftnref19" title="" id="_ftnref19"> (21)</a></em> hay <em>videoconference<a href="#_ftn20" name="_ftnref20" title="" id="_ftnref20">(22)</a></em>.</p>
+    <blockquote>
+      <blockquote>
+        <h4 align="justify"><a name="_Toc268951674" id="_Toc268951674"><em>4.3.4. Ad-Hoc</em></a></h4>
+      </blockquote>
+    </blockquote>
+    <p align="justify">Cho phép người dùng tạo ra và sửa đổi định nghĩa  LCV nhanh chóng và dể dàng để đáp ứng các trường hợp phát sinh. Như  thế, Ad-Hoc có thể có rất nhiều định nghĩa LCV. Ad-hoc Workflow tối đa  hóa tính linh hoạt trong các lĩnh vực mà bảo mật không phải là vấn  đề chính yếu. Nghĩa là, chẳng hạn với các LCV loại Production thì Tổ  chức, doanh nghiệp là người sở hữu LCV, còn ở Ad-Hoc thì  các người sử dụng ứng dụng có thể có tiến trình riêng của họ.</p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <div align="justify">
+      <h2><a name="_Toc268951675" id="_Toc268951675"><strong>5. Yêu cầu của một ứng dụng quản lý LCV tổng quát</strong></a> </h2>
+    </div>
+    <p align="justify">Để đáp ứng nhu cầu của doanh nghiệp, các ứng dụng hỗ trợ  quản lý LCV tổng quát cần đáp ứng rất nhiều yêu cầu về nhiều mặt:</p>
+    <div align="justify">
+      <ul>
+        <li>Về hiệu suất làm việc, ứng dụng cần phải đạt hiệu suất  làm việc cao, nghĩa là cùng một lúc có thể chạy song song nhiều thể hiện LCV mà  không gặp trở ngại</li>
+        <li>Về mức độ linh hoạt, ứng dụng cần phải thể hiện sự linh  hoạt tốt nhất có thể. Nghĩa là ứng dụng được thiết kế sao cho có thể thích hợp  với nhiều luồng LCV khác nhau. Bởi trong doanh nghiệp hiện nay, có rất nhiều  LCV cùng tồn tại song song. Chẳng hạn như, trong một trường đại học có thể sẽ  có những LCV như: LCV quản lý hồ sơ công văn, LCV tổ chức thi học kì, LCV tuyển  sinh đại học,... Vì thế, nếu ứng với mỗi LCV khác nhau phải sử dụng một ứng  dụng hỗ trợ khác nhau thì thật sự rất khó khăn cho doanh nghiệp, ngay cả trong  việc quản lý các ứng dụng, chứ chưa nói gì đến việc sử dụng chúng (vì mỗi ứng  dụng khác nhau sẽ có thể có cách sử dụng khác nhau, và khó thống nhất cơ sở dữ  liệu chung...)</li>
+        <li>Chia sẻ, dùng chung dữ liệu với cơ sở dữ liệu vốn có của  doanh nghiệp, và tự động cập nhật thông tin tương ứng của từng thể hiện LCV</li>
+        <li>Về khả năng hỗ trợ quản lý, ứng dụng cần hỗ trợ người  quản lý sao cho họ có thể thông qua ứng dụng nắm bắt được tình hình của từng  thể hiện LCV, đồng thời kiểm soát, điều phối chúng. Nghĩa là ứng dụng phải có  khả năng:</li>
+        <ul>
+          <li>Cho phép người quản lý có thể thấy được thông tin của  từng thể hiện LCV đang thực thi ở dạng hình ảnh dễ hiểu (biểu đồ, sơ đồ...),  đồng thời cho phép kiểm soát chúng (runback<a href="#_ftn21" name="_ftnref21" title="" id="_ftnref21">(23) </a> 1 tác vụ đang thực thi, thấy được tình trạng cụ thể, có cảnh báo khi có vấn đề  xảy ra, xem được các tài liệu đi kèm ứng với từng tác vụ con</li>
+          <li>Thống kê lại các kết quả thực hiện theo yêu cầu của quản  lý và cho phép tự thiết kế các kiểu thống kê phù hợp... </li>
+          <li>Cho phép phân công, cập nhật phân công từng tác vụ sao  cho hợp với từng thời điểm thực tại. </li>
+          <li>Gửi thông báo đến quản lý trong bất cứ tình huống xảy ra  nào. </li>
+          <li>Cập nhật thời gian thực hiện cho phù hợp từng thời kì,  từng thể hiện khác nhau  theo thực tế.</li>
+        </ul>
+      </ul>
+    </div>
+    <p align="justify">­Đây chỉ là những yêu cầu chung của một ứng dụng quản lý  LCV tổng quát. Trên thực tế, ứng với mỗi doanh nghiệp khác nhau với­ nền văn  hóa doanh nghiệp cũng khác nhau, sẽ có các yêu cầu riêng rất khác biệt mà ứng  dụng thực tế cần phải thỏa mãn cả những điều này.­­<br />
+        <em>Tóm  lại,trong chương này, chúng tôi đã trình bày các kiến thức cơ bản về LCV cũng  như </em>MHH<em> LCV, từ đó làm cơ sở cho những chương tiếp  theo trình bày về các kỹ thuật, công nghệ <u>mà</u> chúng tôi đã nghiên cứu để  xây dựng ứng dụng, cũng như nội dung của ứng dụng mà chúng tôi đã thực hiện  trong khóa luận.</em></p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <p align="center">***</p>
+    <div class="style2">
+      <div id="ftn1">
+        <div align="justify"><br />
+          <a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"> </a>(3) <a href="http://en.wikipedia.org/wiki/Workflow">http://en.wikipedia.org/wiki/Workflow</a> </div>
+      </div>
+      <div id="ftn2">
+        <p align="justify"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2"> </a> (4)SHI Meilin, YANG Guangxin,  XIANG Yong, WU Shangguang, Workflow Management Systems: A Survey, Department of  Computer Science, Tsinghua University, Beijing, P.R.China 100084, 1998</p>
+      </div>
+      <div id="ftn3">
+        <p align="justify"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3"> </a>(5) Từ đây về sau, chúng tôi  dùng từ viết tắt LCV để thay cho cụm từ “Luồng Công việc” và MH LCV để thay cho  cụm từ “Mô hình luồng công việc”.</p>
+      </div>
+      <div id="ftn4">
+        <p align="justify"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4"> </a> (6)Từ nay chúng tôi sẽ dùng từ  viết tắt HQT LCV để chỉ Hệ Quản Trị Luồng Công Việc </p>
+      </div>
+      <div id="ftn5">
+        <p align="justify"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5"> </a> (7)David Hollingsworth, The  Workflow Reference Model, Workflow Management Coalition Specification, 1995,  trang 20</p>
+      </div>
+      <div id="ftn6">
+        <p align="justify"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6"> </a> (8)Workflow Application Programming Interface &amp;  Interchange: thư viện chứa các API và các hàm mở rộng tùy theo chức năng của  các giao thức</p>
+      </div>
+      <div id="ftn7">
+        <p align="justify"><a href="#_ftnref7" name="_ftn7" title="" id="_ftn7"> </a> (9)David Hollingsworth, The  Workflow Reference Model, Workflow Management Coalition Specification, 1995,  trang 23</p>
+      </div>
+      <div id="ftn8">
+        <p align="justify"><a href="#_ftnref8" name="_ftn8" title="" id="_ftn8"> </a> (10)Xem chi tiết ở khóa luận  tốt nghiệp &quot;Tìm hiểu và ứng dụng Windows Workflow Foundation để hỗ trợ các  quy trình nghiệp vụ&quot; , Khoa CNTT, trường ĐHKHTN tp HCM, năm 2009 </p>
+      </div>
+      <div id="ftn9">
+        <p align="justify"><a href="#_ftnref9" name="_ftn9" title="" id="_ftn9"> </a> (11)là dạng biểu diễn đồ  họa nhằm xác định Tiến trình nghiệp vụ trong LCV</p>
+      </div>
+      <div id="ftn10">
+        <p align="justify"><a href="#_ftnref10" name="_ftn10" title="" id="_ftn10"> </a> (12)là dạng rút gọn của  WS-BPEL - Web Service Business Process Execution Language - một chuẩn ngôn  ngữ thực thi tiến trình xác định các tương tác với các dịch vụ web</p>
+      </div>
+      <div id="ftn11">
+        <p align="justify"><a href="#_ftnref11" name="_ftn11" title="" id="_ftn11"> </a> (13)Xem phụ lục: Danh sách các  sản phẩm, ứng dụng sử dụng XPDL </p>
+      </div>
+      <div id="ftn12">
+        <p align="justify"><a href="#_ftnref12" name="_ftn12" title="" id="_ftn12"> </a> (14)Xem chi tiết ở  http://en.wikipedia.org/wiki/Business_process_management   </p>
+      </div>
+      <div id="ftn13">
+        <p align="justify"><a href="#_ftnref13" name="_ftn13" title="" id="_ftn13"> </a> (15)Xem lại mục 4.1 </p>
+      </div>
+      <div id="ftn14">
+        <p align="justify"><a href="#_ftnref14" name="_ftn14" title="" id="_ftn14"> </a> (16)Các engine thực thi tiến  trình/LCV </p>
+      </div>
+      <div id="ftn15">
+        <p align="justify"><a href="#_ftnref15" name="_ftn15" title="" id="_ftn15"> </a> (17)Xem phụ lục: XML Schema của  Wf-XML 2.0</p>
+      </div>
+      <div id="ftn16">
+        <p align="justify"><a href="#_ftnref16" name="_ftn16" title="" id="_ftn16"> </a> (18)Charles Plesums, Introduction to Workflow, Computer  Sciences Corporation, Financial Services Group</p>
+      </div>
+      <div id="ftn17">
+        <p align="justify"><a href="#_ftnref17" name="_ftn17" title="" id="_ftn17"> </a> (19)Hệ thống hoạch định tài  nguyên doanh nghiệp - một hệ thống được sử dụng trong các tổ chức nhằm mục đích  hoạch định tài nguyên trong tổ chức đó. Đó có thể là một doanh nghiệp, hay bất  kì loại tổ chức nào khác... </p>
+      </div>
+      <div id="ftn18">
+        <p align="justify"><a href="#_ftnref18" name="_ftn18" title="" id="_ftn18"> </a> (20)Chương trình hỗ trợ làm  việc nhóm</p>
+      </div>
+      <div id="ftn19">
+        <p align="justify"><a href="#_ftnref19" name="_ftn19" title="" id="_ftn19"> </a> (21)Bảng thông báo, thông báo  các thông tin mới đến các thành viên trong nhóm</p>
+      </div>
+      <div id="ftn20">
+        <p align="justify"><a href="#_ftnref20" name="_ftn20" title="" id="_ftn20"> </a> (22)Chương trình hỗ trợ họp  nhóm bằng Video, hỗ trợ làm việc từ xa với nhau, khi các nhân viên không đang  cùng ở chung một nơi, chẳng hạn như khi đang ở các quốc gia khác nhau.</p>
+      </div>
+      <div id="ftn21">
+        <p align="justify"><a href="#_ftnref21" name="_ftn21" title="" id="_ftn21"> </a> (23)Thực hiện lại, nghĩa là khi  1 tác vụ nào đó thực hiện không đúng theo yêu cầu thực tế hoặc không đúng với  thực tế, người quản lý có thể cho phép thực hiện lại tác vụ đó và gửi thông báo  đến nhân viên tương ứng </p>
+        <p align="justify">&nbsp;</p>
+      </div>
+    </div><p align="center">***</p>
+    <p align="right"><a href="#_Toc002">[TOP]</a></p>
+    <div align="justify">
+      <!-- end #mainContent -->
+    </div>
+  </div>
+<!-- end #container --></div>
+</body>
+</html>

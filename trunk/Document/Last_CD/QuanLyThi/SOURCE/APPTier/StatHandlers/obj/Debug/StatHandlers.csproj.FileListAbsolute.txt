@@ -1,0 +1,115 @@
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\StatHandlers\bin\Debug\StatHandlers.dll
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\StatHandlers\bin\Debug\StatHandlers.pdb
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\StatHandlers\obj\Debug\StatHandlers.dll
+C:\Users\Nghia Tran\Desktop\AddStaticalCriteria\StatHandlers\obj\Debug\StatHandlers.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+C:\Users\Nghia Tran\Desktop\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+C:\Users\Nghia Tran\Desktop\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\My Dropbox\WF_LuanVan\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\Final Source\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\Final Source\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\Final Source\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\Final Source\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\Final Source\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\My Dropbox\Final\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\My Dropbox\Final\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\My Dropbox\Final\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\Final\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\My Dropbox\Final\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\16072010\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\16072010\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\16072010\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\16072010\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\My Dropbox\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\My Dropbox\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\My Dropbox\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\My Dropbox\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\16072010\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\16072010\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\16072010\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\16072010\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\16072010\1772010Code_sql2005\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\16072010\1772010Code_sql2005\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\16072010\1772010Code_sql2005\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\1772010Code_sql2005\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\16072010\1772010Code_sql2005\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\My Dropbox\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\My Dropbox\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\My Dropbox\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\My Dropbox\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\19072010\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\19072010\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\19072010\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\19072010\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\19072010\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+D:\2172010\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+D:\2172010\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+D:\2172010\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+D:\2172010\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+D:\2172010\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\StatHandlers\bin\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\StatHandlers\bin\Debug\StatHandlers.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\StatHandlers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\StatHandlers\obj\Debug\StatHandlers.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\StatHandlers\obj\Debug\StatHandlers.pdb

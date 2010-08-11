@@ -1,0 +1,57 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="APPTier.UCWorkItem"
+    Height="62"  Width="111" mc:Ignorable="d" >
+    <Border BorderThickness="2" CornerRadius="5" BorderBrush="#FFF4FFC3">
+     <Canvas x:Name="canv" MouseRightButtonUp="canv_MouseLeftButtonDown"  >
+        <Canvas.ToolTip>
+            <ToolTip Background="Transparent" BorderThickness="0" x:Name="yy" >
+                <Border CornerRadius="6" BorderThickness="1" BorderBrush="#FF04FFB6">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#BF000000"/>
+                            <GradientStop Color="#BF1E1E1E" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock x:Name="personNameAssigned" Margin="8" Foreground="White" Text="Chưa được phân công" TextWrapping="Wrap"/>
+                </Border>
+                
+            </ToolTip>
+        </Canvas.ToolTip>
+        <StackPanel x:Name="stackShowData">
+            <TextBlock x:Name="workItemName" TextAlignment="Center" />
+        </StackPanel>
+        <Popup IsOpen="False" StaysOpen="False" x:Name="xx" Placement="MousePoint" MouseLeave="xx_MouseLeave" AllowsTransparency="True"
+ >
+ <Border BorderThickness="1" CornerRadius="6" BorderBrush="#FF17698f" Background="#FF3dc6ff">
+		<Grid x:Name="LayoutRoot" Margin="1,-1,-1,1">
+			<Border Margin="21,20,20.5,91.5" BorderBrush="#FF17698f" BorderThickness="1" CornerRadius="3">
+				 <Grid>
+					    <Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<TextBlock Grid.Column="0" x:Name="tbxContentLeft" Foreground="Black" Margin="5"/>
+                    	<TextBlock Grid.Column="1" x:Name="tbxContentRight" Foreground="Black" Margin="5"/>
+                   
+					</Grid>
+				
+			</Border>
+			<Grid>
+			<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+			<Button x:Name="btnStart" HorizontalAlignment="Right" Margin="21,0,0,46.5" VerticalAlignment="Bottom" Width="77.667" Height="23.5" Content="Bắt đầu" Click="btnStart_Click"/>
+			<Button x:Name="btnChange" Margin="13,0,13,46.5" VerticalAlignment="Bottom" Height="23.5" Content="Chỉnh sửa" Click="btnChange_Click" HorizontalAlignment="Center" Width="79.2" Grid.Column="1"/>
+			<Button x:Name="btnFinish" Margin="0,0,20.5,46.5" VerticalAlignment="Bottom" Height="23.5" Content="Kết Thúc" HorizontalAlignment="Left" Width="77.5" Click="btnFinish_Click" Grid.Column="2"/>
+			</Grid>
+		</Grid>
+	</Border>
+          
+        </Popup>
+    </Canvas>
+</Border>
+</UserControl>

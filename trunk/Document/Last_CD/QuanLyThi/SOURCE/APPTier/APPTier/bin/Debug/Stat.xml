@@ -1,0 +1,173 @@
+﻿<root>
+  <object Name="Nhân Viên">
+    <Criteria Name="Tổng số lượng nhân viên trên hệ thống" IsDetail="True">
+      <Type Name="Số lượng" Method="f1" SQL="" />
+    </Criteria>
+    <Criteria Name="Những nhân viên thường làm việc trễ hạn" IsDetail="False">
+      <Type Name="Số lượng" Method="f2" SQL="" />
+      <Type Name="Phần trăm" Method="f2a" SQL="" />
+    </Criteria>
+    <Criteria Name="Những nhân viên thường làm việc sớm hạn" IsDetail="False">
+      <Type Name="Số lượng" Method="f3" SQL="" />
+      <Type Name="Phần trăm" Method="f3a" SQL="" />
+    </Criteria>
+    <Criteria Name="Bảng phân công nhân viên" IsDetail="True">
+      <Type Name="Bảng" Method="f4" SQL="" />
+    </Criteria>
+  </object>
+  <object Name="Công Việc">
+    <Criteria Name="Tổng số công việc" IsDetail="False">
+      <Type Name="Số lượng" Method="f5" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành sớm hạn" IsDetail="True">
+      <Type Name="Số lượng" Method="f6" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành trễ hạn" IsDetail="True">
+      <Type Name="Số lượng" Method="f7" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành đúng hạn" IsDetail="True">
+      <Type Name="Số lượng" Method="f8" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành sớm hạn/công đoạn thi" IsDetail="True">
+      <Type Name="Số lượng" Method="f9" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành sớm hạn/công đoạn chấm thi và công bố kết quả" IsDetail="True">
+      <Type Name="Số lượng" Method="f10" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành sớm hạn/công đoạn cấp chứng chỉ và in văn bằng" IsDetail="True">
+      <Type Name="Số lượng" Method="f11" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành đúng hạn/công đoạn thi" IsDetail="True">
+      <Type Name="Số lượng" Method="f12" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành đúng hạn/công đoạn chấm thi và công bố kết quả" IsDetail="True">
+      <Type Name="Số lượng" Method="f13" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành đúng hạn/công đoạn cấp chứng chỉ và in văn bằng" IsDetail="True">
+      <Type Name="Số lượng" Method="f14" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành trễ hạn/công đoạn thi" IsDetail="True">
+      <Type Name="Số lượng" Method="f15" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành trễ hạn/công đoạn chấm thi và công bố kết quả" IsDetail="True">
+      <Type Name="Số lượng" Method="f16" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số công việc hoàn thành trễ hạn/công đoạn cấp chứng chỉ và in văn bằng" IsDetail="True">
+      <Type Name="Số lượng" Method="f17" SQL="" />
+    </Criteria>
+    <Criteria Name="Những công đoạn có độ trễ hạn cao" IsDetail="False">
+      <Type Name="Phần trăm" Method="f18" SQL="" />
+    </Criteria>
+    <Criteria Name="Số lượng công việc hoàn thành trễ qua các đợt" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f19" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f19a" SQL="" />
+    </Criteria>
+    <Criteria Name="Số lượng công việc hoàn thành đúng hạn qua các đợt" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f20" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f20a" SQL="" />
+    </Criteria>
+    <Criteria Name="Số lượng công việc hoàn thành sớm hạn qua các đợt" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f21" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f21a" SQL="" />
+    </Criteria>
+    <Criteria Name="Chi tiết các công việc trễ hạn" IsDetail="True">
+      <Type Name="Mô tả liệt kê" Method="f22" SQL="" />
+    </Criteria>
+    <Criteria Name="Chi tiết các công việc đúng hạn" IsDetail="False">
+      <Type Name="Mô tả liệt kê" Method="f23" SQL="" />
+    </Criteria>
+  </object>
+  <object Name="Đợt thi">
+    <Criteria Name="Tổng số đợt thi" IsDetail="False">
+      <Type Name="Số lượng" Method="f24" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số đợt thi hoàn thành kịp thời hạn" IsDetail="False">
+      <Type Name="Số lượng" Method="f25" SQL="" />
+      <Type Name="Phần trăm" Method="f25a" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số đợt thi không hoàn thành kịp thời hạn" IsDetail="False">
+      <Type Name="Số lượng" Method="f26" SQL="" />
+      <Type Name="Phần trăm" Method="f26a" SQL="" />
+    </Criteria>
+    <Criteria Name="Chi tiết các đợt thi không hoàn thành kịp thời hạn" IsDetail="False">
+      <Type Name="Liệt kê" Method="f27" SQL="" />
+    </Criteria>
+  </object>
+  <object Name="Chứng chỉ">
+    <Criteria Name="Tổng số chứng chỉ được cấp" IsDetail="False">
+      <Type Name="Số lượng" Method="f28" SQL="" />
+    </Criteria>
+    <Criteria Name="Số chứng chỉ được cấp qua từng kì" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f29" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f29a" SQL="" />
+    </Criteria>
+    <Criteria Name="Chi tiết các chứng chỉ" IsDetail="False">
+      <Type Name="Liệt kê" Method="f30" SQL="" />
+    </Criteria>
+  </object>
+  <object Name="Thí Sinh">
+    <Criteria Name="Tổng số thí sinh đăng kí dự thi" IsDetail="False">
+      <Type Name="Số lượng" Method="f31" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số thi sinh bài thi" IsDetail="False">
+      <Type Name="Số lượng" Method="f32" SQL="" />
+      <Type Name="Phần trăm" Method="f32a" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số bài phúc khảo" IsDetail="False">
+      <Type Name="Số lượng" Method="f33" SQL="" />
+      <Type Name="Phần trăm" Method="f33a" SQL="" />
+    </Criteria>
+    <Criteria Name="Tổng số chứng chỉ được cấp" IsDetail="False">
+      <Type Name="Số lượng" Method="f34" SQL="" />
+      <Type Name="Phần trăm" Method="f34a" SQL="" />
+    </Criteria>
+    <Criteria Name="Số thí sinh đăng kí dự thi qua từng kì" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f35" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f35a" SQL="" />
+    </Criteria>
+    <Criteria Name="Số bài thi qua từng kì" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f36" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f36a" SQL="" />
+    </Criteria>
+    <Criteria Name="Số bài phúc khảo qua từng kì" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f37" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f37a" SQL="" />
+    </Criteria>
+    <Criteria Name="Số chứng chỉ được cấp qua từng kì" IsDetail="False">
+      <Type Name="Biểu đồ cột" Method="f38" SQL="" />
+      <Type Name="Biểu đồ đường" Method="f38a" SQL="" />
+    </Criteria>
+  </object>
+  <object Name="Custom">
+    <Criteria Name="qwerty" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select cv.tenCV, cv.ngayBatDau, pc.maNV, pc.ngayHetHan FROM CongViec cv, PhanCong pc WHERE cv.maCV = 6 and pc.maNV = 2  GROUP BY cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, pc.maCV, pc.maNV, pc.ngayApDung, pc.ngayHetHan HAVING cv.maCV = 6 ORDER BY cv.tenCV Select cv.tenCV, cv.ngayBatDau, pc.maNV, pc.ngayHetHan FROM CongViec cv, PhanCong pc WHERE cv.maCV = 6 and pc.maNV = 2  GROUP BY cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, pc.maCV, pc.maNV, pc.ngayApDung, pc.ngayHetHan HAVING cv.maCV = 6 ORDER BY cv.tenCV " />
+    </Criteria>
+    <Criteria Name="asdfg" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select cv.tenCV, cv.ngayBatDau, pc.maNV, pc.ngayHetHan FROM CongViec cv, PhanCong pc WHERE cv.maCV = 6 and pc.maNV = 2  GROUP BY cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, pc.maCV, pc.maNV, pc.ngayApDung, pc.ngayHetHan HAVING cv.maCV = 6 ORDER BY cv.tenCV Select cv.tenCV, cv.ngayBatDau, pc.maNV, pc.ngayHetHan FROM CongViec cv, PhanCong pc WHERE cv.maCV = 6 and pc.maNV = 2  GROUP BY cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, pc.maCV, pc.maNV, pc.ngayApDung, pc.ngayHetHan HAVING cv.maCV = 6 ORDER BY cv.tenCV Select cv.tenCV, cv.ngayBatDau, pc.maNV, pc.ngayHetHan FROM CongViec cv, PhanCong pc WHERE cv.maCV = 6 and pc.maNV = 2  GROUP BY cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, pc.maCV, pc.maNV, pc.ngayApDung, pc.ngayHetHan HAVING cv.maCV = 6 ORDER BY cv.tenCV " />
+    </Criteria>
+    <Criteria Name="Test" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, dt.tenDotThi, dt.ngayThi, td.ngayBatDauQuyDinh, td.ngayKetThucQuyDinh, td.ngayBatDauThucTe, td.ngayKetThucThucTe FROM CongViec cv, DotThi dt, TienDo td WHERE cv.tenCV = N'Thi'and dt.maDT = 3 and td.maNV = 2 and td.maDT = 3  GROUP BY cv.maCV, cv.tenCV, cv.ngayBatDau, cv.ngayKetThuc, cv.moTa, dt.maDT, dt.tenDotThi, dt.ngayThi, dt.soLuongThiSinh, td.maTD, td.tongKhoiLuongCV, td.khoiLuongCVHT, td.ngayBatDauQuyDinh, td.ngayKetThucQuyDinh, td.ngayBatDauThucTe, td.ngayKetThucThucTe, td.maDT, td.maCV, td.maNV HAVING cv.maCV = 7 ORDER BY cv.tenCV ASC" />
+    </Criteria>
+    <Criteria Name="asd" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select cv.ngayBatDau, cv.ngayKetThuc FROM CongViec cv WHERE cv.tenCV = N'Thi'" />
+    </Criteria>
+    <Criteria Name="Danh sách nhân viên" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select nvth.dienThoai FROM NhanVienThuaHanh nvth WHERE nvth.maNV = 1 " />
+    </Criteria>
+    <Criteria Name="Thử nghiệm " IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select td.ngayBatDauThucTe, td.ngayKetThucThucTe FROM NhanVienThuaHanh nvth, TienDo td WHERE nvth.maNV = 1 and td.tongKhoiLuongCV = 2000 " />
+    </Criteria>
+    <Criteria Name="Thử nghiệm" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select nvth.tenDangNhap, nvth.email, td.tongKhoiLuongCV, td.khoiLuongCVHT, td.ngayBatDauQuyDinh, td.ngayKetThucQuyDinh, td.ngayBatDauThucTe FROM NhanVienThuaHanh nvth, TienDo td WHERE nvth.maNV = 1 and nvth.dienThoai = N'12345678'and td.tongKhoiLuongCV = 2000 " />
+    </Criteria>
+    <Criteria Name="Thu nghiem" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select td.maTD, td.tongKhoiLuongCV, td.khoiLuongCVHT, td.ngayBatDauQuyDinh, td.ngayKetThucQuyDinh, td.ngayBatDauThucTe, td.ngayKetThucThucTe, td.maDT, td.maCV FROM TienDo td WHERE td.maDT = 1 " />
+    </Criteria>
+    <Criteria Name="Thu Nghiem 01" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select td.tongKhoiLuongCV, td.khoiLuongCVHT, td.ngayBatDauThucTe, td.ngayKetThucThucTe, td.maDT, td.maCV FROM TienDo td WHERE td.maDT = 25 " />
+    </Criteria>
+    <Criteria Name="Thu Nghiem 02" IsDetail="False">
+      <Type Name="Bảng" Method="custom" SQL="Select td.tongKhoiLuongCV, td.khoiLuongCVHT, td.ngayBatDauThucTe, td.ngayKetThucThucTe FROM TienDo td WHERE td.maCV = 12 " />
+    </Criteria>
+  </object>
+</root>

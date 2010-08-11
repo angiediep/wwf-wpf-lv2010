@@ -1,0 +1,21 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+	x:Class="APPTier.ChangeWorkTimeByExam"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
+
+	<Grid x:Name="LayoutRoot">
+		<Label x:Name="lblFuncName" Margin="392,84,193,0" VerticalAlignment="Top" Height="34" Content="THAY ĐỔI THỜI GIAN THỰC HIỆN CÁC CÔNG VIỆC" FontSize="16" Background="{x:Null}" Foreground="#FF0F1D04"/>
+		<Border Margin="267,144,67,139" BorderBrush="#FF0F1D04" BorderThickness="1" CornerRadius="6" Width="500">
+			<Custom:DataGrid CanUserResizeColumns="False" CanUserResizeRows="False" x:Name="dtgvWorkItem" Margin="8" MouseLeftButtonDown="dtgvWorkItem_MouseLeftButtonDown" IsReadOnly="True" Width="480"/>
+		</Border>
+		
+		<ListBox x:Name="lbxExam" HorizontalAlignment="Left"  Width="145.8" Margin="8,50,0,12" BorderBrush="#FF0F1D04" SelectionChanged="lbxExam_SelectionChanged"/>
+		<Label x:Name="lblFuncName_Copy" Margin="38,25,0,0" VerticalAlignment="Top" Height="25" Content="Chọn đợt thi" HorizontalAlignment="Left" Width="74.8" Background="{x:Null}" Foreground="#FF0F1D04"/>
+	</Grid>
+</UserControl>

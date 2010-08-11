@@ -1,0 +1,19 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit"
+	x:Class="APPTier.UpdateExam"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="946" Height="628">
+    
+	<Grid x:Name="LayoutRoot">
+		<Border HorizontalAlignment="Right" Margin="0,55,202,187.357" Width="568" BorderThickness="1" BorderBrush="#FF0F1D04" CornerRadius="6">
+			<Custom:DataGrid x:Name="dtgvExam" ItemsSource="{Binding Collection}" AutoGenerateColumns="True" DataContext="{Binding}" Margin="8" IsReadOnly="True" CanUserResizeColumns="False" CanUserResizeRows="False" MouseLeftButtonDown="dtgvExam_MouseLeftButtonDown" Width="548"/>
+		</Border>
+		<Button x:Name="btnSave" Margin="384,0,464,134.4" VerticalAlignment="Bottom" Height="27" Content="Thêm Đợt Thi" Click="btnSave_Click" />
+        <TextBlock x:Name="lblFuncName" Margin="397,17,396,0" VerticalAlignment="Top" Height="34" FontSize="16" TextWrapping="Wrap" Foreground="#FF0F1D04"><Run Text="CẬP NHẬT ĐỢT THI"/></TextBlock>
+	</Grid>
+</UserControl>

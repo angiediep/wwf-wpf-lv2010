@@ -1,0 +1,105 @@
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\Final Source\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\Final Source\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\Final Source\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Final Source\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\Final Source\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\My Dropbox\Final\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\My Dropbox\Final\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\My Dropbox\Final\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\Final\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\My Dropbox\Final\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\16072010\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\16072010\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\16072010\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\16072010\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\anh hai\APPTier\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\16072010\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\16072010\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\16072010\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\16072010\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\16072010\1772010Code_sql2005\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\16072010\1772010Code_sql2005\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\16072010\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\16072010\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\16072010\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Nghia Tran\Desktop\1772010Code_sql2005\1772010Code_sql2005\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\My Dropbox\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\My Dropbox\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\My Dropbox\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\19072010\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\19072010\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\19072010\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\19072010\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\19072010\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\1772010Code_sql2005_TDN\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\UMH\Desktop\AssignUser\APPTier\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\1772010Code_sql2005\2072010\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+D:\2172010\APPTier\DataLayer\bin\Debug\DataLayer.dll
+D:\2172010\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+D:\2172010\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\2172010\APPTier\DataLayer\obj\Debug\DataLayer.dll
+D:\2172010\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\SOFT\SOURCE\APPTier\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\LuanVanTotNghiep\Last_SVN\Document\Last_CD\QuanLyThi\SOURCE\APPTier\DataLayer\obj\Debug\DataLayer.pdb
